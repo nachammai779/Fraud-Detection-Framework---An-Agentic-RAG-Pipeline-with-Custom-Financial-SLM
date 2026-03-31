@@ -8,4 +8,3 @@ A machine learning framework for fraud detection using the Kaggle IEEE dataset, 
 - `Fraud_Detection_Kaggle_IEEE_Dataset.py` — Python script version
 - `Kaggle-IEEE-dataset/` — Dataset directory
 - `fraud-detection-pipeline/` — Real-time fraud detection pipeline (Kafka, Docker)
-- `Website/` — Web interface
