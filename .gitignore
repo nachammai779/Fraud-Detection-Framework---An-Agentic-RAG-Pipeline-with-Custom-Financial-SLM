@@ -23,6 +23,7 @@ Thumbs.db
 
 # Data (large files)
 *.csv
+!Kaggle-IEEE-dataset/*.csv
 
 # Claude Code
 .claude/
