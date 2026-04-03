@@ -110,15 +110,15 @@ def main():
             early_stopping_rounds=NGB_EARLY_STOP,
         )
 
-        # OOF predictions
-        oof_dist = ngb.pred_dist(X_fold_oof)
-        oof_prob[oof_idx] = oof_dist.probs.flatten()
-        oof_var[oof_idx] = oof_dist.probs.flatten() * (1 - oof_dist.probs.flatten())
+        # OOF predictions — predict_proba returns (n, 2), take class 1
+        oof_p = ngb.predict_proba(X_fold_oof)[:, 1]
+        oof_prob[oof_idx] = oof_p
+        oof_var[oof_idx] = oof_p * (1 - oof_p)
 
         # Val predictions (average across folds)
-        val_dist = ngb.pred_dist(X_val_filled)
-        val_probs[fold] = val_dist.probs.flatten()
-        val_vars[fold] = val_dist.probs.flatten() * (1 - val_dist.probs.flatten())
+        val_p = ngb.predict_proba(X_val_filled)[:, 1]
+        val_probs[fold] = val_p
+        val_vars[fold] = val_p * (1 - val_p)
 
         fold_auc = roc_auc_score(y_train[oof_idx], oof_prob[oof_idx])
         print(f"    OOF AUC: {fold_auc:.6f}")
