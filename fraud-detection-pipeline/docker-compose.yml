@@ -53,6 +53,7 @@ services:
         echo 'Creating Kafka topics...' &&
         kafka-topics --create --if-not-exists --bootstrap-server kafka:9092 --replication-factor 1 --partitions 3 --topic transactions &&
         kafka-topics --create --if-not-exists --bootstrap-server kafka:9092 --replication-factor 1 --partitions 3 --topic fraud-alerts &&
+        kafka-topics --create --if-not-exists --bootstrap-server kafka:9092 --replication-factor 1 --partitions 3 --topic fraud-alerts-enriched &&
         kafka-topics --create --if-not-exists --bootstrap-server kafka:9092 --replication-factor 1 --partitions 1 --topic transaction-metrics &&
         echo 'Topics created:' &&
         kafka-topics --list --bootstrap-server kafka:9092
@@ -93,6 +94,140 @@ services:
     volumes:
       - ./model:/model:ro
 
+  # --- Graph Database ---
+  neo4j:
+    image: neo4j:5.26-community
+    container_name: neo4j
+    ports:
+      - "7474:7474"   # Browser UI
+      - "7687:7687"   # Bolt protocol
+    environment:
+      NEO4J_AUTH: neo4j/fraud_detection
+      NEO4J_PLUGINS: '["graph-data-science"]'
+      NEO4J_dbms_memory_heap_max__size: 2G
+      NEO4J_server_directories_import: /import
+    volumes:
+      - neo4j_data:/data
+      - ../Kaggle-IEEE-dataset:/import:ro
+    healthcheck:
+      test: ["CMD", "cypher-shell", "-u", "neo4j", "-p", "fraud_detection", "RETURN 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+
+  graph-loader:
+    build:
+      context: ./graph-loader
+      dockerfile: Dockerfile
+    container_name: graph-loader
+    depends_on:
+      neo4j:
+        condition: service_healthy
+    environment:
+      NEO4J_URI: bolt://neo4j:7687
+      NEO4J_USER: neo4j
+      NEO4J_PASSWORD: fraud_detection
+      TRANSACTION_PATH: /data/train_transaction.csv
+      IDENTITY_PATH: /data/train_identity.csv
+      BATCH_SIZE: 5000
+      CHUNK_SIZE: 50000
+    volumes:
+      - ../Kaggle-IEEE-dataset:/data:ro
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+
+  feature-exporter:
+    build:
+      context: ./graph-loader
+      dockerfile: Dockerfile
+    container_name: feature-exporter
+    command: ["python", "-u", "export_graph_features.py"]
+    depends_on:
+      graph-loader:
+        condition: service_completed_successfully
+    environment:
+      NEO4J_URI: bolt://neo4j:7687
+      NEO4J_USER: neo4j
+      NEO4J_PASSWORD: fraud_detection
+      TRANSACTION_PATH: /input/train_transaction.csv
+      IDENTITY_PATH: /input/train_identity.csv
+      OUTPUT_DIR: /output
+    volumes:
+      - ../Kaggle-IEEE-dataset:/input:ro
+      - ../data/processed:/output
+    deploy:
+      resources:
+        limits:
+          memory: 6G
+
+  # --- Vector Database ---
+  chromadb:
+    image: chromadb/chroma:0.5.23
+    container_name: chromadb
+    ports:
+      - "8000:8000"
+    volumes:
+      - chroma_data:/chroma/chroma
+    environment:
+      ANONYMIZED_TELEMETRY: "false"
+      IS_PERSISTENT: "true"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/heartbeat"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  chroma-indexer:
+    build:
+      context: ./chroma-indexer
+      dockerfile: Dockerfile
+    container_name: chroma-indexer
+    depends_on:
+      chromadb:
+        condition: service_healthy
+      neo4j:
+        condition: service_healthy
+    environment:
+      CHROMA_HOST: chromadb
+      CHROMA_PORT: 8000
+      NEO4J_URI: bolt://neo4j:7687
+      NEO4J_USER: neo4j
+      NEO4J_PASSWORD: fraud_detection
+      FEATURE_MATRIX_PATH: /data/feature_matrix.parquet
+      BATCH_SIZE: 500
+    volumes:
+      - ../data/processed:/data:ro
+    deploy:
+      resources:
+        limits:
+          memory: 6G
+
+  rag-enricher:
+    build:
+      context: ./rag-enricher
+      dockerfile: Dockerfile
+    container_name: rag-enricher
+    depends_on:
+      kafka-init:
+        condition: service_completed_successfully
+      chroma-indexer:
+        condition: service_completed_successfully
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      INPUT_TOPIC: fraud-alerts
+      OUTPUT_TOPIC: fraud-alerts-enriched
+      KAFKA_GROUP_ID: rag-enricher-group
+      CHROMA_HOST: chromadb
+      CHROMA_PORT: 8000
+      TOP_K_CASES: 5
+      TOP_K_PATTERNS: 3
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+
   # --- Monitoring UI (optional) ---
   kafka-ui:
     image: provectuslabs/kafka-ui:latest
@@ -106,3 +241,7 @@ services:
       KAFKA_CLUSTERS_0_NAME: fraud-detection-cluster
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092
       KAFKA_CLUSTERS_0_ZOOKEEPER: zookeeper:2181
+
+volumes:
+  neo4j_data:
+  chroma_data:

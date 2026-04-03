@@ -1,0 +1,6 @@
+chromadb-client==0.5.23
+sentence-transformers==3.4.1
+pandas==2.2.3
+numpy==1.26.4
+pyarrow==18.1.0
+neo4j==5.26.0

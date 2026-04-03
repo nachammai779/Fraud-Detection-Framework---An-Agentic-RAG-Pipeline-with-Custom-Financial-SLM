@@ -187,6 +187,8 @@ def main():
                 "card6": txn.get("card6"),
                 "P_emaildomain": txn.get("P_emaildomain"),
                 "DeviceType": txn.get("DeviceType"),
+                "card1": txn.get("card1"),
+                "addr1": txn.get("addr1"),
                 "actual_fraud": actual_fraud,
                 "timestamp": time.time(),
             }
