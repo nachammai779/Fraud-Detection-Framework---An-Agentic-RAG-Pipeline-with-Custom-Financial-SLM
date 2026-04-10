@@ -1,0 +1,59 @@
+{
+  "archetype": "remittance",
+  "total_synthetic_records": 500,
+  "fraud_rate": 0.096,
+  "seed_size": 1000,
+  "epochs_trained": 50,
+  "generation_mode": "hybrid (Gaussian diffusion + profile categorical sampling)",
+  "numerical_columns": [
+    "transaction_amount_usd",
+    "fee_amount_usd",
+    "sender_age",
+    "hour_of_day",
+    "day_of_week",
+    "days_since_last_txn",
+    "account_age_days",
+    "txn_count_30d"
+  ],
+  "amount_stats": {
+    "mean": 3572.6772800000003,
+    "median": 976.99,
+    "min": 50.0,
+    "max": 10000.0
+  },
+  "fraud_vector_distribution": {
+    "wire transfer": 113,
+    "emergency": 77,
+    "exchange rate": 75,
+    "fraude": 37,
+    "interception": 35,
+    "fake family": 34,
+    "unknown": 30,
+    "MoneyGram": 28,
+    "Western Union": 24,
+    "bonus": 24,
+    "estafa": 23
+  },
+  "language_distribution": {
+    "en": 378,
+    "vi": 44,
+    "yo": 32,
+    "es": 31,
+    "hi": 8,
+    "ht": 7
+  },
+  "instrument_distribution": {
+    "Xoom": 78,
+    "Remitly": 76,
+    "Hawala": 72,
+    "MoneyGram": 72,
+    "Western Union": 71,
+    "Cash pickup": 66,
+    "Wire transfer (bank)": 65
+  },
+  "generated_at": "2026-04-10T01:00:16.860174+00:00",
+  "output_files": {
+    "parquet": "datasets\\remittance\\synthetic\\transactions.parquet",
+    "csv": "datasets\\remittance\\synthetic\\transactions_remittance.csv"
+  }
+}

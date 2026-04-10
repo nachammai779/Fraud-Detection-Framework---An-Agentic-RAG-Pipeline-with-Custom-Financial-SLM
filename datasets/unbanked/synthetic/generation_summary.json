@@ -1,0 +1,42 @@
+{
+  "archetype": "unbanked",
+  "total_synthetic_records": 5000,
+  "fraud_rate": 0.1024,
+  "seed_size": 2000,
+  "epochs_trained": 200,
+  "numerical_columns": [
+    "transaction_amount_usd",
+    "fee_amount_usd",
+    "sender_age",
+    "hour_of_day",
+    "day_of_week",
+    "days_since_last_txn",
+    "account_age_days",
+    "txn_count_30d"
+  ],
+  "categorical_columns": [
+    "fraud_vector",
+    "language",
+    "instrument"
+  ],
+  "amount_stats": {
+    "mean": 1466.1678680000002,
+    "median": 764.555,
+    "min": 10.0,
+    "max": 3000.0
+  },
+  "fraud_vector_distribution": {
+    "advance fee": 4844,
+    "fake loan": 156
+  },
+  "language_distribution": {
+    "en": 4941,
+    "es": 59
+  },
+  "instrument_distribution": {
+    "Bill pay kiosk": 4982,
+    "Cash (informal)": 18
+  },
+  "generated_at": "2026-04-10T00:16:49.046446+00:00",
+  "output_file": "datasets\\unbanked\\synthetic\\transactions.parquet"
+}

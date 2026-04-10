@@ -1,0 +1,42 @@
+{
+  "archetype": "gig_worker",
+  "total_synthetic_records": 5000,
+  "fraud_rate": 0.1002,
+  "seed_size": 2000,
+  "epochs_trained": 200,
+  "numerical_columns": [
+    "transaction_amount_usd",
+    "fee_amount_usd",
+    "sender_age",
+    "hour_of_day",
+    "day_of_week",
+    "days_since_last_txn",
+    "account_age_days",
+    "txn_count_30d"
+  ],
+  "categorical_columns": [
+    "fraud_vector",
+    "language",
+    "instrument"
+  ],
+  "amount_stats": {
+    "mean": 1468.5798760000002,
+    "median": 213.16,
+    "min": 5.0,
+    "max": 6000.0
+  },
+  "fraud_vector_distribution": {
+    "ATO": 4833,
+    "CashApp": 167
+  },
+  "language_distribution": {
+    "en": 4958,
+    "es": 42
+  },
+  "instrument_distribution": {
+    "Bank debit card": 4961,
+    "CashApp": 39
+  },
+  "generated_at": "2026-04-10T00:13:41.497653+00:00",
+  "output_file": "datasets\\gig_worker\\synthetic\\transactions.parquet"
+}

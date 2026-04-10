@@ -1,0 +1,40 @@
+{
+  "archetype": "gig_worker",
+  "total_records": 259,
+  "source_files": {
+    "seed_narratives_web.jsonl": 185,
+    "seed_narratives_cfpb.jsonl": 44,
+    "seed_narratives_bbb.jsonl": 30
+  },
+  "source_distribution": {
+    "reddit_archive": 185,
+    "cfpb": 44,
+    "bbb_scamtracker": 30
+  },
+  "language_distribution": {
+    "en": 234,
+    "vi": 6,
+    "es": 4,
+    "yo": 4,
+    "hi": 15
+  },
+  "fraud_vector_distribution": {
+    "hacked": 28,
+    "ATO": 24,
+    "unknown": 111,
+    "stolen": 41,
+    "account takeover": 3,
+    "OTP": 7,
+    "paise": 1,
+    "PayPal": 23,
+    "account hacked": 1,
+    "CashApp": 7,
+    "Venmo": 8,
+    "Zelle": 4,
+    "driver": 1
+  },
+  "merged_at": "2026-04-09T21:08:04.960150+00:00",
+  "output_file": "datasets\\gig_worker\\raw\\seed_narratives.jsonl",
+  "ready_for_adaptive_data": true,
+  "ready_for_tabddpm": true
+}

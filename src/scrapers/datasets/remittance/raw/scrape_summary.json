@@ -1,0 +1,40 @@
+{
+  "archetype": "remittance",
+  "total_records": 280,
+  "source_files": {
+    "seed_narratives_web.jsonl": 182,
+    "seed_narratives_cfpb.jsonl": 63,
+    "seed_narratives_bbb.jsonl": 35
+  },
+  "source_distribution": {
+    "reddit_archive": 182,
+    "cfpb": 63,
+    "bbb_scamtracker": 35
+  },
+  "language_distribution": {
+    "es": 18,
+    "en": 233,
+    "yo": 15,
+    "vi": 21,
+    "ht": 5,
+    "hi": 7
+  },
+  "fraud_vector_distribution": {
+    "fraude": 9,
+    "unknown": 154,
+    "bonus": 8,
+    "exchange rate": 23,
+    "emergency": 23,
+    "estafa": 9,
+    "wire transfer": 32,
+    "MoneyGram": 8,
+    "remittance": 1,
+    "Xoom": 2,
+    "Western Union": 9,
+    "international transfer": 2
+  },
+  "merged_at": "2026-04-09T21:08:04.952403+00:00",
+  "output_file": "datasets\\remittance\\raw\\seed_narratives.jsonl",
+  "ready_for_adaptive_data": true,
+  "ready_for_tabddpm": true
+}

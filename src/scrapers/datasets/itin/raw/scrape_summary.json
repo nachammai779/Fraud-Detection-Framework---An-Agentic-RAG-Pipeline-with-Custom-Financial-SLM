@@ -1,0 +1,32 @@
+{
+  "archetype": "itin",
+  "total_records": 182,
+  "source_files": {
+    "seed_narratives_web.jsonl": 70,
+    "seed_narratives_cfpb.jsonl": 62,
+    "seed_narratives_bbb.jsonl": 50
+  },
+  "source_distribution": {
+    "reddit_archive": 70,
+    "cfpb": 62,
+    "bbb_scamtracker": 50
+  },
+  "language_distribution": {
+    "en": 179,
+    "vi": 2,
+    "ta": 1
+  },
+  "fraud_vector_distribution": {
+    "ITIN": 56,
+    "unknown": 64,
+    "EIN": 43,
+    "tax return": 3,
+    "immigration consultant": 1,
+    "identity theft": 11,
+    "social security": 4
+  },
+  "merged_at": "2026-04-09T21:08:04.972670+00:00",
+  "output_file": "datasets\\itin\\raw\\seed_narratives.jsonl",
+  "ready_for_adaptive_data": true,
+  "ready_for_tabddpm": true
+}

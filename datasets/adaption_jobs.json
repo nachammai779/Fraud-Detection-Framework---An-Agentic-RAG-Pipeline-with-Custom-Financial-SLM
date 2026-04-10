@@ -1,0 +1,42 @@
+{
+  "remittance": {
+    "dataset_id": "acb5a642-a867-48c0-a9fe-0c26854c0a1f",
+    "run_id": "dataset-acb5a642-a867-48c0-a9fe-0c26854c0a1f-1775793625555",
+    "credits": 51.0,
+    "estimated_minutes": 73.0,
+    "submitted_at": "2026-04-10T04:00:26.192568+00:00",
+    "status": "downloaded",
+    "adapted_records": 3460,
+    "filled_narratives": 3460
+  },
+  "gig_worker": {
+    "dataset_id": "b294fe1d-1998-4a32-abd5-a9affd3a408f",
+    "run_id": "dataset-b294fe1d-1998-4a32-abd5-a9affd3a408f-1775793630038",
+    "credits": 51.0,
+    "estimated_minutes": 73.0,
+    "submitted_at": "2026-04-10T04:00:30.516146+00:00",
+    "status": "downloaded",
+    "adapted_records": 4533,
+    "filled_narratives": 4533
+  },
+  "unbanked": {
+    "dataset_id": "7fcd7144-a398-4c57-9c29-d861942d124d",
+    "run_id": "dataset-7fcd7144-a398-4c57-9c29-d861942d124d-1775793634259",
+    "credits": 51.0,
+    "estimated_minutes": 73.0,
+    "submitted_at": "2026-04-10T04:00:34.736346+00:00",
+    "status": "downloaded",
+    "adapted_records": 3766,
+    "filled_narratives": 3766
+  },
+  "itin": {
+    "dataset_id": "ab55da6a-7810-4b86-863c-a755019c139b",
+    "run_id": "dataset-ab55da6a-7810-4b86-863c-a755019c139b-1775793638439",
+    "credits": 51.0,
+    "estimated_minutes": 73.0,
+    "submitted_at": "2026-04-10T04:00:38.917548+00:00",
+    "status": "downloaded",
+    "adapted_records": 3317,
+    "filled_narratives": 3317
+  }
+}

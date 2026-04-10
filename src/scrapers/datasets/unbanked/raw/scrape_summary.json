@@ -1,0 +1,37 @@
+{
+  "archetype": "unbanked",
+  "total_records": 319,
+  "source_files": {
+    "seed_narratives_web.jsonl": 280,
+    "seed_narratives_cfpb.jsonl": 18,
+    "seed_narratives_bbb.jsonl": 21
+  },
+  "source_distribution": {
+    "reddit_archive": 280,
+    "cfpb": 18,
+    "bbb_scamtracker": 21
+  },
+  "language_distribution": {
+    "en": 272,
+    "yo": 5,
+    "vi": 40,
+    "es": 3,
+    "hi": 2
+  },
+  "fraud_vector_distribution": {
+    "prepaid": 24,
+    "predatory": 36,
+    "unknown": 226,
+    "kiosk": 17,
+    "advance fee": 2,
+    "estafa": 1,
+    "bill pay": 2,
+    "prepaid card": 7,
+    "payday loan": 3,
+    "payday": 1
+  },
+  "merged_at": "2026-04-09T21:08:04.968580+00:00",
+  "output_file": "datasets\\unbanked\\raw\\seed_narratives.jsonl",
+  "ready_for_adaptive_data": true,
+  "ready_for_tabddpm": true
+}

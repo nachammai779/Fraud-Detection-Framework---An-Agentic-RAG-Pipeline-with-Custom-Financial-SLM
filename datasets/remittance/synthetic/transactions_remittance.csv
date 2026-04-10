@@ -1,0 +1,501 @@
+data_uuid,id,archetype,source,narrative_text,detected_language_hints,fraud_vector_hint,record_timestamp,transaction_amount_usd,fee_amount_usd,sender_age,hour_of_day,day_of_week,day_of_week_name,days_since_last_txn,account_age_days,txn_count_30d,fraud_vector,language,instrument,is_fraud
+b3648dab-dbbb-4a6a-9f16-c3847ee2571b,synth_c7c44277c7bf,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-10-21T20:48:00+00:00,1139.26,66.73,39,20,3,Thursday,5,1,3,wire transfer,en,Western Union,0
+174ed052-f181-4b37-a2c4-206cccd0e7de,synth_28b8b442f193,remittance,tabddpm_synthetic,,['es'],fraude,2024-09-09T00:21:00+00:00,3539.18,271.85,27,0,6,Sunday,90,2000,28,fraude,es,Remitly,0
+53a6b45f-8d85-4442-80d7-d177113826c7,synth_4f42bb32fe35,remittance,tabddpm_synthetic,,['vi'],emergency,2024-06-20T00:50:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,emergency,vi,Hawala,1
+2decb208-9c7b-47c5-8700-468c84ca02e3,synth_f22704e977e3,remittance,tabddpm_synthetic,,['ht'],fraude,2024-01-07T21:33:00+00:00,1138.35,51.96,45,21,2,Wednesday,8,778,7,fraude,ht,Cash pickup,0
+3e94e06a-937a-4491-90f8-ba984cbe0436,synth_56737bfa6d84,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-07-20T00:16:00+00:00,10000.0,5000.0,26,0,6,Sunday,49,1,51,exchange rate,en,Cash pickup,1
+9db9761d-8996-4e01-8bdc-05166d809865,synth_712370131905,remittance,tabddpm_synthetic,,['vi'],emergency,2024-09-23T00:22:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,emergency,vi,Remitly,0
+c6f10882-211e-4e88-80d2-eac5430cb2dc,synth_0aee6b13d6df,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-08-31T15:35:00+00:00,535.32,27.61,41,15,5,Saturday,14,1209,7,wire transfer,en,Wire transfer (bank),0
+f206435a-aa07-4357-9ecc-913f22c3dc01,synth_ebb6a7be82ba,remittance,tabddpm_synthetic,,['en'],interception,2024-05-06T16:13:00+00:00,50.0,20.82,27,16,4,Friday,5,1008,2,interception,en,Xoom,0
+3af5be4b-0775-4df2-af9f-b85a8dd0dd87,synth_c660facb99e8,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-03-23T00:52:00+00:00,10000.0,1882.59,25,0,6,Sunday,90,2000,100,wire transfer,en,Xoom,0
+5d54f29d-c82e-4fb5-9be2-67d12f414adc,synth_44b071a1795c,remittance,tabddpm_synthetic,,['en'],fake family,2024-08-19T19:52:00+00:00,398.2,15.22,39,19,0,Monday,8,747,9,fake family,en,MoneyGram,0
+4e411f56-997d-4160-8554-634e8507fea0,synth_0aa41919ee15,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-04-17T00:10:00+00:00,2927.82,131.79,29,0,6,Sunday,21,1,31,wire transfer,en,Remitly,1
+a82402ff-c37a-47a3-afc4-55d826f2cd40,synth_d7cd96cea17c,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-01-18T18:41:00+00:00,401.43,16.94,30,18,6,Sunday,3,782,10,exchange rate,en,MoneyGram,0
+d032ced6-abf0-4c4f-b3cd-48e739838d6a,synth_4df84af6620b,remittance,tabddpm_synthetic,,['en'],fraude,2024-05-10T22:43:00+00:00,674.09,29.91,57,22,6,Sunday,5,1281,8,fraude,en,Xoom,0
+1e00f8f2-9f02-4552-adc0-2b4949ff1dc4,synth_3870a2c8162a,remittance,tabddpm_synthetic,,['hi'],fraude,2024-12-11T00:07:00+00:00,1284.68,62.1,48,0,5,Saturday,7,19,25,fraude,hi,Xoom,1
+49919924-ad24-4c81-bad1-cc5d13c452b4,synth_120cfb4df9f6,remittance,tabddpm_synthetic,,['yo'],emergency,2024-07-05T22:50:00+00:00,351.98,12.51,61,22,1,Tuesday,0,337,15,emergency,yo,Remitly,0
+d4f0b46f-38e7-47b4-87a2-cb980f4f8cb9,synth_ee4f19c56bf6,remittance,tabddpm_synthetic,,['en'],emergency,2024-12-12T00:01:00+00:00,6073.3,540.29,25,0,6,Sunday,90,2000,44,emergency,en,Hawala,0
+ff621d42-5b71-400c-b2f7-4ad971bc145f,synth_8bfd82d7481a,remittance,tabddpm_synthetic,,['en'],Western Union,2024-03-31T18:19:00+00:00,633.19,41.62,61,18,2,Wednesday,3,1495,7,Western Union,en,Hawala,0
+aaa55c0e-8070-4087-b2f8-5599b233a3b8,synth_4db049ff38fb,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-09-08T00:05:00+00:00,10000.0,5000.0,25,0,6,Sunday,79,1,44,wire transfer,en,Hawala,1
+424d655f-a372-4f2b-8277-ff85b8f2fffa,synth_876a242d98a7,remittance,tabddpm_synthetic,,['es'],emergency,2024-01-30T06:55:00+00:00,10000.0,1322.36,25,6,6,Sunday,90,1,6,emergency,es,Cash pickup,0
+739d057f-1be4-47a8-9a5a-b9ec7e5b4cb6,synth_a6509b068dd3,remittance,tabddpm_synthetic,,['es'],fake family,2024-01-13T13:07:00+00:00,10000.0,867.96,25,13,6,Sunday,6,117,3,fake family,es,Xoom,0
+33beeadb-7b2e-4209-867f-a17f831a31b4,synth_d4b3f3b8c1e4,remittance,tabddpm_synthetic,,['en'],Western Union,2024-01-20T00:10:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,Western Union,en,Western Union,0
+d447daec-1ef7-4f95-b7c6-670f5e006120,synth_d30461ee9e3d,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-06-12T00:32:00+00:00,1804.76,100.81,28,0,5,Saturday,13,1,35,wire transfer,en,Hawala,1
+cd7d1dbc-6019-41c5-ba80-35e9d96a1557,synth_e4bc2ab65534,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-12-02T00:11:00+00:00,10000.0,5000.0,25,0,6,Sunday,36,1,0,wire transfer,en,Cash pickup,0
+674f787e-fe24-4738-8038-c7a5a95ff97b,synth_6c652b2e04a3,remittance,tabddpm_synthetic,,['ht'],exchange rate,2024-12-28T00:48:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,exchange rate,ht,Cash pickup,0
+6ddc3a50-3a84-4838-ac1f-83de85d04aaa,synth_a05a62fb2bad,remittance,tabddpm_synthetic,,['en'],unknown,2024-07-22T00:43:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,unknown,en,Western Union,1
+ea74fc11-6d2e-453e-b8aa-b17e4257b4c2,synth_b13d729676ab,remittance,tabddpm_synthetic,,['en'],fake family,2024-10-06T00:13:00+00:00,10000.0,5000.0,25,0,6,Sunday,60,1,13,fake family,en,Cash pickup,1
+3e470965-5198-4475-81f3-65ff500c5985,synth_10875c790f0b,remittance,tabddpm_synthetic,,['en'],emergency,2024-10-27T23:21:00+00:00,603.2,22.16,47,23,3,Thursday,0,1126,3,emergency,en,Western Union,0
+e3297566-0935-4a99-a1b3-709792fa491c,synth_9e93848a57db,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-01-28T00:30:00+00:00,5151.92,420.07,25,0,6,Sunday,90,2000,36,exchange rate,en,Xoom,0
+8b496ce0-480b-4d2b-b350-189baa7d64a0,synth_9ba898c2820a,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-12-22T00:36:00+00:00,10000.0,5000.0,25,0,6,Sunday,37,1,0,exchange rate,en,Wire transfer (bank),0
+45357494-c56d-4c4a-a667-3f93c9f09b13,synth_c25135ea7fb8,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-03-22T17:08:00+00:00,398.21,17.57,46,17,5,Saturday,0,848,7,wire transfer,en,MoneyGram,0
+73cf55e1-8373-49c7-ab4a-f9dd8aceaa54,synth_31edaed445e1,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-07-30T14:18:00+00:00,202.22,20.65,35,14,3,Thursday,4,969,9,wire transfer,en,Remitly,0
+2798aff5-d112-4687-951b-7bf1750a71a0,synth_22011db6b2ba,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-12-03T00:08:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,exchange rate,en,MoneyGram,0
+5fe18550-4753-485e-b6bb-759a2ff6d669,synth_ede222f8dff4,remittance,tabddpm_synthetic,,['en'],fraude,2024-08-29T22:45:00+00:00,1367.54,44.64,25,22,2,Wednesday,16,440,12,fraude,en,Remitly,0
+b09e87bd-b286-46c4-9903-c1576f00dd25,synth_870fd7bd0a48,remittance,tabddpm_synthetic,,['en'],fake family,2024-04-05T17:29:00+00:00,428.23,24.0,27,17,2,Wednesday,5,1342,2,fake family,en,Hawala,0
+93fbdff6-8e29-43f0-8281-3fb51f1ae3d2,synth_eb3db9b83ee0,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-10-08T17:13:00+00:00,1732.75,44.44,51,17,3,Thursday,4,836,12,wire transfer,en,Western Union,0
+10e4813b-3896-45e8-b2e6-ae303a5293b8,synth_7ad13c2f5bb0,remittance,tabddpm_synthetic,,['vi'],bonus,2024-03-16T20:54:00+00:00,1080.49,35.63,37,20,4,Friday,2,488,12,bonus,vi,Wire transfer (bank),0
+3a53bdee-befe-4608-b698-e498a0222cc4,synth_ea363219af79,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-08-26T17:44:00+00:00,355.18,5.77,41,17,4,Friday,10,1760,2,exchange rate,en,Cash pickup,0
+c07bf7bb-4df7-409d-9603-96c993a9c2e7,synth_7519f3a8e50f,remittance,tabddpm_synthetic,,['en'],unknown,2024-12-27T15:13:00+00:00,124.24,15.94,39,15,0,Monday,5,193,8,unknown,en,Western Union,0
+0954ed3f-84aa-4d6e-8eb3-69c756d5cc2b,synth_2f9873270822,remittance,tabddpm_synthetic,,['en'],emergency,2024-09-12T14:20:00+00:00,692.06,26.78,25,14,4,Friday,2,1347,8,emergency,en,Western Union,0
+062f3466-58f9-4aad-824c-914aca3c0cae,synth_e3e4d04494bf,remittance,tabddpm_synthetic,,['en'],emergency,2024-03-25T15:47:00+00:00,374.01,29.12,46,15,5,Saturday,2,832,10,emergency,en,Xoom,0
+f428f185-1eef-419a-a842-59453c9f0697,synth_9b794bc688b6,remittance,tabddpm_synthetic,,['en'],MoneyGram,2024-08-13T19:54:00+00:00,611.26,41.77,31,19,5,Saturday,0,458,12,MoneyGram,en,Cash pickup,0
+fab4779c-4ae1-4680-bb47-6f7e2ec6dcdb,synth_9d3722345f33,remittance,tabddpm_synthetic,,['yo'],exchange rate,2024-05-21T16:49:00+00:00,389.33,16.83,49,16,5,Saturday,2,1011,14,exchange rate,yo,MoneyGram,0
+4b1890c3-a331-4964-8cd0-63fe24aef1fd,synth_56568722aa74,remittance,tabddpm_synthetic,,['en'],unknown,2024-08-23T18:14:00+00:00,935.86,23.04,65,18,1,Tuesday,0,643,9,unknown,en,Xoom,0
+7e0f28ca-cd47-439b-8914-ce319ec3d5af,synth_d2fc138c73c6,remittance,tabddpm_synthetic,,['en'],fake family,2024-05-03T00:21:00+00:00,1416.09,55.63,29,0,1,Tuesday,5,6,33,fake family,en,Xoom,1
+842c8c48-e2d6-4e44-9eaf-dfa84085c799,synth_0b768f4e04ee,remittance,tabddpm_synthetic,,['es'],wire transfer,2024-08-29T19:28:00+00:00,437.07,31.66,52,19,0,Monday,3,518,8,wire transfer,es,Western Union,0
+d0c23c19-f90f-4c7f-9ae6-d589a2a52e4c,synth_675c153518c4,remittance,tabddpm_synthetic,,['en'],emergency,2024-12-07T00:39:00+00:00,4607.26,391.3,25,0,6,Sunday,90,2000,36,emergency,en,Hawala,0
+8980f0e4-0008-4dcc-a6f0-9d79a3d278d2,synth_6ea9f1d673ca,remittance,tabddpm_synthetic,,['en'],MoneyGram,2024-02-26T19:17:00+00:00,461.6,12.08,45,19,5,Saturday,3,1308,6,MoneyGram,en,Wire transfer (bank),0
+4d6cc5ba-89ff-4448-a962-a75e0b602205,synth_494ed46c51b5,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-04-02T00:08:00+00:00,10000.0,5000.0,25,0,6,Sunday,85,1,62,wire transfer,en,Western Union,1
+b1d43671-945d-488e-b91c-8c00b204f654,synth_6b71fa206cd2,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-12-18T00:31:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,wire transfer,en,MoneyGram,1
+e2158ebd-503c-448e-a971-d69ffdf1f4a9,synth_882d2e9e1b98,remittance,tabddpm_synthetic,,['en'],estafa,2024-06-18T18:42:00+00:00,71.95,0.0,42,18,3,Thursday,7,205,7,estafa,en,Hawala,0
+fb657d97-9bd5-4156-b54e-77d4abbea2ac,synth_50afc469597c,remittance,tabddpm_synthetic,,['en'],unknown,2024-02-13T00:12:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,unknown,en,Remitly,0
+49ed8de7-62b2-4856-b516-93a585c4d15a,synth_52caf6802589,remittance,tabddpm_synthetic,,['yo'],emergency,2024-01-09T00:15:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,100,emergency,yo,Western Union,1
+f9e7044b-8c38-4ad5-a8d6-9fcc0120491b,synth_e78190cc157f,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-08-21T21:25:00+00:00,2704.5,94.85,38,21,1,Tuesday,0,582,13,exchange rate,en,Hawala,0
+bf72b53c-6614-4a7b-816f-fa6db5be655b,synth_16680f89316e,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-08-31T00:32:00+00:00,3202.66,218.46,25,0,6,Sunday,28,1,60,exchange rate,en,MoneyGram,1
+957ce5e6-c94d-4ded-b753-73f9e293662e,synth_6cbb250f20ff,remittance,tabddpm_synthetic,,['en'],interception,2024-08-14T19:08:00+00:00,337.47,31.03,46,19,3,Thursday,10,1258,3,interception,en,Hawala,0
+3a0fde23-5146-4e34-97e3-35ed87d4cde8,synth_4c785471ae16,remittance,tabddpm_synthetic,,['en'],interception,2024-02-06T20:19:00+00:00,516.39,26.4,56,20,4,Friday,0,1592,8,interception,en,Xoom,0
+ed69bf87-bf36-48c9-a905-adf3045f2cdc,synth_89e09dc6db59,remittance,tabddpm_synthetic,,['en'],fraude,2024-09-19T20:24:00+00:00,50.0,2.77,26,20,3,Thursday,4,1217,8,fraude,en,Wire transfer (bank),0
+7bc665bb-b754-4373-a3f9-a0fda7724548,synth_ecc43259de01,remittance,tabddpm_synthetic,,['en'],MoneyGram,2024-02-04T23:06:00+00:00,517.23,26.37,34,23,5,Saturday,6,1232,15,MoneyGram,en,Cash pickup,0
+4233dfe2-5172-4152-8fa4-c5f31da309ef,synth_68a5256c25e7,remittance,tabddpm_synthetic,,['en'],estafa,2024-07-16T00:02:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,estafa,en,MoneyGram,0
+6c2f3496-8b2c-471d-9941-48310cf3ce47,synth_991c06a9bc03,remittance,tabddpm_synthetic,,['vi'],emergency,2024-11-26T00:31:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,emergency,vi,Western Union,0
+c25a225e-06e4-4d84-97c8-1e6e2fc6c9da,synth_a1f73fdec267,remittance,tabddpm_synthetic,,['en'],fraude,2024-07-04T09:21:00+00:00,10000.0,1569.27,46,9,6,Sunday,7,1,3,fraude,en,Remitly,0
+4e08abaa-790a-417c-be92-dde6d643bbdd,synth_4fa86ac0546d,remittance,tabddpm_synthetic,,['en'],bonus,2024-06-04T00:19:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,bonus,en,Cash pickup,0
+f0951f80-fce4-49a3-8547-1b26d81fb6b4,synth_2f9545d35078,remittance,tabddpm_synthetic,,['en'],emergency,2024-04-23T00:32:00+00:00,10000.0,5000.0,25,0,6,Sunday,69,1,0,emergency,en,Hawala,0
+fd1b6e7f-a704-47da-89a6-a8e82d293eba,synth_031170037909,remittance,tabddpm_synthetic,,['en'],estafa,2024-02-17T00:55:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,estafa,en,Xoom,0
+f89d1426-8f85-4bb7-a51c-d98d27d28f9d,synth_ddebb04d75f1,remittance,tabddpm_synthetic,,['en'],fake family,2024-02-09T18:15:00+00:00,8325.89,312.66,45,18,5,Saturday,6,1,8,fake family,en,Remitly,0
+054f4c10-39e3-4c4c-827a-da80021c396c,synth_4dadecce780f,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-04-24T20:47:00+00:00,206.35,4.61,25,20,3,Thursday,11,1550,10,wire transfer,en,Hawala,0
+76361b74-5e83-4a06-b241-92100907100b,synth_9d2b85023b62,remittance,tabddpm_synthetic,,['vi'],interception,2024-10-17T00:22:00+00:00,10000.0,5000.0,25,0,6,Sunday,46,1,0,interception,vi,MoneyGram,0
+a9e86187-099d-48b1-a166-d0cb6670e03e,synth_053b0a3e453d,remittance,tabddpm_synthetic,,['en'],fraude,2024-10-08T19:23:00+00:00,824.16,58.94,59,19,4,Friday,2,65,9,fraude,en,Xoom,0
+c76fa736-892e-45ae-9cdb-58c904590f0e,synth_2681c86e7ee0,remittance,tabddpm_synthetic,,['yo'],exchange rate,2024-06-10T17:01:00+00:00,1449.38,86.02,55,17,2,Wednesday,2,43,6,exchange rate,yo,Cash pickup,0
+3d42461e-c09c-42a9-a217-20c850a30a5f,synth_55e9412f0541,remittance,tabddpm_synthetic,,['en'],Western Union,2024-09-15T20:30:00+00:00,864.86,29.73,33,20,6,Sunday,4,1875,10,Western Union,en,MoneyGram,0
+40ebbec9-ac79-489f-bdda-5af316237ff8,synth_3f1bd110484b,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-09-30T00:12:00+00:00,3524.16,260.56,41,0,6,Sunday,90,2000,21,wire transfer,en,Hawala,0
+b2098c6f-f390-4f04-bd7c-47b487bf0b42,synth_0007e2c963b9,remittance,tabddpm_synthetic,,['en'],bonus,2024-01-09T00:59:00+00:00,824.45,41.86,55,0,3,Thursday,4,1,23,bonus,en,Hawala,1
+9f47b423-d2bc-4265-ab77-3a8aec1c1131,synth_46492a27b83e,remittance,tabddpm_synthetic,,['en'],fraude,2024-12-04T17:29:00+00:00,999.02,94.38,35,17,3,Thursday,1,384,1,fraude,en,Western Union,0
+02248e54-8d8e-4a9b-b8d9-5399c620869a,synth_840f43b0ba6d,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-07-31T21:19:00+00:00,666.16,26.78,52,21,5,Saturday,2,1918,9,wire transfer,en,Xoom,0
+7232c54c-5269-408d-910d-b00667748ef5,synth_33a15e7c7a5a,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-02-18T07:58:00+00:00,10000.0,2279.75,49,7,6,Sunday,15,1,0,exchange rate,en,Xoom,0
+103a60db-5f09-4995-9798-889f3d9cd993,synth_a788a8bca7a4,remittance,tabddpm_synthetic,,['en'],estafa,2024-09-25T00:03:00+00:00,10000.0,5000.0,25,0,6,Sunday,31,1,0,estafa,en,Wire transfer (bank),0
+1926aff2-fc96-4045-8641-1e362c58e1f2,synth_0f605187e87f,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-02-08T18:27:00+00:00,366.31,12.76,54,18,4,Friday,3,1,8,wire transfer,en,Wire transfer (bank),0
+b98c4f63-c9ea-487e-bed5-3eb8b104efa2,synth_a2c3019c1573,remittance,tabddpm_synthetic,,['en'],emergency,2024-06-16T00:38:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,emergency,en,Wire transfer (bank),0
+57bfac22-68fa-4d60-886e-0ce933a1bd6b,synth_a59e6159c22b,remittance,tabddpm_synthetic,,['en'],fake family,2024-08-27T00:28:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,fake family,en,Remitly,0
+83ae1319-d825-42cd-aaa7-15b96d29fd94,synth_4db6366c5d2d,remittance,tabddpm_synthetic,,['yo'],exchange rate,2024-07-15T19:40:00+00:00,1205.7,78.87,43,19,5,Saturday,0,1664,6,exchange rate,yo,Cash pickup,0
+f9d726eb-dc1d-4641-a361-8fe50f1eedd5,synth_e8bb98b8addc,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-10-03T00:45:00+00:00,638.95,71.89,40,0,5,Saturday,12,1,34,exchange rate,en,Hawala,1
+a3bff6f8-a783-48ad-9681-4e1e1f07d11c,synth_ee880c56582a,remittance,tabddpm_synthetic,,['en'],fake family,2024-10-18T20:45:00+00:00,224.08,0.0,41,20,3,Thursday,3,1424,10,fake family,en,Xoom,0
+b16adeaf-2677-40f9-acbc-58de231735e4,synth_357e0afa352b,remittance,tabddpm_synthetic,,['vi'],exchange rate,2024-11-19T14:13:00+00:00,741.06,34.37,42,14,3,Thursday,1,975,13,exchange rate,vi,Wire transfer (bank),0
+01544819-290d-41be-84c5-b26a4451258c,synth_c655874a9289,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-09-13T17:46:00+00:00,50.0,0.0,49,17,5,Saturday,3,1473,0,exchange rate,en,Wire transfer (bank),0
+552802a3-5532-41fe-b908-decef071278e,synth_1589f96c4bba,remittance,tabddpm_synthetic,,['en'],interception,2024-11-14T19:27:00+00:00,529.18,45.27,47,19,6,Sunday,81,1928,11,interception,en,Xoom,0
+682ef7b4-36ff-4a5e-8419-5db109b0e200,synth_ee7738292fdc,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-01-05T19:57:00+00:00,766.5,65.49,47,19,1,Tuesday,6,415,10,exchange rate,en,MoneyGram,0
+5f0c396e-1d16-496f-830c-567661b67d67,synth_6d00c0558020,remittance,tabddpm_synthetic,,['es'],exchange rate,2024-08-29T00:53:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,exchange rate,es,Xoom,0
+bf1b0d59-e8ee-436c-b335-db46fb165844,synth_e81cbb097b6b,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-07-18T22:32:00+00:00,494.03,34.47,65,22,4,Friday,0,1289,10,exchange rate,en,Western Union,0
+2db44bff-0873-4d71-839c-d9d227d1371a,synth_f79ed8c7275d,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-06-29T20:26:00+00:00,3152.12,127.53,50,20,4,Friday,3,38,6,exchange rate,en,Cash pickup,0
+46dd645d-5d22-4807-af88-8dbd85168414,synth_5a593c5019b4,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-10-21T15:01:00+00:00,1658.04,68.78,52,15,4,Friday,5,1198,5,exchange rate,en,Wire transfer (bank),0
+b32e1374-4f69-4078-94ac-c98d363d2a0c,synth_548e5d566fec,remittance,tabddpm_synthetic,,['en'],interception,2024-08-03T00:22:00+00:00,3202.79,251.29,25,0,6,Sunday,90,2000,25,interception,en,Xoom,0
+1807acc3-4dc5-446f-b004-bad90931426e,synth_bf073e045806,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-09-10T19:29:00+00:00,106.39,2.34,33,19,3,Thursday,9,2000,4,wire transfer,en,Western Union,0
+ab64c7b9-b9df-4d5f-93d2-1d5f7aa0aa80,synth_5715e0433bd2,remittance,tabddpm_synthetic,,['yo'],exchange rate,2024-06-06T14:11:00+00:00,300.27,5.28,38,14,5,Saturday,0,1166,9,exchange rate,yo,Remitly,0
+54176f81-1079-41c2-bef9-246d3f3e269d,synth_5c3d9823d59a,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-02-10T21:53:00+00:00,654.88,53.0,51,21,4,Friday,2,1,11,wire transfer,en,Remitly,0
+d1b0e9f6-35d4-4cca-a465-98f620e1eddd,synth_c5e6858ec357,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-05-05T16:17:00+00:00,905.03,43.29,60,16,0,Monday,0,1012,4,exchange rate,en,Hawala,0
+bc19c333-bcd5-4f3b-a17d-7bd225c57bd8,synth_b7e91df3a643,remittance,tabddpm_synthetic,,['en'],unknown,2024-06-03T19:05:00+00:00,487.05,22.75,25,19,4,Friday,6,1380,8,unknown,en,Wire transfer (bank),0
+94b306e1-3568-4ff9-a246-7c087127cde6,synth_873c27aed8e7,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-11-27T00:06:00+00:00,8858.2,772.4,25,0,6,Sunday,90,2000,60,wire transfer,en,MoneyGram,0
+1af9b1ee-e5d5-4e19-bfa0-d7711327d1da,synth_dd1c45a96c93,remittance,tabddpm_synthetic,,['en'],interception,2024-02-03T00:27:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,interception,en,Wire transfer (bank),0
+3228fb9d-1850-4257-93eb-4f6eeb9fd755,synth_f865f76eb350,remittance,tabddpm_synthetic,,['en'],MoneyGram,2024-06-16T14:32:00+00:00,1507.12,124.56,28,14,4,Friday,1,2000,9,MoneyGram,en,Wire transfer (bank),0
+e888f212-c9ce-40f8-b767-1a77260f0c33,synth_158003c988f4,remittance,tabddpm_synthetic,,['es'],emergency,2024-01-20T06:29:00+00:00,496.09,52.05,33,6,6,Sunday,90,2000,12,emergency,es,Hawala,0
+e73d7df5-cd4d-418c-8561-c5ced11ba725,synth_4890b9f15381,remittance,tabddpm_synthetic,,['en'],unknown,2024-12-06T00:30:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,unknown,en,Wire transfer (bank),1
+4d264cb0-b630-454e-b668-8cce168da18f,synth_4c4014afa457,remittance,tabddpm_synthetic,,['en'],emergency,2024-08-13T09:53:00+00:00,659.99,69.27,34,9,6,Sunday,90,2000,11,emergency,en,MoneyGram,0
+04db3c8b-cc73-4fdf-8687-86bee6db6eb4,synth_aa735f484987,remittance,tabddpm_synthetic,,['en'],bonus,2024-07-26T16:26:00+00:00,722.14,35.73,56,16,0,Monday,0,315,9,bonus,en,Western Union,0
+ec7ae4cf-8797-4b37-aa5a-fb0bca8a9fed,synth_113a1e80ac26,remittance,tabddpm_synthetic,,['en'],emergency,2024-01-01T00:32:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,emergency,en,Cash pickup,1
+4403bd28-ebe2-4691-962f-bed14d092988,synth_c4a76ef14b39,remittance,tabddpm_synthetic,,['es'],exchange rate,2024-02-07T00:50:00+00:00,10000.0,990.6,25,0,6,Sunday,90,2000,62,exchange rate,es,Hawala,0
+4880844a-b2d5-4f49-b379-ca10791e19c1,synth_d46943151ce7,remittance,tabddpm_synthetic,,['en'],fraude,2024-07-23T17:48:00+00:00,760.15,34.36,25,17,2,Wednesday,0,1662,7,fraude,en,Wire transfer (bank),0
+be9d5c26-d3a6-4dd8-bad8-faa66841eac4,synth_409e129a5955,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-07-30T13:40:00+00:00,576.76,27.4,33,13,5,Saturday,2,1413,5,wire transfer,en,Remitly,0
+e52f2eaa-df8a-455b-92f9-d7c728331f69,synth_af7cdbbe9ab5,remittance,tabddpm_synthetic,,['es'],exchange rate,2024-10-25T20:11:00+00:00,289.95,18.84,50,20,2,Wednesday,0,664,6,exchange rate,es,Cash pickup,0
+7032d279-52aa-49cf-a7c7-78629e204def,synth_17f7891d9091,remittance,tabddpm_synthetic,,['en'],emergency,2024-12-15T18:10:00+00:00,1492.69,118.16,55,18,2,Wednesday,2,1,12,emergency,en,MoneyGram,0
+1f3f8649-a9e2-4871-ba6e-0215c2dc41f7,synth_e131e2c6c056,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-05-28T17:02:00+00:00,600.26,24.84,42,17,4,Friday,21,1221,13,wire transfer,en,Remitly,0
+31f4740e-3a64-43e0-9fcd-eb66e42141fd,synth_551efbd007c3,remittance,tabddpm_synthetic,,['en'],MoneyGram,2024-08-29T00:56:00+00:00,10000.0,1386.07,25,0,6,Sunday,90,2000,81,MoneyGram,en,Cash pickup,0
+ec872c3c-f87e-4729-8273-2c16837f6e5b,synth_bb977f5740ae,remittance,tabddpm_synthetic,,['en'],unknown,2024-02-17T14:44:00+00:00,110.66,20.89,29,14,2,Wednesday,8,694,11,unknown,en,Xoom,0
+d018acf9-c244-4969-a39b-5552d99b3d5c,synth_36cac82999b2,remittance,tabddpm_synthetic,,['en'],emergency,2024-11-02T18:15:00+00:00,549.11,35.12,60,18,4,Friday,0,885,7,emergency,en,Remitly,0
+0e23a9d9-ed19-4771-a6cf-c052fabc952a,synth_ff84c647ad3d,remittance,tabddpm_synthetic,,['yo'],emergency,2024-05-06T00:46:00+00:00,10000.0,5000.0,25,0,6,Sunday,84,1,0,emergency,yo,Remitly,0
+6a66a978-9349-418d-a396-29dd645693d3,synth_9c75374dce5a,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-04-21T00:18:00+00:00,10000.0,1323.62,25,0,6,Sunday,90,2000,90,wire transfer,en,Remitly,0
+409e4d93-7598-4bf7-a5b7-aced37aba863,synth_7ba7c400a828,remittance,tabddpm_synthetic,,['en'],unknown,2024-05-27T20:06:00+00:00,7150.0,430.04,48,20,4,Friday,2,972,3,unknown,en,Western Union,0
+94a2f9cb-60a9-469e-b833-6d2b658e75da,synth_3e8d8c6de8d5,remittance,tabddpm_synthetic,,['en'],fake family,2024-01-10T00:23:00+00:00,10000.0,4025.71,25,0,6,Sunday,27,1,0,fake family,en,Wire transfer (bank),0
+da351305-c6e7-4ee8-85ec-8ab850683975,synth_3f15e8966fa9,remittance,tabddpm_synthetic,,['en'],emergency,2024-01-08T21:21:00+00:00,970.06,47.69,37,21,4,Friday,0,1087,6,emergency,en,Wire transfer (bank),0
+9edcc7f9-5285-42cf-b64d-2caabcb7ab9d,synth_ad8b21a3c2e5,remittance,tabddpm_synthetic,,['hi'],wire transfer,2024-05-27T00:26:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,wire transfer,hi,MoneyGram,0
+7a94effe-7124-4b63-8ebb-7b94924e7836,synth_2b07239a8781,remittance,tabddpm_synthetic,,['yo'],unknown,2024-05-11T00:37:00+00:00,10000.0,5000.0,25,0,6,Sunday,88,1,0,unknown,yo,Xoom,0
+68703e22-3b0e-46f2-932c-d8fe56b48c56,synth_34495031400a,remittance,tabddpm_synthetic,,['en'],bonus,2024-01-30T21:08:00+00:00,249.05,5.54,45,21,4,Friday,20,1,12,bonus,en,Cash pickup,0
+7c60b7f5-9950-4620-886e-5b468f190500,synth_8988ecf9ac57,remittance,tabddpm_synthetic,,['yo'],wire transfer,2024-01-11T20:01:00+00:00,467.68,40.96,34,20,3,Thursday,3,1302,8,wire transfer,yo,Western Union,0
+62f50829-32cc-453c-b8ca-8aa08643388b,synth_44825efe0eb3,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-12-16T18:46:00+00:00,331.76,16.75,29,18,5,Saturday,11,505,7,wire transfer,en,Western Union,0
+06dc947d-94a7-4304-b18e-712e866310c6,synth_0dd06e394f27,remittance,tabddpm_synthetic,,['yo'],emergency,2024-11-14T20:24:00+00:00,452.18,16.97,38,20,4,Friday,16,862,7,emergency,yo,MoneyGram,0
+48f79e77-df90-44e1-9e1e-3ca94ebdb86f,synth_3d7585a0fc8a,remittance,tabddpm_synthetic,,['en'],Western Union,2024-10-29T14:40:00+00:00,1980.75,90.11,37,14,6,Sunday,0,1482,3,Western Union,en,Western Union,0
+adb24fd9-251e-4fc5-bf99-9d26874bba54,synth_82527198beeb,remittance,tabddpm_synthetic,,['en'],fraude,2024-11-08T17:36:00+00:00,522.52,22.28,44,17,0,Monday,0,731,7,fraude,en,Western Union,0
+3bfe245b-1a36-4741-8e9f-9d702d54633b,synth_74b74175b2c2,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-06-26T04:18:00+00:00,10000.0,3909.08,65,4,6,Sunday,4,1,0,wire transfer,en,Remitly,0
+b64a5956-52bd-43b6-8a63-020369564bb9,synth_462b47f7e945,remittance,tabddpm_synthetic,,['yo'],MoneyGram,2024-03-29T19:50:00+00:00,7423.13,303.55,37,19,6,Sunday,5,752,6,MoneyGram,yo,Xoom,0
+4376c7a8-093d-4e2d-88b6-982a12fac678,synth_5200e85c7b48,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-05-03T21:12:00+00:00,380.57,21.82,40,21,5,Saturday,9,1865,11,wire transfer,en,MoneyGram,0
+72020f78-abac-4a2e-8b8d-54ab047a4516,synth_ecad650be46e,remittance,tabddpm_synthetic,,['en'],emergency,2024-10-09T00:52:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,96,emergency,en,Xoom,0
+ae832cfd-3c3e-468d-883e-d94742b3a990,synth_9258b72920cb,remittance,tabddpm_synthetic,,['en'],emergency,2024-10-09T16:39:00+00:00,271.61,9.87,60,16,3,Thursday,0,1817,5,emergency,en,Hawala,0
+cee8e8f2-014b-43dc-a4f3-8f174047a91f,synth_6e81a86bb379,remittance,tabddpm_synthetic,,['vi'],estafa,2024-02-07T18:37:00+00:00,499.81,58.25,43,18,2,Wednesday,5,778,8,estafa,vi,Cash pickup,0
+c37d0893-9831-481e-b2b8-5153b96aacc2,synth_e88c6679c76f,remittance,tabddpm_synthetic,,['en'],emergency,2024-01-16T21:33:00+00:00,955.76,32.84,52,21,5,Saturday,0,1191,7,emergency,en,Wire transfer (bank),0
+a428ca8e-cdce-4e7d-8758-b5a91f56652c,synth_7a6c80f88af6,remittance,tabddpm_synthetic,,['en'],emergency,2024-10-29T20:33:00+00:00,850.73,72.34,44,20,3,Thursday,5,556,8,emergency,en,Remitly,0
+eee6e0c8-7290-4304-8371-6e75d5365106,synth_625cc2ab1e0c,remittance,tabddpm_synthetic,,['es'],fraude,2024-11-27T11:57:00+00:00,227.08,19.79,65,11,2,Wednesday,15,274,6,fraude,es,Western Union,0
+c06281f7-d183-405d-944b-87947e5ab8d6,synth_78b10097750c,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-07-25T19:33:00+00:00,10000.0,570.8,49,19,2,Wednesday,5,415,6,wire transfer,en,Xoom,0
+da2d0ab1-03bd-486f-95e5-4298276961d9,synth_a61274b6817f,remittance,tabddpm_synthetic,,['en'],unknown,2024-05-02T12:32:00+00:00,1441.4,108.12,30,12,4,Friday,15,1147,13,unknown,en,Wire transfer (bank),0
+9c04207a-cfe1-44c2-895e-8362e8cdd074,synth_9ce46a009453,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-06-19T15:51:00+00:00,367.54,39.54,60,15,6,Sunday,1,314,6,wire transfer,en,Hawala,0
+c0db1744-6628-4cf8-a85a-1468421b9181,synth_8deed52225ce,remittance,tabddpm_synthetic,,['vi'],exchange rate,2024-01-10T19:55:00+00:00,50.0,0.0,54,19,1,Tuesday,5,1142,3,exchange rate,vi,Remitly,0
+ccbf0847-3143-4a1a-ab82-81f131104300,synth_1bae96c4895a,remittance,tabddpm_synthetic,,['en'],unknown,2024-05-12T00:30:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,unknown,en,MoneyGram,0
+2e862386-c7cb-4824-a09c-458302a41285,synth_37215586eb66,remittance,tabddpm_synthetic,,['hi'],bonus,2024-06-05T22:59:00+00:00,961.43,38.51,45,22,4,Friday,0,1272,8,bonus,hi,Hawala,0
+124e1a3a-8425-4179-a112-a5a554f80452,synth_29fa52063258,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-09-03T23:37:00+00:00,754.26,48.03,43,23,3,Thursday,9,1670,7,wire transfer,en,Hawala,0
+f1e59594-9f6b-4185-8bd6-4b3b02c8dd84,synth_d7b6a67ad114,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-02-03T21:21:00+00:00,96.03,4.97,37,21,2,Wednesday,0,1133,8,wire transfer,en,MoneyGram,0
+208f2c7e-c869-47bf-80a6-1908f4ded114,synth_91d2f14eff45,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-12-23T18:08:00+00:00,1661.63,101.53,65,18,6,Sunday,0,1341,3,wire transfer,en,Western Union,0
+c2518b69-bf6c-4297-8535-eba8ec1659c4,synth_170e4ad04460,remittance,tabddpm_synthetic,,['hi'],MoneyGram,2024-07-12T23:37:00+00:00,370.38,10.77,65,23,4,Friday,6,1989,6,MoneyGram,hi,Western Union,0
+a0bfdb99-9549-4807-95a2-4ea14a5a4ef5,synth_62de76b6a4c3,remittance,tabddpm_synthetic,,['en'],Western Union,2024-02-10T00:42:00+00:00,10000.0,5000.0,25,0,6,Sunday,41,1,46,Western Union,en,Xoom,1
+1b2338d1-5a53-4ae4-8303-951b45305d05,synth_b680359e7863,remittance,tabddpm_synthetic,,['es'],exchange rate,2024-09-27T23:19:00+00:00,160.42,13.64,60,23,5,Saturday,1,757,7,exchange rate,es,Xoom,0
+48a2d1f9-8286-4b64-82ae-7e73670e96a0,synth_8362ee5e13c2,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-08-21T23:01:00+00:00,579.47,49.0,38,23,0,Monday,4,412,8,wire transfer,en,Hawala,0
+263804b7-2d94-4fbe-b4ac-d79e9410f018,synth_4d492722d23e,remittance,tabddpm_synthetic,,['en'],MoneyGram,2024-02-06T18:42:00+00:00,818.62,41.99,45,18,2,Wednesday,11,1862,3,MoneyGram,en,Western Union,0
+6804fbd4-3cc7-46ec-8fe9-7605e3359794,synth_c81e77d8157f,remittance,tabddpm_synthetic,,['en'],emergency,2024-08-16T00:35:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,emergency,en,Remitly,0
+2c62b42e-b523-43cf-8f92-ad0cdefae10f,synth_7c15ca7ebbf5,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-01-09T11:42:00+00:00,267.69,14.19,27,11,4,Friday,12,1188,10,exchange rate,en,Xoom,0
+cd72b275-7c4c-42e3-be20-b6e5b9c368db,synth_0ddd69d2be73,remittance,tabddpm_synthetic,,['en'],fraude,2024-06-20T21:23:00+00:00,684.4,25.66,38,21,5,Saturday,4,1092,6,fraude,en,Cash pickup,0
+4da1bac7-52b1-40f6-8ee4-4ddc1da26f24,synth_3e44a8b49ecb,remittance,tabddpm_synthetic,,['en'],fake family,2024-03-25T00:02:00+00:00,10000.0,5000.0,25,0,6,Sunday,82,1,95,fake family,en,MoneyGram,1
+54f712a0-527b-44cb-8350-221d8fafb4d7,synth_b934d750cac4,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-10-27T12:28:00+00:00,1097.42,64.08,36,12,2,Wednesday,8,859,13,wire transfer,en,Xoom,0
+f91031d6-b50a-44da-a4d6-583da5f36047,synth_6bf34a6c52bd,remittance,tabddpm_synthetic,,['en'],unknown,2024-02-17T18:39:00+00:00,94.16,0.0,41,18,2,Wednesday,3,589,8,unknown,en,Remitly,0
+69164186-2e4e-4f19-a3ba-104c527e5f66,synth_b2ca1ee12e02,remittance,tabddpm_synthetic,,['en'],estafa,2024-05-13T00:27:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,estafa,en,Xoom,1
+14eb5e32-8ed8-48a7-96a8-484f84b3e372,synth_c053bb122a56,remittance,tabddpm_synthetic,,['en'],emergency,2024-10-31T00:31:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,emergency,en,Wire transfer (bank),0
+0649cdc0-948f-41e9-a40b-0b0659043be5,synth_efe9e4742e32,remittance,tabddpm_synthetic,,['en'],Western Union,2024-12-25T03:23:00+00:00,10000.0,3290.95,35,3,6,Sunday,12,1,0,Western Union,en,Xoom,0
+7b1143bd-9308-4116-bc2c-3fe024abf14d,synth_9c45b847bda7,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-08-31T00:40:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,wire transfer,en,Hawala,0
+d2ad0ca1-17c5-41ec-8d84-3526fcda6dab,synth_a9809d7887de,remittance,tabddpm_synthetic,,['hi'],estafa,2024-12-08T19:04:00+00:00,846.49,62.75,46,19,3,Thursday,5,794,7,estafa,hi,Xoom,0
+ea6587a9-ff31-42ec-bac6-5838d819c3c8,synth_7df353cf1020,remittance,tabddpm_synthetic,,['en'],unknown,2024-01-29T00:49:00+00:00,5785.26,444.53,25,0,6,Sunday,90,2000,34,unknown,en,Xoom,0
+4dce2406-de07-46a6-90e1-4d8cba169ae3,synth_4d19b1e05f07,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-02-02T00:20:00+00:00,9337.09,492.76,25,0,6,Sunday,90,1,69,wire transfer,en,Wire transfer (bank),1
+7ff82ef0-1d10-4fba-ad59-0c75c225effb,synth_2bab0c9bd398,remittance,tabddpm_synthetic,,['en'],emergency,2024-04-12T23:19:00+00:00,769.51,20.79,35,23,1,Tuesday,2,567,3,emergency,en,Cash pickup,0
+9622cd50-d6c3-4d35-9ca5-5f47f061d740,synth_ecbaa8003030,remittance,tabddpm_synthetic,,['vi'],unknown,2024-10-20T00:49:00+00:00,10000.0,1494.77,25,0,6,Sunday,90,2000,92,unknown,vi,Remitly,0
+f1c130cc-c390-40d4-a642-182e68865b5e,synth_5a1332b1c102,remittance,tabddpm_synthetic,,['vi'],estafa,2024-11-13T17:41:00+00:00,1033.02,54.24,33,17,5,Saturday,54,1466,9,estafa,vi,MoneyGram,0
+50178318-f062-4d20-943c-f8ea36e364f0,synth_a4ec0b617013,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-07-17T15:20:00+00:00,544.31,31.08,31,15,0,Monday,0,1085,9,wire transfer,en,Wire transfer (bank),0
+a9778ce9-5a7c-485a-81f7-373de190f26f,synth_a96624cda491,remittance,tabddpm_synthetic,,['hi'],Western Union,2024-01-27T00:04:00+00:00,5921.59,381.49,25,0,6,Sunday,28,1,53,Western Union,hi,Xoom,1
+74c62e1b-0364-49c3-b371-f75edd86c012,synth_03a480d7e378,remittance,tabddpm_synthetic,,['vi'],interception,2024-01-12T18:43:00+00:00,5316.73,276.01,55,18,6,Sunday,2,1451,0,interception,vi,Wire transfer (bank),0
+a17be0e3-0923-40b4-bfa9-658da91ff86c,synth_8036c2112aab,remittance,tabddpm_synthetic,,['en'],fraude,2024-10-22T21:59:00+00:00,395.77,30.07,37,21,1,Tuesday,2,186,5,fraude,en,MoneyGram,0
+c31f54a5-535a-442c-8105-059b1975de1a,synth_799312743736,remittance,tabddpm_synthetic,,['yo'],interception,2024-02-11T18:30:00+00:00,50.0,0.0,40,18,5,Saturday,0,1495,7,interception,yo,Hawala,0
+76af00a6-00eb-464f-b0ba-d0df7afc98ad,synth_8e336a9963aa,remittance,tabddpm_synthetic,,['en'],bonus,2024-09-28T20:54:00+00:00,1775.66,91.18,65,20,4,Friday,2,1118,5,bonus,en,Remitly,0
+f7b1d8b9-0fc8-4136-be88-8f476a3e5226,synth_e10a3aca9ac8,remittance,tabddpm_synthetic,,['en'],interception,2024-04-30T17:36:00+00:00,267.48,8.53,65,17,1,Tuesday,0,551,4,interception,en,Hawala,0
+ec3ae438-3cb8-4df7-9f54-09c5e85100c1,synth_316e96e8d0a5,remittance,tabddpm_synthetic,,['en'],fraude,2024-12-26T23:10:00+00:00,1455.18,102.45,46,23,4,Friday,0,672,4,fraude,en,Western Union,0
+b59793d4-a7d3-4e83-b6ba-8e4af8580d42,synth_270eaa3066d8,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-10-23T20:39:00+00:00,493.01,23.4,33,20,0,Monday,2,1888,10,wire transfer,en,Cash pickup,0
+b0304f0a-233e-4443-8bd2-2518a1698343,synth_540c40c14391,remittance,tabddpm_synthetic,,['es'],wire transfer,2024-01-08T00:24:00+00:00,5767.18,504.1,25,0,6,Sunday,90,2000,39,wire transfer,es,Remitly,0
+3d93b4c8-83e3-4215-97c1-a99c78a8fa72,synth_5f70dfbbcec3,remittance,tabddpm_synthetic,,['en'],Western Union,2024-06-11T00:01:00+00:00,10000.0,5000.0,25,0,6,Sunday,24,1,0,Western Union,en,Cash pickup,0
+317b407a-b681-434b-8f95-b71171020642,synth_39863e53d8bb,remittance,tabddpm_synthetic,,['en'],Western Union,2024-06-12T18:40:00+00:00,804.53,50.83,45,18,1,Tuesday,1,541,5,Western Union,en,Western Union,0
+11b4b1f3-6afe-4a9a-b9a9-56b3db684ce9,synth_fc4ac343e109,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-05-16T00:35:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,wire transfer,en,Hawala,0
+2d0eedd9-7fd5-46e6-a01f-300402c5179b,synth_6af35a93f153,remittance,tabddpm_synthetic,,['en'],estafa,2024-02-07T18:20:00+00:00,547.8,51.44,48,18,3,Thursday,5,1117,5,estafa,en,Western Union,0
+934aa44f-8ced-4ee1-96f7-5daed35957cb,synth_7450aaf09b03,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-05-22T21:02:00+00:00,633.93,43.65,62,21,5,Saturday,3,539,9,wire transfer,en,Western Union,0
+e23af30a-1046-415d-a836-01b35646e8b0,synth_21cacf4905d6,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-04-07T00:05:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,exchange rate,en,MoneyGram,0
+a149d56c-de80-44a3-bcd3-c5bcd4b60f42,synth_877a2ca5daf3,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-06-21T21:27:00+00:00,233.02,41.91,32,21,4,Friday,0,988,2,wire transfer,en,Western Union,0
+63c9f219-f945-427d-85ca-47ca4ebefdb0,synth_275e108e7d13,remittance,tabddpm_synthetic,,['en'],fraude,2024-12-04T00:02:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,40,fraude,en,Hawala,0
+74a83399-868c-44e6-8c71-692daee18b96,synth_9f587888bb5d,remittance,tabddpm_synthetic,,['en'],fake family,2024-09-04T16:24:00+00:00,1042.89,73.76,43,16,5,Saturday,0,1552,7,fake family,en,Hawala,0
+34cfdce6-9a53-4139-919e-81e2640f0ea4,synth_3b1569b431c1,remittance,tabddpm_synthetic,,['en'],fraude,2024-06-27T13:16:00+00:00,10000.0,892.65,25,13,6,Sunday,4,330,0,fraude,en,Xoom,0
+1ec40cfa-2191-4782-ba62-102f4eb378a2,synth_411facbbbbd6,remittance,tabddpm_synthetic,,['en'],interception,2024-05-04T20:26:00+00:00,1083.56,76.1,50,20,1,Tuesday,5,1525,13,interception,en,Remitly,0
+f98a26d0-b611-48d3-bb60-5b1e1c51e1cd,synth_8cd59191a89f,remittance,tabddpm_synthetic,,['es'],wire transfer,2024-06-22T17:32:00+00:00,156.16,8.92,34,17,1,Tuesday,1,1570,3,wire transfer,es,Western Union,0
+bf3e0aec-ed07-4860-941e-e19a0d580f3c,synth_2dc2e5aeadee,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-02-04T00:35:00+00:00,2899.6,255.52,25,0,6,Sunday,90,2000,24,wire transfer,en,MoneyGram,0
+739b1535-ba8d-40cb-a808-c1f34bf64547,synth_9e60a3bc0a24,remittance,tabddpm_synthetic,,['vi'],Western Union,2024-12-11T00:06:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,Western Union,vi,Wire transfer (bank),0
+a7b59724-a5a1-4182-b019-23ba08c5051c,synth_c404dff110a4,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-12-12T11:37:00+00:00,4067.72,266.68,56,11,2,Wednesday,1,518,6,wire transfer,en,Wire transfer (bank),0
+bc8ec08f-febe-4bca-bd34-4177e5a180f7,synth_39e2151b8e8f,remittance,tabddpm_synthetic,,['en'],emergency,2024-02-12T00:20:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,emergency,en,Remitly,0
+9a6738e8-d7b2-4ffa-9c7e-a297c2eeefc5,synth_de623fbb8843,remittance,tabddpm_synthetic,,['en'],interception,2024-10-16T23:13:00+00:00,75.05,17.12,51,23,2,Wednesday,0,301,15,interception,en,MoneyGram,0
+db39fded-228b-4d2c-8fb6-d3a246dc4c36,synth_25d93a09ca9e,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-06-20T17:15:00+00:00,50.0,6.32,65,17,4,Friday,6,1,6,wire transfer,en,Western Union,0
+ab739dc3-3331-4ce0-aad0-498faa1b42aa,synth_d917841c3456,remittance,tabddpm_synthetic,,['vi'],emergency,2024-02-13T00:35:00+00:00,1244.09,69.88,25,0,5,Saturday,7,1,33,emergency,vi,Remitly,1
+0407638f-32c6-4fcc-8e62-3cc0b6046b0c,synth_a911f3bd2ca4,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-07-30T22:49:00+00:00,342.84,33.85,39,22,5,Saturday,16,1229,7,wire transfer,en,Xoom,0
+6cf7690d-8733-4716-8d62-a432ec12e1c0,synth_3b78be671ec0,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-03-21T11:00:00+00:00,370.55,27.07,51,11,6,Sunday,20,1112,3,exchange rate,en,Hawala,0
+28270f5a-ab57-4665-ba01-5e086bfb73e1,synth_b5d96ee6d6c8,remittance,tabddpm_synthetic,,['es'],bonus,2024-06-24T16:06:00+00:00,1974.17,62.96,50,16,4,Friday,0,1350,10,bonus,es,Remitly,0
+72b4a84c-6895-4531-8d2b-884cd87712ab,synth_a79c22c5c10d,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-02-27T00:33:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,wire transfer,en,Xoom,0
+33afb6a2-e120-4854-9d97-2b7dbd5c888e,synth_41ff3729e148,remittance,tabddpm_synthetic,,['en'],interception,2024-07-19T17:48:00+00:00,805.61,56.99,42,17,4,Friday,0,1709,5,interception,en,Hawala,0
+8bd1f178-8682-4602-976d-622a2013c0d0,synth_51dd997f72ed,remittance,tabddpm_synthetic,,['en'],fake family,2024-05-28T12:21:00+00:00,10000.0,1336.97,58,12,5,Saturday,2,1,7,fake family,en,Wire transfer (bank),0
+d605702f-f4a2-48d2-9e57-d6f937a28585,synth_42af18d8610f,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-12-19T00:23:00+00:00,198.34,27.05,37,0,5,Saturday,10,1,28,wire transfer,en,Xoom,1
+d19f806e-4af3-48c3-888c-d59a6f46d5b9,synth_6874b95a7fdb,remittance,tabddpm_synthetic,,['en'],interception,2024-03-12T20:11:00+00:00,1318.08,63.98,45,20,3,Thursday,5,1,13,interception,en,Cash pickup,0
+078fcf20-1711-4cd2-96f5-a3f07ebadd8e,synth_53a42625c9bc,remittance,tabddpm_synthetic,,['en'],bonus,2024-10-02T17:56:00+00:00,379.14,28.04,33,17,3,Thursday,0,1132,7,bonus,en,Hawala,0
+cc147222-fb3c-4067-bb20-7ecd4faeb646,synth_bf446e62afc4,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-02-21T00:40:00+00:00,3662.91,292.4,25,0,6,Sunday,90,2000,20,exchange rate,en,Western Union,0
+54c9f539-a350-472b-9685-1e2775e2f207,synth_15f9d5cb2fc3,remittance,tabddpm_synthetic,,['en'],Western Union,2024-04-14T17:53:00+00:00,362.59,35.42,50,17,0,Monday,9,1,7,Western Union,en,Cash pickup,0
+3269f6ae-0141-48d0-a25c-cb16857bf7d5,synth_cd3b3989f93d,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-01-13T00:42:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,exchange rate,en,Cash pickup,0
+6182214a-a129-47f0-b730-fe9dbcc9bff7,synth_6afe0f88a4ff,remittance,tabddpm_synthetic,,['en'],emergency,2024-02-11T20:45:00+00:00,482.35,16.52,56,20,1,Tuesday,9,288,7,emergency,en,Wire transfer (bank),0
+8429665d-3d67-4b90-a23f-adf9133f86f9,synth_5403bc6479fa,remittance,tabddpm_synthetic,,['en'],emergency,2024-04-01T16:58:00+00:00,460.43,35.0,52,16,5,Saturday,0,850,8,emergency,en,Western Union,0
+9986ed50-f91c-4b50-876b-63d1378305fe,synth_aada220e9e88,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-06-28T00:36:00+00:00,10000.0,5000.0,25,0,6,Sunday,49,1,0,wire transfer,en,Remitly,0
+c48e7331-51e2-46b0-8aec-119655b981b9,synth_14a3d618a0e4,remittance,tabddpm_synthetic,,['en'],fraude,2024-04-28T00:41:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,2,fraude,en,Hawala,1
+f150f18e-479f-47c7-944e-b01108eaf396,synth_214b3f67518b,remittance,tabddpm_synthetic,,['en'],emergency,2024-02-10T17:34:00+00:00,610.48,17.89,56,17,3,Thursday,3,226,8,emergency,en,Cash pickup,0
+e1c70bc1-30ce-4d77-8f5a-d7c2d3ea1859,synth_1b81984fd54f,remittance,tabddpm_synthetic,,['en'],fake family,2024-02-21T22:43:00+00:00,650.54,25.84,31,22,3,Thursday,5,623,2,fake family,en,Hawala,0
+f3d764a0-b65b-4dfa-ba5a-0ee018c6f6f5,synth_7e82cc483b7f,remittance,tabddpm_synthetic,,['en'],MoneyGram,2024-10-23T17:05:00+00:00,1168.8,32.36,44,17,3,Thursday,3,1667,5,MoneyGram,en,Hawala,0
+ee3d2f1e-b44a-49c6-88cb-5ce9ee98fd79,synth_46c64664c544,remittance,tabddpm_synthetic,,['es'],wire transfer,2024-08-27T00:24:00+00:00,3655.78,158.83,25,0,5,Saturday,16,1,51,wire transfer,es,Hawala,1
+6dc3d73d-37f2-4377-9314-2d8ea4e164cb,synth_dfe6ff01fa70,remittance,tabddpm_synthetic,,['vi'],exchange rate,2024-11-25T19:38:00+00:00,91.39,0.07,41,19,3,Thursday,1,1495,10,exchange rate,vi,Wire transfer (bank),0
+41827918-42af-4689-8d9a-da11adfaaa17,synth_5fffc7e6cf12,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-05-10T11:59:00+00:00,913.01,66.99,33,11,4,Friday,2,733,11,wire transfer,en,Hawala,0
+d3331cad-4da1-4914-b62d-371226c6f978,synth_609abedf9fd3,remittance,tabddpm_synthetic,,['en'],emergency,2024-03-29T00:11:00+00:00,10000.0,5000.0,54,0,6,Sunday,38,1,0,emergency,en,Wire transfer (bank),0
+71bdef3f-cd63-4418-baa8-4beffe940f9c,synth_64078b5d0611,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-07-02T00:37:00+00:00,10000.0,5000.0,25,0,6,Sunday,78,1,0,exchange rate,en,Remitly,0
+5d35454f-3909-4c4c-adf7-b25fd5c9d119,synth_73d15645f741,remittance,tabddpm_synthetic,,['en'],estafa,2024-01-02T18:13:00+00:00,630.22,50.41,54,18,3,Thursday,16,509,10,estafa,en,Wire transfer (bank),0
+d2d171a0-90a6-4db1-8d6b-e8056b923e22,synth_99bfcb436e2a,remittance,tabddpm_synthetic,,['en'],interception,2024-03-22T00:48:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,interception,en,Remitly,0
+1e7f1ab4-42e0-4f60-98b0-277fe6f6d279,synth_675161d526ee,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-07-24T00:27:00+00:00,10000.0,5000.0,59,0,6,Sunday,22,1,0,exchange rate,en,Hawala,0
+3617b452-105f-4849-9d3d-ffe7c745ff7d,synth_74d5fd24ddc4,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-12-24T00:10:00+00:00,10000.0,1532.21,25,0,6,Sunday,90,2000,100,wire transfer,en,MoneyGram,0
+787efce8-caa7-4720-95ae-24672314d815,synth_ade31e8338d4,remittance,tabddpm_synthetic,,['en'],interception,2024-10-09T00:58:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,interception,en,MoneyGram,0
+7c0587a2-e794-48bb-a732-c8ee212c3a0e,synth_63ee3185f317,remittance,tabddpm_synthetic,,['yo'],interception,2024-05-09T16:15:00+00:00,50.0,10.05,54,16,6,Sunday,1,1325,4,interception,yo,Xoom,0
+6b23aeac-18e9-4292-aa7c-8b8923188d0e,synth_d7d5ffff7d44,remittance,tabddpm_synthetic,,['en'],MoneyGram,2024-07-01T14:05:00+00:00,50.0,13.26,41,14,3,Thursday,14,444,7,MoneyGram,en,Western Union,0
+7dd1362f-8c54-4bec-8ef8-e11e2b9f6b0d,synth_a957396374b2,remittance,tabddpm_synthetic,,['en'],fraude,2024-12-14T00:45:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,fraude,en,Cash pickup,0
+ce66ba38-afb6-495c-8b3e-16963ddaae61,synth_08a783e95260,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-03-23T00:52:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,wire transfer,en,MoneyGram,0
+1e731213-0634-4885-ad7c-42f2fd1776d2,synth_3b5f87e8b3aa,remittance,tabddpm_synthetic,,['vi'],exchange rate,2024-04-17T00:52:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,exchange rate,vi,Wire transfer (bank),1
+c85b3b7e-c24b-4a46-9928-d01f200552cc,synth_9581b3c8cfaf,remittance,tabddpm_synthetic,,['en'],MoneyGram,2024-08-09T00:56:00+00:00,1532.14,146.18,36,0,6,Sunday,90,2000,20,MoneyGram,en,Wire transfer (bank),0
+78ac83a2-b525-4969-b8b1-9252653cad1e,synth_9d98c233f140,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-06-14T16:18:00+00:00,469.13,12.31,63,16,4,Friday,1,586,5,exchange rate,en,Cash pickup,0
+adfbe9a4-7562-459d-b7cc-01c2db23dbf2,synth_a84642508dd5,remittance,tabddpm_synthetic,,['vi'],emergency,2024-04-14T18:04:00+00:00,662.77,48.08,54,18,3,Thursday,0,559,5,emergency,vi,MoneyGram,0
+04f03af9-d4bd-451c-9c45-22f30a53e9a7,synth_963c12ce3ad1,remittance,tabddpm_synthetic,,['en'],bonus,2024-11-29T16:26:00+00:00,638.8,30.92,55,16,3,Thursday,3,1377,10,bonus,en,MoneyGram,0
+e3b0685c-39ba-4b7e-9fb2-5de91c4dce26,synth_c64377858ae8,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-02-28T21:25:00+00:00,1188.06,72.84,59,21,4,Friday,8,1724,10,exchange rate,en,Western Union,0
+801d4c39-c0be-4ac4-a9f3-8bb7f46eae73,synth_ab5feb2d43a5,remittance,tabddpm_synthetic,,['en'],MoneyGram,2024-09-06T15:20:00+00:00,1328.66,74.98,35,15,3,Thursday,9,500,5,MoneyGram,en,Cash pickup,0
+fc6b9696-657c-4526-a59e-b0c338f34a22,synth_9f66561a6639,remittance,tabddpm_synthetic,,['yo'],emergency,2024-04-26T01:43:00+00:00,692.72,33.46,25,1,0,Monday,5,1,30,emergency,yo,Remitly,1
+32389af0-7be5-4389-8926-f3c2f7a73f12,synth_0aadab0efe3e,remittance,tabddpm_synthetic,,['en'],unknown,2024-07-28T17:24:00+00:00,919.8,48.6,65,17,1,Tuesday,0,648,9,unknown,en,Hawala,0
+44c11bdf-5d73-49ce-a541-6be7c0ec510b,synth_8e273b8c40a8,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-01-23T13:10:00+00:00,516.17,50.98,37,13,4,Friday,69,1357,7,wire transfer,en,Wire transfer (bank),0
+5791d76d-0605-423d-9708-e75e8bdd9d60,synth_6e5da4870fee,remittance,tabddpm_synthetic,,['yo'],interception,2024-03-19T00:29:00+00:00,4595.6,400.23,25,0,6,Sunday,90,2000,38,interception,yo,Xoom,0
+2f6fb1e5-7cb1-45c3-aa6e-b62a55ac7c0d,synth_901a3522aa76,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-06-02T21:05:00+00:00,107.58,0.82,56,21,2,Wednesday,14,591,6,wire transfer,en,Xoom,0
+bd654edb-f0b7-41d5-9fa2-e158b57929c4,synth_d3f728804bd6,remittance,tabddpm_synthetic,,['en'],MoneyGram,2024-02-27T00:10:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,MoneyGram,en,Hawala,0
+30796baf-4179-4e8e-8ab1-3ced99c59d8e,synth_b2e4030e496a,remittance,tabddpm_synthetic,,['en'],fraude,2024-03-23T22:45:00+00:00,253.57,5.51,33,22,1,Tuesday,28,1727,8,fraude,en,Cash pickup,0
+227bd471-a09d-4b7d-9946-e1c7947a29df,synth_b3e9ff799fdd,remittance,tabddpm_synthetic,,['yo'],emergency,2024-04-06T00:10:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,emergency,yo,Xoom,0
+624c3b63-5eb6-4819-8231-b28554070269,synth_b410c59e89da,remittance,tabddpm_synthetic,,['es'],emergency,2024-12-19T17:29:00+00:00,605.06,23.07,58,17,4,Friday,4,106,4,emergency,es,MoneyGram,0
+1ab7c74d-0ac3-4300-86b7-cc727b5fca28,synth_74d98c8a5ecb,remittance,tabddpm_synthetic,,['en'],emergency,2024-05-12T18:32:00+00:00,263.29,16.93,43,18,4,Friday,0,1010,8,emergency,en,Xoom,0
+7a02bbe9-e0cf-4316-9b9a-4e347605e57f,synth_32b76aec6ccd,remittance,tabddpm_synthetic,,['es'],wire transfer,2024-07-09T22:19:00+00:00,632.96,29.48,34,22,4,Friday,3,1,6,wire transfer,es,Wire transfer (bank),0
+a95f359b-6f71-4b1b-bcdb-6102f6bdc453,synth_6804980a396b,remittance,tabddpm_synthetic,,['es'],emergency,2024-04-27T20:44:00+00:00,636.86,49.67,37,20,5,Saturday,1,1481,6,emergency,es,Wire transfer (bank),0
+ccd2c848-15e1-490a-a683-0f165b7d9614,synth_5e80400b3633,remittance,tabddpm_synthetic,,['es'],emergency,2024-02-29T18:09:00+00:00,454.26,27.87,29,18,5,Saturday,0,1092,7,emergency,es,Hawala,0
+c2ba117c-fb7c-4968-bcb0-1ee4b87c9a6f,synth_1fba65c0060d,remittance,tabddpm_synthetic,,['en'],emergency,2024-03-12T16:15:00+00:00,365.93,14.58,50,16,2,Wednesday,3,472,7,emergency,en,Xoom,0
+d2578d7a-0297-4bbb-9970-1c8ac16522aa,synth_8f107ded0c9f,remittance,tabddpm_synthetic,,['en'],fraude,2024-06-23T23:11:00+00:00,584.09,17.88,56,23,4,Friday,3,1521,8,fraude,en,Remitly,0
+83c8dd51-336c-4ddc-9e9e-ae527553bc86,synth_1728862014ba,remittance,tabddpm_synthetic,,['yo'],fake family,2024-03-18T18:46:00+00:00,446.96,24.97,40,18,6,Sunday,0,1974,5,fake family,yo,Cash pickup,0
+5a3e71dc-4bbb-4fa1-90a8-d6606e5efd8f,synth_69a60a1348fb,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-02-01T15:02:00+00:00,1096.33,55.97,52,15,3,Thursday,3,412,0,exchange rate,en,MoneyGram,0
+00d6b871-ad08-41e3-a485-8c44ac826442,synth_caf0d5b3bc69,remittance,tabddpm_synthetic,,['en'],Western Union,2024-12-25T00:40:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,Western Union,en,Xoom,0
+1572b8f3-34d6-4f12-bba4-e4c0914a4617,synth_890be25022a2,remittance,tabddpm_synthetic,,['en'],fake family,2024-12-14T17:16:00+00:00,578.06,5.45,47,17,2,Wednesday,19,1119,12,fake family,en,MoneyGram,0
+bea70ef8-0598-40bf-996b-ffad773fd9c3,synth_77115e010829,remittance,tabddpm_synthetic,,['es'],wire transfer,2024-06-04T19:41:00+00:00,108.83,7.19,61,19,4,Friday,5,875,13,wire transfer,es,Hawala,0
+1dcaa8a2-91a2-45ed-8d2d-5f377e7661f3,synth_fd87613e67de,remittance,tabddpm_synthetic,,['en'],fraude,2024-02-13T00:49:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,fraude,en,Remitly,0
+474c5f96-9230-41d2-abcc-3ccdecd83594,synth_9271bdcb81e6,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-10-02T22:48:00+00:00,344.29,21.1,47,22,1,Tuesday,12,741,1,wire transfer,en,Western Union,0
+eedc595c-89db-4aec-917c-e43a3de41285,synth_8439adcba1cb,remittance,tabddpm_synthetic,,['en'],MoneyGram,2024-06-30T01:10:00+00:00,1260.52,97.13,37,1,6,Sunday,90,2000,11,MoneyGram,en,Remitly,0
+26cf8acc-148c-423e-a593-7915a704f405,synth_75a525d13199,remittance,tabddpm_synthetic,,['vi'],bonus,2024-07-11T13:44:00+00:00,1617.57,61.43,53,13,4,Friday,0,664,2,bonus,vi,Wire transfer (bank),0
+24ace788-b789-4d51-a858-bbdda212d622,synth_987bad34d057,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-04-28T00:29:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,wire transfer,en,Xoom,1
+3a1835b2-fee3-40bd-837d-ee4c767959ac,synth_efcafb879750,remittance,tabddpm_synthetic,,['en'],Western Union,2024-12-24T00:53:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,Western Union,en,Western Union,0
+227a4bbb-d449-4929-b7f7-8923a1048fe7,synth_301f42064d35,remittance,tabddpm_synthetic,,['en'],emergency,2024-12-19T18:41:00+00:00,266.13,15.7,48,18,1,Tuesday,0,1586,7,emergency,en,Western Union,0
+f2580042-b880-49f7-9e45-446fa30c9a0f,synth_085a408d3160,remittance,tabddpm_synthetic,,['en'],MoneyGram,2024-04-29T21:33:00+00:00,953.7,56.96,51,21,0,Monday,0,1002,10,MoneyGram,en,Hawala,0
+33601fae-16a2-4d1e-ab71-6b821659611e,synth_6e5d0eca7a4f,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-05-30T20:20:00+00:00,360.05,22.43,44,20,1,Tuesday,7,1778,5,wire transfer,en,Cash pickup,0
+4d5a6d96-79cd-4a33-9b6d-7bdc30ecfbe5,synth_31fd8b278f55,remittance,tabddpm_synthetic,,['en'],fake family,2024-04-06T00:03:00+00:00,4300.7,376.24,25,0,6,Sunday,90,2000,31,fake family,en,Western Union,0
+7ad38686-6ce0-4576-a067-d1c5ac38cd1c,synth_dc8c9fd8ad68,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-08-27T15:43:00+00:00,823.49,46.27,25,15,0,Monday,1,1133,6,wire transfer,en,Hawala,0
+367719bd-2232-461a-a107-a279ad5be358,synth_38dd2d589e1f,remittance,tabddpm_synthetic,,['ht'],estafa,2024-02-19T19:32:00+00:00,4777.42,287.5,26,19,4,Friday,3,1956,8,estafa,ht,Western Union,0
+5c44a040-3bba-43ca-a721-3b4812f01533,synth_4549df3b25b1,remittance,tabddpm_synthetic,,['en'],estafa,2024-09-02T17:08:00+00:00,404.67,24.96,43,17,5,Saturday,78,1083,10,estafa,en,Cash pickup,0
+ab5de5dd-bb49-4022-ab84-23ed62b3cc5b,synth_f8556daada65,remittance,tabddpm_synthetic,,['yo'],fake family,2024-03-24T00:25:00+00:00,10000.0,761.34,25,0,6,Sunday,44,1,74,fake family,yo,Remitly,1
+48a83f45-050c-4242-811c-32a8a1a7e2a2,synth_3d9b7e25c0d4,remittance,tabddpm_synthetic,,['en'],fake family,2024-06-06T00:40:00+00:00,8516.74,613.83,25,0,6,Sunday,90,2000,34,fake family,en,Hawala,0
+89ff2819-260a-40ee-acac-2a65fd8f3a86,synth_d949e10e52a8,remittance,tabddpm_synthetic,,['en'],estafa,2024-11-09T00:21:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,estafa,en,Western Union,0
+58c5da04-6149-48c9-85d8-1534c65e08a1,synth_ad8a365eedcf,remittance,tabddpm_synthetic,,['en'],MoneyGram,2024-04-15T18:23:00+00:00,404.55,21.48,42,18,2,Wednesday,7,737,5,MoneyGram,en,Cash pickup,0
+d0d132be-0ed3-4c68-a972-33bbe87adf7d,synth_30819e219c33,remittance,tabddpm_synthetic,,['vi'],interception,2024-06-21T20:02:00+00:00,602.42,0.0,65,20,0,Monday,3,554,9,interception,vi,Xoom,0
+28699744-7818-47e5-9dab-6d8849e2a7c7,synth_6ac0758f84b6,remittance,tabddpm_synthetic,,['en'],fake family,2024-11-25T00:37:00+00:00,10000.0,1442.89,25,0,6,Sunday,90,2000,99,fake family,en,Remitly,0
+da6ca104-f141-47d3-8794-1aee503e7081,synth_6c9705edf587,remittance,tabddpm_synthetic,,['en'],Western Union,2024-06-19T02:06:00+00:00,404.79,35.22,27,2,1,Tuesday,4,1,25,Western Union,en,MoneyGram,1
+594bb61f-e0a7-4c34-8137-b8988a3d2955,synth_4cc9ed8f0a6a,remittance,tabddpm_synthetic,,['es'],exchange rate,2024-12-20T22:32:00+00:00,912.07,23.01,27,22,2,Wednesday,1,1093,11,exchange rate,es,Western Union,0
+19966cdf-9c50-4064-b43d-1b9524562123,synth_23fcf8cd9c0a,remittance,tabddpm_synthetic,,['en'],emergency,2024-09-07T15:50:00+00:00,403.17,26.55,57,15,3,Thursday,1,1161,5,emergency,en,Western Union,0
+7a6aa736-9eb8-4fbd-84c8-38a465cd6e6d,synth_1622590c75f1,remittance,tabddpm_synthetic,,['hi'],exchange rate,2024-01-21T17:38:00+00:00,183.62,11.49,40,17,5,Saturday,6,1430,10,exchange rate,hi,Remitly,0
+707dfe6e-17d9-46a0-bf4c-64232422f46b,synth_2a466105409a,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-06-25T20:01:00+00:00,209.34,15.74,46,20,6,Sunday,10,404,12,exchange rate,en,Xoom,0
+326c75a7-6af6-4bb6-ace6-e78a38d9abfe,synth_1a108c2804b5,remittance,tabddpm_synthetic,,['en'],emergency,2024-01-10T20:56:00+00:00,596.09,18.78,32,20,4,Friday,6,1284,7,emergency,en,Wire transfer (bank),0
+3fc5e2f8-19a7-4ff8-bf25-0fad9b684e29,synth_96f8578a0762,remittance,tabddpm_synthetic,,['en'],fake family,2024-08-22T00:48:00+00:00,10000.0,5000.0,25,0,6,Sunday,60,1,0,fake family,en,Wire transfer (bank),0
+5bc3d43b-4291-491b-9a5b-bdc084163b31,synth_ebde7869eba1,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-10-20T17:08:00+00:00,442.97,24.26,38,17,4,Friday,1,1682,11,exchange rate,en,Remitly,0
+53d910d1-d798-4114-89d0-df749f40c527,synth_f5cd362cef09,remittance,tabddpm_synthetic,,['yo'],emergency,2024-08-05T23:31:00+00:00,50.0,1.7,55,23,3,Thursday,0,220,6,emergency,yo,Xoom,0
+92ea6a7c-0b7a-4c83-b783-57ace6bf2972,synth_63f3c0442e9e,remittance,tabddpm_synthetic,,['vi'],interception,2024-12-27T19:05:00+00:00,1358.2,67.79,65,19,6,Sunday,12,559,11,interception,vi,Cash pickup,0
+57a25086-b0c1-4ae8-bb5d-6cd6dea1d73c,synth_dcc19df3e35d,remittance,tabddpm_synthetic,,['en'],fraude,2024-04-04T00:25:00+00:00,10000.0,5000.0,25,0,6,Sunday,58,1,0,fraude,en,Western Union,0
+81c23f9e-525b-44a4-819c-b615743e710c,synth_8e0bd05e438c,remittance,tabddpm_synthetic,,['en'],emergency,2024-11-08T18:16:00+00:00,297.3,10.62,65,18,4,Friday,4,643,10,emergency,en,Western Union,0
+ba6db1b8-2fa2-455e-a2b4-f9821cf84623,synth_0fcb86f01ea2,remittance,tabddpm_synthetic,,['en'],emergency,2024-06-15T14:11:00+00:00,571.27,50.54,44,14,6,Sunday,68,1664,7,emergency,en,Wire transfer (bank),0
+bb2f2927-b432-4cfd-a5db-021293022107,synth_fd816d78150b,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-11-16T14:40:00+00:00,249.95,8.79,44,14,3,Thursday,2,794,8,wire transfer,en,Wire transfer (bank),0
+54100cec-b80e-475c-a255-998fe3d8c381,synth_f03c7855707a,remittance,tabddpm_synthetic,,['en'],fake family,2024-08-24T00:54:00+00:00,4542.82,420.73,25,0,6,Sunday,90,2000,42,fake family,en,Western Union,0
+3568e501-1576-438c-bf9c-80469dd39d30,synth_520ec76ebb21,remittance,tabddpm_synthetic,,['en'],emergency,2024-03-02T21:48:00+00:00,1043.25,50.11,26,21,4,Friday,7,1533,4,emergency,en,Cash pickup,0
+c3d1c35e-167c-4b02-a93e-fcfaae7e1e2a,synth_19723faf1256,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-06-02T17:22:00+00:00,1228.48,86.89,30,17,6,Sunday,73,1938,7,exchange rate,en,Cash pickup,0
+74fe2dab-49f3-4afe-991f-460ffa04485f,synth_0d6ef5270ec6,remittance,tabddpm_synthetic,,['en'],emergency,2024-01-31T18:28:00+00:00,2392.06,84.66,58,18,3,Thursday,3,408,9,emergency,en,Cash pickup,0
+3e093e19-468c-425d-9995-624d9318e771,synth_481126ab9dcf,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-12-15T19:50:00+00:00,50.0,0.0,31,19,2,Wednesday,18,1935,11,exchange rate,en,Western Union,0
+a031166e-40b0-443b-9093-3f51faa02063,synth_f3eae0adb35c,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-05-19T19:44:00+00:00,490.11,23.75,48,19,2,Wednesday,5,326,12,wire transfer,en,MoneyGram,0
+e22b1438-ab72-43d1-9a08-2e8304ff52b3,synth_9881e62c407c,remittance,tabddpm_synthetic,,['en'],interception,2024-02-16T16:38:00+00:00,369.15,12.14,58,16,3,Thursday,2,439,10,interception,en,Xoom,0
+30c87316-21be-415b-a68a-b6c342253c73,synth_5969ba0f67fe,remittance,tabddpm_synthetic,,['en'],emergency,2024-03-19T10:42:00+00:00,1785.64,110.12,31,10,4,Friday,8,1058,12,emergency,en,Xoom,0
+e28ff627-7949-428d-9c0f-b13cbc434f81,synth_f93f0ae8e546,remittance,tabddpm_synthetic,,['en'],MoneyGram,2024-06-17T13:40:00+00:00,1485.77,139.24,47,13,3,Thursday,6,441,5,MoneyGram,en,Xoom,0
+2e9c8781-6859-4af4-98d5-fa8f578bbd08,synth_6d6306765091,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-05-16T00:19:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,wire transfer,en,Xoom,0
+35b41eed-05eb-46f0-9277-4590af20bfcd,synth_f3f61a9c12f7,remittance,tabddpm_synthetic,,['en'],estafa,2024-03-25T21:50:00+00:00,371.24,74.49,32,21,0,Monday,3,1379,10,estafa,en,Cash pickup,0
+f876465d-d816-4ed0-888c-5a60cff7436c,synth_e670b9e3d0cf,remittance,tabddpm_synthetic,,['ht'],emergency,2024-04-03T20:34:00+00:00,1316.51,111.91,30,20,3,Thursday,5,1257,9,emergency,ht,Wire transfer (bank),0
+36d0ce5f-874c-4b72-bb69-c135c4b75b66,synth_325c861bfb89,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-01-13T19:43:00+00:00,1769.13,87.75,29,19,4,Friday,6,1187,5,wire transfer,en,Western Union,0
+84b81bcc-9607-4a09-a845-83e739190358,synth_18792a58fe1c,remittance,tabddpm_synthetic,,['en'],MoneyGram,2024-02-12T15:22:00+00:00,277.49,20.98,54,15,4,Friday,11,602,4,MoneyGram,en,Remitly,0
+a76e8174-0d30-4fd2-850a-bcb28c2c61ef,synth_d6166c419180,remittance,tabddpm_synthetic,,['yo'],emergency,2024-02-18T17:38:00+00:00,295.14,12.11,31,17,2,Wednesday,3,1100,6,emergency,yo,Xoom,0
+024a5dbe-0363-4f3c-a5e2-1e54a8cabca6,synth_7a35b7fcb0a8,remittance,tabddpm_synthetic,,['yo'],Western Union,2024-02-06T23:33:00+00:00,376.78,19.51,42,23,4,Friday,13,1,9,Western Union,yo,Cash pickup,0
+f7a196d7-795a-4263-a1fc-4ce7e38129be,synth_7128a4da5cee,remittance,tabddpm_synthetic,,['en'],unknown,2024-04-08T03:49:00+00:00,996.49,82.19,35,3,6,Sunday,90,1937,15,unknown,en,Western Union,0
+5a23734e-366e-469d-938f-3f83b1487922,synth_6841c8a55cce,remittance,tabddpm_synthetic,,['en'],emergency,2024-12-30T21:12:00+00:00,130.03,15.25,39,21,3,Thursday,5,1252,10,emergency,en,Cash pickup,0
+c4d06e3d-f03d-4759-b0fd-ca0a5c1c4933,synth_b0560d6281e2,remittance,tabddpm_synthetic,,['en'],emergency,2024-11-11T23:15:00+00:00,68.18,0.0,58,23,3,Thursday,6,1025,9,emergency,en,Remitly,0
+564ec571-1dea-4efd-8e34-67c85b1a923d,synth_7462d595f526,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-03-02T21:19:00+00:00,418.13,6.64,44,21,1,Tuesday,1,212,8,wire transfer,en,Cash pickup,0
+26e1e9f4-5484-4481-9d67-85a69dae193a,synth_e95ad15b6014,remittance,tabddpm_synthetic,,['vi'],wire transfer,2024-11-23T00:32:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,100,wire transfer,vi,Xoom,0
+87c44e19-3d07-4b2f-a2f2-eb60605db046,synth_79da4dd5bb68,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-01-14T20:47:00+00:00,818.74,42.67,40,20,6,Sunday,0,2000,5,wire transfer,en,MoneyGram,0
+77b52b49-c879-4f6b-a5c4-20acfe8d1fc6,synth_6b7341c41445,remittance,tabddpm_synthetic,,['es'],wire transfer,2024-12-03T21:41:00+00:00,1676.63,97.43,34,21,5,Saturday,5,228,7,wire transfer,es,Xoom,0
+dd3efffb-aa79-4a4f-9438-768af7286fe7,synth_d43ef482cd57,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-08-14T20:12:00+00:00,385.44,23.18,41,20,4,Friday,3,750,10,wire transfer,en,MoneyGram,0
+12d66347-d638-47a9-93f9-6e5755cb57dc,synth_ec2b7ce179be,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-12-09T00:25:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,exchange rate,en,Western Union,0
+2ec36b68-2ee0-4d51-996c-71b3a9502169,synth_03e2f2d59100,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-02-04T20:06:00+00:00,406.48,7.02,58,20,5,Saturday,0,90,7,exchange rate,en,Cash pickup,0
+2a0e78b5-768d-4260-ac9a-4c9127a2db57,synth_f46f2c52f3e3,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-05-28T08:09:00+00:00,1302.7,82.78,26,8,6,Sunday,90,2000,13,exchange rate,en,Cash pickup,0
+22d1560d-df98-4318-9e68-180156101ba3,synth_2c76e56bd5fc,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-01-23T20:49:00+00:00,605.26,27.42,56,20,3,Thursday,0,123,10,exchange rate,en,MoneyGram,0
+4148a924-a386-4174-b629-ceef581af47f,synth_a7b91d9a0f5d,remittance,tabddpm_synthetic,,['en'],bonus,2024-08-08T00:35:00+00:00,10000.0,2828.22,25,0,6,Sunday,90,2000,100,bonus,en,Remitly,0
+16dee5bb-7bc3-4178-85dd-e0d69413058d,synth_fe62d203b714,remittance,tabddpm_synthetic,,['en'],MoneyGram,2024-07-21T18:58:00+00:00,1386.22,86.34,41,18,1,Tuesday,8,303,6,MoneyGram,en,Xoom,0
+71ca973b-92bd-44db-a080-e763f8ca4124,synth_12b4443b6e85,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-04-28T18:36:00+00:00,2167.22,121.99,63,18,0,Monday,3,585,6,exchange rate,en,MoneyGram,0
+a2cbf922-1873-4b5f-9f8c-ff29c00c11cf,synth_54f1c5822f33,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-02-06T00:13:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,wire transfer,en,MoneyGram,0
+7d227ad8-60ff-4dd5-b767-5592841f9fec,synth_586fcb3f24fa,remittance,tabddpm_synthetic,,['es'],emergency,2024-07-02T00:49:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,emergency,es,Western Union,1
+24191feb-479a-4111-ba1b-3c004062a9a6,synth_093bd1a5b629,remittance,tabddpm_synthetic,,['yo'],wire transfer,2024-08-13T22:21:00+00:00,637.73,38.7,61,22,2,Wednesday,0,1,10,wire transfer,yo,Cash pickup,0
+385d6e9b-a044-4b13-9c42-88ab355ceda2,synth_36da1b406979,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-06-29T20:40:00+00:00,207.65,35.91,50,20,3,Thursday,0,1,11,exchange rate,en,Western Union,0
+d5e38ee7-eff4-4356-a3dc-aef2df42b8e9,synth_be78fb61e450,remittance,tabddpm_synthetic,,['en'],interception,2024-05-24T00:01:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,interception,en,Western Union,0
+59c6d970-0b12-4d1a-b173-683e6a10f264,synth_9393c78cffeb,remittance,tabddpm_synthetic,,['en'],unknown,2024-07-03T18:54:00+00:00,186.24,6.96,43,18,2,Wednesday,0,829,8,unknown,en,MoneyGram,0
+f07070df-91fa-4e27-b8b6-ac1413cf74e6,synth_f6d12bb6bb23,remittance,tabddpm_synthetic,,['en'],bonus,2024-03-31T00:50:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,bonus,en,MoneyGram,0
+645e5cb0-0c41-4ef8-a391-c6ab2e044c0b,synth_c82442f84b55,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-05-23T21:06:00+00:00,513.02,35.86,41,21,5,Saturday,0,992,5,wire transfer,en,MoneyGram,0
+c362cf5b-8833-4176-8522-c3d779e8214b,synth_cd218f321bec,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-06-16T21:45:00+00:00,983.92,35.4,40,21,1,Tuesday,3,46,13,wire transfer,en,MoneyGram,0
+04e14f53-ae4c-45aa-910f-13e0e05b5679,synth_da54f0e4bfcb,remittance,tabddpm_synthetic,,['en'],fake family,2024-04-29T15:08:00+00:00,321.16,6.74,33,15,2,Wednesday,21,704,11,fake family,en,Xoom,0
+609e49a3-70c3-4498-a230-d91b3baf908c,synth_4b75eadd29d9,remittance,tabddpm_synthetic,,['en'],unknown,2024-09-24T00:05:00+00:00,10000.0,5000.0,25,0,6,Sunday,67,1,0,unknown,en,Cash pickup,0
+f4d46145-160e-4d1b-ad15-cddacb20571d,synth_671a7d84cbd5,remittance,tabddpm_synthetic,,['en'],interception,2024-02-16T20:30:00+00:00,331.67,12.55,25,20,4,Friday,4,60,11,interception,en,MoneyGram,0
+67478130-b233-4922-b594-6aca17eab120,synth_861c1e28a9ed,remittance,tabddpm_synthetic,,['en'],interception,2024-11-14T00:53:00+00:00,1137.14,134.9,35,0,6,Sunday,90,2000,16,interception,en,MoneyGram,0
+e086ea13-f265-444c-acea-5fab99cf41fb,synth_f14e9405a3e2,remittance,tabddpm_synthetic,,['en'],fraude,2024-03-13T12:09:00+00:00,102.37,37.22,60,12,3,Thursday,10,1128,5,fraude,en,Cash pickup,0
+a62f9029-1f7a-4172-8c5a-a7d12608bf78,synth_d7bcc209715c,remittance,tabddpm_synthetic,,['en'],estafa,2024-04-18T00:36:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,estafa,en,Remitly,0
+2f77733e-e0cb-4cbb-bf89-ab16e1ce6e7b,synth_6a6b6f360389,remittance,tabddpm_synthetic,,['vi'],exchange rate,2024-03-05T19:06:00+00:00,586.57,14.13,30,19,0,Monday,1,1176,7,exchange rate,vi,Remitly,0
+7c1a486a-d2fd-4259-b908-ca3b462eefb1,synth_f11319a273de,remittance,tabddpm_synthetic,,['en'],bonus,2024-06-29T18:27:00+00:00,726.9,32.5,25,18,5,Saturday,8,1143,5,bonus,en,Wire transfer (bank),0
+6ec7c9ca-ab84-46ff-9a1f-c7113cb1ee59,synth_3377fb0fb4f5,remittance,tabddpm_synthetic,,['en'],interception,2024-04-14T15:54:00+00:00,5213.24,195.01,40,15,5,Saturday,6,726,11,interception,en,MoneyGram,0
+948deae1-d145-4b92-98da-97a6589ae0ee,synth_688b5ad7cd8a,remittance,tabddpm_synthetic,,['en'],bonus,2024-04-29T18:52:00+00:00,552.88,16.4,51,18,3,Thursday,5,1458,5,bonus,en,Western Union,0
+ea8f778a-7058-436b-87a9-23707a443773,synth_c162782d5400,remittance,tabddpm_synthetic,,['yo'],exchange rate,2024-12-08T00:55:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,exchange rate,yo,MoneyGram,0
+fd8cff6f-37f9-47d8-8aad-0b9309870633,synth_de3c0c888355,remittance,tabddpm_synthetic,,['en'],emergency,2024-02-05T00:00:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,emergency,en,Wire transfer (bank),1
+4bd647d3-69bc-41f3-ba8a-a724344396e6,synth_ddf41e535fb9,remittance,tabddpm_synthetic,,['ht'],emergency,2024-05-17T23:12:00+00:00,716.68,38.36,59,23,4,Friday,13,416,9,emergency,ht,Hawala,0
+4926f4f0-ed90-4312-b497-e0f31f52b5da,synth_4b3b8e8286a1,remittance,tabddpm_synthetic,,['en'],emergency,2024-04-13T00:49:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,emergency,en,Cash pickup,0
+a0a48e6b-7903-476b-b9f0-954995d7a34d,synth_b50222190722,remittance,tabddpm_synthetic,,['yo'],fake family,2024-03-07T00:23:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,96,fake family,yo,Xoom,1
+ba78e1d1-2e5d-4360-860d-492875d6c313,synth_66a938c661d4,remittance,tabddpm_synthetic,,['en'],estafa,2024-04-04T18:24:00+00:00,255.0,5.52,35,18,3,Thursday,5,1148,2,estafa,en,Remitly,0
+7e2628fe-0076-4e60-920f-2e4f9cee444d,synth_2def2be65270,remittance,tabddpm_synthetic,,['en'],fraude,2024-11-11T21:58:00+00:00,410.91,0.87,53,21,2,Wednesday,2,295,9,fraude,en,Cash pickup,0
+6ed50f7e-d7b2-4652-bb07-4e4031475f5d,synth_efb4d494cae5,remittance,tabddpm_synthetic,,['en'],unknown,2024-09-16T15:19:00+00:00,561.63,16.12,57,15,3,Thursday,0,608,7,unknown,en,Cash pickup,0
+1597d0cc-fdea-4904-83fa-8cdcc7691ca6,synth_583de6496419,remittance,tabddpm_synthetic,,['vi'],wire transfer,2024-12-30T18:32:00+00:00,301.39,13.46,50,18,4,Friday,14,928,6,wire transfer,vi,Remitly,0
+54d71e0c-f2b2-449b-a42c-357c0a0d0f98,synth_7c9c9dec40fb,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-10-13T17:44:00+00:00,810.42,45.98,47,17,4,Friday,2,1370,10,exchange rate,en,MoneyGram,0
+b1b857db-6563-4723-9279-60c69670e166,synth_5930cfe00d75,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-04-06T00:49:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,wire transfer,en,Wire transfer (bank),0
+e6d8a4a2-620a-4e9e-afa8-e0cdb3abec81,synth_4256efc3f78c,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-12-23T22:19:00+00:00,612.18,1.23,44,22,4,Friday,0,676,12,wire transfer,en,MoneyGram,0
+00ee98a2-baf3-42e9-85fb-42997767af87,synth_56c38e58beeb,remittance,tabddpm_synthetic,,['es'],exchange rate,2024-07-26T14:51:00+00:00,1707.23,101.51,43,14,4,Friday,0,518,7,exchange rate,es,MoneyGram,0
+d445ac2d-b16e-4b58-b34b-6f4a1da4382d,synth_72baef263a79,remittance,tabddpm_synthetic,,['yo'],emergency,2024-07-25T18:19:00+00:00,882.84,37.68,48,18,5,Saturday,5,1241,9,emergency,yo,Hawala,0
+b2976ca7-f338-4653-857c-e9faa31912ea,synth_70fd826c06fd,remittance,tabddpm_synthetic,,['en'],emergency,2024-10-15T00:27:00+00:00,10000.0,1513.83,25,0,6,Sunday,90,2000,89,emergency,en,Xoom,0
+fd93dbe7-ad08-47c3-b429-9466cb500379,synth_3f721e828de1,remittance,tabddpm_synthetic,,['en'],Western Union,2024-02-22T00:00:00+00:00,4223.94,339.86,25,0,6,Sunday,90,2000,31,Western Union,en,Xoom,0
+a5fcc419-2ac2-4eed-a401-b2e24d4213fd,synth_619032bf28b5,remittance,tabddpm_synthetic,,['en'],fake family,2024-01-31T14:41:00+00:00,575.62,19.67,32,14,5,Saturday,0,1601,8,fake family,en,Xoom,0
+f7b65ee3-7955-4d54-b57d-f31c599e3e07,synth_344204dabaaf,remittance,tabddpm_synthetic,,['vi'],wire transfer,2024-02-02T15:47:00+00:00,747.98,33.46,27,15,4,Friday,0,751,2,wire transfer,vi,Remitly,0
+6c0057f6-fdbc-45f5-ab3a-93e98bdbcd93,synth_7a7942655e95,remittance,tabddpm_synthetic,,['ht'],Western Union,2024-02-23T00:12:00+00:00,2140.69,198.37,25,0,6,Sunday,90,2000,22,Western Union,ht,Wire transfer (bank),0
+a7af94a7-1f38-4905-bd6d-5fadaac2593c,synth_0f0f730996e2,remittance,tabddpm_synthetic,,['en'],fake family,2024-10-07T19:18:00+00:00,604.21,0.85,41,19,4,Friday,0,1,14,fake family,en,Remitly,0
+1faf252b-3619-45b0-abf7-767ba7c8dbe9,synth_194ef465e76c,remittance,tabddpm_synthetic,,['en'],estafa,2024-04-08T18:26:00+00:00,1157.77,27.67,53,18,3,Thursday,6,415,6,estafa,en,Remitly,0
+6997850b-37b5-4594-8ad3-138adf21540c,synth_d1a045b0ba44,remittance,tabddpm_synthetic,,['es'],fraude,2024-08-08T20:27:00+00:00,575.41,19.72,55,20,5,Saturday,2,1269,8,fraude,es,Hawala,0
+9bb1c1d9-603c-423b-b918-ca7eeb3da5a2,synth_ac3590c596aa,remittance,tabddpm_synthetic,,['yo'],exchange rate,2024-07-29T14:11:00+00:00,1783.11,123.67,32,14,3,Thursday,8,1072,9,exchange rate,yo,MoneyGram,0
+5f040fae-982b-4ea5-8900-cdfada1ba66a,synth_95116ca771bd,remittance,tabddpm_synthetic,,['en'],estafa,2024-11-20T18:34:00+00:00,288.33,22.55,40,18,3,Thursday,6,455,11,estafa,en,Remitly,0
+63ee87bd-8f24-4cd5-b47c-fb6cad0ef472,synth_5a508eca3671,remittance,tabddpm_synthetic,,['vi'],Western Union,2024-01-10T18:33:00+00:00,440.83,8.96,41,18,4,Friday,1,833,10,Western Union,vi,Hawala,0
+2a1a490b-7de3-45ed-bb46-fcacf1d064f1,synth_74b54572e99c,remittance,tabddpm_synthetic,,['yo'],MoneyGram,2024-07-02T18:32:00+00:00,1018.38,42.44,42,18,3,Thursday,3,1448,13,MoneyGram,yo,Hawala,0
+d8b74521-b36d-40e9-9c85-c780cfb37d87,synth_638ce62e537e,remittance,tabddpm_synthetic,,['ht'],wire transfer,2024-04-02T18:42:00+00:00,872.1,44.05,55,18,5,Saturday,2,948,7,wire transfer,ht,Remitly,0
+6640b000-34d5-49b8-9aa0-6f7304c77f1a,synth_ba4b25a585b0,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-01-10T08:52:00+00:00,10000.0,1399.4,25,8,6,Sunday,4,1,12,wire transfer,en,MoneyGram,0
+3ebc00ab-41c7-4703-a62f-48a8c433f686,synth_2007fad1775e,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-06-13T16:18:00+00:00,1425.6,50.11,27,16,3,Thursday,15,700,9,wire transfer,en,Hawala,0
+60a233c7-fcb9-4174-82ae-fadb6e22886e,synth_4ef3f62568fb,remittance,tabddpm_synthetic,,['en'],fake family,2024-01-27T00:54:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,fake family,en,Cash pickup,0
+ad3889ae-fae6-45ee-a1a5-dc8e05efcdd1,synth_018a4f86edc7,remittance,tabddpm_synthetic,,['vi'],wire transfer,2024-04-22T22:11:00+00:00,373.17,36.5,44,22,5,Saturday,7,793,11,wire transfer,vi,Xoom,0
+3dbae15e-9250-462d-9d95-bea8772abf60,synth_9b7f6648dbe8,remittance,tabddpm_synthetic,,['en'],fake family,2024-09-15T00:13:00+00:00,10000.0,5000.0,25,0,6,Sunday,35,1,0,fake family,en,Hawala,0
+e40e72ce-54c7-4f40-b7d3-75b674f74711,synth_4f923eb2e0e3,remittance,tabddpm_synthetic,,['en'],interception,2024-11-27T18:59:00+00:00,429.89,2.83,25,18,5,Saturday,6,787,6,interception,en,Xoom,0
+7f4f26cf-7019-46dc-b375-3a9fd8a82747,synth_06d5a4a1ca37,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-03-26T14:21:00+00:00,622.73,37.02,58,14,6,Sunday,65,1879,10,exchange rate,en,Remitly,0
+80569b9b-4b91-47cf-b4d3-b6ddd21fd2da,synth_ca9d3f0b1e57,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-03-23T17:22:00+00:00,760.12,58.52,47,17,0,Monday,2,551,5,wire transfer,en,Xoom,0
+03b5a122-91f4-48c1-8e12-3250e734f497,synth_4c8a3942d053,remittance,tabddpm_synthetic,,['en'],emergency,2024-06-27T16:54:00+00:00,1632.94,95.42,57,16,0,Monday,0,1476,7,emergency,en,Wire transfer (bank),0
+75e741a1-b44c-495d-87bf-9c2b0d328ed8,synth_062bdb032f1b,remittance,tabddpm_synthetic,,['en'],bonus,2024-08-25T20:25:00+00:00,567.96,48.1,43,20,1,Tuesday,0,916,6,bonus,en,Western Union,0
+641e8741-13bd-44dc-aab1-2f0bb5dc14a0,synth_99f952e8e584,remittance,tabddpm_synthetic,,['es'],Western Union,2024-01-02T19:49:00+00:00,2448.08,114.11,65,19,3,Thursday,0,326,9,Western Union,es,Western Union,0
+9b71cc7f-42a2-420e-8527-864ee76e271b,synth_0e49f3a3dae8,remittance,tabddpm_synthetic,,['vi'],estafa,2024-06-06T15:30:00+00:00,492.0,26.4,25,15,2,Wednesday,7,1489,10,estafa,vi,Hawala,0
+ef078a72-c1db-48a3-b876-2387b1d9b6b3,synth_456dccc67a5a,remittance,tabddpm_synthetic,,['en'],fraude,2024-11-15T16:03:00+00:00,408.1,13.54,46,16,5,Saturday,0,1418,12,fraude,en,Xoom,0
+5e8a429a-826a-4b1f-b848-41c04949518a,synth_9f64b1f2b67e,remittance,tabddpm_synthetic,,['en'],unknown,2024-05-17T00:53:00+00:00,10000.0,3136.93,25,0,6,Sunday,90,2000,100,unknown,en,MoneyGram,0
+8bb61858-dde1-4f72-97fa-c1a828065879,synth_9217fea30468,remittance,tabddpm_synthetic,,['vi'],emergency,2024-01-17T00:39:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,emergency,vi,Hawala,1
+24bccb9e-d6f5-4c40-8f71-2d6ae0bcd17b,synth_5bee2e83e35b,remittance,tabddpm_synthetic,,['vi'],exchange rate,2024-03-24T08:55:00+00:00,497.65,47.38,50,8,5,Saturday,90,1651,12,exchange rate,vi,Remitly,0
+056bfc3e-9818-49ba-aefe-32a3783e4888,synth_a332f2e797b6,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-11-01T13:10:00+00:00,514.19,37.95,33,13,5,Saturday,3,1,7,exchange rate,en,Cash pickup,0
+b0feb606-db10-473d-a6db-b7eac66ed9b7,synth_d13e5fe6430b,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-01-03T19:09:00+00:00,50.0,3.58,48,19,3,Thursday,0,389,6,exchange rate,en,Hawala,0
+9420fe5f-ee31-47a5-9a54-e0bbadcac031,synth_e054df907629,remittance,tabddpm_synthetic,,['en'],bonus,2024-07-25T13:44:00+00:00,856.31,28.24,53,13,2,Wednesday,0,772,7,bonus,en,Xoom,0
+33dda02a-c95e-488e-84a2-f55e3160fe86,synth_61ee0346813d,remittance,tabddpm_synthetic,,['vi'],bonus,2024-09-25T20:32:00+00:00,397.5,30.2,42,20,1,Tuesday,2,1170,10,bonus,vi,Hawala,0
+8b5717b9-017e-442a-a112-801a7f17ee2c,synth_f3dec8d43de2,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-01-12T20:12:00+00:00,835.62,34.75,35,20,5,Saturday,0,1,9,wire transfer,en,MoneyGram,0
+971fb43c-f0c8-49e4-a7e3-1309ac2ecd64,synth_8aaf05152ad0,remittance,tabddpm_synthetic,,['vi'],exchange rate,2024-04-12T00:05:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,exchange rate,vi,Hawala,0
+c450b55b-9c37-4deb-ae86-e55e0ece2bd7,synth_87ff9e701eb7,remittance,tabddpm_synthetic,,['en'],Western Union,2024-10-27T17:33:00+00:00,232.81,3.0,45,17,3,Thursday,0,1393,8,Western Union,en,Western Union,0
+de8d4882-56f0-41b1-9a4d-70a7f78a715a,synth_d3fe250921e2,remittance,tabddpm_synthetic,,['en'],emergency,2024-10-17T11:14:00+00:00,10000.0,1220.04,27,11,2,Wednesday,0,1,2,emergency,en,Remitly,0
+e5ed708e-1a9b-4538-991a-3242d62c449f,synth_f3e14a6091b5,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-11-09T00:07:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,wire transfer,en,MoneyGram,0
+1fbd0106-1cc4-4d45-a64c-712312a91456,synth_087aa4e840e4,remittance,tabddpm_synthetic,,['en'],emergency,2024-10-21T21:39:00+00:00,268.19,6.25,40,21,3,Thursday,5,1416,6,emergency,en,Xoom,0
+5bdd7076-1e6b-404f-965b-25a5829e6fa8,synth_8e89eebf2334,remittance,tabddpm_synthetic,,['en'],MoneyGram,2024-10-20T19:53:00+00:00,323.93,18.71,46,19,5,Saturday,0,611,10,MoneyGram,en,Remitly,0
+92649a6c-6fe4-49c3-8711-99838c8ad1b8,synth_272f57d0939e,remittance,tabddpm_synthetic,,['en'],Western Union,2024-01-21T00:24:00+00:00,10000.0,4013.9,25,0,6,Sunday,30,1,0,Western Union,en,MoneyGram,0
+432730ee-d3db-43be-8254-8e9b2cb0e131,synth_137b2ed1dc41,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-06-17T00:56:00+00:00,2213.83,156.89,34,0,6,Sunday,90,2000,17,exchange rate,en,Hawala,0
+f74cfed2-5164-4ed1-80c4-fff89dc33a60,synth_29b792065ea8,remittance,tabddpm_synthetic,,['en'],estafa,2024-10-24T20:56:00+00:00,557.7,39.6,31,20,6,Sunday,1,1200,10,estafa,en,Western Union,0
+dd401378-2b17-4c0f-829a-dd35a5e3f5dc,synth_55bb69e77e93,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-12-13T00:43:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,wire transfer,en,MoneyGram,0
+9fe6978e-37a3-4263-a371-1e6d98305021,synth_2f65671d4968,remittance,tabddpm_synthetic,,['en'],unknown,2024-12-14T16:51:00+00:00,871.59,40.47,36,16,1,Tuesday,8,351,12,unknown,en,Xoom,0
+3bf408ac-5206-45d9-b3f7-fb7e81d21f6d,synth_4c52b83f713d,remittance,tabddpm_synthetic,,['en'],fraude,2024-02-21T15:06:00+00:00,1353.98,116.36,30,15,4,Friday,10,1552,12,fraude,en,Wire transfer (bank),0
+d9e34b2d-1b91-4dc2-88ed-a2975ca8d1e5,synth_f2e4c401c815,remittance,tabddpm_synthetic,,['en'],fake family,2024-10-29T00:46:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,fake family,en,Xoom,0
+1aaa8c5a-0951-4a05-b230-1e39621cdf6f,synth_6969ba37f4ec,remittance,tabddpm_synthetic,,['en'],emergency,2024-12-21T17:21:00+00:00,384.46,38.17,53,17,2,Wednesday,7,2000,4,emergency,en,Western Union,0
+8f5a9b9e-47b7-40d8-be84-90e2f028a7f4,synth_87b92c7177be,remittance,tabddpm_synthetic,,['es'],unknown,2024-07-04T00:41:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,unknown,es,Remitly,0
+b1828bb0-112d-41ab-9bc5-2040e3e099ae,synth_fd082d535964,remittance,tabddpm_synthetic,,['vi'],fraude,2024-11-01T19:06:00+00:00,637.44,14.87,57,19,4,Friday,1,482,10,fraude,vi,Hawala,0
+89e24efa-24cd-4deb-a70c-0608049410a4,synth_2a1897685efd,remittance,tabddpm_synthetic,,['en'],MoneyGram,2024-12-17T23:54:00+00:00,406.27,19.53,42,23,1,Tuesday,3,1,9,MoneyGram,en,Hawala,0
+ec726be8-76d6-43ce-97e2-47a612483074,synth_842b5a99cc63,remittance,tabddpm_synthetic,,['en'],unknown,2024-05-26T00:37:00+00:00,10000.0,5000.0,25,0,6,Sunday,35,1,0,unknown,en,Western Union,0
+338bfb6c-a22d-4c4b-9149-f8d4ed8aa4b9,synth_e5877a9b9b09,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-07-23T18:16:00+00:00,350.44,12.61,55,18,0,Monday,0,885,6,wire transfer,en,MoneyGram,0
+c7ab2681-0807-44a2-a3a7-5ec618773676,synth_d4f9f2d4403d,remittance,tabddpm_synthetic,,['en'],emergency,2024-03-17T02:28:00+00:00,612.11,35.84,25,2,5,Saturday,7,177,29,emergency,en,Hawala,1
+fd79a52a-1d01-4d2e-96d3-f17b61511314,synth_bd3096c19e0e,remittance,tabddpm_synthetic,,['vi'],exchange rate,2024-06-14T12:29:00+00:00,1498.58,62.86,44,12,1,Tuesday,4,1,21,exchange rate,vi,Cash pickup,1
+99265b21-05d1-4c5b-aacc-c8ef00569c6c,synth_8c49968dd6b6,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-12-02T22:40:00+00:00,813.6,66.43,44,22,1,Tuesday,4,955,11,wire transfer,en,MoneyGram,0
+56c78b2f-4553-49be-90b1-9e2b60563f26,synth_788d3f7a9147,remittance,tabddpm_synthetic,,['en'],fake family,2024-12-14T08:25:00+00:00,10000.0,1629.18,25,8,6,Sunday,12,1,0,fake family,en,Remitly,0
+bd61e495-f98b-4909-b6f0-d004f3afb012,synth_7622e680c5ba,remittance,tabddpm_synthetic,,['en'],emergency,2024-11-17T21:24:00+00:00,150.02,6.99,46,21,5,Saturday,0,345,10,emergency,en,Remitly,0
+ee6ebe47-7554-49a6-b4ba-0a0ef492940f,synth_4006ebb3b36f,remittance,tabddpm_synthetic,,['en'],unknown,2024-05-01T18:01:00+00:00,577.2,21.23,64,18,2,Wednesday,5,2000,7,unknown,en,Wire transfer (bank),0
+8f94996b-2e7c-485d-b92d-7e6b0d53dea4,synth_9c9630b5ae19,remittance,tabddpm_synthetic,,['vi'],wire transfer,2024-12-17T18:38:00+00:00,60.2,8.07,33,18,2,Wednesday,3,1018,6,wire transfer,vi,Western Union,0
+871ff394-bb4b-4681-be01-d90c813024d7,synth_363be98832f6,remittance,tabddpm_synthetic,,['en'],interception,2024-08-20T18:20:00+00:00,503.59,2.29,25,18,1,Tuesday,5,615,8,interception,en,Western Union,0
+b824265f-f1d8-4283-94ba-d82927054f67,synth_c264243c28e1,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-08-17T20:10:00+00:00,948.42,35.57,50,20,5,Saturday,3,1268,9,wire transfer,en,MoneyGram,0
+b0bcd643-3d8e-4ef5-89b4-7a00af342ba2,synth_7ed35f9bf5ee,remittance,tabddpm_synthetic,,['vi'],interception,2024-11-18T00:19:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,interception,vi,Wire transfer (bank),0
+f46c3512-dba5-426f-b648-ca8655e2783a,synth_f1d6d208df6b,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-01-23T00:00:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,exchange rate,en,Hawala,0
+6419f76f-6614-4540-8e67-b60188a29d1b,synth_310b62b55088,remittance,tabddpm_synthetic,,['yo'],fraude,2024-12-18T00:30:00+00:00,1243.1,105.2,36,0,6,Sunday,90,2000,18,fraude,yo,Remitly,0
+369240d2-1298-4b44-bbf2-cfa9fc27b445,synth_c3c01bd056d9,remittance,tabddpm_synthetic,,['en'],interception,2024-07-03T00:26:00+00:00,10000.0,1282.74,25,0,6,Sunday,90,2000,86,interception,en,Western Union,0
+f22395ca-5f5f-4939-841a-b8444cd17687,synth_6802d99dc6ea,remittance,tabddpm_synthetic,,['vi'],wire transfer,2024-06-09T17:10:00+00:00,1955.07,118.15,64,17,3,Thursday,1,801,5,wire transfer,vi,Wire transfer (bank),0
+3a912857-6802-415f-946e-45e52ce3b478,synth_a3129b10a118,remittance,tabddpm_synthetic,,['en'],unknown,2024-01-31T14:07:00+00:00,482.6,13.46,47,14,2,Wednesday,0,1384,10,unknown,en,Xoom,0
+58a34b9f-e734-4815-b1da-4b2b156a1fed,synth_2c35abf37034,remittance,tabddpm_synthetic,,['en'],interception,2024-05-05T15:35:00+00:00,807.33,44.91,54,15,2,Wednesday,5,194,5,interception,en,Remitly,0
+13ff2ee8-82b3-40a0-aae7-c12f268e233e,synth_a7a508a932f8,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-03-17T20:25:00+00:00,1306.97,84.54,39,20,5,Saturday,5,463,5,wire transfer,en,Remitly,0
+025ac207-371d-425f-9170-d0d2ec354630,synth_ecb1db60a5d9,remittance,tabddpm_synthetic,,['en'],MoneyGram,2024-06-25T00:37:00+00:00,1087.39,52.72,29,0,6,Sunday,9,1,38,MoneyGram,en,Western Union,1
+2b81a236-43c4-4665-9501-3d1da8602188,synth_17c28b1ae30b,remittance,tabddpm_synthetic,,['vi'],wire transfer,2024-09-15T00:21:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,wire transfer,vi,MoneyGram,0
+4e6b04e9-5e3f-4ad4-907d-b5936e41cdad,synth_18614feea6f0,remittance,tabddpm_synthetic,,['en'],unknown,2024-10-31T16:37:00+00:00,484.6,9.41,51,16,2,Wednesday,3,774,11,unknown,en,Cash pickup,0
+d28d92b5-8b2d-4cf1-8b41-905b7388243b,synth_2fa5aa10822a,remittance,tabddpm_synthetic,,['en'],interception,2024-05-09T00:19:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,26,interception,en,Hawala,1
+287f8034-682c-41e8-a1db-2d689836d296,synth_aa1e14ddf1cc,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-01-19T17:21:00+00:00,1178.39,28.84,27,17,2,Wednesday,6,1272,10,exchange rate,en,Hawala,0
+5806f42d-87ab-4cb7-b6ae-350588215237,synth_3a530f291f37,remittance,tabddpm_synthetic,,['en'],bonus,2024-09-21T00:51:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,bonus,en,Xoom,1
+2de26329-eeec-4d74-b3c0-d4da632a19e8,synth_1921b25a4c68,remittance,tabddpm_synthetic,,['en'],interception,2024-10-10T00:16:00+00:00,5425.22,416.56,25,0,6,Sunday,90,2000,35,interception,en,Western Union,0
+74503cf3-8996-41f8-8ee1-53a54c632e62,synth_9460ecdb7131,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-02-08T23:32:00+00:00,50.0,0.0,48,23,5,Saturday,2,1125,11,exchange rate,en,Xoom,0
+464e0e0d-025e-43ab-9bb1-f7b68d92520c,synth_1ca50a27b4be,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-02-06T23:20:00+00:00,108.48,0.0,25,23,5,Saturday,27,2000,5,exchange rate,en,Wire transfer (bank),0
+6282d17e-7a11-4b5b-9e81-b210f2fad69d,synth_1b966cf70af9,remittance,tabddpm_synthetic,,['en'],fraude,2024-11-23T17:58:00+00:00,4200.16,158.04,34,17,6,Sunday,1,735,10,fraude,en,Hawala,0
+aa584084-3b12-422d-be0c-27c006d9b74e,synth_ae9b156715ed,remittance,tabddpm_synthetic,,['yo'],unknown,2024-06-11T11:40:00+00:00,212.25,19.47,40,11,1,Tuesday,4,120,27,unknown,yo,Remitly,1
+6d83399e-21b1-43f7-a31a-b72ca9773a66,synth_3e7c2fb8aa1b,remittance,tabddpm_synthetic,,['vi'],exchange rate,2024-06-28T18:18:00+00:00,252.36,10.22,42,18,4,Friday,8,1143,11,exchange rate,vi,Wire transfer (bank),0
+7927c129-0c32-4b56-881d-6472860b8d8d,synth_b9d256fc89a6,remittance,tabddpm_synthetic,,['es'],exchange rate,2024-08-24T18:19:00+00:00,50.0,2.84,25,18,0,Monday,6,272,6,exchange rate,es,Remitly,0
+3475173c-5725-4b88-bb61-337697b0840c,synth_a09104612dcf,remittance,tabddpm_synthetic,,['vi'],exchange rate,2024-06-27T00:00:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,13,exchange rate,vi,MoneyGram,1
+37d8be28-375b-4b2e-994e-22dabf5054eb,synth_6884149b638a,remittance,tabddpm_synthetic,,['en'],estafa,2024-08-29T00:57:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,81,estafa,en,Xoom,1
+1ce10444-e2f5-4349-a4c6-d874b09dd16d,synth_9834c2eb56e3,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-06-30T17:54:00+00:00,138.35,8.32,47,17,5,Saturday,5,1690,2,wire transfer,en,Western Union,0
+e68b3f96-95b5-4933-95a0-e0dadea14846,synth_5ed9a9d29418,remittance,tabddpm_synthetic,,['en'],MoneyGram,2024-10-15T15:56:00+00:00,1879.12,106.46,41,15,6,Sunday,4,344,8,MoneyGram,en,Western Union,0
+7838152b-182d-4af5-a6a6-e28cbcaf3bab,synth_328a24d0d8bc,remittance,tabddpm_synthetic,,['en'],emergency,2024-05-27T13:19:00+00:00,331.27,8.46,40,13,2,Wednesday,0,222,7,emergency,en,Remitly,0
+d7c15a2f-9f21-4a5b-8764-4e3efa8f7306,synth_8f95403438d5,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-04-05T00:00:00+00:00,10000.0,5000.0,25,0,6,Sunday,55,1,0,wire transfer,en,MoneyGram,0
+78024e1e-c412-4454-b4d5-5941acd856de,synth_4bbd98e5bf2a,remittance,tabddpm_synthetic,,['en'],MoneyGram,2024-07-24T00:11:00+00:00,10000.0,890.21,25,0,6,Sunday,90,2000,55,MoneyGram,en,Cash pickup,0
+f9e66dec-b290-4165-9ab8-1d6bf0142d1b,synth_b05a087cb696,remittance,tabddpm_synthetic,,['vi'],emergency,2024-03-14T21:37:00+00:00,800.79,72.61,32,21,3,Thursday,18,1659,11,emergency,vi,Hawala,0
+1e0e1d75-7fb4-4de8-813c-7e88e2bfa657,synth_cd06d60d6afc,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-01-18T14:03:00+00:00,289.88,28.26,36,14,0,Monday,0,1227,11,exchange rate,en,MoneyGram,0
+7f7c4d5e-61d9-41d0-ad00-44b1d64b9968,synth_0f99a798eaac,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-04-18T14:26:00+00:00,493.71,27.75,59,14,3,Thursday,0,737,8,wire transfer,en,MoneyGram,0
+80b5bea6-dac0-415f-bb5c-7a1b22f22ff9,synth_e0857f84ea3b,remittance,tabddpm_synthetic,,['en'],emergency,2024-04-06T00:27:00+00:00,309.38,31.52,25,0,1,Tuesday,2,1,23,emergency,en,Cash pickup,1
+8ff9db43-b24d-41ab-8454-84f385b6da5d,synth_635b837430a5,remittance,tabddpm_synthetic,,['en'],interception,2024-01-15T00:28:00+00:00,10000.0,4136.09,25,0,6,Sunday,24,1,0,interception,en,Remitly,0
+e58b0542-84cb-4898-8a28-f3ce3bf84068,synth_7781e53ef3a6,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-05-18T13:08:00+00:00,1054.62,58.59,33,13,3,Thursday,0,275,6,exchange rate,en,Wire transfer (bank),0
+82f0dd63-924c-4c25-b0c2-496dfbe881e8,synth_b5bf8a7dca05,remittance,tabddpm_synthetic,,['en'],unknown,2024-04-26T22:50:00+00:00,466.94,21.85,52,22,3,Thursday,8,1017,6,unknown,en,Remitly,0
+2eaaa041-c845-44fc-9ff2-671bc94ecaec,synth_37963cd1f7e1,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-03-13T15:55:00+00:00,710.44,43.09,25,15,3,Thursday,0,958,13,exchange rate,en,MoneyGram,0
+920920ea-2092-4c71-8703-39bd5a04cf92,synth_ef7a9900b908,remittance,tabddpm_synthetic,,['en'],Western Union,2024-09-12T00:34:00+00:00,5701.66,430.13,25,0,6,Sunday,90,547,65,Western Union,en,Hawala,1
+d9ce4349-e7fc-4e8d-accb-62d4e75f86b0,synth_0518c8c0c5c6,remittance,tabddpm_synthetic,,['yo'],fraude,2024-12-25T00:27:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,fraude,yo,Wire transfer (bank),0
+4bbd30fa-b0fb-4d53-a21f-29d951fa2824,synth_43ff59b4c9c5,remittance,tabddpm_synthetic,,['en'],bonus,2024-02-08T17:23:00+00:00,1102.24,36.37,65,17,5,Saturday,5,1146,4,bonus,en,Wire transfer (bank),0
+3c8511e1-3df9-45d2-bc7e-0493c3337a8b,synth_7ef87f75b161,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-12-26T00:50:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,exchange rate,en,Xoom,0
+807ec76c-a77a-4e16-a71e-2d6d69c78711,synth_0de250841173,remittance,tabddpm_synthetic,,['es'],fraude,2024-05-23T16:54:00+00:00,112.69,9.25,61,16,1,Tuesday,7,1,7,fraude,es,Cash pickup,0
+61bcffd3-1cd5-49ed-a0e1-d6c9698babb9,synth_cbcf5aed465a,remittance,tabddpm_synthetic,,['en'],MoneyGram,2024-01-02T15:01:00+00:00,1375.8,64.95,25,15,0,Monday,3,1156,10,MoneyGram,en,Wire transfer (bank),0
+98b2b030-db92-45b2-835a-a2e4dafffed1,synth_c7f79613d09e,remittance,tabddpm_synthetic,,['vi'],wire transfer,2024-09-19T00:06:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,wire transfer,vi,Western Union,0
+90891182-c883-4b22-992b-797c346a2916,synth_5765e480ed0b,remittance,tabddpm_synthetic,,['en'],bonus,2024-10-02T00:54:00+00:00,8306.78,567.29,25,0,6,Sunday,90,492,68,bonus,en,Xoom,1
+ec1530ea-7620-4a9e-bb42-561b2b40b72f,synth_0333457103c4,remittance,tabddpm_synthetic,,['en'],fraude,2024-07-07T00:04:00+00:00,2828.02,234.97,32,0,6,Sunday,90,2000,23,fraude,en,Wire transfer (bank),0
+6a62200d-1320-49ac-9a13-65c669419e39,synth_b8b385dc91aa,remittance,tabddpm_synthetic,,['en'],bonus,2024-09-15T00:47:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,bonus,en,Remitly,0
+a7309997-7c87-4173-b5b7-e05895b2e239,synth_6e826c5eef50,remittance,tabddpm_synthetic,,['en'],bonus,2024-04-21T00:15:00+00:00,1521.42,125.75,36,0,6,Sunday,90,2000,12,bonus,en,Hawala,0
+b5888958-db59-4a78-af15-74371081f63c,synth_7ff60718f583,remittance,tabddpm_synthetic,,['vi'],fake family,2024-04-14T16:41:00+00:00,663.03,31.52,55,16,1,Tuesday,4,1185,7,fake family,vi,Remitly,0
+a81c82a1-5e7b-42f4-8280-0815d648c503,synth_0f79b3d5fbb4,remittance,tabddpm_synthetic,,['en'],estafa,2024-08-10T15:03:00+00:00,142.13,8.55,60,15,1,Tuesday,6,978,8,estafa,en,Cash pickup,0
+2bb4bcbc-bc3b-4616-857d-71e327e16c0c,synth_0020ef4effbe,remittance,tabddpm_synthetic,,['vi'],wire transfer,2024-08-28T00:40:00+00:00,10000.0,5000.0,33,0,6,Sunday,28,1,0,wire transfer,vi,Wire transfer (bank),0
+163e0eed-4254-4e22-8155-19e4592af266,synth_a0d52bfeff50,remittance,tabddpm_synthetic,,['en'],emergency,2024-06-19T21:13:00+00:00,641.84,26.09,60,21,4,Friday,0,922,14,emergency,en,Xoom,0
+f8dd5e4f-8dee-44b9-942d-b2feca85df04,synth_500825ad2fbf,remittance,tabddpm_synthetic,,['en'],emergency,2024-03-07T17:28:00+00:00,889.83,27.72,44,17,0,Monday,0,558,6,emergency,en,Cash pickup,0
+ec53dd73-33b3-45c4-91be-c20a9dfbe545,synth_9e1240dd18ba,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-08-05T18:00:00+00:00,580.55,35.85,60,18,3,Thursday,12,1480,9,wire transfer,en,Xoom,0
+08f02c22-a003-49d2-ade2-588a87ca5241,synth_b2b41195e3be,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-06-05T00:03:00+00:00,10000.0,5000.0,25,0,6,Sunday,65,1,0,wire transfer,en,MoneyGram,0
+9d745c54-66bb-4f4a-96f1-59f4ca83ed12,synth_ca9290d5d165,remittance,tabddpm_synthetic,,['es'],wire transfer,2024-07-10T00:09:00+00:00,10000.0,722.02,32,0,6,Sunday,31,1,77,wire transfer,es,Western Union,1
+6ab22338-d7aa-4ebc-9534-0030e253b667,synth_b8504402227a,remittance,tabddpm_synthetic,,['yo'],Western Union,2024-12-04T22:02:00+00:00,1510.55,89.26,43,22,5,Saturday,1,927,9,Western Union,yo,Cash pickup,0
+e95e7f71-d65c-4609-8952-24e7305bbdb3,synth_d3d1f36ca061,remittance,tabddpm_synthetic,,['en'],MoneyGram,2024-12-06T00:30:00+00:00,10000.0,5000.0,25,0,6,Sunday,78,1,0,MoneyGram,en,Remitly,1
+5ae6f60c-6333-42f9-9b34-38aeb55b2a98,synth_bf920cd6e114,remittance,tabddpm_synthetic,,['en'],fraude,2024-11-03T18:08:00+00:00,390.09,16.23,29,18,6,Sunday,3,2000,4,fraude,en,Cash pickup,0
+d8d8b123-187e-4817-b441-455d2927c910,synth_d161d5b672f6,remittance,tabddpm_synthetic,,['en'],exchange rate,2024-10-06T00:32:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,exchange rate,en,MoneyGram,0
+e8370cca-c6be-4119-af30-1cc7a477c9c4,synth_68ad1186d7b5,remittance,tabddpm_synthetic,,['en'],fake family,2024-03-07T23:10:00+00:00,1229.62,43.71,54,23,2,Wednesday,2,1177,6,fake family,en,Wire transfer (bank),0
+9c63d79f-f3b2-4f31-a399-10ff5cc3e6d8,synth_bef37be356b5,remittance,tabddpm_synthetic,,['es'],emergency,2024-05-12T14:16:00+00:00,1412.85,77.21,50,14,3,Thursday,1,1642,0,emergency,es,Remitly,0
+d8f8f9c9-9510-4fa0-ae1e-a8ceb8929152,synth_b5c503a8785b,remittance,tabddpm_synthetic,,['es'],unknown,2024-09-14T23:52:00+00:00,1598.47,119.37,56,23,3,Thursday,1,1870,4,unknown,es,Hawala,0
+67e0bb1d-1ce2-4ddb-b9fa-39c262d7f0dd,synth_254fcc4333b4,remittance,tabddpm_synthetic,,['hi'],wire transfer,2024-03-24T19:50:00+00:00,532.11,17.23,33,19,6,Sunday,1,1823,8,wire transfer,hi,MoneyGram,0
+c4982afb-c035-40d0-9625-67843c627520,synth_bacad42b3de5,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-04-02T22:12:00+00:00,403.76,22.47,31,22,3,Thursday,10,638,10,wire transfer,en,Remitly,0
+c423ad89-6a98-4a0b-90a6-05fb8d0b94cb,synth_8eba166473ae,remittance,tabddpm_synthetic,,['en'],emergency,2024-10-24T16:15:00+00:00,2013.01,71.57,34,16,1,Tuesday,2,2000,12,emergency,en,Hawala,0
+4d5281d5-56e2-4571-a218-87521be9f818,synth_fcac54ec5f4b,remittance,tabddpm_synthetic,,['en'],bonus,2024-12-10T23:57:00+00:00,57.68,0.0,28,23,3,Thursday,15,752,5,bonus,en,Cash pickup,0
+64b12cdd-07a0-4905-98a2-96166fcf075e,synth_b2ad8cf91f38,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-12-19T15:18:00+00:00,549.32,53.98,39,15,3,Thursday,13,1496,14,wire transfer,en,Xoom,0
+28a95f5b-0fc0-4df0-998d-a76205dbe009,synth_3686abe1c1a9,remittance,tabddpm_synthetic,,['en'],fake family,2024-09-28T16:17:00+00:00,622.16,26.92,31,16,5,Saturday,7,1147,7,fake family,en,Wire transfer (bank),0
+8e0d4062-9049-4f22-9ee2-5093b192f4e2,synth_e87106a64247,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-11-23T14:53:00+00:00,390.53,19.45,47,14,1,Tuesday,16,547,11,wire transfer,en,Xoom,0
+4911053d-9cb6-4f73-b68b-09629dffcf94,synth_333d1a3bc16a,remittance,tabddpm_synthetic,,['vi'],fake family,2024-03-15T18:44:00+00:00,913.88,32.27,58,18,3,Thursday,0,696,9,fake family,vi,Hawala,0
+8ef40abc-ef05-4434-9767-a788c318a7e4,synth_b757b84a3495,remittance,tabddpm_synthetic,,['vi'],Western Union,2024-10-25T19:17:00+00:00,50.0,6.96,34,19,0,Monday,6,988,5,Western Union,vi,Cash pickup,0
+5f4c8b6b-17f8-4f01-bbe0-2f77ff6180d5,synth_68702093744c,remittance,tabddpm_synthetic,,['en'],interception,2024-08-02T00:21:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,interception,en,Cash pickup,0
+20d35757-fa7a-43e0-9668-6899a3236561,synth_6cdc65bda9ff,remittance,tabddpm_synthetic,,['en'],unknown,2024-12-18T09:27:00+00:00,10000.0,1577.9,29,9,6,Sunday,11,1,0,unknown,en,Cash pickup,0
+cdd21a6e-8a63-4b99-959a-80e5d151a65d,synth_4925a2bc8820,remittance,tabddpm_synthetic,,['en'],fraude,2024-07-09T17:13:00+00:00,228.94,12.4,35,17,4,Friday,0,320,8,fraude,en,MoneyGram,0
+94ee0b83-a150-466c-af3a-e101a1cb9b50,synth_c7fa6d9401d2,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-03-25T00:32:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,wire transfer,en,Wire transfer (bank),0
+2f09f62e-e042-4519-8fd5-0482be6228f2,synth_057ec1006175,remittance,tabddpm_synthetic,,['en'],fake family,2024-07-13T20:29:00+00:00,557.47,38.07,61,20,1,Tuesday,2,1528,5,fake family,en,Remitly,0
+5f131746-1274-4e31-a241-73e0cd9a2d54,synth_0f9a126ec291,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-07-20T22:41:00+00:00,141.61,6.94,30,22,3,Thursday,2,600,6,wire transfer,en,Wire transfer (bank),0
+8c44531e-3d26-4bc1-9558-9d9ef0b42e42,synth_053b79b23f9b,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-04-27T14:36:00+00:00,1048.62,64.21,26,14,1,Tuesday,11,968,9,wire transfer,en,Hawala,0
+d87bc7ae-c469-4c9b-98d2-8000b95cadba,synth_6808ed9794bf,remittance,tabddpm_synthetic,,['yo'],wire transfer,2024-03-05T18:09:00+00:00,167.52,3.81,56,18,5,Saturday,1,159,10,wire transfer,yo,Remitly,0
+6247a5c4-973e-4c64-ab6a-9d38626d53ef,synth_895d0caf8e6a,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-11-03T18:29:00+00:00,422.47,26.96,37,18,4,Friday,5,333,9,wire transfer,en,Remitly,0
+732b7b57-9621-4295-bab5-42a894407c37,synth_5621c898e0f8,remittance,tabddpm_synthetic,,['en'],wire transfer,2024-05-29T00:09:00+00:00,2050.74,185.23,25,0,6,Sunday,90,2000,21,wire transfer,en,Remitly,0
+77bb84ca-cc27-431c-b43c-591800dc049d,synth_bfed7a37b201,remittance,tabddpm_synthetic,,['en'],MoneyGram,2024-07-09T20:13:00+00:00,824.12,29.4,63,20,4,Friday,9,1516,7,MoneyGram,en,Cash pickup,0
+124713c7-9965-4f35-84d9-50384426c464,synth_a6108b7abd54,remittance,tabddpm_synthetic,,['en'],fraude,2024-06-10T13:22:00+00:00,893.06,35.98,45,13,1,Tuesday,9,719,7,fraude,en,Western Union,0
+4ee06d82-c004-434f-a33a-235df0d62abe,synth_9543937fba67,remittance,tabddpm_synthetic,,['en'],interception,2024-09-29T00:41:00+00:00,10000.0,5000.0,25,0,6,Sunday,90,1,0,interception,en,Wire transfer (bank),0
+69d8e280-944c-4987-979f-0f9a60c560f0,synth_e53e02e85d94,remittance,tabddpm_synthetic,,['en'],emergency,2024-06-09T21:52:00+00:00,406.9,53.65,34,21,5,Saturday,1,1575,4,emergency,en,Western Union,0
+85ea28e7-1fc6-4c4e-8d4c-173b6bd62b1b,synth_7458f200bc27,remittance,tabddpm_synthetic,,['en'],estafa,2024-05-06T03:32:00+00:00,1284.15,109.92,36,3,6,Sunday,90,2000,14,estafa,en,Wire transfer (bank),0
+7d2ff72a-f6ff-44d2-92c2-48156e8efd36,synth_cc2524cead0d,remittance,tabddpm_synthetic,,['en'],emergency,2024-09-27T22:55:00+00:00,625.89,26.2,36,22,6,Sunday,1,1730,8,emergency,en,MoneyGram,0
