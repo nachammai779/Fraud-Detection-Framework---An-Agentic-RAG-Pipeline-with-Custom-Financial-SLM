@@ -1,186 +1,202 @@
-# Fraud Detection Framework — An Agentic RAG Pipeline with Custom Financial SLM
+# Uncharted Data Challenge — Fraud Detection for Underserved Communities
 
-An end-to-end fraud detection system combining **LightGBM**, **Neo4j graph analytics**, **ChromaDB RAG**, and **NGBoost uncertainty estimation** on the Kaggle IEEE-CIS Fraud Detection dataset.
+Synthetic fraud detection dataset targeting **4 underserved archetypes** that are underrepresented in existing financial crime datasets. Built for the [Adaption Labs Uncharted Data Challenge](https://www.adaptionlabs.ai/blog/the-uncharted-data-challenge).
 
-## Architecture
+## The Problem
+
+Fraud detection models are trained almost exclusively on mainstream banking data. Communities that rely on informal remittances, gig economy payments, prepaid cards, or ITIN-based transactions are left unprotected. This project fills that gap.
+
+## 4 Archetypes
+
+| Archetype | Description | Fraud Vectors | Languages |
+|-----------|-------------|---------------|-----------|
+| **Remittance** | Cross-border money transfer fraud targeting immigrant communities | Wire transfer, exchange rate, emergency, interception, estafa | en, es, vi, yo, hi, ht |
+| **Gig Worker** | Account takeover and payment fraud targeting gig economy workers | ATO, SIM swap, OTP, stolen, hacked, fake support | en, hi, vi, es, yo |
+| **Unbanked** | Prepaid card, payday loan, and kiosk fraud targeting unbanked populations | Predatory, prepaid, kiosk, advance fee, fake loan, hawala | en, vi, yo, es, hi |
+| **ITIN** | Identity theft, tax fraud, and synthetic identity targeting ITIN holders | ITIN, EIN, identity theft, synthetic identity, tax return | en, vi, ta, es |
+
+## Pipeline
 
 ```
-Kaggle IEEE Dataset (590K transactions)
-        |
-        v
-+------------------+     +-------------------+     +-------------------+
-|  Kafka Producer  | --> |   Kafka Broker    | --> |  Kafka Consumer   |
-|  (streaming)     |     |  (transactions)   |     |  (LightGBM)       |
-+------------------+     +-------------------+     +--------+----------+
-                                                            |
-                                                   fraud-alerts topic
-                                                            |
-                                                            v
-+------------------+     +-------------------+     +-------------------+
-|  Neo4j + GDS     | --> | Graph Features    | --> |  RAG Enricher     |
-|  (PageRank,      |     | (22 features)     |     |  (ChromaDB query) |
-|   Louvain)       |     +-------------------+     +--------+----------+
-+------------------+                                        |
-                                                            v
-+------------------+     +-------------------+     fraud-alerts-enriched
-|  ChromaDB        | <-- | Chroma Indexer    |          topic
-|  (4 collections) |     | (batch vectorize) |
-+------------------+     +-------------------+
+Scrapers (Reddit + CFPB + BBB)          Profile Configs
+    |   1,040 seed narratives               |   Behavioral distributions
+    v                                       v
+Schema (31 fields)                   Tab-DDPM (Gaussian diffusion)
+    |                                       |   5,000 synthetic transactions
+    v                                       v   per archetype (20,000 total)
+Merge Sources                        Adaption Labs API
+    |                                       |   15,076 AI-generated narratives
+    v                                       |   + 390 reasoning traces
+Seed Narratives                      Final Adapted Dataset
+    (JSONL per archetype)                (parquet + CSV per archetype)
 ```
 
-## Model Performance
+## Dataset Summary
 
-| Model | AUC-ROC | Features |
-|-------|---------|----------|
-| LightGBM (tabular only) | 0.9143 | 424 |
-| + 14 Neo4j graph features | 0.9425 | 438 |
-| **+ 22 graph features (with 2-hop)** | **0.9486** | **446** |
-| NGBoost standalone (120K subsample) | 0.9292 | 446 |
-| NGBoost + LightGBM ensemble | 0.9424 | 449 |
+| Metric | Value |
+|--------|-------|
+| Total synthetic records | 20,000 (5,000 per archetype) |
+| Narratives generated | 15,076 by Adaption Labs + 4,924 reused from pool |
+| Reasoning traces | 390 (100 sampled per archetype) |
+| Seed narratives scraped | 1,040 from Reddit, CFPB, BBB |
+| Languages covered | 8 (en, es, hi, ta, ta-en, ht, yo, vi) |
+| Fraud rate | ~10% across all archetypes |
+| Schema fields | 31 (8 universal + 23 source extensions) |
+| Adaption quality score | E (5.0) -> A (9.2-9.4), 82-88% improvement |
 
 ## Project Structure
 
 ```
 Fraud Detection Framework/
-|-- Fraud_Detection_Kaggle_IEEE_Dataset.ipynb   # EDA & model development notebook
-|-- Fraud_Detection_Kaggle_IEEE_Dataset.py      # Python script version
-|-- Kaggle-IEEE-dataset/                        # IEEE-CIS dataset (590K transactions)
-|-- data/processed/                             # Generated feature matrices
-|   |-- feature_matrix.parquet                  # Tabular + graph features (446 cols)
-|   |-- graph_features.parquet                  # Graph-only features (22 cols)
-|   |-- graph_features.csv                      # CSV for inspection
-|   |-- explore.py                              # Streamlit viewer
-|   `-- view_parquet.py                         # CLI parquet viewer
-|-- scripts/
-|   |-- merge_features.py                       # Merge graph + tabular features locally
-|   `-- ensemble_train.py                       # NGBoost + LightGBM stacked ensemble
-`-- fraud-detection-pipeline/                   # Dockerized pipeline (see below)
+|-- datasets/
+|   |-- {archetype}/
+|   |   |-- adaptive/
+|   |   |   |-- transactions_adapted.parquet      # Final dataset (narratives filled)
+|   |   |   |-- transactions_adapted_{arch}.csv   # CSV for viewing
+|   |   |   |-- adapted_output.jsonl              # Raw Adaption response
+|   |   |   |-- prompt_reference.csv              # Prompt/enhanced_prompt reference
+|   |   |   `-- for_adaption.jsonl                # Uploaded to Adaption
+|   |   |-- reasoning/
+|   |   |   |-- reasoning_{arch}.csv              # Reasoning traces (100 samples)
+|   |   |   `-- reasoning_output.jsonl            # Raw reasoning response
+|   |   `-- synthetic/
+|   |       |-- transactions.parquet              # Tab-DDPM output (pre-adaptation)
+|   |       |-- transactions_{arch}.csv           # CSV version
+|   |       `-- generation_summary.json           # Generation stats
+|   |-- adaption_jobs.json                        # Job tracker (narrative generation)
+|   `-- adaption_reasoning_jobs.json              # Job tracker (reasoning traces)
+|
+|-- src/
+|   |-- scrapers/
+|   |   |-- web_scraper.py             # Pullpush.io (Reddit archive) scraper
+|   |   |-- cfpb_scraper.py            # CFPB complaint database scraper
+|   |   |-- bbb_scraper.py             # BBB Scam Tracker scraper
+|   |   |-- merge_sources.py           # Merge all scraped JSONL per archetype
+|   |   |-- run_all_scrapers.py        # Master scraper runner
+|   |   |-- schema.py                  # 31-field canonical schema + validation
+|   |   |-- profile_configs.py         # Behavioral profiles per archetype
+|   |   |-- README.md                  # Scraper documentation
+|   |   `-- datasets/                  # Scraped seed narratives (1,040 records)
+|   |
+|   `-- generators/
+|       |-- tabddpm_generator.py       # Hybrid Tab-DDPM generator
+|       |-- adaptive_data.py           # Adaption Labs integration (main)
+|       |-- adaptive_submit.py         # Fire-and-forget job submission
+|       |-- adaptive_check.py          # Job status checker
+|       |-- adaptive_download.py       # Download + merge adapted results
+|       |-- adaptive_reasoning.py      # Reasoning traces pipeline
+|       |-- verify_language.py         # Language verification via langdetect
+|       `-- export_csv.py              # Parquet to CSV exporter
+|
+|-- notebooks/
+|   `-- generation/
+|       |-- tabddpm_colab.ipynb        # Colab Pro notebook (A100 GPU)
+|       `-- tabddpm_output/            # Colab generation output (4 parquets)
+|
+`-- lib/
+    `-- tab-ddpm/                      # Tab-DDPM library (Gaussian diffusion core)
 ```
 
-## Key Components
+## How It Works
 
-### 1. Neo4j Graph Analytics
+### 1. Scraping (no API keys needed)
 
-The transaction and identity data is loaded into Neo4j as a property graph with 5 node types and 6 relationship types:
+Three public sources, zero authentication:
 
-**Graph Model:**
-- `:Transaction` -- `:Card` -- `:Address` -- `:EmailDomain` -- `:Device`
-- Relationships: `USED_CARD`, `FROM_ADDRESS`, `SENT_FROM_EMAIL`, `SENT_TO_EMAIL`, `USED_DEVICE`, `LINKED_TO_ADDRESS`
-
-**GDS Algorithms:**
-- **PageRank** — Identifies hub-connected transactions. Top 20% PageRank transactions have 2.1x the average fraud rate (7.38% vs 3.50%).
-- **Louvain Community Detection** — Groups transactions into ~39 communities by shared entities. High-risk communities (>10% fraud rate) are strong fraud signals.
-
-**22 Graph Features Extracted:**
-
-| Category | Features | Description |
-|----------|----------|-------------|
-| GDS | `communityId`, `pageRank` | Louvain community + PageRank score |
-| Community | `communitySize`, `communityFraudRate`, `communityAvgAmount`, `communityStdAmount` | Per-community aggregates |
-| Card | `cardDegree`, `cardFraudRate`, `numDevicesOnCard`, `addressesPerCard`, `fraudOnSameCard` | Card-level stats |
-| 2-hop | `neighborCardFraudRate`, `neighborCardCount` | Fraud rate of cards sharing same address |
-| Address | `addrDegree`, `addrFraudRate`, `numCardsAtAddress` | Address-level stats |
-| Email | `emailDegree`, `emailFraudRate`, `cardsPerEmail` | Email domain stats |
-| Device | `deviceDegree`, `deviceFraudRate` | Device fingerprint stats |
-| Cross-entity | `maxEntityFraudRate` | Max fraud rate across all connected entities |
-
-**Top graph features by importance (LightGBM gain):**
-1. `cardFraudRate` — 3,293,442
-2. `maxEntityFraudRate` — 449,753
-3. `fraudOnSameCard` — 216,162
-4. `pageRank` — 157,572
-5. `deviceFraudRate` — 129,445
-
-### 2. ChromaDB RAG Pipeline
-
-ChromaDB provides semantic search over fraud intelligence, enabling the RAG enricher to add context to every fraud alert.
-
-**4 Collections:**
-
-| Collection | Documents | Content |
-|------------|-----------|---------|
-| `fraud_cases` | ~20,663 | One doc per historical fraud — amount, card, email, community stats, PageRank |
-| `community_profiles` | ~39 | Louvain community risk profiles with fraud rates and classifications |
-| `entity_risk_profiles` | ~13,885 | Per-card and per-address risk profiles with degree, fraud rate, risk level |
-| `fraud_patterns` | ~30-50 | Aggregated pattern rules (e.g., "Transactions 2am-5am have 6.1% fraud rate") |
-
-**Embedding Model:** `all-MiniLM-L6-v2` (384-dim, runs locally — no API keys needed)
-
-**RAG Enricher Flow:**
-1. Consumes from `fraud-alerts` Kafka topic
-2. Queries ChromaDB for top-5 similar historical frauds, community context, entity risk profiles, and matching patterns
-3. Publishes enriched alert with `rag_context` to `fraud-alerts-enriched` topic
-
-### 3. NGBoost Uncertainty Estimation
-
-NGBoost provides calibrated probabilistic predictions — not just a fraud score, but a confidence estimate.
-
-- **Standalone AUC:** 0.9292 (on 120K subsample — competitive given data limitation)
-- **Stacked Ensemble:** NGBoost OOF predictions used as features for LightGBM
-- **Key Value:** Uncertainty estimates (`ngb_variance`) for analyst triage — high-confidence alerts can be auto-actioned, low-confidence ones need human review
-
-**Ensemble Script:** `scripts/ensemble_train.py` — 5-fold CV NGBoost + LightGBM stacking
-
-### 4. Real-Time Kafka Pipeline
-
-- **Producer** streams transactions at configurable TPS (default: 10)
-- **Consumer** runs LightGBM inference per transaction, publishes fraud alerts
-- **RAG Enricher** adds ChromaDB context to each alert
-- **Kafka UI** at `localhost:8080` for monitoring all topics
-
-## Docker Services
-
-| Service | Image | Port | Purpose |
-|---------|-------|------|---------|
-| `zookeeper` | confluentinc/cp-zookeeper:7.5.0 | 2181 | Kafka coordination |
-| `kafka` | confluentinc/cp-kafka:7.5.0 | 9092, 29092 | Message broker |
-| `kafka-ui` | provectuslabs/kafka-ui | 8080 | Monitoring dashboard |
-| `neo4j` | neo4j:5.26-community | 7474, 7687 | Graph database + GDS |
-| `chromadb` | chromadb/chroma:0.5.23 | 8000 | Vector database |
-| `graph-loader` | custom | — | Loads CSV data into Neo4j |
-| `feature-exporter` | custom | — | Runs GDS algorithms, exports graph features |
-| `chroma-indexer` | custom | — | Indexes fraud intelligence into ChromaDB |
-| `rag-enricher` | custom | — | Enriches fraud alerts with RAG context |
-| `producer` | custom | — | Streams transactions to Kafka |
-| `consumer` | custom | — | LightGBM inference + fraud alerting |
-
-## Quick Start
+| Source | What | Records |
+|--------|------|---------|
+| Pullpush.io | Reddit archive — fraud/scam posts from 40+ subreddits | 717 |
+| CFPB | Consumer Financial Protection Bureau complaints | 187 |
+| BBB Scam Tracker | Better Business Bureau scam reports | 136 |
 
 ```bash
-cd fraud-detection-pipeline/
-
-# 1. Start infrastructure
-docker compose up zookeeper kafka neo4j chromadb kafka-ui -d
-
-# 2. Load graph and extract features
-docker compose up graph-loader
-docker compose run --rm feature-exporter
-
-# 3. Merge features and train model (local)
-cd ..
-python scripts/merge_features.py
-python fraud-detection-pipeline/scripts/train_and_export_model.py
-
-# 4. Index fraud intelligence into ChromaDB
-cd fraud-detection-pipeline/
-docker compose up chroma-indexer --build
-
-# 5. Run the full pipeline
-docker compose up producer consumer rag-enricher --build
+python src/scrapers/run_all_scrapers.py
+python src/scrapers/merge_sources.py
 ```
 
-## Dataset
+### 2. Schema & Profiles
 
-[Kaggle IEEE-CIS Fraud Detection](https://www.kaggle.com/c/ieee-fraud-detection)
-- 590,540 transactions, 394 features
-- 144,233 identity records (24.4% coverage)
-- Binary target: `isFraud` (3.50% fraud rate)
+**Schema** (`schema.py`): 31 fields — 8 universal (data_uuid, id, archetype, source, narrative_text, detected_language_hints, fraud_vector_hint, record_timestamp) + source-specific extensions.
+
+**Profiles** (`profile_configs.py`): Behavioral distributions per archetype derived from scraped data — fraud vector weights, language mix, transaction patterns, instruments, demographics.
+
+### 3. Synthetic Generation (Tab-DDPM Hybrid)
+
+Gaussian diffusion for numerical columns + profile-weighted sampling for categoricals. This avoids multinomial diffusion mode-collapse.
+
+```bash
+# Local (CPU)
+python src/generators/tabddpm_generator.py --epochs 700 --samples_per_archetype 5000
+
+# Colab Pro (A100 GPU — recommended)
+# Upload notebooks/generation/tabddpm_colab.ipynb
+```
+
+Output: 5,000 synthetic transactions per archetype with realistic amounts, fees, ages, hours — but empty `narrative_text`.
+
+### 4. Narrative Generation (Adaption Labs)
+
+Fills `narrative_text` using Adaption Labs API. Each row's fraud vector, language, instrument, and amount become prompt context.
+
+```bash
+export ADAPTION_API_KEY=sk-...
+
+# Estimate credits
+python src/generators/adaptive_data.py --all --estimate
+
+# Submit all 4 archetypes
+python src/generators/adaptive_submit.py
+
+# Check status
+python src/generators/adaptive_check.py
+
+# Download and merge
+python src/generators/adaptive_download.py
+```
+
+### 5. Reasoning Traces (optional)
+
+Adds chain-of-thought reasoning to 100 sampled rows per archetype.
+
+```bash
+python src/generators/adaptive_reasoning.py --estimate
+python src/generators/adaptive_reasoning.py --submit
+python src/generators/adaptive_reasoning.py --check
+python src/generators/adaptive_reasoning.py --download
+```
+
+### 6. Verification
+
+```bash
+python src/generators/verify_language.py --all
+```
 
 ## Tech Stack
 
-- **ML:** LightGBM, NGBoost, scikit-learn
-- **Graph:** Neo4j, Graph Data Science (GDS) library
-- **Vector DB:** ChromaDB, sentence-transformers
-- **Streaming:** Apache Kafka
-- **Containerization:** Docker Compose
-- **Data:** pandas, PyArrow, NumPy
+| Component | Technology |
+|-----------|------------|
+| Synthetic tabular data | Tab-DDPM (Gaussian diffusion) |
+| Narrative generation | Adaption Labs API |
+| Seed scraping | Pullpush.io, CFPB API, BBB Scam Tracker |
+| Language detection | langdetect |
+| Data formats | Parquet, JSONL, CSV |
+| GPU training | Google Colab Pro (A100) |
+| Languages | Python 3.9+ |
+
+## Dependencies
+
+```bash
+pip install torch scikit-learn pandas pyarrow requests beautifulsoup4 adaption langdetect
+```
+
+## Credits
+
+- [Adaption Labs](https://www.adaptionlabs.ai/) — Adaptive Data platform for narrative generation
+- [Tab-DDPM](https://github.com/rotot0/tab-ddpm) — Denoising diffusion for tabular data
+- [CFPB](https://www.consumerfinance.gov/) — Consumer complaint database
+- [BBB Scam Tracker](https://www.bbb.org/scamtracker) — Public scam reports
+- [Pullpush.io](https://pullpush.io/) — Reddit archive API
+
+## Branch Info
+
+This branch (`unchartered_data_challenge`) contains the full Uncharted Data Challenge pipeline. The `main` branch contains the original Fraud Detection Framework (LightGBM + Neo4j + ChromaDB + NGBoost on Kaggle IEEE dataset).
