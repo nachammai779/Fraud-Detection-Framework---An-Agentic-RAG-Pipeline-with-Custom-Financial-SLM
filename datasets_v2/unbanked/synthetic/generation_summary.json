@@ -1,0 +1,52 @@
+{
+  "archetype": "unbanked",
+  "n_samples": 5000,
+  "n_personas": 9,
+  "per_persona_counts": {
+    "unb_001": 556,
+    "unb_002": 556,
+    "unb_003": 556,
+    "unb_004": 556,
+    "unb_005": 556,
+    "unb_006": 555,
+    "unb_007": 555,
+    "unb_008": 555,
+    "unb_009": 555
+  },
+  "fraud_rate": 0.0994,
+  "mean_amount_usd": 154.179812,
+  "unique_instruments": [
+    "1099_payroll",
+    "Bluebird",
+    "Cash App",
+    "Cedar-Riverside, Minneapolis, MN (55404)",
+    "Houston Home Depot lot + WU at La Michoacana",
+    "MasterCard_Debit",
+    "NetSpend x2",
+    "Walmart MoneyCard",
+    "Walmart_MoneyCard",
+    "Walmart_MoneyCenter",
+    "WhatsApp",
+    "corner_liquor_store",
+    "en",
+    "es",
+    "income_source",
+    "kiosk_location",
+    "mobile_data",
+    "online_gateway",
+    "prepaid_card_stack",
+    "voice_call"
+  ],
+  "unique_languages": [
+    "ar",
+    "en",
+    "es",
+    "fr",
+    "pl",
+    "so",
+    "vi",
+    "wo"
+  ],
+  "generated_at": "2026-04-16T02:58:07.606296+00:00",
+  "dataset_version": "v2"
+}

@@ -1,0 +1,172 @@
+{
+  "remittance": [
+    {
+      "archetype": "remittance",
+      "dataset_id": "0556a9a7-c6c5-4ef6-8834-52e69a3a6b94",
+      "run_id": null,
+      "estimated_credits": 3.0,
+      "estimated_minutes": 13.0,
+      "n_rows": 200,
+      "estimate_only": true
+    },
+    {
+      "archetype": "remittance",
+      "dataset_id": "7637d2f6-b0d4-4c9f-a16d-7fa714d10334",
+      "run_id": "dataset-7637d2f6-b0d4-4c9f-a16d-7fa714d10334-1776293499339",
+      "estimated_credits": 3.0,
+      "estimated_minutes": 13.0,
+      "n_rows": 200,
+      "estimate_only": false
+    },
+    {
+      "archetype": "remittance",
+      "dataset_id": "705a0ab0-be3d-4d84-a2ec-626be5f7d4e4",
+      "run_id": "dataset-705a0ab0-be3d-4d84-a2ec-626be5f7d4e4-1776299636245",
+      "estimated_credits": 1.0,
+      "estimated_minutes": 11.0,
+      "n_rows": 50,
+      "estimate_only": false
+    },
+    {
+      "archetype": "remittance",
+      "dataset_id": "25516141-21df-406b-a48b-1166e958d98c",
+      "run_id": "dataset-25516141-21df-406b-a48b-1166e958d98c-1776305784438",
+      "estimated_credits": 1.0,
+      "estimated_minutes": 11.0,
+      "n_rows": 50,
+      "estimate_only": false
+    },
+    {
+      "archetype": "remittance",
+      "dataset_id": "5ae59010-801f-4558-a0d2-a0c8459d9795",
+      "run_id": "dataset-5ae59010-801f-4558-a0d2-a0c8459d9795-1776308375623",
+      "estimated_credits": 1.0,
+      "estimated_minutes": 11.0,
+      "n_rows": 50,
+      "estimate_only": false
+    }
+  ],
+  "gig_worker": [
+    {
+      "archetype": "gig_worker",
+      "dataset_id": "d1e481d7-178f-4991-9fb2-64b187af0773",
+      "run_id": null,
+      "estimated_credits": 3.0,
+      "estimated_minutes": 13.0,
+      "n_rows": 200,
+      "estimate_only": true
+    },
+    {
+      "archetype": "gig_worker",
+      "dataset_id": "d3550509-3663-4e8e-ae38-c68380517623",
+      "run_id": "dataset-d3550509-3663-4e8e-ae38-c68380517623-1776293507017",
+      "estimated_credits": 3.0,
+      "estimated_minutes": 13.0,
+      "n_rows": 200,
+      "estimate_only": false
+    },
+    {
+      "archetype": "gig_worker",
+      "dataset_id": "519b309e-36fb-477f-864a-3667aab7b2ba",
+      "run_id": "dataset-519b309e-36fb-477f-864a-3667aab7b2ba-1776299642053",
+      "estimated_credits": 1.0,
+      "estimated_minutes": 11.0,
+      "n_rows": 50,
+      "estimate_only": false
+    },
+    {
+      "archetype": "gig_worker",
+      "dataset_id": "1cfa40ab-f737-409c-91c1-49e00f6e1868",
+      "run_id": "dataset-1cfa40ab-f737-409c-91c1-49e00f6e1868-1776305790628",
+      "estimated_credits": 1.0,
+      "estimated_minutes": 11.0,
+      "n_rows": 50,
+      "estimate_only": false
+    },
+    {
+      "archetype": "gig_worker",
+      "dataset_id": "26e0d064-10e3-4289-ab7c-75102d539d0d",
+      "run_id": "dataset-26e0d064-10e3-4289-ab7c-75102d539d0d-1776308388649",
+      "estimated_credits": 1.0,
+      "estimated_minutes": 11.0,
+      "n_rows": 50,
+      "estimate_only": false
+    }
+  ],
+  "unbanked": [
+    {
+      "archetype": "unbanked",
+      "dataset_id": "26074a04-eb31-455d-9949-33deafdc1326",
+      "run_id": "dataset-26074a04-eb31-455d-9949-33deafdc1326-1776293514167",
+      "estimated_credits": 3.0,
+      "estimated_minutes": 13.0,
+      "n_rows": 200,
+      "estimate_only": false
+    },
+    {
+      "archetype": "unbanked",
+      "dataset_id": "8403c945-1940-4a83-b552-21af202def4b",
+      "run_id": "dataset-8403c945-1940-4a83-b552-21af202def4b-1776299648448",
+      "estimated_credits": 1.0,
+      "estimated_minutes": 11.0,
+      "n_rows": 50,
+      "estimate_only": false
+    },
+    {
+      "archetype": "unbanked",
+      "dataset_id": "fa64b5fc-11e6-4f87-b829-f9a9e93cd641",
+      "run_id": "dataset-fa64b5fc-11e6-4f87-b829-f9a9e93cd641-1776305796853",
+      "estimated_credits": 1.0,
+      "estimated_minutes": 11.0,
+      "n_rows": 50,
+      "estimate_only": false
+    },
+    {
+      "archetype": "unbanked",
+      "dataset_id": "15071c7c-96ba-4fbe-a821-b88063c565a5",
+      "run_id": "dataset-15071c7c-96ba-4fbe-a821-b88063c565a5-1776308394978",
+      "estimated_credits": 1.0,
+      "estimated_minutes": 11.0,
+      "n_rows": 50,
+      "estimate_only": false
+    }
+  ],
+  "itin": [
+    {
+      "archetype": "itin",
+      "dataset_id": "ee6a98cb-d9f3-4c06-956f-03cf9ca3df0f",
+      "run_id": "dataset-ee6a98cb-d9f3-4c06-956f-03cf9ca3df0f-1776293521727",
+      "estimated_credits": 2.0,
+      "estimated_minutes": 13.0,
+      "n_rows": 200,
+      "estimate_only": false
+    },
+    {
+      "archetype": "itin",
+      "dataset_id": "af372b9a-5998-4d61-97bb-bd86470fc22a",
+      "run_id": "dataset-af372b9a-5998-4d61-97bb-bd86470fc22a-1776299654850",
+      "estimated_credits": 1.0,
+      "estimated_minutes": 11.0,
+      "n_rows": 50,
+      "estimate_only": false
+    },
+    {
+      "archetype": "itin",
+      "dataset_id": "00380a7a-b369-4dd4-bcb8-48fccaa40e2c",
+      "run_id": "dataset-00380a7a-b369-4dd4-bcb8-48fccaa40e2c-1776305802734",
+      "estimated_credits": 1.0,
+      "estimated_minutes": 11.0,
+      "n_rows": 50,
+      "estimate_only": false
+    },
+    {
+      "archetype": "itin",
+      "dataset_id": "33c3bcec-b701-4986-9f63-1e9193a9423d",
+      "run_id": "dataset-33c3bcec-b701-4986-9f63-1e9193a9423d-1776308404144",
+      "estimated_credits": 1.0,
+      "estimated_minutes": 11.0,
+      "n_rows": 50,
+      "estimate_only": false
+    }
+  ]
+}

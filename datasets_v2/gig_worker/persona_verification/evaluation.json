@@ -1,0 +1,98 @@
+{
+  "dataset_id": "519b309e-36fb-477f-864a-3667aab7b2ba",
+  "quality": {
+    "grade_after": "A",
+    "grade_before": "E",
+    "improvement_percent": 94.0,
+    "percentile_after": 57.7,
+    "score_after": 9.7,
+    "score_before": 5.0
+  },
+  "raw_results": {
+    "gains": {
+      "overall_percentage_gain": 115.96,
+      "message_quality_absolute_gain": 0.86,
+      "message_quality_percentage_gain": 9.5,
+      "completion_quality_absolute_gain": 9.6,
+      "completion_quality_percentage_gain": 0
+    },
+    "columns": {
+      "enhanced_prompt": "rephrased_prompt",
+      "original_prompt": "original_prompt",
+      "enhanced_completion": "fused_generation",
+      "original_completion": "original_completion"
+    },
+    "metrics": {
+      "timings": {
+        "data_loading": 0.6531651020050049,
+        "enhanced_quality": 1.832822561264038,
+        "original_quality": 1.678151845932007
+      },
+      "timestamp": "2026-04-16T00:50:24.048998+00:00",
+      "row_counts": {
+        "input": 50
+      },
+      "config_source": "s3://proteus-prod-datasets/output/dataset-519b309e-36fb-477f-864a-3667aab7b2ba-1776299642053.lance",
+      "reference_lance_path": "s3://proteus-prod-datasets/reference-datasets/numi_dataset_diagnosis.lance",
+      "quality_percentile_after": {
+        "quality_grade": "A",
+        "quality_score": 9.7,
+        "percentile_score": 57.7,
+        "message_quality_percentile": 78.4,
+        "dataset_avg_message_quality": 9.88,
+        "completion_quality_percentile": 37,
+        "dataset_avg_completion_quality": 9.6,
+        "reference_mean_message_quality": 8.36,
+        "reference_mean_completion_quality": 9.38
+      },
+      "quality_percentile_before": {
+        "quality_grade": "E",
+        "quality_score": null,
+        "percentile_score": 39.2,
+        "message_quality_percentile": 78.4,
+        "dataset_avg_message_quality": 9.02,
+        "completion_quality_percentile": 0,
+        "dataset_avg_completion_quality": null,
+        "reference_mean_message_quality": 8.36,
+        "reference_mean_completion_quality": 9.38
+      }
+    },
+    "summary": {
+      "message_quality": {
+        "after": 9.88,
+        "before": 9.02,
+        "gains_percentage": 9.5,
+        "percentile_after": 78.4,
+        "percentile_before": 78.4
+      },
+      "completion_quality": {
+        "after": 9.6,
+        "before": 0,
+        "gains_percentage": 0,
+        "percentile_after": 37,
+        "percentile_before": 0
+      }
+    },
+    "input_path": "s3://proteus-prod-datasets/output/dataset-519b309e-36fb-477f-864a-3667aab7b2ba-1776299642053.lance",
+    "quality_after": {
+      "max_message_quality": 10,
+      "min_message_quality": 9,
+      "std_message_quality": 0.33,
+      "max_completion_quality": 10,
+      "median_message_quality": 10,
+      "min_completion_quality": 8,
+      "std_completion_quality": 0.53,
+      "average_message_quality": 9.88,
+      "median_completion_quality": 10,
+      "average_completion_quality": 9.6
+    },
+    "quality_before": {
+      "max_message_quality": 10,
+      "min_message_quality": 9,
+      "std_message_quality": 0.14,
+      "median_message_quality": 9,
+      "average_message_quality": 9.02
+    }
+  },
+  "status": "pending"
+}

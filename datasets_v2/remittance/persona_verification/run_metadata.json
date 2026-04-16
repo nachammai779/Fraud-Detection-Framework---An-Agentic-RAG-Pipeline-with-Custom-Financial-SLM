@@ -1,0 +1,9 @@
+{
+  "archetype": "remittance",
+  "dataset_id": "5ae59010-801f-4558-a0d2-a0c8459d9795",
+  "run_id": "dataset-5ae59010-801f-4558-a0d2-a0c8459d9795-1776308375623",
+  "estimated_credits": 1.0,
+  "estimated_minutes": 11.0,
+  "n_rows": 50,
+  "estimate_only": false
+}

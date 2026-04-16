@@ -1,0 +1,46 @@
+{
+  "archetype": "gig_worker",
+  "n_samples": 5000,
+  "n_personas": 11,
+  "per_persona_counts": {
+    "gig_001": 455,
+    "gig_002": 455,
+    "gig_003": 455,
+    "gig_004": 455,
+    "gig_005": 455,
+    "gig_006": 455,
+    "gig_007": 454,
+    "gig_008": 454,
+    "gig_009": 454,
+    "gig_010": 454,
+    "gig_011": 454
+  },
+  "fraud_rate": 0.097,
+  "mean_amount_usd": 345.985498,
+  "unique_instruments": [
+    "Amazon Flex",
+    "Curb (yellow cab)",
+    "DoorDash",
+    "Instacart",
+    "OnlyFans",
+    "Shipt",
+    "Spark",
+    "Uber",
+    "Uber Eats",
+    "cash",
+    "es"
+  ],
+  "unique_languages": [
+    "en",
+    "es",
+    "fr",
+    "hi",
+    "ja",
+    "te",
+    "vi",
+    "wo",
+    "yo"
+  ],
+  "generated_at": "2026-04-16T02:58:07.505632+00:00",
+  "dataset_version": "v2"
+}

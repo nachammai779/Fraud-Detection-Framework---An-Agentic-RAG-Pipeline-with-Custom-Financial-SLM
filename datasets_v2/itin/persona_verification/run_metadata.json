@@ -1,0 +1,9 @@
+{
+  "archetype": "itin",
+  "dataset_id": "33c3bcec-b701-4986-9f63-1e9193a9423d",
+  "run_id": "dataset-33c3bcec-b701-4986-9f63-1e9193a9423d-1776308404144",
+  "estimated_credits": 1.0,
+  "estimated_minutes": 11.0,
+  "n_rows": 50,
+  "estimate_only": false
+}

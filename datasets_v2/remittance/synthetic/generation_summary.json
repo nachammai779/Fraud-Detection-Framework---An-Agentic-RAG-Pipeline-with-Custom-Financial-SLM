@@ -1,0 +1,44 @@
+{
+  "archetype": "remittance",
+  "n_samples": 5000,
+  "n_personas": 11,
+  "per_persona_counts": {
+    "rem_001": 455,
+    "rem_002": 455,
+    "rem_003": 455,
+    "rem_004": 455,
+    "rem_005": 455,
+    "rem_006": 455,
+    "rem_007": 454,
+    "rem_008": 454,
+    "rem_009": 454,
+    "rem_010": 454,
+    "rem_011": 454
+  },
+  "fraud_rate": 0.1004,
+  "mean_amount_usd": 462.3367039999999,
+  "unique_instruments": [
+    "CAM",
+    "ICICI Money2India",
+    "MoneyGram (in-store)",
+    "Remitly",
+    "Sendwave",
+    "Walmart2Walmart",
+    "en",
+    "informal_mulas",
+    "informal_relay (Zelle to aunt)",
+    "vi"
+  ],
+  "unique_languages": [
+    "en",
+    "es",
+    "fr",
+    "hi",
+    "ht",
+    "ta",
+    "vi",
+    "yo"
+  ],
+  "generated_at": "2026-04-16T02:58:07.391588+00:00",
+  "dataset_version": "v2"
+}

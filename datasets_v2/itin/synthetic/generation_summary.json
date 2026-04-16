@@ -1,0 +1,44 @@
+{
+  "archetype": "itin",
+  "n_samples": 5000,
+  "n_personas": 9,
+  "per_persona_counts": {
+    "itin_001": 556,
+    "itin_002": 556,
+    "itin_003": 556,
+    "itin_004": 556,
+    "itin_005": 556,
+    "itin_006": 555,
+    "itin_007": 555,
+    "itin_008": 555,
+    "itin_009": 555
+  },
+  "fraud_rate": 0.0968,
+  "mean_amount_usd": 170.73226400000001,
+  "unique_instruments": [
+    "Etsy Payments",
+    "SMS",
+    "auto detailing, sole proprietor",
+    "bodega/small grocery, sole proprietor",
+    "commercial_contracts",
+    "construction subcontracting LLC, partnership",
+    "en",
+    "food truck, sole proprietor",
+    "mobile_sms_whatsapp",
+    "nail salon S-corp",
+    "residential_clients",
+    "secure_portal_email",
+    "tenant_rent"
+  ],
+  "unique_languages": [
+    "ar",
+    "en",
+    "es",
+    "ko",
+    "ta",
+    "vi",
+    "zh"
+  ],
+  "generated_at": "2026-04-16T02:58:07.708859+00:00",
+  "dataset_version": "v2"
+}
