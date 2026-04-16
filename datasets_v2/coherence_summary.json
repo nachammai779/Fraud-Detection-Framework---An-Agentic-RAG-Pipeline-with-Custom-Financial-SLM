@@ -3,32 +3,32 @@
     "n_rows": 50,
     "parsed_ok": 50,
     "with_score": 50,
-    "mean_coherence": 0.426,
-    "flagged_for_regen": 38,
-    "flag_rate": 0.76
+    "mean_coherence": 0.516,
+    "flagged_for_regen": 28,
+    "flag_rate": 0.56
   },
   "gig_worker": {
     "n_rows": 50,
     "parsed_ok": 50,
     "with_score": 50,
-    "mean_coherence": 0.37,
-    "flagged_for_regen": 40,
-    "flag_rate": 0.8
+    "mean_coherence": 0.399,
+    "flagged_for_regen": 38,
+    "flag_rate": 0.76
   },
   "unbanked": {
     "n_rows": 50,
     "parsed_ok": 50,
     "with_score": 50,
-    "mean_coherence": 0.543,
-    "flagged_for_regen": 27,
-    "flag_rate": 0.54
+    "mean_coherence": 0.609,
+    "flagged_for_regen": 21,
+    "flag_rate": 0.42
   },
   "itin": {
     "n_rows": 50,
     "parsed_ok": 50,
     "with_score": 50,
-    "mean_coherence": 0.72,
-    "flagged_for_regen": 13,
-    "flag_rate": 0.26
+    "mean_coherence": 0.798,
+    "flagged_for_regen": 5,
+    "flag_rate": 0.1
   }
 }
