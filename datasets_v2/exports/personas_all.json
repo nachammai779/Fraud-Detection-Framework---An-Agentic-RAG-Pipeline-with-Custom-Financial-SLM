@@ -1,0 +1,990 @@
+{
+  "version": "v2",
+  "total_personas": 40,
+  "archetypes": {
+    "remittance": {
+      "key_world_dimensions": [
+        "corridor_country",
+        "transfer_service_loyalty",
+        "family_crisis_history",
+        "sender_tenure"
+      ],
+      "personas": [
+        {
+          "persona_id": "rem_001",
+          "name": "Maria Hernandez",
+          "age": 34,
+          "summary": "Maria, 34, undocumented DoorDash driver, Los Angeles. Primary financial tool: CashApp. ITIN pending since 2023. Income: $800-1,200/week, paid daily, highly irregular. Device: shared Android, 2 SIM cards. Family: sends $200-400/month to mother in Oaxaca via Remitly. Peak earning: Friday/Saturday nights. Loss tolerance: cannot absorb any fraud loss above $150.",
+          "corridor_country": "Mexico (Oaxaca)",
+          "transfer_service_loyalty": {
+            "primary": "Remitly",
+            "secondary": "MoneyGram",
+            "switch_threshold_fee_diff_usd": 4.0
+          },
+          "family_crisis_history": [
+            "mother_hospitalization_2024",
+            "sibling_school_fees_recurring"
+          ],
+          "sender_tenure_years": 6,
+          "language_mix": [
+            "es",
+            "en"
+          ],
+          "device": "shared Android, 2 SIM cards",
+          "income_usd_weekly": [
+            800,
+            1200
+          ],
+          "remittance_cadence": "biweekly + emergency wires",
+          "loss_tolerance_usd": 150
+        },
+        {
+          "persona_id": "rem_002",
+          "name": "Tuan Nguyen",
+          "age": 52,
+          "summary": "Tuan, 52, nail salon co-owner in Houston, sends to elderly parents in Da Nang. Uses Western Union in-person at a Vietnamese-owned shop on Bellaire Blvd. Trusts only one cashier. Cash deposits in $1,500-2,000 chunks twice monthly. Frequent target of 'family in trouble' phone scams in Vietnamese.",
+          "corridor_country": "Vietnam (Da Nang)",
+          "transfer_service_loyalty": {
+            "primary": "Western Union (in-person)",
+            "secondary": "none",
+            "switch_threshold_fee_diff_usd": 999
+          },
+          "family_crisis_history": [
+            "father_diabetes_meds_recurring",
+            "phone_scam_attempted_2024"
+          ],
+          "sender_tenure_years": 18,
+          "language_mix": [
+            "vi",
+            "en"
+          ],
+          "device": "iPhone 11, single SIM",
+          "income_usd_weekly": [
+            1500,
+            2200
+          ],
+          "remittance_cadence": "twice monthly",
+          "loss_tolerance_usd": 500
+        },
+        {
+          "persona_id": "rem_003",
+          "name": "Adaeze Okafor",
+          "age": 29,
+          "summary": "Adaeze, 29, registered nurse in Newark NJ, sends to siblings in Lagos. Uses Sendwave for speed. Works night shifts; transactions cluster 2am-5am ET. Recently targeted by Yoruba-language WhatsApp scam impersonating cousin asking for school fees.",
+          "corridor_country": "Nigeria (Lagos)",
+          "transfer_service_loyalty": {
+            "primary": "Sendwave",
+            "secondary": "Wise",
+            "switch_threshold_fee_diff_usd": 2.5
+          },
+          "family_crisis_history": [
+            "whatsapp_impersonation_attempted_2025",
+            "sister_university_fees_recurring"
+          ],
+          "sender_tenure_years": 4,
+          "language_mix": [
+            "en",
+            "yo"
+          ],
+          "device": "iPhone 13, single SIM",
+          "income_usd_weekly": [
+            1600,
+            1900
+          ],
+          "remittance_cadence": "monthly + tuition months",
+          "loss_tolerance_usd": 800
+        },
+        {
+          "persona_id": "rem_004",
+          "name": "Jean-Baptiste Pierre",
+          "age": 41,
+          "summary": "Jean-Baptiste, 41, construction laborer in Brooklyn, sends to wife and three children in Port-au-Prince. Uses CAM Transfer and occasionally hand-carries cash via traveling friend ('boat' / informal courier). Speaks Haitian Creole. Was robbed of $600 cash in 2023 and now distrusts couriers.",
+          "corridor_country": "Haiti (Port-au-Prince)",
+          "transfer_service_loyalty": {
+            "primary": "CAM",
+            "secondary": "informal_courier",
+            "switch_threshold_fee_diff_usd": 6.0
+          },
+          "family_crisis_history": [
+            "courier_theft_2023",
+            "earthquake_aid_2021",
+            "wife_medical_2024"
+          ],
+          "sender_tenure_years": 11,
+          "language_mix": [
+            "ht",
+            "en",
+            "fr"
+          ],
+          "device": "Android budget phone, single SIM",
+          "income_usd_weekly": [
+            700,
+            1100
+          ],
+          "remittance_cadence": "weekly small + monthly large",
+          "loss_tolerance_usd": 100
+        },
+        {
+          "persona_id": "rem_005",
+          "name": "Ravi Patel",
+          "age": 38,
+          "summary": "Ravi, 38, software contractor in Sunnyvale on H-1B, sends to parents in Ahmedabad. Uses Wise for FX rate optimization. Sophisticated; monitors INR/USD daily. Targets of 'Microsoft tech support' scams in Hindi-English.",
+          "corridor_country": "India (Gujarat)",
+          "transfer_service_loyalty": {
+            "primary": "Wise",
+            "secondary": "Remitly",
+            "switch_threshold_fee_diff_usd": 1.0
+          },
+          "family_crisis_history": [
+            "mother_surgery_2024",
+            "tech_support_scam_attempted_2025"
+          ],
+          "sender_tenure_years": 7,
+          "language_mix": [
+            "en",
+            "hi"
+          ],
+          "device": "Pixel 8, single SIM",
+          "income_usd_weekly": [
+            3500,
+            4200
+          ],
+          "remittance_cadence": "monthly fixed",
+          "loss_tolerance_usd": 2000
+        },
+        {
+          "persona_id": "rem_006",
+          "name": "Esperanza Reyes",
+          "age": 47,
+          "summary": "Esperanza, 47, hotel housekeeper in Las Vegas, sends to son in El Salvador. Uses Walmart-to-Walmart transfers, pays in cash. Has been a victim of estafa twice in three years (fake ICE call demanding payment, romance scam). Limited English.",
+          "corridor_country": "El Salvador (San Miguel)",
+          "transfer_service_loyalty": {
+            "primary": "Walmart2Walmart",
+            "secondary": "MoneyGram",
+            "switch_threshold_fee_diff_usd": 3.0
+          },
+          "family_crisis_history": [
+            "fake_ICE_call_loss_2023",
+            "romance_scam_loss_2024",
+            "son_university_fees_recurring"
+          ],
+          "sender_tenure_years": 9,
+          "language_mix": [
+            "es"
+          ],
+          "device": "older Android, prepaid",
+          "income_usd_weekly": [
+            550,
+            750
+          ],
+          "remittance_cadence": "biweekly with payday",
+          "loss_tolerance_usd": 75
+        },
+        {
+          "persona_id": "rem_007",
+          "name": "Linh Tran",
+          "age": 26,
+          "summary": "Linh, 26, dental hygienist in San Jose, sends to grandmother in Ho Chi Minh City. Uses Zelle to her aunt in California who relays cash via VND in Vietnam. Hybrid digital/informal corridor. Tech-savvy.",
+          "corridor_country": "Vietnam (HCMC)",
+          "transfer_service_loyalty": {
+            "primary": "informal_relay (Zelle to aunt)",
+            "secondary": "Remitly",
+            "switch_threshold_fee_diff_usd": 8.0
+          },
+          "family_crisis_history": [
+            "grandmother_caregiver_costs_recurring"
+          ],
+          "sender_tenure_years": 3,
+          "language_mix": [
+            "vi",
+            "en"
+          ],
+          "device": "iPhone 14, single SIM",
+          "income_usd_weekly": [
+            1300,
+            1600
+          ],
+          "remittance_cadence": "monthly",
+          "loss_tolerance_usd": 300
+        },
+        {
+          "persona_id": "rem_008",
+          "name": "Boluwatife Adeyemi",
+          "age": 35,
+          "summary": "Boluwatife, 35, Uber driver in Atlanta, sends to extended family in Ibadan. Uses Sendwave and crypto (USDT on Binance) for larger sums. Members of his Yoruba diaspora WhatsApp group share scam alerts. Has lost $400 to fake church donation scam.",
+          "corridor_country": "Nigeria (Ibadan)",
+          "transfer_service_loyalty": {
+            "primary": "Sendwave",
+            "secondary": "Binance USDT",
+            "switch_threshold_fee_diff_usd": 5.0
+          },
+          "family_crisis_history": [
+            "church_donation_scam_loss_2024"
+          ],
+          "sender_tenure_years": 5,
+          "language_mix": [
+            "yo",
+            "en"
+          ],
+          "device": "Samsung Galaxy A54, dual SIM",
+          "income_usd_weekly": [
+            900,
+            1300
+          ],
+          "remittance_cadence": "weekly small",
+          "loss_tolerance_usd": 200
+        },
+        {
+          "persona_id": "rem_009",
+          "name": "Carlos Mendoza",
+          "age": 58,
+          "summary": "Carlos, 58, retired factory worker in Chicago, sends pension to widowed sister in Guadalajara. Fixed income $1,800/month Social Security. Uses MoneyGram in-store, distrusts apps. Highly vulnerable to phone-based estafa.",
+          "corridor_country": "Mexico (Jalisco)",
+          "transfer_service_loyalty": {
+            "primary": "MoneyGram (in-store)",
+            "secondary": "none",
+            "switch_threshold_fee_diff_usd": 999
+          },
+          "family_crisis_history": [
+            "sister_widow_support_recurring",
+            "phone_estafa_loss_2022"
+          ],
+          "sender_tenure_years": 22,
+          "language_mix": [
+            "es",
+            "en"
+          ],
+          "device": "flip phone + tablet",
+          "income_usd_weekly": [
+            400,
+            450
+          ],
+          "remittance_cadence": "monthly fixed",
+          "loss_tolerance_usd": 100
+        },
+        {
+          "persona_id": "rem_010",
+          "name": "Priya Krishnan",
+          "age": 31,
+          "summary": "Priya, 31, ESL teacher in Queens, Tamil Nadu native. Sends quarterly to parents and monthly to grandmother. Uses Remitly and ICICI Money2India. Maintains spreadsheet of FX history. Targets of UPI-impersonation scams in Tamil.",
+          "corridor_country": "India (Tamil Nadu)",
+          "transfer_service_loyalty": {
+            "primary": "ICICI Money2India",
+            "secondary": "Remitly",
+            "switch_threshold_fee_diff_usd": 2.0
+          },
+          "family_crisis_history": [
+            "grandmother_assisted_living_recurring",
+            "upi_scam_attempted_2025"
+          ],
+          "sender_tenure_years": 5,
+          "language_mix": [
+            "ta",
+            "en"
+          ],
+          "device": "iPhone 12, single SIM",
+          "income_usd_weekly": [
+            1100,
+            1300
+          ],
+          "remittance_cadence": "monthly small + quarterly large",
+          "loss_tolerance_usd": 400
+        },
+        {
+          "persona_id": "rem_011",
+          "name": "Ana Lucia Diaz",
+          "age": 24,
+          "summary": "Ana Lucia, 24, college student in Miami, works two part-time jobs. Sends to mother in Havana via informal mulas (couriers traveling Miami-Havana). Limited formal corridor options. Cash-based, highly informal economy. Vulnerable to courier theft and confiscation.",
+          "corridor_country": "Cuba (Havana)",
+          "transfer_service_loyalty": {
+            "primary": "informal_mulas",
+            "secondary": "VaCuba",
+            "switch_threshold_fee_diff_usd": 999
+          },
+          "family_crisis_history": [
+            "courier_confiscation_2024",
+            "mother_medication_recurring"
+          ],
+          "sender_tenure_years": 3,
+          "language_mix": [
+            "es",
+            "en"
+          ],
+          "device": "Android budget, single SIM",
+          "income_usd_weekly": [
+            400,
+            600
+          ],
+          "remittance_cadence": "every 6 weeks via courier",
+          "loss_tolerance_usd": 50
+        }
+      ]
+    },
+    "gig_worker": {
+      "key_world_dimensions": [
+        "platform_mix",
+        "daily_cashout_pattern",
+        "device_stability",
+        "sim_history"
+      ],
+      "personas": [
+        {
+          "persona_id": "gig_001",
+          "name": "DeShawn Williams",
+          "age": 28,
+          "summary": "DeShawn, 28, Uber + DoorDash + Instacart driver in Atlanta. Cashes out daily via Uber Instant Pay + DoorDash Fast Pay ($1.99 fee each). Lives paycheck to paycheck, balance never above $200. Has been ATO'd once via SIM swap, lost $340.",
+          "platform_mix": {
+            "Uber": 0.5,
+            "DoorDash": 0.3,
+            "Instacart": 0.2
+          },
+          "daily_cashout_pattern": "every shift end, ~$80-180 chunks, 4-6x/day",
+          "device_stability": "single Android, 18 months",
+          "sim_history": [
+            "MetroPCS 2022-2024",
+            "SIM_swap_attack_jul_2024",
+            "T-Mobile postpaid 2024-current"
+          ],
+          "language_mix": [
+            "en"
+          ],
+          "income_usd_weekly": [
+            600,
+            1100
+          ],
+          "loss_tolerance_usd": 100
+        },
+        {
+          "persona_id": "gig_002",
+          "name": "Yuki Tanaka",
+          "age": 35,
+          "summary": "Yuki, 35, full-time Lyft driver in San Francisco, also TaskRabbit. Stable iPhone, single SIM 5+ years. Cashes out weekly to credit union. Lost $1,200 to fake-support phishing impersonating Lyft.",
+          "platform_mix": {
+            "Lyft": 0.85,
+            "TaskRabbit": 0.15
+          },
+          "daily_cashout_pattern": "weekly Sunday lump",
+          "device_stability": "iPhone, 5+ years same device family, single SIM stable",
+          "sim_history": [
+            "AT&T 2019-current"
+          ],
+          "language_mix": [
+            "en",
+            "ja"
+          ],
+          "income_usd_weekly": [
+            1400,
+            1800
+          ],
+          "loss_tolerance_usd": 600
+        },
+        {
+          "persona_id": "gig_003",
+          "name": "Rajesh Sharma",
+          "age": 32,
+          "summary": "Rajesh, 32, Amazon Flex + Uber Eats in suburban NJ. Drives 5am-9am Flex blocks then evening Uber Eats. Uses prepaid Visa from his bank to receive payouts. Has had OTP fraud attempts via Hindi-language calls claiming to be from Amazon.",
+          "platform_mix": {
+            "Amazon Flex": 0.6,
+            "Uber Eats": 0.4
+          },
+          "daily_cashout_pattern": "Flex weekly, Uber daily after dinner rush",
+          "device_stability": "Android, 2 years",
+          "sim_history": [
+            "Verizon prepaid 2022-current"
+          ],
+          "language_mix": [
+            "hi",
+            "en"
+          ],
+          "income_usd_weekly": [
+            950,
+            1300
+          ],
+          "loss_tolerance_usd": 250
+        },
+        {
+          "persona_id": "gig_004",
+          "name": "Ahmed Bah",
+          "age": 41,
+          "summary": "Ahmed, 41, NYC yellow cab + Uber. Speaks Wolof + French + English. Account hacked Dec 2024 via fake email; lost three days of earnings ($840). Now uses Yubikey and locked-down 2FA.",
+          "platform_mix": {
+            "Uber": 0.55,
+            "Curb (yellow cab)": 0.45
+          },
+          "daily_cashout_pattern": "every other day, large lumps",
+          "device_stability": "iPhone, replaced after hack",
+          "sim_history": [
+            "T-Mobile postpaid 2018-current"
+          ],
+          "language_mix": [
+            "en",
+            "fr",
+            "wo"
+          ],
+          "income_usd_weekly": [
+            1100,
+            1500
+          ],
+          "loss_tolerance_usd": 300
+        },
+        {
+          "persona_id": "gig_005",
+          "name": "Brittany Cole",
+          "age": 24,
+          "summary": "Brittany, 24, Instacart + Shipt + occasional OnlyFans. Multi-platform high churn. Switches phones often (3 in 18 months). Multiple Cash App tags. High device instability flag for fraud models.",
+          "platform_mix": {
+            "Instacart": 0.5,
+            "Shipt": 0.3,
+            "OnlyFans payouts": 0.2
+          },
+          "daily_cashout_pattern": "irregular, multiple times daily across platforms",
+          "device_stability": "3 phones in 18 months, high churn",
+          "sim_history": [
+            "Cricket -> Mint -> Visible 2023-2025"
+          ],
+          "language_mix": [
+            "en"
+          ],
+          "income_usd_weekly": [
+            700,
+            1400
+          ],
+          "loss_tolerance_usd": 75
+        },
+        {
+          "persona_id": "gig_006",
+          "name": "Hai Pham",
+          "age": 39,
+          "summary": "Hai, 39, full-time DoorDash in Houston. Vietnamese community ties. Has heard of 'fake support' calls from his Facebook group; cautious. Uses business debit card, separate from personal. Cashes out every Friday.",
+          "platform_mix": {
+            "DoorDash": 0.95,
+            "Grubhub": 0.05
+          },
+          "daily_cashout_pattern": "weekly Friday",
+          "device_stability": "Samsung A-series, 3 years",
+          "sim_history": [
+            "T-Mobile prepaid 2021-current"
+          ],
+          "language_mix": [
+            "vi",
+            "en"
+          ],
+          "income_usd_weekly": [
+            1000,
+            1300
+          ],
+          "loss_tolerance_usd": 400
+        },
+        {
+          "persona_id": "gig_007",
+          "name": "Olumide Bakare",
+          "age": 30,
+          "summary": "Olumide, 30, Uber + Lyft + Bolt(when visiting Lagos). US-based. Targeted by Yoruba-language WhatsApp scam selling 'fake background check expedite'. Lost $200.",
+          "platform_mix": {
+            "Uber": 0.6,
+            "Lyft": 0.4
+          },
+          "daily_cashout_pattern": "instant pay every shift",
+          "device_stability": "iPhone 12, dual eSIM (US + Nigeria)",
+          "sim_history": [
+            "Mint 2022-current + MTN Nigeria"
+          ],
+          "language_mix": [
+            "yo",
+            "en"
+          ],
+          "income_usd_weekly": [
+            800,
+            1200
+          ],
+          "loss_tolerance_usd": 150
+        },
+        {
+          "persona_id": "gig_008",
+          "name": "Maria Soto",
+          "age": 45,
+          "summary": "Maria, 45, single mother, Postmates + Rover dog walking. Spanish-speaking, Phoenix AZ. Uses Chime account. Was victim of stolen-card chargeback fraud where customer disputed legitimate delivery.",
+          "platform_mix": {
+            "Rover": 0.55,
+            "Postmates": 0.45
+          },
+          "daily_cashout_pattern": "Rover weekly, Postmates daily small",
+          "device_stability": "Motorola, 4 years",
+          "sim_history": [
+            "Cricket 2020-current"
+          ],
+          "language_mix": [
+            "es",
+            "en"
+          ],
+          "income_usd_weekly": [
+            600,
+            850
+          ],
+          "loss_tolerance_usd": 100
+        },
+        {
+          "persona_id": "gig_009",
+          "name": "Tyler Brennan",
+          "age": 22,
+          "summary": "Tyler, 22, Uber Eats bike courier in Brooklyn. Lives with roommates, no car. iPhone hand-me-down from older sister. Account once frozen for 'suspicious activity' (false positive); now hyper-aware.",
+          "platform_mix": {
+            "Uber Eats": 0.7,
+            "DoorDash": 0.3
+          },
+          "daily_cashout_pattern": "instant pay end of shift",
+          "device_stability": "iPhone (hand-me-down, 4 years old)",
+          "sim_history": [
+            "Verizon family plan, parent's account"
+          ],
+          "language_mix": [
+            "en"
+          ],
+          "income_usd_weekly": [
+            500,
+            750
+          ],
+          "loss_tolerance_usd": 50
+        },
+        {
+          "persona_id": "gig_010",
+          "name": "Devi Reddy",
+          "age": 36,
+          "summary": "Devi, 36, Telugu-speaking, gig CPA + TaskRabbit assembly + Rover. Highly skilled, multi-income. iPad Pro for CPA work, separate phone for gigs. Targets of OTP-stealing scams via WhatsApp.",
+          "platform_mix": {
+            "Independent CPA": 0.5,
+            "TaskRabbit": 0.3,
+            "Rover": 0.2
+          },
+          "daily_cashout_pattern": "CPA via direct deposit, gigs cashed daily",
+          "device_stability": "stable, multi-device",
+          "sim_history": [
+            "Google Fi 2021-current"
+          ],
+          "language_mix": [
+            "te",
+            "hi",
+            "en"
+          ],
+          "income_usd_weekly": [
+            1800,
+            2400
+          ],
+          "loss_tolerance_usd": 700
+        },
+        {
+          "persona_id": "gig_011",
+          "name": "Marcus Johnson",
+          "age": 27,
+          "summary": "Marcus, 27, full-time DoorDash + Spark (Walmart). Detroit. Account ATO'd via credential stuffing using leaked password from 2019 breach. Now uses password manager.",
+          "platform_mix": {
+            "DoorDash": 0.55,
+            "Spark": 0.45
+          },
+          "daily_cashout_pattern": "fast pay $1.99 every dash, multiple times daily",
+          "device_stability": "Android, 2 years",
+          "sim_history": [
+            "Boost Mobile 2022-current"
+          ],
+          "language_mix": [
+            "en"
+          ],
+          "income_usd_weekly": [
+            800,
+            1100
+          ],
+          "loss_tolerance_usd": 100
+        }
+      ]
+    },
+    "unbanked": {
+      "key_world_dimensions": [
+        "kiosk_location",
+        "prepaid_card_stack",
+        "income_source",
+        "documentation_status"
+      ],
+      "personas": [
+        {
+          "persona_id": "unb_001",
+          "name": "Roosevelt Banks",
+          "age": 54,
+          "summary": "Roosevelt, 54, day laborer in Memphis. ChexSystems-flagged from 2011 overdraft, cannot open bank account. Uses Walmart MoneyCard prepaid + corner-store check cashing (3% fee). Cashes payroll Friday at same kiosk for 8 years. Targets of advance-fee loan scams via SMS.",
+          "kiosk_location": "Memphis corner liquor store + Walmart MoneyCenter",
+          "prepaid_card_stack": [
+            "Walmart MoneyCard",
+            "GreenDot reloadable"
+          ],
+          "income_source": "1099 day labor, paid weekly",
+          "documentation_status": "US citizen, ChexSystems-banned",
+          "language_mix": [
+            "en"
+          ],
+          "income_usd_weekly": [
+            400,
+            700
+          ],
+          "loss_tolerance_usd": 50
+        },
+        {
+          "persona_id": "unb_002",
+          "name": "Lupe Vasquez",
+          "age": 38,
+          "summary": "Lupe, 38, undocumented housekeeper in Phoenix. Cash-only income. Uses Vanilla Visa gift cards to pay bills online. Stack of 4-6 active prepaid cards. Lost $200 to fake utility shutoff scam in Spanish.",
+          "kiosk_location": "Phoenix dollar store + check cashing on Van Buren",
+          "prepaid_card_stack": [
+            "Vanilla Visa x3-5",
+            "NetSpend"
+          ],
+          "income_source": "cash from cleaning houses",
+          "documentation_status": "undocumented",
+          "language_mix": [
+            "es"
+          ],
+          "income_usd_weekly": [
+            500,
+            700
+          ],
+          "loss_tolerance_usd": 30
+        },
+        {
+          "persona_id": "unb_003",
+          "name": "Thi Le",
+          "age": 61,
+          "summary": "Thi, 61, retired garment worker in Oakland. Pays bills in cash at the Vietnamese-owned market that runs an informal hawala-style remittance and bill-pay desk. Speaks no English. Has been overcharged repeatedly but trusts no one outside the community.",
+          "kiosk_location": "Vietnamese grocery in Oakland, in-community informal hawala",
+          "prepaid_card_stack": [
+            "GreenDot (only used for online prescriptions)"
+          ],
+          "income_source": "Social Security $1,100/mo",
+          "documentation_status": "permanent resident",
+          "language_mix": [
+            "vi"
+          ],
+          "income_usd_weekly": [
+            275,
+            275
+          ],
+          "loss_tolerance_usd": 50
+        },
+        {
+          "persona_id": "unb_004",
+          "name": "Jamal Ahmed",
+          "age": 33,
+          "summary": "Jamal, 33, Somali immigrant in Minneapolis. Uses hawala for remittances to Mogadishu and a credit union for daily banking. Targets of fake IRS phone scams in Somali, has resisted them.",
+          "kiosk_location": "Cedar-Riverside hawala desk + community credit union",
+          "prepaid_card_stack": [
+            "Chime card (semi-banked)"
+          ],
+          "income_source": "Lyft + part-time mosque administration",
+          "documentation_status": "naturalized citizen",
+          "language_mix": [
+            "so",
+            "ar",
+            "en"
+          ],
+          "income_usd_weekly": [
+            800,
+            1100
+          ],
+          "loss_tolerance_usd": 200
+        },
+        {
+          "persona_id": "unb_005",
+          "name": "Crystal Davis",
+          "age": 26,
+          "summary": "Crystal, 26, hair braider in New Orleans, working booth-rental at salon. Cash income. Uses 4 prepaid cards strategically (one for rent, one for car, one for food, one for fun). Lost $400 to predatory payday loan rollover trap.",
+          "kiosk_location": "New Orleans Walmart MoneyCenter",
+          "prepaid_card_stack": [
+            "NetSpend x2",
+            "Walmart MoneyCard",
+            "Bluebird"
+          ],
+          "income_source": "cash from braiding, $40-150/client",
+          "documentation_status": "US citizen, no banking history",
+          "language_mix": [
+            "en"
+          ],
+          "income_usd_weekly": [
+            600,
+            900
+          ],
+          "loss_tolerance_usd": 75
+        },
+        {
+          "persona_id": "unb_006",
+          "name": "Felipe Gonzalez",
+          "age": 49,
+          "summary": "Felipe, 49, day laborer at Home Depot parking lot in Houston. Cash, no documents, no bank. Uses Western Union to send to Honduras. Has been short-changed at kiosk repeatedly. Lost $300 in fake job-listing advance fee.",
+          "kiosk_location": "Houston Home Depot lot + WU at La Michoacana",
+          "prepaid_card_stack": [],
+          "income_source": "cash daily labor, irregular",
+          "documentation_status": "undocumented",
+          "language_mix": [
+            "es"
+          ],
+          "income_usd_weekly": [
+            350,
+            700
+          ],
+          "loss_tolerance_usd": 30
+        },
+        {
+          "persona_id": "unb_007",
+          "name": "Aisha Toure",
+          "age": 31,
+          "summary": "Aisha, 31, Senegalese braider in the Bronx. Mix of cash and Cash App. Uses Wolof and French. Targeted by fake immigration-attorney advance-fee fraud, lost $600.",
+          "kiosk_location": "Bronx braid shop + Cash App",
+          "prepaid_card_stack": [
+            "Cash App card",
+            "Vanilla Visa"
+          ],
+          "income_source": "cash + Cash App from clients",
+          "documentation_status": "TPS holder",
+          "language_mix": [
+            "wo",
+            "fr",
+            "en"
+          ],
+          "income_usd_weekly": [
+            600,
+            900
+          ],
+          "loss_tolerance_usd": 100
+        },
+        {
+          "persona_id": "unb_008",
+          "name": "Robert Kowalski",
+          "age": 67,
+          "summary": "Robert, 67, retired union ironworker in Cleveland. Pension + SS. Distrusts banks since 2008. Cashes pension check at kiosk, keeps cash at home. Frequent target of grandparent scam (fake grandchild in jail).",
+          "kiosk_location": "Cleveland check-cashing on Lorain Ave",
+          "prepaid_card_stack": [
+            "Direct Express SS card only"
+          ],
+          "income_source": "pension + Social Security",
+          "documentation_status": "US citizen",
+          "language_mix": [
+            "en",
+            "pl"
+          ],
+          "income_usd_weekly": [
+            550,
+            550
+          ],
+          "loss_tolerance_usd": 200
+        },
+        {
+          "persona_id": "unb_009",
+          "name": "Yolanda Marquez",
+          "age": 42,
+          "summary": "Yolanda, 42, food truck cook in San Antonio. Cash and Zelle. Two prepaid cards rotated. Mexican-American, second-generation. Family member fell for kiosk skimmer; she now inspects every kiosk.",
+          "kiosk_location": "San Antonio HEB MoneyCenter",
+          "prepaid_card_stack": [
+            "NetSpend",
+            "Walmart MoneyCard"
+          ],
+          "income_source": "food truck daily cash + Zelle tips",
+          "documentation_status": "US citizen",
+          "language_mix": [
+            "es",
+            "en"
+          ],
+          "income_usd_weekly": [
+            700,
+            1100
+          ],
+          "loss_tolerance_usd": 150
+        }
+      ]
+    },
+    "itin": {
+      "key_world_dimensions": [
+        "business_type",
+        "tax_filing_history",
+        "credit_file_age",
+        "accountant_relationship"
+      ],
+      "personas": [
+        {
+          "persona_id": "itin_001",
+          "name": "Jose Ramirez",
+          "age": 44,
+          "summary": "Jose, 44, ITIN-holder operating a landscaping LLC in Dallas. Files Schedule C since 2018. Uses a bilingual CPA in Oak Cliff. Credit file age 6 years (built via secured cards). Was victim of synthetic-identity fraud: someone used a similar SSN-like number to open credit in a variant of his name.",
+          "business_type": "landscaping LLC, sole proprietor",
+          "tax_filing_history": {
+            "first_filing_year": 2018,
+            "consistent": true,
+            "schedule": "C"
+          },
+          "credit_file_age_years": 6,
+          "accountant_relationship": "bilingual CPA in Oak Cliff Dallas, 5+ years",
+          "language_mix": [
+            "es",
+            "en"
+          ],
+          "income_usd_annual": 62000,
+          "loss_tolerance_usd": 800
+        },
+        {
+          "persona_id": "itin_002",
+          "name": "Mei Chen",
+          "age": 39,
+          "summary": "Mei, 39, ITIN-holder owns a nail salon in Queens NY. Files 1120-S for S-corp. Mandarin-speaking CPA. Strong credit file (8 years). Targets of EIN/business-identity theft attempts on her LLC.",
+          "business_type": "nail salon S-corp",
+          "tax_filing_history": {
+            "first_filing_year": 2016,
+            "consistent": true,
+            "schedule": "1120-S"
+          },
+          "credit_file_age_years": 8,
+          "accountant_relationship": "Mandarin CPA in Flushing, 7 years",
+          "language_mix": [
+            "zh",
+            "en"
+          ],
+          "income_usd_annual": 95000,
+          "loss_tolerance_usd": 2000
+        },
+        {
+          "persona_id": "itin_003",
+          "name": "Ahmed Hassan",
+          "age": 36,
+          "summary": "Ahmed, 36, ITIN-holder, Egyptian, runs a halal food truck in Detroit. Files Schedule C. New to US tax system (3 filings). Uses VITA volunteer tax prep. Thin credit file. Targeted by tax-refund advance-loan scam.",
+          "business_type": "food truck, sole proprietor",
+          "tax_filing_history": {
+            "first_filing_year": 2022,
+            "consistent": true,
+            "schedule": "C"
+          },
+          "credit_file_age_years": 2,
+          "accountant_relationship": "VITA volunteer, no continuity",
+          "language_mix": [
+            "ar",
+            "en"
+          ],
+          "income_usd_annual": 41000,
+          "loss_tolerance_usd": 200
+        },
+        {
+          "persona_id": "itin_004",
+          "name": "Sandra Morales",
+          "age": 51,
+          "summary": "Sandra, 51, Salvadoran ITIN-holder, owns 2-unit rental property in Houston. Files Schedule E. Uses small-firm CPA. Solid credit (12 years). Was victim of identity theft: fraudulent EIN created in her business name.",
+          "business_type": "real estate rental, Schedule E",
+          "tax_filing_history": {
+            "first_filing_year": 2009,
+            "consistent": true,
+            "schedule": "E"
+          },
+          "credit_file_age_years": 12,
+          "accountant_relationship": "small CPA firm, 10 years",
+          "language_mix": [
+            "es",
+            "en"
+          ],
+          "income_usd_annual": 78000,
+          "loss_tolerance_usd": 1500
+        },
+        {
+          "persona_id": "itin_005",
+          "name": "Thanh Nguyen",
+          "age": 33,
+          "summary": "Thanh, 33, ITIN-holder, Vietnamese, runs auto-detailing shop in San Jose. Filed first return 2023. Uses bilingual CPA in San Jose Vietnamese business district. Thin credit, just got first secured card. Vulnerable to synthetic-identity fraud.",
+          "business_type": "auto detailing, sole proprietor",
+          "tax_filing_history": {
+            "first_filing_year": 2023,
+            "consistent": true,
+            "schedule": "C"
+          },
+          "credit_file_age_years": 1,
+          "accountant_relationship": "Vietnamese CPA in San Jose, 1 year",
+          "language_mix": [
+            "vi",
+            "en"
+          ],
+          "income_usd_annual": 53000,
+          "loss_tolerance_usd": 500
+        },
+        {
+          "persona_id": "itin_006",
+          "name": "Roberto Sanchez",
+          "age": 47,
+          "summary": "Roberto, 47, ITIN-holder, Mexican, owns construction subcontracting LLC in Phoenix. Files 1065 partnership return with brother. CPA who specializes in Mexican-American small businesses. Established credit. Targets of IRS impersonation calls in Spanish.",
+          "business_type": "construction subcontracting LLC, partnership",
+          "tax_filing_history": {
+            "first_filing_year": 2012,
+            "consistent": true,
+            "schedule": "1065"
+          },
+          "credit_file_age_years": 9,
+          "accountant_relationship": "specialty CPA, 8 years",
+          "language_mix": [
+            "es",
+            "en"
+          ],
+          "income_usd_annual": 110000,
+          "loss_tolerance_usd": 1500
+        },
+        {
+          "persona_id": "itin_007",
+          "name": "Priyanka Iyer",
+          "age": 35,
+          "summary": "Priyanka, 35, ITIN-holder on dependent visa, runs Etsy jewelry business from home. Files Schedule C. Tamil-speaking. Uses TurboTax + paid review by CPA. Strong digital footprint, thin formal credit.",
+          "business_type": "Etsy/online jewelry, sole proprietor",
+          "tax_filing_history": {
+            "first_filing_year": 2021,
+            "consistent": true,
+            "schedule": "C"
+          },
+          "credit_file_age_years": 3,
+          "accountant_relationship": "TurboTax + ad-hoc CPA review",
+          "language_mix": [
+            "ta",
+            "en"
+          ],
+          "income_usd_annual": 38000,
+          "loss_tolerance_usd": 400
+        },
+        {
+          "persona_id": "itin_008",
+          "name": "Carlos Bermudez",
+          "age": 56,
+          "summary": "Carlos, 56, ITIN-holder, Cuban, owns small bodega in Miami. Files Schedule C since 1998 (long-tenured ITIN). Spanish-only CPA in Hialeah. 20+ year credit file built carefully. Stable but a frequent target of refund-scam phone calls.",
+          "business_type": "bodega/small grocery, sole proprietor",
+          "tax_filing_history": {
+            "first_filing_year": 1998,
+            "consistent": true,
+            "schedule": "C"
+          },
+          "credit_file_age_years": 20,
+          "accountant_relationship": "Hialeah CPA, 15 years",
+          "language_mix": [
+            "es"
+          ],
+          "income_usd_annual": 65000,
+          "loss_tolerance_usd": 1000
+        },
+        {
+          "persona_id": "itin_009",
+          "name": "Linda Park",
+          "age": 41,
+          "summary": "Linda, 41, ITIN-holder, Korean, runs dry cleaner in LA. Files 1120-S. Korean-speaking CPA in Koreatown. Was victim of synthetic-identity fraud where attacker combined her name with fabricated SSN to open credit lines in 2024.",
+          "business_type": "dry cleaner S-corp",
+          "tax_filing_history": {
+            "first_filing_year": 2014,
+            "consistent": true,
+            "schedule": "1120-S"
+          },
+          "credit_file_age_years": 9,
+          "accountant_relationship": "Koreatown CPA, 9 years",
+          "language_mix": [
+            "ko",
+            "en"
+          ],
+          "income_usd_annual": 88000,
+          "loss_tolerance_usd": 1500
+        }
+      ]
+    }
+  }
+}
