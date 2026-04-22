@@ -1,0 +1,246 @@
+{
+  "archetype": "gig_worker",
+  "version": "v3",
+  "key_world_dimensions": ["platform_mix", "daily_cashout_pattern", "device_stability", "sim_history"],
+  "synthesis_notes": {
+    "n_personas": 12,
+    "grade_distribution_achieved": {"A": 0, "B": 3, "C": 4, "D": 5},
+    "grade_distribution_target_per_spec": {"A": "20-25%", "B": "15-20%", "C": "20-25%", "D": "30-40%"},
+    "off_target_rationale": "Target A share (20-25%) is unachievable in v3 — no ethnographic / field-interview source for gig workers is present in the pool. Vallas & Schor is a theoretical / literature-review paper (Grade C). Hitting A would require adding: UC Berkeley Labor Center gig-worker ethnographies, Dubal's driver-strike fieldwork, JPM Chase Institute gig-pay panel data, or CA AG deposition records. B / C / D shares are on target.",
+    "source_roles": {
+      "B": "fincen_2024_identity_fta (account takeover, synthetic ID fraud typologies), fincen_sar_key_terms (ATO, BEC advisories), fed_reserve_synthetic_identity_fraud (synthetic-ID definition and framework)",
+      "C": "vallas_schor_2020_gig_platforms (platform-labor structure, algorithmic control, platform list, precarity framings)",
+      "D": "design assumptions for corridor/persona detail without specific source support"
+    }
+  },
+  "personas": [
+    {
+      "persona_id": "gig_001",
+      "name": "DeShawn Williams",
+      "age": 31,
+      "summary": "DeShawn, 31, Black, Detroit. Full-time multi-apper: Uber + DoorDash + Instacart. Cashes out daily via Instant Pay ($1.99 fee). Cycles phones every 2 years because the screens crack on long shifts. His Uber account was briefly suspended in 2023 over a rating dispute — lost 4 days of income while appealing.",
+      "platform_mix": {"Uber": 0.50, "DoorDash": 0.30, "Instacart": 0.20},
+      "daily_cashout_pattern": "Instant Pay daily, ~$1.99 per cashout",
+      "device_stability": 0.65,
+      "sim_history": "one SIM for 3 years, T-Mobile prepaid",
+      "language_mix": ["en"],
+      "loss_tolerance_usd": 150,
+      "income_usd_weekly": [900, 1400],
+      "persona_source_ids": ["vallas_schor_2020_gig_platforms"],
+      "behavioral_evidence_grade": "C",
+      "grounding": {
+        "platform_mix":           {"value": "Uber/DoorDash/Instacart multi-app", "evidence_basis": "V&S: on-demand service workers cited as Uber/Lyft/DoorDash/Instacart/TaskRabbit; multi-apping is documented pattern", "confidence": "DIRECT", "source_ids": ["vallas_schor_2020_gig_platforms"]},
+        "classification":         {"value": "independent contractor", "evidence_basis": "V&S: 'platforms almost always classify workers as independent contractors'; US social-insurance disconnect", "confidence": "DIRECT", "source_ids": ["vallas_schor_2020_gig_platforms"]},
+        "earnings_volatility":    {"value": "platform-borne risk", "evidence_basis": "V&S: 'Platform workers bear all the costs of inadequate demand and lost earnings'", "confidence": "DIRECT", "source_ids": ["vallas_schor_2020_gig_platforms"]},
+        "suspension_event_2023":  {"value": "brief Uber suspension over rating dispute", "evidence_basis": "V&S: algorithmic-opacity + deactivation risk structural", "confidence": "INFERRED", "source_ids": ["vallas_schor_2020_gig_platforms"]},
+        "name_and_biography":     {"value": "DeShawn Williams; Detroit", "confidence": null, "source_ids": [], "notes": "design"}
+      }
+    },
+    {
+      "persona_id": "gig_002",
+      "name": "Yuki Tanaka",
+      "age": 38,
+      "summary": "Yuki, 38, Japanese-American, TaskRabbit + Lyft in San Francisco. A 2017-era study documented women and workers of color receiving fewer reviews and lower ratings on TaskRabbit/Fiverr — she feels this daily. Cashes out weekly to smooth income. Part-time supplementary to a graphic-design freelance practice.",
+      "platform_mix": {"TaskRabbit": 0.55, "Lyft": 0.35, "Fiverr (design)": 0.10},
+      "daily_cashout_pattern": "weekly via direct deposit",
+      "device_stability": 0.85,
+      "sim_history": "same SIM 5+ years, Verizon postpaid",
+      "language_mix": ["en", "ja"],
+      "loss_tolerance_usd": 300,
+      "income_usd_weekly": [800, 1500],
+      "persona_source_ids": ["vallas_schor_2020_gig_platforms"],
+      "behavioral_evidence_grade": "C",
+      "grounding": {
+        "rating_bias_context":    {"value": "women + workers of color rated lower on TaskRabbit/Fiverr", "evidence_basis": "V&S p14: Hannák et al. 2017 study of TaskRabbit and Fiverr", "confidence": "DIRECT", "source_ids": ["vallas_schor_2020_gig_platforms"]},
+        "platform_mix":           {"value": "TaskRabbit + Lyft + Fiverr", "evidence_basis": "V&S names all three platforms explicitly", "confidence": "DIRECT", "source_ids": ["vallas_schor_2020_gig_platforms"]},
+        "supplementary_income":   {"value": "part-time supplement to freelance", "evidence_basis": "V&S: many gig workers use platforms as supplement to asset monetization or other income", "confidence": "DIRECT", "source_ids": ["vallas_schor_2020_gig_platforms"]},
+        "name_and_biography":     {"value": "Yuki Tanaka; SF design freelancer", "confidence": null, "source_ids": [], "notes": "design"}
+      }
+    },
+    {
+      "persona_id": "gig_003",
+      "name": "Rajesh Patel",
+      "age": 42,
+      "summary": "Rajesh, 42, Indian-origin naturalized US citizen, Chicago. Amazon Flex 5-9am weekdays before his day job; Uber Eats 6-11pm evenings. Bimodal schedule. Uses Flex's scheduled-blocks model; earnings depend on grabbing available blocks fast.",
+      "platform_mix": {"Amazon Flex": 0.60, "Uber Eats": 0.40},
+      "daily_cashout_pattern": "Amazon Flex weekly direct deposit; Uber Instant Pay occasional",
+      "device_stability": 0.75,
+      "sim_history": "same SIM 4 years, AT&T postpaid",
+      "language_mix": ["en", "hi", "gu"],
+      "loss_tolerance_usd": 250,
+      "income_usd_weekly": [1100, 1600],
+      "persona_source_ids": ["vallas_schor_2020_gig_platforms"],
+      "behavioral_evidence_grade": "C",
+      "grounding": {
+        "platform_mix_bimodal":   {"value": "Amazon Flex mornings + Uber Eats evenings", "evidence_basis": "V&S frames platform-worker diversity; bimodal multi-platform scheduling is documented structural pattern (joint platform+hour grounding drove v2 R3 improvements)", "confidence": "INFERRED", "source_ids": ["vallas_schor_2020_gig_platforms"]},
+        "algorithmic_block_scarcity":{"value": "earnings dependent on grabbing Amazon Flex blocks fast", "evidence_basis": "V&S: algorithms render labor process 'legible to employers not employees'", "confidence": "DIRECT", "source_ids": ["vallas_schor_2020_gig_platforms"]},
+        "name_and_biography":     {"value": "Rajesh Patel; Chicago", "confidence": null, "source_ids": [], "notes": "design"}
+      }
+    },
+    {
+      "persona_id": "gig_004",
+      "name": "Ahmed Bah",
+      "age": 36,
+      "summary": "Ahmed, 36, Senegalese-born LPR, Uber driver in Manhattan — full-time, 65hr weeks. Business Email Compromise attempt in early 2024: got a convincing email from 'Uber Driver Relations' demanding he verify his banking info; caught it because the URL was wrong. Reports trying to warn other drivers in his WhatsApp group.",
+      "platform_mix": {"Uber": 0.95, "Lyft": 0.05},
+      "daily_cashout_pattern": "daily Instant Pay",
+      "device_stability": 0.90,
+      "sim_history": "same SIM 6 years, carrier postpaid",
+      "language_mix": ["fr", "wo", "en"],
+      "loss_tolerance_usd": 200,
+      "income_usd_weekly": [1400, 1900],
+      "persona_source_ids": ["fincen_sar_key_terms", "fincen_2024_identity_fta"],
+      "behavioral_evidence_grade": "B",
+      "grounding": {
+        "fraud_exposure_bec_attempt":{"value": "BEC / driver-impersonation attempt 2024, detected", "evidence_basis": "SAR_ADVISORY_BEC_FRAUD (FIN-2019-A005) and FTA_IDENTITY_2024_T11 (Business Email Compromise)", "confidence": "DIRECT", "source_ids": ["fincen_sar_key_terms", "fincen_2024_identity_fta"]},
+        "fraud_typology_ref":     {"value": "FTA_IDENTITY_2024_T11 + SAR_ADVISORY_BEC_FRAUD", "evidence_basis": "Direct map", "confidence": "DIRECT", "source_ids": ["fincen_sar_key_terms", "fincen_2024_identity_fta"]},
+        "platform_mix":           {"value": "Uber primary", "evidence_basis": "Design within V&S-documented platform set", "confidence": "INFERRED", "source_ids": []},
+        "name_and_biography":     {"value": "Ahmed Bah; Manhattan Uber", "confidence": null, "source_ids": [], "notes": "fraud-vector-defined persona"}
+      }
+    },
+    {
+      "persona_id": "gig_005",
+      "name": "Brittany Cole",
+      "age": 34,
+      "summary": "Brittany, 34, white, suburban Columbus Ohio. Shipt + Instacart; part-time to supplement her partner's paycheck and cover two kids' activities. Schedule-of-convenience shopper; rejects batches with bad tips. Cashout weekly.",
+      "platform_mix": {"Instacart": 0.55, "Shipt": 0.45},
+      "daily_cashout_pattern": "weekly direct deposit",
+      "device_stability": 0.88,
+      "sim_history": "postpaid family plan, same SIM 5+ years",
+      "language_mix": ["en"],
+      "loss_tolerance_usd": 400,
+      "income_usd_weekly": [400, 800],
+      "persona_source_ids": ["vallas_schor_2020_gig_platforms"],
+      "behavioral_evidence_grade": "C",
+      "grounding": {
+        "supplementary_income":   {"value": "part-time supplement", "evidence_basis": "V&S: most gig workers are NOT the precarious full-time trope; many use platforms for supplementary income", "confidence": "DIRECT", "source_ids": ["vallas_schor_2020_gig_platforms"]},
+        "tip_stealing_era_context":{"value": "aware of 2019 Instacart tip-stealing scandal", "evidence_basis": "V&S p13: Instacart media campaign early 2019", "confidence": "DIRECT", "source_ids": ["vallas_schor_2020_gig_platforms"]},
+        "name_and_biography":     {"value": "Brittany Cole; Columbus OH", "confidence": null, "source_ids": [], "notes": "design"}
+      }
+    },
+    {
+      "persona_id": "gig_006",
+      "name": "Hai Pham",
+      "age": 47,
+      "summary": "Hai, 47, Vietnamese-born US citizen, owns a small nail salon in Houston but also runs DoorDash evenings to pay down the salon's 2020 COVID-era debt. Keeps two phones — one for salon clients, one for DoorDash.",
+      "platform_mix": {"DoorDash": 0.85, "occasional Grubhub": 0.15},
+      "daily_cashout_pattern": "daily DoorDash Fast Pay, $1.99 fee",
+      "device_stability": 0.55,
+      "sim_history": "two SIMs (salon + DoorDash), both prepaid",
+      "language_mix": ["vi", "en"],
+      "loss_tolerance_usd": 150,
+      "income_usd_weekly": [900, 1300],
+      "persona_source_ids": [],
+      "behavioral_evidence_grade": "D",
+      "grounding": {"all_fields": {"value": "design assumption", "confidence": null, "source_ids": [], "notes": "Grade D — dual-role persona (small-business + gig) not specifically grounded in v3 sources"}}
+    },
+    {
+      "persona_id": "gig_007",
+      "name": "Olumide Bakare",
+      "age": 29,
+      "summary": "Olumide, 29, Nigerian-born on an H-2B-origin pathway (now on employment-based visa), Atlanta. Lyft + UberEats + Grubhub. Full-time driver, 55hr weeks. Multi-app to smooth slow hours.",
+      "platform_mix": {"Lyft": 0.40, "Uber": 0.30, "UberEats": 0.20, "Grubhub": 0.10},
+      "daily_cashout_pattern": "daily Instant Pay across both apps",
+      "device_stability": 0.70,
+      "sim_history": "1 SIM, 2 years, Metro prepaid",
+      "language_mix": ["en", "yo"],
+      "loss_tolerance_usd": 150,
+      "income_usd_weekly": [1000, 1500],
+      "persona_source_ids": [],
+      "behavioral_evidence_grade": "D",
+      "grounding": {"all_fields": {"value": "design assumption", "confidence": null, "source_ids": [], "notes": "Grade D"}}
+    },
+    {
+      "persona_id": "gig_008",
+      "name": "Maria Soto",
+      "age": 33,
+      "summary": "Maria, 33, Mexican-American, Austin. Postmates + Rover (dog-walking). Bilingual but prefers Spanish-speaking customers. Rover is her stable income; Postmates fills midday gaps. Used car, high miles.",
+      "platform_mix": {"Postmates": 0.50, "Rover": 0.50},
+      "daily_cashout_pattern": "weekly direct deposit",
+      "device_stability": 0.75,
+      "sim_history": "same SIM 3 years, postpaid",
+      "language_mix": ["es", "en"],
+      "loss_tolerance_usd": 200,
+      "income_usd_weekly": [750, 1100],
+      "persona_source_ids": [],
+      "behavioral_evidence_grade": "D",
+      "grounding": {"all_fields": {"value": "design assumption", "confidence": null, "source_ids": [], "notes": "Grade D"}}
+    },
+    {
+      "persona_id": "gig_009",
+      "name": "Tyler Brennan",
+      "age": 24,
+      "summary": "Tyler, 24, white, Chicago, DoorDash + Uber Eats full-time. His DoorDash account was hit by a synthetic-identity attack in 2024 — attacker used his partial leaked PII to open a second driver account, route payments elsewhere. Took 3 weeks to resolve.",
+      "platform_mix": {"DoorDash": 0.70, "Uber Eats": 0.30},
+      "daily_cashout_pattern": "daily Fast Pay, $1.99",
+      "device_stability": 0.80,
+      "sim_history": "1 SIM, 4 years, T-Mobile postpaid",
+      "language_mix": ["en"],
+      "loss_tolerance_usd": 200,
+      "income_usd_weekly": [1000, 1400],
+      "persona_source_ids": ["fed_reserve_synthetic_identity_fraud", "fincen_2024_identity_fta"],
+      "behavioral_evidence_grade": "B",
+      "grounding": {
+        "fraud_exposure_synthetic_id":{"value": "synthetic ID attack on platform account 2024", "evidence_basis": "Fed Reserve: 'combination of PII to fabricate a person or entity'; FTA_IDENTITY_2024_T13 Synthetic Identity", "confidence": "DIRECT", "source_ids": ["fed_reserve_synthetic_identity_fraud", "fincen_2024_identity_fta"]},
+        "fraud_typology_ref":     {"value": "FTA_IDENTITY_2024_T13", "evidence_basis": "Direct map", "confidence": "DIRECT", "source_ids": ["fincen_2024_identity_fta"]},
+        "name_and_biography":     {"value": "Tyler Brennan; Chicago", "confidence": null, "source_ids": [], "notes": "fraud-vector-defined"}
+      }
+    },
+    {
+      "persona_id": "gig_010",
+      "name": "Devi Reddy",
+      "age": 36,
+      "summary": "Devi, 36, Indian-American, Philadelphia. Rover (dog-walking/boarding) primary, Care.com secondary (childcare). Fully WFH parent-friendly gig mix; caters to premium clients in Rittenhouse.",
+      "platform_mix": {"Rover": 0.75, "Care.com": 0.25},
+      "daily_cashout_pattern": "Rover weekly, Care.com per-job",
+      "device_stability": 0.85,
+      "sim_history": "postpaid family, 6+ years same SIM",
+      "language_mix": ["en", "te"],
+      "loss_tolerance_usd": 400,
+      "income_usd_weekly": [800, 1400],
+      "persona_source_ids": [],
+      "behavioral_evidence_grade": "D",
+      "grounding": {"all_fields": {"value": "design assumption", "confidence": null, "source_ids": [], "notes": "Grade D — Rover/Care.com not directly covered in V&S"}}
+    },
+    {
+      "persona_id": "gig_011",
+      "name": "Marcus Johnson",
+      "age": 27,
+      "summary": "Marcus, 27, Black, Detroit. DoorDash + Walmart Spark. Account taken over via credential stuffing in early 2024 using a password leaked in the 2019 Collection-1 breach. Lost 5 days' earnings; now uses a password manager and FIDO2 token.",
+      "platform_mix": {"DoorDash": 0.60, "Walmart Spark": 0.40},
+      "daily_cashout_pattern": "daily Fast Pay",
+      "device_stability": 0.70,
+      "sim_history": "1 SIM, 3 years, Verizon prepaid",
+      "language_mix": ["en"],
+      "loss_tolerance_usd": 150,
+      "income_usd_weekly": [900, 1300],
+      "persona_source_ids": ["fincen_sar_key_terms", "fincen_2024_identity_fta"],
+      "behavioral_evidence_grade": "B",
+      "grounding": {
+        "fraud_exposure_ato_credential_stuffing":{"value": "Account takeover via credential stuffing 2024", "evidence_basis": "SAR_ADVISORY_ACCOUNT_TAKEOVER_FRAUD (FIN-2011-A016); FTA_IDENTITY_2024_T6 Account Takeover", "confidence": "DIRECT", "source_ids": ["fincen_sar_key_terms", "fincen_2024_identity_fta"]},
+        "fraud_typology_ref":     {"value": "FTA_IDENTITY_2024_T6 + SAR_ADVISORY_ACCOUNT_TAKEOVER_FRAUD", "evidence_basis": "Direct map", "confidence": "DIRECT", "source_ids": ["fincen_sar_key_terms", "fincen_2024_identity_fta"]},
+        "name_and_biography":     {"value": "Marcus Johnson; Detroit; 2019-breach password", "confidence": null, "source_ids": [], "notes": "fraud-vector-defined"}
+      }
+    },
+    {
+      "persona_id": "gig_012",
+      "name": "Alex Morgan",
+      "age": 31,
+      "summary": "Alex, 31, white, NYC Brooklyn. TaskRabbit handyman full-time, plus occasional Uber. Furniture assembly specialist. Deep platform reliance; knows every ratings-gaming hack. Aware of the 2019 Instacart tip-stealing case and its culture-shift effect.",
+      "platform_mix": {"TaskRabbit": 0.80, "Uber": 0.20},
+      "daily_cashout_pattern": "TaskRabbit weekly direct deposit",
+      "device_stability": 0.85,
+      "sim_history": "1 SIM 5+ years, T-Mobile postpaid",
+      "language_mix": ["en"],
+      "loss_tolerance_usd": 300,
+      "income_usd_weekly": [1200, 1700],
+      "persona_source_ids": ["vallas_schor_2020_gig_platforms"],
+      "behavioral_evidence_grade": "C",
+      "grounding": {
+        "platform_and_rating_gaming":{"value": "TaskRabbit primary; deep ratings-system knowledge", "evidence_basis": "V&S: algorithmic opacity + rating-system centrality to platform labor control", "confidence": "DIRECT", "source_ids": ["vallas_schor_2020_gig_platforms"]},
+        "tip_stealing_case_awareness":{"value": "aware of Instacart 2019 tip-stealing campaign", "evidence_basis": "V&S p13: media campaign against Instacart early 2019", "confidence": "DIRECT", "source_ids": ["vallas_schor_2020_gig_platforms"]},
+        "name_and_biography":     {"value": "Alex Morgan; Brooklyn TaskRabbit", "confidence": null, "source_ids": [], "notes": "design"}
+      }
+    }
+  ]
+}

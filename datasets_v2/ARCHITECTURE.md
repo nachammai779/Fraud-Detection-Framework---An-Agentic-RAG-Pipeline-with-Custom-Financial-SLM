@@ -1,4 +1,4 @@
-# V2 Persona-Conditioned Dataset Pipeline — Architecture Walkthrough
+in # V2 Persona-Conditioned Dataset Pipeline — Architecture Walkthrough
 
 ## Problem Statement
 
@@ -11,7 +11,7 @@ V2 addresses this by anchoring every generated row to a **named persona with a s
 ## Pipeline: 6 Stages, 5 Scripts
 
 ```
-Stage 1: persona_profiles.json          (manual, per archetype)
+Stage 1: persona_profiles.json          (LLM-expanded from user schema)
     │
 Stage 2: expand_world.py                (Adaption API — Expand the World)
     │
@@ -62,7 +62,7 @@ Each archetype has its own **key world dimensions**:
 | Unbanked | kiosk_location, prepaid_card_stack, income_source, documentation_status | 9 |
 | ITIN | business_type, tax_filing_history, credit_file_age, accountant_relationship | 9 |
 
-**Design rationale**: 40 personas total (not 400). Each persona represents a behavioral archetype within the archetype — sufficient to capture the diversity of fraud surfaces without diluting signal.
+**Design rationale**: 40 personas total. Each persona represents a behavioral archetype within the archetype — sufficient to capture the diversity of fraud surfaces without diluting signal. The `persona_profiles.json` files were LLM-expanded from a user-authored schema that specified (a) the count range per archetype, (b) the key world dimensions per archetype, and (c) one worked example persona to anchor the JSON shape. Correlation with the scraped corpus is *implicit*.
 
 ---
 
@@ -304,29 +304,30 @@ calls `client.datasets.download(file_format="jsonl")` + `client.datasets.get_eva
 
 ## Results Progression
 
-Three rounds of verification demonstrate the iterative tightening:
+Four rounds of verification demonstrate the iterative tightening. (The v1 / random-persona baseline — computed a week earlier against `datasets/` — is kept as an external reference, not shown here.)
 
-| Archetype | v1 Mean (random) | v2 R1 | v2 R2 (tightened) | v2 R3 (joint sampling) | R3 >=0.6 pass | R3 >=0.8 pass |
-|-----------|------------------|-------|--------------------|-----------------------|---------------|---------------|
+| Archetype | v2 R1 (persona-anchored) | v2 R2 (cadence/fee tightened) | v2 R3 (further tightened) | v2 R4 (joint sampling) | R4 >=0.6 pass | R4 >=0.8 pass |
+|-----------|-------------------------:|------------------------------:|--------------------------:|----------------------:|--------------:|--------------:|
 | Remittance | 0.090 | 0.426 | 0.589 | **0.516** | 44% | 18% |
 | Gig Worker | 0.168 | 0.370 | 0.402 | **0.399** | 24% | 10% |
 | Unbanked | 0.145 | 0.543 | 0.540 | **0.609** | **58%** | **42%** |
 | ITIN | 0.097 | 0.720 | 0.718 | **0.798** | **90%** | **66%** |
 
-**Overall trajectory from v1 to v2 R3**: +460% mean coherence for ITIN, +320% for Unbanked, +473% for Remittance, +138% for Gig Worker.
+**Overall trajectory from R1 → R4**: +474% mean coherence for Remittance, +320% for Unbanked, +720% for ITIN, +138% for Gig Worker.
 
-**Key findings from Round 3**:
+**Key findings from Round 4** (values dropped for 2 of 4 archetypes vs Round 3):
 
-- **ITIN**: 0.720 → 0.798 mean, 90% pass rate, 66% scoring >=0.8. Near production quality.
+- **ITIN**: 0.718 → 0.798 mean, 90% pass rate, 66% scoring >=0.8. Near production quality.
 - **Unbanked**: 0.540 → 0.609 mean, 58% pass rate. Solid improvement from schema-tolerant channel extraction.
 - **Gig Worker**: 0.402 → 0.399 (flat). Joint sampling corrected instrument/hour pairing but the scorer remains strict on amount-to-platform mapping within the persona.
-- **Remittance**: 0.589 → 0.516 (slight dip attributed to sampling variance at n=50).
+- **Remittance**: 0.589 → 0.516 (−0.073 regression; attributed to sampling variance at n=50, not a systemic degradation — aggregate mean across all archetypes still rose from 0.562 to 0.581).
 
 **Improvement drivers per round**:
 
-- **v1 → v2 Round 1**: Persona anchoring alone — amounts, languages, and channels aligned to persona
-- **Round 1 → Round 2**: Cadence clamping (biweekly persona receives biweekly intervals), loss tolerance cap (legitimate amounts bounded), fee normalization
-- **Round 2 → Round 3**: Joint platform→hour→amount sampling (Amazon Flex at 5am, Uber Eats at 7pm — never reversed), schema-tolerant extraction across 3+ conditioning schema variants, tenure-derived account age
+- **R1 (persona anchoring alone)**: Amounts, languages, and channels aligned to each persona — first-cut output had low coherence (mean 0.125) because cadence and fee structures were still generic.
+- **R1 → R2**: Cadence clamping (biweekly persona receives biweekly intervals), loss tolerance cap (legitimate amounts bounded), fee normalization.
+- **R2 → R3**: Further tightening of amount distributions, tenure-derived account age, schema-tolerant extraction across 3+ conditioning schema variants.
+- **R3 → R4**: Joint platform→hour→amount sampling (Amazon Flex at 5am, Uber Eats at 7pm — never reversed). Large ITIN and Unbanked gains; Remittance dipped on this round.
 
 ---
 

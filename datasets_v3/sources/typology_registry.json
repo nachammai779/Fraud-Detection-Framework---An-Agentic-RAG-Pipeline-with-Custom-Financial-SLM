@@ -1,0 +1,220 @@
+{
+  "_schema": {
+    "description": "FinCEN typology registry for v3. Each typology has a stable code, a name, a definition, a source pointer, and a list of fraud_vector strings (as used in persona family_crisis_history / generated transactions) that map to it. Consumed by the v3 generator to populate each row's fraud_vector_typology_ref column.",
+    "code_formats": {
+      "FTA_IDENTITY_2024_T{n}": "One of the 14 typologies catalogued in FinCEN's Financial Trend Analysis on Identity-Related Suspicious Activity (2024 report on 2021 BSA data).",
+      "SAR_ADVISORY_{TERM}": "A FinCEN SAR Advisory Key Term naming a specific fraud scheme advisory (e.g. SAR_ADVISORY_BEC_FRAUD)."
+    },
+    "fields": {
+      "code": "stable id (= registry key)",
+      "name": "FinCEN's official typology or advisory name",
+      "definition": "one-sentence definition from the FinCEN source",
+      "primary_exploitation": "(FTA only) Impersonation | Compromise | Circumvention",
+      "fincen_advisory_codes": "(SAR only) related FIN-YYYY-A### advisory codes",
+      "advisory_date": "(SAR only) publication date of the primary advisory",
+      "source_id": "key in sources.json — where the definition lives",
+      "source_page": "(FTA only) page number in the FTA PDF",
+      "applies_to_fraud_vectors": "list of fraud_vector strings this typology annotates; used by the v3 generator to populate fraud_vector_typology_ref"
+    }
+  },
+  "FTA_IDENTITY_2024_T1": {
+    "name": "General Fraud",
+    "definition": "Wrongful or criminal deception intended to result in financial or personal gain.",
+    "primary_exploitation": "Impersonation",
+    "source_id": "fincen_2024_identity_fta",
+    "source_page": 14,
+    "applies_to_fraud_vectors": ["wire_transfer", "exchange_rate", "emergency", "courier_theft", "cash_robbery", "estafa", "credit_card_fraud", "debit_card_fraud"]
+  },
+  "FTA_IDENTITY_2024_T2": {
+    "name": "False Records",
+    "definition": "Altering, counterfeiting, or forging documentation, records, or forms of payment.",
+    "primary_exploitation": "Impersonation",
+    "source_id": "fincen_2024_identity_fta",
+    "source_page": 14,
+    "applies_to_fraud_vectors": ["false_income_documents", "forged_signature", "counterfeit_check"]
+  },
+  "FTA_IDENTITY_2024_T3": {
+    "name": "Identity Theft",
+    "definition": "Using identifying information unique to the rightful owner without the rightful owner's permission.",
+    "primary_exploitation": "Compromise",
+    "source_id": "fincen_2024_identity_fta",
+    "source_page": 14,
+    "applies_to_fraud_vectors": ["identity_theft", "tax_refund_fraud", "credit_file_theft", "new_account_fraud"]
+  },
+  "FTA_IDENTITY_2024_T4": {
+    "name": "Third-Party Money Laundering",
+    "definition": "Laundering of illicit proceeds by a person who was not involved in the commission of the predicate offense.",
+    "primary_exploitation": "Circumvention",
+    "source_id": "fincen_2024_identity_fta",
+    "source_page": 14,
+    "applies_to_fraud_vectors": ["money_mule", "third_party_laundering"]
+  },
+  "FTA_IDENTITY_2024_T5": {
+    "name": "Circumventing Standards",
+    "definition": "Lack of adherence to standards or acceptable practices, knowingly or unknowingly.",
+    "primary_exploitation": "Circumvention",
+    "source_id": "fincen_2024_identity_fta",
+    "source_page": 14,
+    "applies_to_fraud_vectors": ["lax_kyc", "unlicensed_msb"]
+  },
+  "FTA_IDENTITY_2024_T6": {
+    "name": "Account Takeover",
+    "definition": "Deliberate compromise of a victim's account to remove, steal, procure, or otherwise affect the victim's funds.",
+    "primary_exploitation": "Compromise",
+    "source_id": "fincen_2024_identity_fta",
+    "source_page": 14,
+    "applies_to_fraud_vectors": ["ato", "account_takeover", "credential_stuffing", "sim_swap"]
+  },
+  "FTA_IDENTITY_2024_T7": {
+    "name": "Abuse of Access",
+    "definition": "Misuse of authorized access to data, information, or systems for financial gain (e.g. insider abuse, corruption, and embezzlement).",
+    "primary_exploitation": "Compromise",
+    "source_id": "fincen_2024_identity_fta",
+    "source_page": 14,
+    "applies_to_fraud_vectors": ["insider_abuse", "accountant_embezzlement", "power_of_attorney_abuse"]
+  },
+  "FTA_IDENTITY_2024_T8": {
+    "name": "Refusal to Cooperate",
+    "definition": "Refusal of requests to follow procedures or provide information.",
+    "primary_exploitation": "Circumvention",
+    "source_id": "fincen_2024_identity_fta",
+    "source_page": 14,
+    "applies_to_fraud_vectors": ["refusal_to_cooperate"]
+  },
+  "FTA_IDENTITY_2024_T9": {
+    "name": "Cyber Incident",
+    "definition": "Attempt to compromise or gain unauthorized access to electronic systems, services, resources, or information.",
+    "primary_exploitation": "Compromise",
+    "source_id": "fincen_2024_identity_fta",
+    "source_page": 14,
+    "applies_to_fraud_vectors": ["phishing", "malware", "data_breach"]
+  },
+  "FTA_IDENTITY_2024_T10": {
+    "name": "Scam",
+    "definition": "Schemes designed to manipulate someone into giving something away, especially money.",
+    "primary_exploitation": "Impersonation",
+    "source_id": "fincen_2024_identity_fta",
+    "source_page": 14,
+    "applies_to_fraud_vectors": ["phone_scam", "romance_scam", "fake_ICE_call", "tech_support_scam", "whatsapp_impersonation", "imposter_scam", "advance_fee", "earthquake_aid_scam", "disaster_relief_scam"]
+  },
+  "FTA_IDENTITY_2024_T11": {
+    "name": "Business Email Compromise",
+    "definition": "Schemes where criminals compromise the email accounts of victims.",
+    "primary_exploitation": "Compromise",
+    "source_id": "fincen_2024_identity_fta",
+    "source_page": 15,
+    "applies_to_fraud_vectors": ["bec", "eac", "vendor_email_compromise", "payroll_diversion"]
+  },
+  "FTA_IDENTITY_2024_T12": {
+    "name": "False Claims",
+    "definition": "Knowing submission of an untrue claim of fraud, identity theft, or unauthorized transactions.",
+    "primary_exploitation": "Impersonation",
+    "source_id": "fincen_2024_identity_fta",
+    "source_page": 15,
+    "applies_to_fraud_vectors": ["false_claim", "false_chargeback"]
+  },
+  "FTA_IDENTITY_2024_T13": {
+    "name": "Synthetic Identity",
+    "definition": "The use of a combination of real and fake PII to fabricate a person or entity.",
+    "primary_exploitation": "Impersonation",
+    "source_id": "fincen_2024_identity_fta",
+    "source_page": 15,
+    "applies_to_fraud_vectors": ["synthetic_id", "synthetic_identity_fraud", "cpn_fraud"]
+  },
+  "FTA_IDENTITY_2024_T14": {
+    "name": "Kiting",
+    "definition": "The fraudulent use of financial instruments, usually checks, between two or more bank accounts to cover insufficient funds.",
+    "primary_exploitation": "Impersonation",
+    "source_id": "fincen_2024_identity_fta",
+    "source_page": 15,
+    "applies_to_fraud_vectors": ["check_kiting", "check_fraud"]
+  },
+  "SAR_ADVISORY_ELDER_FINANCIAL_EXPLOITATION": {
+    "name": "Elder Financial Exploitation",
+    "definition": "Illicit exploitation of the financial accounts, property, or decision-making of older adults.",
+    "fincen_advisory_codes": ["FIN-2022-A002", "FIN-2011-A003"],
+    "advisory_date": "2022-06-15",
+    "source_id": "fincen_sar_key_terms",
+    "applies_to_fraud_vectors": ["elder_scam", "phone_scam", "grandparent_scam", "romance_scam", "power_of_attorney_abuse"]
+  },
+  "SAR_ADVISORY_BEC_FRAUD": {
+    "name": "Business Email Compromise (BEC) and Email Account Compromise (EAC)",
+    "definition": "Schemes where criminals gain access to victim email accounts to redirect wire transfers, payroll, or vendor payments.",
+    "fincen_advisory_codes": ["FIN-2019-A005", "FIN-2016-A003"],
+    "advisory_date": "2019-07-16",
+    "source_id": "fincen_sar_key_terms",
+    "applies_to_fraud_vectors": ["bec", "eac", "bec_data_theft", "vendor_email_compromise", "payroll_diversion"]
+  },
+  "SAR_ADVISORY_ACCOUNT_TAKEOVER_FRAUD": {
+    "name": "Account Takeover Activity",
+    "definition": "Use of stolen credentials, SIM swaps, or social engineering to gain unauthorized control of a victim's existing financial account.",
+    "fincen_advisory_codes": ["FIN-2011-A016"],
+    "advisory_date": "2011-12-19",
+    "source_id": "fincen_sar_key_terms",
+    "applies_to_fraud_vectors": ["ato", "account_takeover", "credential_stuffing", "sim_swap"]
+  },
+  "SAR_ADVISORY_COVID19_IMPOSTER_SCAMS": {
+    "name": "COVID-19 Imposter Scams and Money Mule Schemes",
+    "definition": "Imposter scams and money-mule recruitment schemes exploiting the COVID-19 emergency.",
+    "fincen_advisory_codes": ["FIN-2020-A003"],
+    "advisory_date": "2020-07-07",
+    "source_id": "fincen_sar_key_terms",
+    "applies_to_fraud_vectors": ["imposter_scam", "fake_government_official", "fake_charity", "money_mule"]
+  },
+  "SAR_ADVISORY_DISASTER_RELATED_FRAUD": {
+    "name": "Disaster-Related Fraud",
+    "definition": "Fraud schemes associated with natural disasters, including fake relief organizations and contractor fraud.",
+    "fincen_advisory_codes": ["FIN-2017-A007"],
+    "advisory_date": "2017-10-31",
+    "source_id": "fincen_sar_key_terms",
+    "applies_to_fraud_vectors": ["earthquake_aid_scam", "disaster_relief_scam", "hurricane_aid_scam", "fake_relief_charity"]
+  },
+  "SAR_ADVISORY_TAX_REFUND_FRAUD": {
+    "name": "Tax Refund and Related Identity Theft",
+    "definition": "Schemes that file fraudulent tax returns in a victim's name to intercept refunds, including compromise of ITINs and stolen SSNs.",
+    "fincen_advisory_codes": ["FIN-2013-A001", "FIN-2012-A005"],
+    "advisory_date": "2013-02-26",
+    "source_id": "fincen_sar_key_terms",
+    "applies_to_fraud_vectors": ["tax_refund_fraud", "itin_compromise", "irs_impersonation"]
+  },
+  "SAR_ADVISORY_IVTS": {
+    "name": "Informal Value Transfer System (IVTS)",
+    "definition": "Money-transfer systems operating outside regulated channels (e.g. hawala, hundi, informal couriers).",
+    "fincen_advisory_codes": ["FIN-2010-A011"],
+    "advisory_date": "2010-09-01",
+    "source_id": "fincen_sar_key_terms",
+    "applies_to_fraud_vectors": ["hawala", "informal_courier", "ivts", "unlicensed_msb"]
+  },
+  "SAR_ADVISORY_FUNNEL_ACCOUNT": {
+    "name": "Funnel Accounts and Trade-Based Money Laundering",
+    "definition": "Use of a single account for multiple-source cash deposits that are subsequently wired out, including TBML patterns in the U.S.-Mexico corridor.",
+    "fincen_advisory_codes": ["FIN-2014-A005", "FIN-2010-A001"],
+    "advisory_date": "2014-05-28",
+    "source_id": "fincen_sar_key_terms",
+    "applies_to_fraud_vectors": ["funnel_account", "tbml", "structured_deposits", "mx_restriction"]
+  },
+  "SAR_ADVISORY_HUMAN_TRAFFICKING": {
+    "name": "Human Trafficking and Smuggling",
+    "definition": "Financial flows associated with human trafficking and human smuggling networks, including victim wage confiscation and exploitation.",
+    "fincen_advisory_codes": ["FIN-2020-A008", "FIN-2014-A008"],
+    "advisory_date": "2020-10-15",
+    "source_id": "fincen_sar_key_terms",
+    "applies_to_fraud_vectors": ["human_trafficking", "wage_confiscation", "coerced_transfer"]
+  },
+  "SAR_ADVISORY_CYBER_EVENTS": {
+    "name": "Cyber-Events and Cyber-Enabled Crime",
+    "definition": "Financial activity tied to cyber events, including phishing, ransomware, and endpoint compromises.",
+    "fincen_advisory_codes": ["FIN-2016-A005"],
+    "advisory_date": "2016-10-25",
+    "source_id": "fincen_sar_key_terms",
+    "applies_to_fraud_vectors": ["phishing", "ransomware", "malware", "data_breach"]
+  },
+  "SAR_ADVISORY_THIRD_PARTY_PAYMENT_PROCESSORS": {
+    "name": "Third-Party Payment Processors",
+    "definition": "Risk indicators for payment-processor-facilitated fraud against consumer accounts.",
+    "fincen_advisory_codes": ["FIN-2012-A010"],
+    "advisory_date": "2012-10-22",
+    "source_id": "fincen_sar_key_terms",
+    "applies_to_fraud_vectors": ["payment_processor_fraud", "unauthorized_ach"]
+  }
+}

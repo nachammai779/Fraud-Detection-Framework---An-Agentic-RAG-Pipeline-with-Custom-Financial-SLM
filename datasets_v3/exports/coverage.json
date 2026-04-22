@@ -1,0 +1,22 @@
+{
+  "remittance": {
+    "n_rows": 5000,
+    "source": "narrative_filled",
+    "narrative_fill_rate": 0.9982
+  },
+  "gig_worker": {
+    "n_rows": 5000,
+    "source": "narrative_filled",
+    "narrative_fill_rate": 0.9982
+  },
+  "unbanked": {
+    "n_rows": 5000,
+    "source": "narrative_filled",
+    "narrative_fill_rate": 0.9974
+  },
+  "itin": {
+    "n_rows": 5000,
+    "source": "raw_synthetic_no_narrative",
+    "narrative_fill_rate": 0.0
+  }
+}

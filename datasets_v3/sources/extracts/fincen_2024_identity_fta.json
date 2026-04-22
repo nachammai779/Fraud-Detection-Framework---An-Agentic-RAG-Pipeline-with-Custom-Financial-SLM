@@ -1,0 +1,90 @@
+{
+  "source_id": "fincen_2024_identity_fta",
+  "archetypes": ["remittance", "gig_worker", "itin"],
+  "extraction_method": "structured extraction from FinCEN Financial Trend Analysis on identity-related suspicious activity (2024 publication on 2021 BSA data). Core typology taxonomy already decomposed into datasets_v3/sources/typology_registry.json; this extract focuses on the quantitative findings and persona-grounding facts that are not typology definitions.",
+  "persona_dimensions": {
+    "demographics": {
+      "filers_by_institution_type": {
+        "value": {
+          "depository_institutions_pct_of_reports": 54,
+          "msb_pct_of_reports": 21,
+          "other_pct_of_reports": 18,
+          "securities_futures_pct_of_reports": 4,
+          "loan_finance_pct_of_reports": 2
+        },
+        "notes": "MSBs (money services businesses, which include remittance providers) are the second-largest filer of identity-related BSA reports. Their fingerprint in identity-fraud reporting is distinct — much higher share of circumvention-type exploits vs depository institutions.",
+        "source_ref": "p3, p13",
+        "quote": "54% of identity-related BSA reports (approximately 1.3 million filings) were filed by depository institutions... Money services businesses (MSBs) are the next largest category of filer, filing 21% of identity-related BSA reports",
+        "confidence": "DIRECT"
+      }
+    },
+    "financial_behavior": {
+      "scale_of_identity_fraud": {
+        "value": {
+          "review_period_year": 2021,
+          "total_bsa_reports_reviewed_millions": 3.8,
+          "identity_related_bsa_reports_millions": 1.6,
+          "identity_related_share_pct": 42,
+          "identity_related_suspicious_amount_usd_billion": 212,
+          "total_suspicious_amount_usd_billion_reviewed": 566
+        },
+        "source_ref": "p2, p3",
+        "quote": "approximately 1.6 million, or 42% of around 3.8 million total BSA reports, equivalent to $212 billion in suspicious activity, related to identity",
+        "confidence": "DIRECT"
+      }
+    },
+    "vulnerability_signals": {
+      "three_exploitation_modes": {
+        "value": [
+          {"mode": "impersonation", "description": "attackers provide false identifying information, claim to be other entities, or misrepresent identity to evade validation", "most_frequent": true},
+          {"mode": "compromise", "description": "attackers use stolen credentials to gain unauthorized access during authentication", "disproportionate_monetary_impact": true},
+          {"mode": "circumvention", "description": "attackers exploit or bypass insufficient verification processes"}
+        ],
+        "source_ref": "p3, p4",
+        "quote": "Attackers most frequently use impersonation tactics, followed by compromise during authentication, and finally, circumventing verification to evade detection. In contrast, compromise has a disproportionally large monetary impact compared to impersonation and circumvention",
+        "confidence": "DIRECT"
+      },
+      "top5_typologies_by_report_count": {
+        "value": [
+          {"typology": "General Fraud", "report_count": "~1.2 million", "usd_billion": 149},
+          {"typology": "False Records", "report_count": "~423,000", "usd_billion": 45},
+          {"typology": "Identity Theft", "report_count": "~222,000", "usd_billion": 36},
+          {"typology": "Third-Party Money Laundering", "report_count": "~154,000", "usd_billion": 18},
+          {"typology": "Circumventing Standards", "report_count": "~110,000", "usd_billion": 12}
+        ],
+        "notes": "Top 5 account for 88% of identity-related BSA reports and 74% of total identity-related suspicious activity amount.",
+        "source_ref": "p3, p9",
+        "confidence": "DIRECT"
+      },
+      "unauthorized_access_via_credentials_scale": {
+        "value": "18% of identity-related BSA reports (~446,000 filings) describe attackers using compromised credentials to gain unauthorized access to legitimate customers' accounts.",
+        "source_ref": "p3",
+        "confidence": "DIRECT"
+      }
+    },
+    "fraud_exposure": {
+      "typology_decomposition_reference": {
+        "value": "Full 14-typology definitions and applies_to_fraud_vectors mappings are registered in datasets_v3/sources/typology_registry.json (codes FTA_IDENTITY_2024_T1 through FTA_IDENTITY_2024_T14)",
+        "source_ref": "p14, p15 (Appendix 1)",
+        "confidence": "DIRECT"
+      },
+      "victim_manipulation_via_social_engineering": {
+        "value": "Attackers use social engineering, computer intrusions, and compromised email accounts to manipulate victims into thinking a trusted person or entity was directing them to make payments — misleading financial institutions and customers into conducting fund transfers to attacker-controlled accounts.",
+        "source_ref": "p9",
+        "quote": "Attackers use social engineering, computer intrusions, and compromised email accounts to manipulate victims into thinking a trusted person or entity was directing them to make payments. This misleads financial institutions and their customers into conducting fund transfers to attacker-controlled accounts",
+        "confidence": "DIRECT"
+      },
+      "elder_specific_abuse_pattern": {
+        "value": "Compromised powers of attorney exploit elders and move funds from victims' accounts to the attackers' own.",
+        "source_ref": "p9",
+        "confidence": "DIRECT"
+      }
+    }
+  },
+  "persona_grounding_implications": {
+    "suitable_for_grounding_fields": ["fraud_vector (any; maps through typology_registry)", "fraud_vector_typology_ref (this is the source of that column)", "family_crisis_history (fraud events — scale evidence for likelihood)"],
+    "not_suitable_for_grounding_fields": ["corridor_country", "documentation_status", "demographic specifics (FTA is typology-focused, not demographic-descriptive)"],
+    "behavioral_evidence_grade_when_used": "B — regulatory typology source. FinCEN is the canonical authority for BSA-derived fraud taxonomy; used for typology mapping and scale-of-problem grounding.",
+    "note": "Primary use of this source in v3 is populating fraud_vector_typology_ref, not seeding persona fields. Persona dimensions above are for cases where scale-of-fraud context is cited (e.g. for a persona's stated fraud-event history)."
+  }
+}

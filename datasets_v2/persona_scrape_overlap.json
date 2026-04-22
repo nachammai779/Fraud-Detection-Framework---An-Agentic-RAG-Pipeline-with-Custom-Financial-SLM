@@ -1,0 +1,794 @@
+{
+  "remittance": {
+    "archetype": "remittance",
+    "n_personas": 11,
+    "total_signals": 228,
+    "total_hits": 159,
+    "pct": 69.7,
+    "per_persona": [
+      {
+        "persona_id": "rem_001",
+        "name": "Maria Hernandez",
+        "n_signals": 27,
+        "n_hits": 18,
+        "pct": 66.7,
+        "missing": [
+          "college fee",
+          "diabetes",
+          "espanol",
+          "espa\u00f1ol",
+          "hospitalization",
+          "oaxaca",
+          "remesa",
+          "school fees"
+        ],
+        "hit_examples": [
+          "android",
+          "english",
+          "estafa",
+          "fees",
+          "hospital",
+          "medical"
+        ]
+      },
+      {
+        "persona_id": "rem_002",
+        "name": "Tuan Nguyen",
+        "n_signals": 23,
+        "n_hits": 17,
+        "pct": 73.9,
+        "missing": [
+          "da nang",
+          "diabetes",
+          "phone fraud",
+          "tieng viet",
+          "vietnam",
+          "vietnamese"
+        ],
+        "hit_examples": [
+          "attempted",
+          "called me",
+          "english",
+          "father",
+          "hospital",
+          "iphone"
+        ]
+      },
+      {
+        "persona_id": "rem_003",
+        "name": "Adaeze Okafor",
+        "n_signals": 19,
+        "n_hits": 15,
+        "pct": 78.9,
+        "missing": [
+          "college fee",
+          "lagos",
+          "school fees",
+          "yoruba"
+        ],
+        "hit_examples": [
+          "attempted",
+          "english",
+          "fees",
+          "impersonat",
+          "impersonation",
+          "iphone"
+        ]
+      },
+      {
+        "persona_id": "rem_004",
+        "name": "Jean-Baptiste Pierre",
+        "n_signals": 25,
+        "n_hits": 17,
+        "pct": 68.0,
+        "missing": [
+          "creole",
+          "diabetes",
+          "francais",
+          "informal_courier",
+          "kreyol",
+          "port-au-prince",
+          "relief",
+          "robbed"
+        ],
+        "hit_examples": [
+          "android",
+          "cam",
+          "courier",
+          "disaster",
+          "earthquake",
+          "english"
+        ]
+      },
+      {
+        "persona_id": "rem_005",
+        "name": "Ravi Patel",
+        "n_signals": 22,
+        "n_hits": 16,
+        "pct": 72.7,
+        "missing": [
+          "apple support",
+          "bhai",
+          "diabetes",
+          "gujarat",
+          "namaste",
+          "tech support"
+        ],
+        "hit_examples": [
+          "attempted",
+          "english",
+          "hindi",
+          "hospital",
+          "india",
+          "medical"
+        ]
+      },
+      {
+        "persona_id": "rem_006",
+        "name": "Esperanza Reyes",
+        "n_signals": 32,
+        "n_hits": 21,
+        "pct": 65.6,
+        "missing": [
+          "boyfriend scam",
+          "college fee",
+          "dating scam",
+          "espanol",
+          "espa\u00f1ol",
+          "girlfriend scam",
+          "prepaid",
+          "remesa"
+        ],
+        "hit_examples": [
+          "android",
+          "call",
+          "deportation",
+          "el salvador",
+          "estafa",
+          "fake"
+        ]
+      },
+      {
+        "persona_id": "rem_007",
+        "name": "Linh Tran",
+        "n_signals": 13,
+        "n_hits": 8,
+        "pct": 61.5,
+        "missing": [
+          "hcmc",
+          "informal_relay",
+          "tieng viet",
+          "vietnam",
+          "vietnamese"
+        ],
+        "hit_examples": [
+          "caregiver",
+          "costs",
+          "english",
+          "grandmother",
+          "iphone",
+          "recurring"
+        ]
+      },
+      {
+        "persona_id": "rem_008",
+        "name": "Boluwatife Adeyemi",
+        "n_signals": 11,
+        "n_hits": 8,
+        "pct": 72.7,
+        "missing": [
+          "binance usdt",
+          "ibadan",
+          "yoruba"
+        ],
+        "hit_examples": [
+          "church",
+          "donation",
+          "english",
+          "loss",
+          "nigeria",
+          "scam"
+        ]
+      },
+      {
+        "persona_id": "rem_009",
+        "name": "Carlos Mendoza",
+        "n_signals": 19,
+        "n_hits": 13,
+        "pct": 68.4,
+        "missing": [
+          "espanol",
+          "espa\u00f1ol",
+          "jalisco",
+          "phone fraud",
+          "remesa",
+          "widow"
+        ],
+        "hit_examples": [
+          "called me",
+          "english",
+          "estafa",
+          "loss",
+          "mexico",
+          "moneygram"
+        ]
+      },
+      {
+        "persona_id": "rem_010",
+        "name": "Priya Krishnan",
+        "n_signals": 13,
+        "n_hits": 11,
+        "pct": 84.6,
+        "missing": [
+          "icici money2india",
+          "tamil nadu"
+        ],
+        "hit_examples": [
+          "assisted",
+          "attempted",
+          "english",
+          "grandmother",
+          "india",
+          "iphone"
+        ]
+      },
+      {
+        "persona_id": "rem_011",
+        "name": "Ana Lucia Diaz",
+        "n_signals": 24,
+        "n_hits": 15,
+        "pct": 62.5,
+        "missing": [
+          "confiscation",
+          "diabetes",
+          "espanol",
+          "espa\u00f1ol",
+          "havana",
+          "informal_mulas",
+          "remesa",
+          "robbed"
+        ],
+        "hit_examples": [
+          "android",
+          "courier",
+          "cuba",
+          "english",
+          "estafa",
+          "hospital"
+        ]
+      }
+    ],
+    "corpus_chars": 754578
+  },
+  "gig_worker": {
+    "archetype": "gig_worker",
+    "n_personas": 11,
+    "total_signals": 64,
+    "total_hits": 33,
+    "pct": 51.6,
+    "per_persona": [
+      {
+        "persona_id": "gig_001",
+        "name": "DeShawn Williams",
+        "n_signals": 5,
+        "n_hits": 4,
+        "pct": 80.0,
+        "missing": [
+          "every shift end, ~$80-180 chunks, 4-6x/day"
+        ],
+        "hit_examples": [
+          "doordash",
+          "english",
+          "instacart",
+          "uber"
+        ]
+      },
+      {
+        "persona_id": "gig_002",
+        "name": "Yuki Tanaka",
+        "n_signals": 4,
+        "n_hits": 2,
+        "pct": 50.0,
+        "missing": [
+          "taskrabbit",
+          "weekly sunday lump"
+        ],
+        "hit_examples": [
+          "english",
+          "lyft"
+        ]
+      },
+      {
+        "persona_id": "gig_003",
+        "name": "Rajesh Sharma",
+        "n_signals": 7,
+        "n_hits": 3,
+        "pct": 42.9,
+        "missing": [
+          "amazon flex",
+          "bhai",
+          "flex weekly, uber daily after dinner rush",
+          "namaste"
+        ],
+        "hit_examples": [
+          "english",
+          "hindi",
+          "uber eats"
+        ]
+      },
+      {
+        "persona_id": "gig_004",
+        "name": "Ahmed Bah",
+        "n_signals": 6,
+        "n_hits": 2,
+        "pct": 33.3,
+        "missing": [
+          "curb (yellow cab)",
+          "every other day, large lumps",
+          "francais",
+          "french"
+        ],
+        "hit_examples": [
+          "english",
+          "uber"
+        ]
+      },
+      {
+        "persona_id": "gig_005",
+        "name": "Brittany Cole",
+        "n_signals": 5,
+        "n_hits": 3,
+        "pct": 60.0,
+        "missing": [
+          "irregular, multiple times daily across platforms",
+          "onlyfans payouts"
+        ],
+        "hit_examples": [
+          "english",
+          "instacart",
+          "shipt"
+        ]
+      },
+      {
+        "persona_id": "gig_006",
+        "name": "Hai Pham",
+        "n_signals": 6,
+        "n_hits": 2,
+        "pct": 33.3,
+        "missing": [
+          "grubhub",
+          "tieng viet",
+          "vietnamese",
+          "weekly friday"
+        ],
+        "hit_examples": [
+          "doordash",
+          "english"
+        ]
+      },
+      {
+        "persona_id": "gig_007",
+        "name": "Olumide Bakare",
+        "n_signals": 6,
+        "n_hits": 4,
+        "pct": 66.7,
+        "missing": [
+          "instant pay every shift",
+          "yoruba"
+        ],
+        "hit_examples": [
+          "english",
+          "lyft",
+          "nigeria",
+          "uber"
+        ]
+      },
+      {
+        "persona_id": "gig_008",
+        "name": "Maria Soto",
+        "n_signals": 9,
+        "n_hits": 4,
+        "pct": 44.4,
+        "missing": [
+          "espanol",
+          "espa\u00f1ol",
+          "estafa",
+          "remesa",
+          "rover weekly, postmates daily small"
+        ],
+        "hit_examples": [
+          "english",
+          "postmates",
+          "rover",
+          "spanish"
+        ]
+      },
+      {
+        "persona_id": "gig_009",
+        "name": "Tyler Brennan",
+        "n_signals": 4,
+        "n_hits": 3,
+        "pct": 75.0,
+        "missing": [
+          "instant pay end of shift"
+        ],
+        "hit_examples": [
+          "doordash",
+          "english",
+          "uber eats"
+        ]
+      },
+      {
+        "persona_id": "gig_010",
+        "name": "Devi Reddy",
+        "n_signals": 8,
+        "n_hits": 3,
+        "pct": 37.5,
+        "missing": [
+          "bhai",
+          "cpa via direct deposit, gigs cashed daily",
+          "independent cpa",
+          "namaste",
+          "taskrabbit"
+        ],
+        "hit_examples": [
+          "english",
+          "hindi",
+          "rover"
+        ]
+      },
+      {
+        "persona_id": "gig_011",
+        "name": "Marcus Johnson",
+        "n_signals": 4,
+        "n_hits": 3,
+        "pct": 75.0,
+        "missing": [
+          "fast pay $1.99 every dash, multiple times daily"
+        ],
+        "hit_examples": [
+          "doordash",
+          "english",
+          "spark"
+        ]
+      }
+    ],
+    "corpus_chars": 698686
+  },
+  "unbanked": {
+    "archetype": "unbanked",
+    "n_personas": 9,
+    "total_signals": 67,
+    "total_hits": 12,
+    "pct": 17.9,
+    "per_persona": [
+      {
+        "persona_id": "unb_001",
+        "name": "Roosevelt Banks",
+        "n_signals": 6,
+        "n_hits": 1,
+        "pct": 16.7,
+        "missing": [
+          "1099 day labor, paid weekly",
+          "greendot reloadable",
+          "memphis corner liquor store + walmart moneycenter",
+          "us citizen, chexsystems-banned",
+          "walmart moneycard"
+        ],
+        "hit_examples": [
+          "english"
+        ]
+      },
+      {
+        "persona_id": "unb_002",
+        "name": "Lupe Vasquez",
+        "n_signals": 10,
+        "n_hits": 1,
+        "pct": 10.0,
+        "missing": [
+          "cash from cleaning houses",
+          "espanol",
+          "espa\u00f1ol",
+          "netspend",
+          "phoenix dollar store + check cashing on van buren",
+          "remesa",
+          "spanish",
+          "undocumented"
+        ],
+        "hit_examples": [
+          "estafa"
+        ]
+      },
+      {
+        "persona_id": "unb_003",
+        "name": "Thi Le",
+        "n_signals": 6,
+        "n_hits": 1,
+        "pct": 16.7,
+        "missing": [
+          "greendot (only used for online prescriptions)",
+          "permanent resident",
+          "social security $1,100/mo",
+          "tieng viet",
+          "vietnamese grocery in oakland, in-community informal hawala"
+        ],
+        "hit_examples": [
+          "vietnamese"
+        ]
+      },
+      {
+        "persona_id": "unb_004",
+        "name": "Jamal Ahmed",
+        "n_signals": 6,
+        "n_hits": 1,
+        "pct": 16.7,
+        "missing": [
+          "arabic",
+          "cedar-riverside hawala desk + community credit union",
+          "chime card (semi-banked)",
+          "lyft + part-time mosque administration",
+          "naturalized citizen"
+        ],
+        "hit_examples": [
+          "english"
+        ]
+      },
+      {
+        "persona_id": "unb_005",
+        "name": "Crystal Davis",
+        "n_signals": 7,
+        "n_hits": 1,
+        "pct": 14.3,
+        "missing": [
+          "bluebird",
+          "cash from braiding, $40-150/client",
+          "netspend x2",
+          "new orleans walmart moneycenter",
+          "us citizen, no banking history",
+          "walmart moneycard"
+        ],
+        "hit_examples": [
+          "english"
+        ]
+      },
+      {
+        "persona_id": "unb_006",
+        "name": "Felipe Gonzalez",
+        "n_signals": 8,
+        "n_hits": 1,
+        "pct": 12.5,
+        "missing": [
+          "cash daily labor, irregular",
+          "espanol",
+          "espa\u00f1ol",
+          "houston home depot lot + wu at la michoacana",
+          "remesa",
+          "spanish",
+          "undocumented"
+        ],
+        "hit_examples": [
+          "estafa"
+        ]
+      },
+      {
+        "persona_id": "unb_007",
+        "name": "Aisha Toure",
+        "n_signals": 8,
+        "n_hits": 1,
+        "pct": 12.5,
+        "missing": [
+          "bronx braid shop + cash app",
+          "cash + cash app from clients",
+          "cash app card",
+          "francais",
+          "french",
+          "tps holder",
+          "vanilla visa"
+        ],
+        "hit_examples": [
+          "english"
+        ]
+      },
+      {
+        "persona_id": "unb_008",
+        "name": "Robert Kowalski",
+        "n_signals": 5,
+        "n_hits": 2,
+        "pct": 40.0,
+        "missing": [
+          "cleveland check-cashing on lorain ave",
+          "direct express ss card only",
+          "pension + social security"
+        ],
+        "hit_examples": [
+          "english",
+          "us citizen"
+        ]
+      },
+      {
+        "persona_id": "unb_009",
+        "name": "Yolanda Marquez",
+        "n_signals": 11,
+        "n_hits": 3,
+        "pct": 27.3,
+        "missing": [
+          "espanol",
+          "espa\u00f1ol",
+          "food truck daily cash + zelle tips",
+          "netspend",
+          "remesa",
+          "san antonio heb moneycenter",
+          "spanish",
+          "walmart moneycard"
+        ],
+        "hit_examples": [
+          "english",
+          "estafa",
+          "us citizen"
+        ]
+      }
+    ],
+    "corpus_chars": 941226
+  },
+  "itin": {
+    "archetype": "itin",
+    "n_personas": 9,
+    "total_signals": 53,
+    "total_hits": 10,
+    "pct": 18.9,
+    "per_persona": [
+      {
+        "persona_id": "itin_001",
+        "name": "Jose Ramirez",
+        "n_signals": 8,
+        "n_hits": 1,
+        "pct": 12.5,
+        "missing": [
+          "bilingual cpa in oak cliff dallas, 5+ years",
+          "espanol",
+          "espa\u00f1ol",
+          "estafa",
+          "landscaping llc, sole proprietor",
+          "remesa",
+          "spanish"
+        ],
+        "hit_examples": [
+          "english"
+        ]
+      },
+      {
+        "persona_id": "itin_002",
+        "name": "Mei Chen",
+        "n_signals": 6,
+        "n_hits": 2,
+        "pct": 33.3,
+        "missing": [
+          "cantonese",
+          "mandarin",
+          "mandarin cpa in flushing, 7 years",
+          "nail salon s-corp"
+        ],
+        "hit_examples": [
+          "chinese",
+          "english"
+        ]
+      },
+      {
+        "persona_id": "itin_003",
+        "name": "Ahmed Hassan",
+        "n_signals": 4,
+        "n_hits": 1,
+        "pct": 25.0,
+        "missing": [
+          "arabic",
+          "food truck, sole proprietor",
+          "vita volunteer, no continuity"
+        ],
+        "hit_examples": [
+          "english"
+        ]
+      },
+      {
+        "persona_id": "itin_004",
+        "name": "Sandra Morales",
+        "n_signals": 8,
+        "n_hits": 1,
+        "pct": 12.5,
+        "missing": [
+          "espanol",
+          "espa\u00f1ol",
+          "estafa",
+          "real estate rental, schedule e",
+          "remesa",
+          "small cpa firm, 10 years",
+          "spanish"
+        ],
+        "hit_examples": [
+          "english"
+        ]
+      },
+      {
+        "persona_id": "itin_005",
+        "name": "Thanh Nguyen",
+        "n_signals": 5,
+        "n_hits": 1,
+        "pct": 20.0,
+        "missing": [
+          "auto detailing, sole proprietor",
+          "tieng viet",
+          "vietnamese",
+          "vietnamese cpa in san jose, 1 year"
+        ],
+        "hit_examples": [
+          "english"
+        ]
+      },
+      {
+        "persona_id": "itin_006",
+        "name": "Roberto Sanchez",
+        "n_signals": 8,
+        "n_hits": 1,
+        "pct": 12.5,
+        "missing": [
+          "construction subcontracting llc, partnership",
+          "espanol",
+          "espa\u00f1ol",
+          "estafa",
+          "remesa",
+          "spanish",
+          "specialty cpa, 8 years"
+        ],
+        "hit_examples": [
+          "english"
+        ]
+      },
+      {
+        "persona_id": "itin_007",
+        "name": "Priyanka Iyer",
+        "n_signals": 3,
+        "n_hits": 1,
+        "pct": 33.3,
+        "missing": [
+          "etsy/online jewelry, sole proprietor",
+          "turbotax + ad-hoc cpa review"
+        ],
+        "hit_examples": [
+          "english"
+        ]
+      },
+      {
+        "persona_id": "itin_008",
+        "name": "Carlos Bermudez",
+        "n_signals": 7,
+        "n_hits": 0,
+        "pct": 0.0,
+        "missing": [
+          "bodega/small grocery, sole proprietor",
+          "espanol",
+          "espa\u00f1ol",
+          "estafa",
+          "hialeah cpa, 15 years",
+          "remesa",
+          "spanish"
+        ],
+        "hit_examples": []
+      },
+      {
+        "persona_id": "itin_009",
+        "name": "Linda Park",
+        "n_signals": 4,
+        "n_hits": 2,
+        "pct": 50.0,
+        "missing": [
+          "dry cleaner s-corp",
+          "koreatown cpa, 9 years"
+        ],
+        "hit_examples": [
+          "english",
+          "korean"
+        ]
+      }
+    ],
+    "corpus_chars": 385176
+  }
+}

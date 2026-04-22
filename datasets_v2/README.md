@@ -53,13 +53,13 @@ datasets_v2/{archetype}/
 ## Commands
 
 ```bash
-# Day 5-6: expand each persona into a conditioning world
+# Expand each persona into a conditioning world
 python src/personas/expand_world.py --all
 
 # Tab-DDPM (conditioned on expanded_world/conditioning_schema.parquet)
 # (TabDDPM v2 generator — pass --conditioning_schema; not yet implemented in this commit)
 
-# Day 8: verify behavioral coherence of generated records
+# Verify behavioral coherence of generated records
 python src/personas/persona_verify.py --all --sample 500
 ```
 

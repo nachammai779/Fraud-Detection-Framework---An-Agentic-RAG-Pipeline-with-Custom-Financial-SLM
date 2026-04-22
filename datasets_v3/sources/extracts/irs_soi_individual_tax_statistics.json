@@ -1,0 +1,33 @@
+{
+  "source_id": "irs_soi_individual_tax_statistics",
+  "archetypes": ["itin"],
+  "extraction_method": "web fetch of IRS SOI Individual Income Tax Statistics landing page. Landing page is a navigation index — actual statistical tables require drill-down.",
+  "persona_dimensions": {
+    "resources_indexed": {
+      "value": [
+        "Individual income tax statistics (Form 1040)",
+        "Estate tax statistics (Form 706)",
+        "International individual tax statistics (Forms 706-NA, 1042-S, 1116, 2555, 3520, 5713)",
+        "Personal wealth statistics",
+        "Income from trusts and estates (Form 1041)"
+      ],
+      "source_ref": "IRS SOI landing page",
+      "confidence": "DIRECT"
+    },
+    "itin_filer_data_availability": {
+      "value": "No dedicated ITIN-filer category visible on the landing page. The 'International' section mentions nonresident aliens and foreign earned income but does not provide ITIN-specific tables at this level. To access ITIN filer statistics, navigate to sub-pages (Form 1040 tables by citizenship/residency) or Treasury IG reports not yet fetched.",
+      "source_ref": "IRS SOI landing page",
+      "confidence": "DIRECT"
+    },
+    "small_business_data_availability": {
+      "value": "'Nonfarm sole proprietorships' (Schedule C) data included in Form 1040 statistics, but no dedicated Schedule C table identified on the landing page.",
+      "source_ref": "IRS SOI landing page",
+      "confidence": "DIRECT"
+    }
+  },
+  "persona_grounding_implications": {
+    "suitable_for_grounding_fields": ["business_type (via Schedule C subcategories — once drill-down tables are fetched)", "income_usd_annual (via Form 1040 AGI tables — by citizenship category if drill-down finds them)", "tax_filing_history (filing pattern and compliance — requires drill-down)"],
+    "behavioral_evidence_grade_when_used": "A — direct government statistical source (when drill-down tables are fetched); landing page alone is Grade C reference material only.",
+    "caveat": "Landing page is a navigation hub. For actual ITIN persona grounding, additional web fetches or PDF pulls from IRS SOI Publication 1304 (Individual Income Tax Returns Complete Report) are needed. This extract flags the source as available but not yet harvested for data."
+  }
+}

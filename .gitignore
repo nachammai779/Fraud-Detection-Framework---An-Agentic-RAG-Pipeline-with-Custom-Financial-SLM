@@ -33,3 +33,13 @@ data/processed/
 
 # Claude Code
 .claude/
+
+# datasets_v3 FDIC 2023 HH survey microdata — kept locally only, too large for git
+datasets_v3/sources/pdfs/hh2023/hh2023_analys.csv
+datasets_v3/sources/pdfs/hh2023/src/raw/*.dat
+datasets_v3/sources/pdfs/hh2023/*.sas7bcat
+datasets_v3/sources/pdfs/hh2023/*.sas7bdat
+
+# Allow small HH2023 metadata/format CSVs to be tracked (override global *.csv rule)
+!datasets_v3/sources/pdfs/hh2023/metadata/metadata.csv
+!datasets_v3/sources/pdfs/hh2023/sas_fmt/formatData.csv

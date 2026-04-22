@@ -1,0 +1,9 @@
+{
+  "archetype": "unbanked",
+  "dataset_id": "c6642065-924e-4f3a-ab94-16f986ddbf3c",
+  "run_id": "dataset-c6642065-924e-4f3a-ab94-16f986ddbf3c-1776862593114",
+  "estimated_credits": 51.0,
+  "estimated_minutes": 73.0,
+  "n_rows": 5000,
+  "estimate_only": false
+}

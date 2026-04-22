@@ -1,0 +1,160 @@
+{
+  "source_id": "wise_2023_remittances_report",
+  "archetypes": ["remittance"],
+  "extraction_method": "manual structured extraction from Wise 2023 Remittances Report (20 pages) — macro market data and first-person sender testimonials",
+  "persona_dimensions": {
+    "demographics": {
+      "sending_country_scope": {
+        "value": ["Australia", "Brazil", "Canada", "France", "Germany", "Italy", "Japan", "Saudi Arabia", "South Africa", "South Korea", "United Kingdom", "United States"],
+        "source_ref": "p2",
+        "quote": "This report will focus on 12 countries, all in the G20, which are considered 'remittance sending countries'",
+        "confidence": "DIRECT"
+      },
+      "immigrant_heavy_sending_markets": {
+        "value": {
+          "Australia": "half of the population has at least one parent born overseas",
+          "Canada": "record number of new migrants in 2022; trend over last decade of increased immigration",
+          "Japan": "close to 2 million migrant workers; newer routes from Vietnam, Philippines, China overtaking traditional ones"
+        },
+        "source_ref": "p12, p13, p15",
+        "confidence": "DIRECT"
+      },
+      "top_corridor_volumes_2022_usd_bn": {
+        "value": {
+          "United States": 37.2,
+          "Germany": 21.4,
+          "United Kingdom": 7.8,
+          "Canada": 7.7,
+          "Japan": 7.8,
+          "Australia": 5.3,
+          "Saudi Arabia_row_omitted": "see report"
+        },
+        "source_ref": "p12-p17",
+        "confidence": "DIRECT"
+      },
+      "recipient_use_of_funds": {
+        "value": "Over 75% of recipients use remittances for essentials — food, medicine, keeping children in school, roof over their head",
+        "source_ref": "p10",
+        "quote": "Unicef estimates that [over 75% of] remittances are used for the essentials – to keep children in school, to feed families, to keep a roof over their head",
+        "confidence": "DIRECT"
+      }
+    },
+    "financial_behavior": {
+      "global_remittance_volume_2022_usd_bn": {
+        "value": 800,
+        "source_ref": "p7, p10",
+        "quote": "remittances volumes globally reached just under $800 billion",
+        "confidence": "DIRECT"
+      },
+      "g20_sending_volume_2021_usd_bn": {
+        "value": 200,
+        "source_ref": "p4",
+        "quote": "In 2021, G20 sending countries sent just under $200 billion in remittances",
+        "confidence": "DIRECT"
+      },
+      "un_sdg_cost_target_2030": {
+        "value": "3% or lower by 2030",
+        "source_ref": "p3",
+        "quote": "UN Sustainable Development Goals... formalising their commitment to lowering the cost of remittances to 3% or lower by 2030",
+        "confidence": "DIRECT"
+      },
+      "fx_margin_share_of_fees": {
+        "value": "approximately 50% of global cross-border payment fees are in the form of FX margin",
+        "source_ref": "p9",
+        "quote": "A McKinsey report found that half of global cross-border payment fees are in the form of FX margin",
+        "confidence": "DIRECT"
+      },
+      "hidden_fee_annual_impact_eu": {
+        "value": "€4.6 billion ($5 billion) per year lost by European remitters in fees",
+        "source_ref": "p4",
+        "quote": "European remitters lost €4.6 billion ($5 billion) in fees",
+        "confidence": "DIRECT"
+      },
+      "informal_channel_usage": {
+        "value": "South Africa: large proportion of remittance flows are through informal channels due to regulatory friction (tiered licensing caps per-transaction limits)",
+        "source_ref": "p16",
+        "quote": "a large proportion flows through informal channels... currency controls have stifled competition",
+        "confidence": "DIRECT"
+      }
+    },
+    "vulnerability_signals": {
+      "fee_awareness_gap": {
+        "value": "Only 20% of Canadian consumers could correctly identify exchange rate markups as part of the cost",
+        "source_ref": "p13",
+        "quote": "only 20% of consumers could correctly identify exchange rate markups as part of that cost. This means consumers lose money unwittingly",
+        "confidence": "DIRECT"
+      },
+      "inflation_eroded_purchasing_power": {
+        "value": "2023: 0.75% reduction in value of remittance flows vs 2021 (inflation-adjusted); Japan weak yen further eroded sender purchasing power",
+        "source_ref": "p4, p15",
+        "confidence": "DIRECT"
+      },
+      "dependence_lifeline_for_recipients": {
+        "value": "Remittances often spike in times of conflict, natural disaster, or financial hardship in the receiving country. Remittance volumes exceed ODA in countries like Australia, Italy, United States",
+        "source_ref": "p4, p7",
+        "quote": "Remittances often spike in times of conflict, natural disaster or financial hardship in the receiving country",
+        "confidence": "DIRECT"
+      }
+    },
+    "fraud_exposure": {
+      "hidden_fee_practice_as_consumer_harm": {
+        "value": "'Junk fees' framing — Wise argues hidden exchange-rate markups are the primary mechanism of consumer harm. Not fraud in the criminal sense, but an exploitation pattern.",
+        "source_ref": "p8, p13",
+        "confidence": "DIRECT"
+      },
+      "fatf_grey_list_impact": {
+        "value": "South Africa's recent FATF Grey List addition made attracting competition more challenging, keeping prices high — indirectly increasing vulnerability to informal-channel fraud",
+        "source_ref": "p16",
+        "confidence": "DIRECT"
+      }
+    },
+    "trust_patterns": {
+      "transparency_as_trust_signal": {
+        "value": "Wise's thesis: transparent pricing (real-time benchmark FX rate, no markup) is the solution to the trust deficit in remittances. Consumers should be able to 'pick a money transfer service with their eyes wide open.'",
+        "source_ref": "p8",
+        "quote": "Consumers should be able to pick a money transfer service with their eyes wide open",
+        "confidence": "DIRECT"
+      },
+      "bank_to_fintech_switching": {
+        "value": "First-person Hungarian sender: started with banks, switched when costs were high. Suggests bank-to-fintech migration among first-time remitters.",
+        "source_ref": "p18",
+        "quote": "In the beginning we did it through banks, and surprisingly the costs of the remittances were so high…",
+        "confidence": "DIRECT"
+      }
+    },
+    "communication": {
+      "first_person_sender_stories": {
+        "value": [
+          {
+            "sender_country": "Hungary",
+            "receiver_country": "Austria",
+            "use_case": "supporting daughter at Vienna University",
+            "original_channel": "bank",
+            "switched_reason": "surprising costs"
+          },
+          {
+            "sender_country": "Australia",
+            "receiver_country": "Malaysia + Indonesia",
+            "use_case": "supporting wife's father (Malaysia) and mother (Indonesia); early-retired couple",
+            "pain_point": "hidden foreign-exchange fees eating into transfers; also domestic surprise fees",
+            "relationship_frame": "family bonds that transcend borders"
+          },
+          {
+            "sender_country": "United States",
+            "receiver_country": "Philippines",
+            "use_case": "sponsoring youths from medical missions (17+ years); many destitute after pandemic with overdue bills",
+            "relationship_frame": "longstanding relationships, medical-mission adjacent philanthropy"
+          }
+        ],
+        "source_ref": "p18",
+        "confidence": "DIRECT"
+      }
+    }
+  },
+  "persona_grounding_implications": {
+    "suitable_for_grounding_fields": ["corridor_country (G20 sending / Wise-served receiving)", "transfer_service_loyalty (Wise specifically; broader fintech migration from banks)", "loss_tolerance_usd (via inflation-eroded purchasing power and fee awareness gap)", "remittance_cadence (from first-person stories: regular monthly support patterns)"],
+    "not_suitable_for_grounding_fields": ["specific fraud events (advocacy report, not a fraud typology)", "device specifics", "individual income ranges (macro-level only)"],
+    "behavioral_evidence_grade_when_used": "C — industry behavioral research (Wise advocacy report). First-person testimonials are narrative but curated for the report's policy arguments, not random-sampled.",
+    "caveat": "Wise is an advocacy publication — the framing (hidden fees = primary harm) reflects Wise's market position. Use the macro statistics with confidence; treat the policy arguments as one industry viewpoint, not neutral regulatory truth."
+  }
+}

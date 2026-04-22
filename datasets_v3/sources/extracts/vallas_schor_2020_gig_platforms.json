@@ -1,0 +1,135 @@
+{
+  "source_id": "vallas_schor_2020_gig_platforms",
+  "archetypes": ["gig_worker"],
+  "extraction_method": "manual structured extraction from Vallas & Schor 2020, 'What Do Platforms Do? Understanding the Gig Economy', Annual Review of Sociology 46:273-294",
+  "persona_dimensions": {
+    "demographics": {
+      "worker_heterogeneity_trope_rejection": {
+        "value": "Most gig / crowdwork workers are NOT the 'precarious, dependent, full-time' stereotype. The accumulation of survey and qualitative evidence shows substantial diversity across education, earnings, reliance-on-platform, and demographic profile.",
+        "source_ref": "p8",
+        "quote": "An accumulation of survey and qualitative evidence on the diversity of platform workers typically finds that the trope of the precarious, dependent, full-time worker is not easily squared with the situations of most workers performing gig and crowdwork (Forde et al. 2017)",
+        "confidence": "DIRECT"
+      },
+      "platform_worker_typology": {
+        "value": [
+          "Architects/technologists: founders, highly skilled employees, independent contractors",
+          "Professional freelancers: designers, writers, cloud-based consultants, content producers, influencers — variable earnings, often entrepreneurial identity",
+          "On-demand service workers: ride-hail drivers (Uber, Lyft), delivery workers (DoorDash, Instacart), TaskRabbit",
+          "Microtaskers: Amazon Mechanical Turk (AMT), Figure Eight — priced under extreme global competition, cannot earn a living wage in wealthy countries"
+        ],
+        "source_ref": "p3, p4, p5",
+        "confidence": "DIRECT"
+      },
+      "racial_bias_in_ratings": {
+        "value": "Workers of color — especially women of color — receive fewer reviews and lower ratings on platforms like TaskRabbit and Fiverr (Hannák et al. 2017)",
+        "source_ref": "p14",
+        "quote": "women and, particularly, workers of color receive fewer reviews and lower ratings",
+        "confidence": "DIRECT"
+      }
+    },
+    "financial_behavior": {
+      "earnings_volatility_source": {
+        "value": "Platform workers bear all the costs of inadequate demand and lost earnings — no employer-side compensation for low-demand periods",
+        "source_ref": "p8",
+        "quote": "Platform workers bear all the costs of inadequate demand and lost earnings",
+        "confidence": "DIRECT"
+      },
+      "microtasker_living_wage_impossibility": {
+        "value": "Microtasking priced under extremely competitive global-north/south conditions; earning a living wage in wealthy countries through microtasking is limited",
+        "source_ref": "p4",
+        "quote": "the ability to earn a living wage in wealthy countries through microtasking is limited",
+        "confidence": "DIRECT"
+      },
+      "supplemental_vs_primary_income": {
+        "value": "Many owners of cars, homes, tools, and other goods monetize latent value of these assets, reducing dependence on labor income — platform work often as supplement not primary income",
+        "source_ref": "p5",
+        "confidence": "DIRECT"
+      },
+      "worker_classification": {
+        "value": "Platforms almost always classify workers as independent contractors — especially problematic in the United States where social insurance (unemployment, health, retirement) is directly tied to employment status",
+        "source_ref": "p9",
+        "quote": "While platforms almost always classify workers as independent contractors, this feature was most problematic in the United States, where social insurance is directly tied to employment status",
+        "confidence": "DIRECT"
+      }
+    },
+    "vulnerability_signals": {
+      "algorithmic_opacity": {
+        "value": "Algorithms render the labor process legible to employers but opaque to employees — workers cannot see how tasks, prices, and ratings are determined",
+        "source_ref": "p6",
+        "quote": "The effect is to render the labor process more legible to employers than employees (Calo & Rosenblat 2017)",
+        "confidence": "DIRECT"
+      },
+      "algorithmic_volatility": {
+        "value": "Platform work varies over time due to frequent changes in algorithmic designs, market conditions, and regulatory policy — workers cannot stabilize their expectations",
+        "source_ref": "p5",
+        "quote": "Platform work also varies over time, owing to frequent changes in algorithmic designs, market conditions, and regulatory policy",
+        "confidence": "DIRECT"
+      },
+      "deactivation_risk": {
+        "value": "Platforms retain unilateral power to deactivate worker accounts, often via opaque algorithmic or customer-rating triggers. Deactivation terminates the worker's income overnight.",
+        "source_ref": "implied throughout; direct at p13 tip-stealing / worker-organizing context",
+        "confidence": "INFERRED"
+      },
+      "worker_of_color_rating_gap": {
+        "value": "See demographics/racial_bias_in_ratings — creates compounding income effect where lower-rated workers get fewer jobs",
+        "source_ref": "p14",
+        "confidence": "DIRECT"
+      }
+    },
+    "fraud_exposure": {
+      "tip_stealing_historical_case": {
+        "value": "Instacart tip-stealing media campaign (early 2019) led to policy change after public pressure. Illustrates platform-as-intermediary fraud vector where worker-visible tips are diverted into base-pay offsets.",
+        "source_ref": "p13",
+        "quote": "In early 2019, a media campaign against tip stealing by Instacart was successful",
+        "confidence": "DIRECT"
+      },
+      "account_access_as_livelihood_gateway": {
+        "value": "Platform account = livelihood. Any account compromise (ATO, credential stuffing, SIM swap) immediately threatens worker's income.",
+        "source_ref": "inferred from independent-contractor framing + deactivation risk",
+        "confidence": "INFERRED"
+      }
+    },
+    "trust_patterns": {
+      "four_framing_metaphors": {
+        "value": [
+          {"metaphor": "entrepreneurial incubators", "framing": "platforms as small-business enablers"},
+          {"metaphor": "digital cages", "framing": "platforms as algorithmic control mechanisms constraining worker autonomy"},
+          {"metaphor": "accelerants of precarity", "framing": "platforms as drivers of declining job quality and standard-employment erosion"},
+          {"metaphor": "chameleons", "framing": "platforms that adapt presentation by audience — worker, customer, regulator"}
+        ],
+        "source_ref": "p1, p2",
+        "quote": "Platforms are seen as entrepreneurial incubators, digital cages, accelerants of precarity, and chameleons adapting to their environments",
+        "confidence": "DIRECT"
+      },
+      "vallas_schor_alternative_framing": {
+        "value": "'Permissive potentates' — platforms externalize responsibility (workers bear all risk) while still exercising concentrated power (algorithmic control, deactivation authority, opaque ratings)",
+        "source_ref": "p1",
+        "quote": "an alternative image of platforms: as permissive potentates that externalize responsibility and control over economic transactions while still exercising concentrated power",
+        "confidence": "DIRECT"
+      },
+      "worker_solidarity_and_collective_action": {
+        "value": "Uber Boston drivers (Robinson 2017) built solidary ties to control supply and price of labor. 2019 one-day global strike to coincide with Uber IPO.",
+        "source_ref": "p7, p13",
+        "confidence": "DIRECT"
+      }
+    },
+    "communication": {
+      "platform_examples_cited": {
+        "value": ["Uber", "Lyft", "Airbnb", "TaskRabbit", "Fiverr", "Amazon Mechanical Turk (AMT)", "Instacart", "Upwork (implied)", "Figure Eight"],
+        "source_ref": "throughout",
+        "confidence": "DIRECT"
+      },
+      "primary_interface": {
+        "value": "App-mediated — all task acquisition, routing, rating, and dispatch occurs via platform app. No human-dispatcher intermediary.",
+        "source_ref": "p5-p7",
+        "confidence": "INFERRED"
+      }
+    }
+  },
+  "persona_grounding_implications": {
+    "suitable_for_grounding_fields": ["platform_mix (direct list of platforms)", "daily_cashout_pattern (indirectly via earnings-volatility and supplement-vs-primary framing)", "device_stability (implied: account = livelihood, so stability matters)", "family_crisis_history (deactivation events, tip-stealing era, account compromise)"],
+    "not_suitable_for_grounding_fields": ["sender-age / specific income ranges (theoretical paper)", "corridor_country / language_mix (not a gig-worker demographic dimension in this paper)", "sim_history (not discussed)"],
+    "behavioral_evidence_grade_when_used": "C — academic behavioral research. Theoretical/review paper synthesizing empirical work by others; strongest for *structural* gig-worker context (algorithmic control, classification, precarity), weaker for individual-persona specifics.",
+    "caveat": "Paper is from 2020 — predates major events like Prop 22 (2020 California ballot), multiple state-level classification rulings, and post-COVID gig-economy shifts. For persona-fraud-vector grounding, cross-reference with FinCEN FTA (account takeover, synthetic ID) and FTC Sentinel (BEC, imposter scams)."
+  }
+}
