@@ -1,0 +1,54 @@
+{
+  "source_id": "oxfam_2018_central_america_myths",
+  "archetypes": ["remittance", "itin"],
+  "extraction_method": "web fetch of Oxfam America article 'Facts, Not Fears: 4 Myths About the Mass Exodus From Central America' (published 2018-11-02).",
+  "publication_date": "2018-11-02",
+  "persona_dimensions": {
+    "demographics": {
+      "migration_drivers": {
+        "value": ["gender-based violence", "gang violence", "poverty", "food insecurity", "climate change effects", "corruption and impunity", "limited opportunities for dignified life"],
+        "source_ref": "Oxfam myths article",
+        "confidence": "DIRECT"
+      },
+      "origin_country_violence_context_2015": {
+        "value": {
+          "el_salvador_homicides_per_100k": 103,
+          "honduras_homicides_per_100k": 57,
+          "guatemala_homicides_per_100k": 30
+        },
+        "notes": "2015 homicide rates — provides vulnerability context for Salvadoran, Honduran, and Guatemalan migrant personas, though dated.",
+        "source_ref": "Oxfam article (myth 3)",
+        "confidence": "DIRECT"
+      },
+      "global_displacement_context": {
+        "value": "Over 68 million people globally displaced by conflict",
+        "source_ref": "Oxfam article (myth 3)",
+        "confidence": "DIRECT"
+      }
+    },
+    "financial_behavior": {
+      "us_aid_to_northern_triangle": {
+        "value": "US allocated over $2 billion in aid to El Salvador, Honduras, and Guatemala since 2016",
+        "source_ref": "Oxfam article (myth 1)",
+        "confidence": "DIRECT"
+      },
+      "immigrant_economic_contribution": {
+        "value": "Immigrants added estimated $2 trillion to US GDP (2016 data)",
+        "source_ref": "Oxfam article (myth 4)",
+        "confidence": "DIRECT"
+      }
+    },
+    "vulnerability_signals": {
+      "limited_legal_pathways": {
+        "value": "Limited legal pathways exist for vulnerable populations; few can access refugee resettlement processes — supports liminal-legality and undocumented-status persona framings.",
+        "source_ref": "Oxfam article (myth 3)",
+        "confidence": "DIRECT"
+      }
+    }
+  },
+  "persona_grounding_implications": {
+    "suitable_for_grounding_fields": ["corridor_country (El Salvador, Honduras, Guatemala origin context)", "family_crisis_history (violence-driven migration events)", "documentation_status (limited legal pathways support undocumented + TPS framings)"],
+    "behavioral_evidence_grade_when_used": "C — advocacy-organization research. Data points are sourced but framing is explicitly argumentative. Use for origin-country context, not for direct persona anchoring.",
+    "note": "sources.json entry currently dates this source 2023; actual publication is 2018. Correct in next registry update."
+  }
+}

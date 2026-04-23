@@ -1,0 +1,553 @@
+{
+  "source_id": "fdic_2023_hh_microdata",
+  "archetype": "unbanked",
+  "extraction_method": "weighted empirical distribution from analytic CSV, restricted to supplement respondents with hunbnk==1 (unbanked households)",
+  "sample": {
+    "n_households_supplement_respondents": 29483,
+    "n_unbanked_raw": 1089,
+    "weighted_unbanked_households": 38057364743,
+    "n_banked_raw": 28394,
+    "weighted_banked_households": 882820033849,
+    "national_unbanked_rate_weighted": 4.13
+  },
+  "persona_dimensions": {
+    "demographics": {
+      "age_group": {
+        "distribution": [
+          {
+            "code": 6.0,
+            "label": "65 years or more",
+            "percent_weighted": 19.73,
+            "n_raw": 243
+          },
+          {
+            "code": 2.0,
+            "label": "25 to 34 years",
+            "percent_weighted": 19.39,
+            "n_raw": 177
+          },
+          {
+            "code": 3.0,
+            "label": "35 to 44 years",
+            "percent_weighted": 18.89,
+            "n_raw": 206
+          },
+          {
+            "code": 5.0,
+            "label": "55 to 64 years",
+            "percent_weighted": 18.51,
+            "n_raw": 210
+          },
+          {
+            "code": 4.0,
+            "label": "45 to 54 years",
+            "percent_weighted": 17.02,
+            "n_raw": 189
+          },
+          {
+            "code": 1.0,
+            "label": "15 to 24 years",
+            "percent_weighted": 6.47,
+            "n_raw": 64
+          }
+        ],
+        "variable": "pagegrp",
+        "source_ref": "codebook + analytic microdata (hunbnk==1, hsupresp==1, weighted hwhhwgt)",
+        "confidence": "DIRECT",
+        "n_raw_unbanked": 1089
+      },
+      "race_ethnicity": {
+        "distribution": [
+          {
+            "code": 1,
+            "label": "Black",
+            "percent_weighted": 33.36,
+            "n_raw": 329
+          },
+          {
+            "code": 2,
+            "label": "Hispanic",
+            "percent_weighted": 31.36,
+            "n_raw": 297
+          },
+          {
+            "code": 6,
+            "label": "White",
+            "percent_weighted": 29.5,
+            "n_raw": 394
+          },
+          {
+            "code": 4,
+            "label": "American Indian or Alaska Native",
+            "percent_weighted": 2.82,
+            "n_raw": 33
+          },
+          {
+            "code": 3,
+            "label": "Asian",
+            "percent_weighted": 2.56,
+            "n_raw": 28
+          },
+          {
+            "code": 5,
+            "label": "Native Hawaiian or Other Pacific Islander",
+            "percent_weighted": 0.39,
+            "n_raw": 8
+          }
+        ],
+        "variable": "praceeth",
+        "source_ref": "codebook + analytic microdata (hunbnk==1, hsupresp==1, weighted hwhhwgt)",
+        "confidence": "DIRECT",
+        "n_raw_unbanked": 1089
+      },
+      "education": {
+        "distribution": [
+          {
+            "code": 2,
+            "label": "High school diploma",
+            "percent_weighted": 37.66,
+            "n_raw": 424
+          },
+          {
+            "code": 1,
+            "label": "No high school diploma",
+            "percent_weighted": 34.97,
+            "n_raw": 371
+          },
+          {
+            "code": 3,
+            "label": "Some college",
+            "percent_weighted": 19.63,
+            "n_raw": 216
+          },
+          {
+            "code": 4,
+            "label": "College degree",
+            "percent_weighted": 7.73,
+            "n_raw": 78
+          }
+        ],
+        "variable": "peducgrp",
+        "source_ref": "codebook + analytic microdata (hunbnk==1, hsupresp==1, weighted hwhhwgt)",
+        "confidence": "DIRECT",
+        "n_raw_unbanked": 1089
+      },
+      "employment_status": {
+        "distribution": [
+          {
+            "code": 3,
+            "label": "Not in labor force",
+            "percent_weighted": 51.97,
+            "n_raw": 610
+          },
+          {
+            "code": 1,
+            "label": "Employed",
+            "percent_weighted": 41.5,
+            "n_raw": 413
+          },
+          {
+            "code": 2,
+            "label": "Unemployed",
+            "percent_weighted": 6.53,
+            "n_raw": 66
+          }
+        ],
+        "variable": "pempstat",
+        "source_ref": "codebook + analytic microdata (hunbnk==1, hsupresp==1, weighted hwhhwgt)",
+        "confidence": "DIRECT",
+        "n_raw_unbanked": 1089
+      },
+      "citizenship_and_birthplace": {
+        "distribution": [
+          {
+            "code": 1.0,
+            "label": "U.S.-born",
+            "percent_weighted": 69.86,
+            "n_raw": 808
+          },
+          {
+            "code": 3.0,
+            "label": "Foreign-born noncitizen",
+            "percent_weighted": 22.17,
+            "n_raw": 209
+          },
+          {
+            "code": 2.0,
+            "label": "Foreign-born citizen",
+            "percent_weighted": 7.98,
+            "n_raw": 72
+          }
+        ],
+        "variable": "pnativ",
+        "source_ref": "codebook + analytic microdata (hunbnk==1, hsupresp==1, weighted hwhhwgt)",
+        "confidence": "DIRECT",
+        "n_raw_unbanked": 1089
+      },
+      "geographic_region": {
+        "distribution": [
+          {
+            "code": 3,
+            "label": "South",
+            "percent_weighted": 44.8,
+            "n_raw": 524
+          },
+          {
+            "code": 2,
+            "label": "Midwest",
+            "percent_weighted": 20.34,
+            "n_raw": 193
+          },
+          {
+            "code": 4,
+            "label": "West",
+            "percent_weighted": 18.9,
+            "n_raw": 236
+          },
+          {
+            "code": 1,
+            "label": "Northeast",
+            "percent_weighted": 15.96,
+            "n_raw": 136
+          }
+        ],
+        "variable": "gereg",
+        "source_ref": "codebook + analytic microdata (hunbnk==1, hsupresp==1, weighted hwhhwgt)",
+        "confidence": "DIRECT",
+        "n_raw_unbanked": 1089
+      },
+      "household_type": {
+        "distribution": [
+          {
+            "code": 7,
+            "label": "Male-householder nonfamily",
+            "percent_weighted": 26.28,
+            "n_raw": 286
+          },
+          {
+            "code": 6,
+            "label": "Female-householder nonfamily",
+            "percent_weighted": 23.39,
+            "n_raw": 279
+          },
+          {
+            "code": 1,
+            "label": "Married couple",
+            "percent_weighted": 18.25,
+            "n_raw": 202
+          },
+          {
+            "code": 3,
+            "label": "Unmarried female-householder family: Other",
+            "percent_weighted": 12.4,
+            "n_raw": 121
+          },
+          {
+            "code": 2,
+            "label": "Unmarried female-householder family: Single-mother household",
+            "percent_weighted": 10.99,
+            "n_raw": 110
+          },
+          {
+            "code": 5,
+            "label": "Unmarried male-householder family: Other",
+            "percent_weighted": 6.51,
+            "n_raw": 66
+          },
+          {
+            "code": 4,
+            "label": "Unmarried male-householder family: Single-father household",
+            "percent_weighted": 1.4,
+            "n_raw": 15
+          },
+          {
+            "code": 8,
+            "label": "Other",
+            "percent_weighted": 0.77,
+            "n_raw": 10
+          }
+        ],
+        "variable": "hhtypev2",
+        "source_ref": "codebook + analytic microdata (hunbnk==1, hsupresp==1, weighted hwhhwgt)",
+        "confidence": "DIRECT",
+        "n_raw_unbanked": 1089
+      },
+      "family_income_bracket": {
+        "distribution": [
+          {
+            "code": 1,
+            "label": "Less than $15,000",
+            "percent_weighted": 42.72,
+            "n_raw": 464
+          },
+          {
+            "code": 2,
+            "label": "$15,000 to $30,000",
+            "percent_weighted": 23.8,
+            "n_raw": 277
+          },
+          {
+            "code": 3,
+            "label": "$30,000 to $50,000",
+            "percent_weighted": 18.2,
+            "n_raw": 194
+          },
+          {
+            "code": 4,
+            "label": "$50,000 to $75,000",
+            "percent_weighted": 7.74,
+            "n_raw": 80
+          },
+          {
+            "code": 5,
+            "label": "At least $75,000",
+            "percent_weighted": 7.54,
+            "n_raw": 74
+          }
+        ],
+        "variable": "hhincome",
+        "source_ref": "codebook + analytic microdata (hunbnk==1, hsupresp==1, weighted hwhhwgt)",
+        "confidence": "DIRECT",
+        "n_raw_unbanked": 1089
+      }
+    },
+    "financial_behavior": {
+      "previously_banked": {
+        "distribution": [
+          {
+            "code": 2,
+            "label": "Never had bank account",
+            "percent_weighted": 52.66,
+            "n_raw": 543
+          },
+          {
+            "code": 1,
+            "label": "Once had bank account",
+            "percent_weighted": 47.34,
+            "n_raw": 546
+          }
+        ],
+        "variable": "hbnkprev",
+        "source_ref": "codebook + analytic microdata (hunbnk==1, hsupresp==1, weighted hwhhwgt)",
+        "confidence": "DIRECT",
+        "n_raw_unbanked": 1089
+      },
+      "length_of_bank_account_ownership": {
+        "distribution": [
+          {
+            "code": -1.0,
+            "label": "NIU",
+            "percent_weighted": 100.0,
+            "n_raw": 1089
+          }
+        ],
+        "variable": "hbnknew",
+        "source_ref": "codebook + analytic microdata (hunbnk==1, hsupresp==1, weighted hwhhwgt)",
+        "confidence": "DIRECT",
+        "n_raw_unbanked": 1089
+      },
+      "most_common_account_access_channel": {
+        "distribution": [
+          {
+            "code": -1,
+            "label": "NIU",
+            "percent_weighted": 100.0,
+            "n_raw": 1089
+          }
+        ],
+        "variable": "hbnkaccm",
+        "source_ref": "codebook + analytic microdata (hunbnk==1, hsupresp==1, weighted hwhhwgt)",
+        "confidence": "DIRECT",
+        "n_raw_unbanked": 1089
+      },
+      "used_nonbank_check_cashing_past_12mo": {
+        "distribution": [
+          {
+            "code": 2,
+            "label": "No",
+            "percent_weighted": 82.12,
+            "n_raw": 902
+          },
+          {
+            "code": 1,
+            "label": "Yes",
+            "percent_weighted": 17.88,
+            "n_raw": 187
+          }
+        ],
+        "variable": "huse12cc",
+        "source_ref": "codebook + analytic microdata (hunbnk==1, hsupresp==1, weighted hwhhwgt)",
+        "confidence": "DIRECT",
+        "n_raw_unbanked": 1089
+      },
+      "used_nonbank_money_order_past_12mo": {
+        "distribution": [
+          {
+            "code": 2,
+            "label": "No",
+            "percent_weighted": 73.98,
+            "n_raw": 793
+          },
+          {
+            "code": 1,
+            "label": "Yes",
+            "percent_weighted": 26.02,
+            "n_raw": 296
+          }
+        ],
+        "variable": "huse12mo",
+        "source_ref": "codebook + analytic microdata (hunbnk==1, hsupresp==1, weighted hwhhwgt)",
+        "confidence": "DIRECT",
+        "n_raw_unbanked": 1089
+      },
+      "used_payday_loan_past_12mo": {
+        "distribution": [
+          {
+            "code": 2,
+            "label": "No",
+            "percent_weighted": 98.87,
+            "n_raw": 1076
+          },
+          {
+            "code": 1,
+            "label": "Yes",
+            "percent_weighted": 1.13,
+            "n_raw": 13
+          }
+        ],
+        "variable": "huse12pdl",
+        "source_ref": "codebook + analytic microdata (hunbnk==1, hsupresp==1, weighted hwhhwgt)",
+        "confidence": "DIRECT",
+        "n_raw_unbanked": 1089
+      },
+      "used_pawn_shop_loan_past_12mo": {
+        "distribution": [
+          {
+            "code": 2,
+            "label": "No",
+            "percent_weighted": 96.51,
+            "n_raw": 1054
+          },
+          {
+            "code": 1,
+            "label": "Yes",
+            "percent_weighted": 3.49,
+            "n_raw": 35
+          }
+        ],
+        "variable": "huse12pwn",
+        "source_ref": "codebook + analytic microdata (hunbnk==1, hsupresp==1, weighted hwhhwgt)",
+        "confidence": "DIRECT",
+        "n_raw_unbanked": 1089
+      },
+      "used_rent_to_own_past_12mo": {
+        "distribution": [
+          {
+            "code": 2,
+            "label": "No",
+            "percent_weighted": 97.76,
+            "n_raw": 1061
+          },
+          {
+            "code": 1,
+            "label": "Yes",
+            "percent_weighted": 2.24,
+            "n_raw": 28
+          }
+        ],
+        "variable": "huse12rto",
+        "source_ref": "codebook + analytic microdata (hunbnk==1, hsupresp==1, weighted hwhhwgt)",
+        "confidence": "DIRECT",
+        "n_raw_unbanked": 1089
+      },
+      "used_auto_title_loan_past_12mo": {
+        "distribution": [
+          {
+            "code": 2,
+            "label": "No",
+            "percent_weighted": 98.62,
+            "n_raw": 1075
+          },
+          {
+            "code": 1,
+            "label": "Yes",
+            "percent_weighted": 1.38,
+            "n_raw": 14
+          }
+        ],
+        "variable": "huse12atl",
+        "source_ref": "codebook + analytic microdata (hunbnk==1, hsupresp==1, weighted hwhhwgt)",
+        "confidence": "DIRECT",
+        "n_raw_unbanked": 1089
+      },
+      "any_nonbank_transaction_product_past_12mo": {
+        "distribution": [
+          {
+            "code": 2,
+            "label": "(code=2)",
+            "percent_weighted": 65.23,
+            "n_raw": 706
+          },
+          {
+            "code": 1,
+            "label": "(code=1)",
+            "percent_weighted": 34.77,
+            "n_raw": 383
+          }
+        ],
+        "variable": "huse2afstv1",
+        "source_ref": "codebook + analytic microdata (hunbnk==1, hsupresp==1, weighted hwhhwgt)",
+        "confidence": "DIRECT",
+        "n_raw_unbanked": 1089
+      }
+    },
+    "vulnerability_signals": {
+      "monthly_income_volatility": {
+        "distribution": [
+          {
+            "code": 1,
+            "label": "Income was about the same each month",
+            "percent_weighted": 74.98,
+            "n_raw": 831
+          },
+          {
+            "code": 2,
+            "label": "Income varied somewhat from month to month",
+            "percent_weighted": 17.95,
+            "n_raw": 179
+          },
+          {
+            "code": 3,
+            "label": "Income varied a lot from month to month",
+            "percent_weighted": 7.07,
+            "n_raw": 79
+          }
+        ],
+        "variable": "hincvol",
+        "source_ref": "codebook + analytic microdata (hunbnk==1, hsupresp==1, weighted hwhhwgt)",
+        "confidence": "DIRECT",
+        "n_raw_unbanked": 1089
+      },
+      "fell_behind_on_bills_past_12mo": {
+        "distribution": [
+          {
+            "code": 2,
+            "label": "No",
+            "percent_weighted": 70.63,
+            "n_raw": 765
+          },
+          {
+            "code": 1,
+            "label": "Yes",
+            "percent_weighted": 29.37,
+            "n_raw": 324
+          }
+        ],
+        "variable": "hbilldq",
+        "source_ref": "codebook + analytic microdata (hunbnk==1, hsupresp==1, weighted hwhhwgt)",
+        "confidence": "DIRECT",
+        "n_raw_unbanked": 1089
+      }
+    }
+  }
+}

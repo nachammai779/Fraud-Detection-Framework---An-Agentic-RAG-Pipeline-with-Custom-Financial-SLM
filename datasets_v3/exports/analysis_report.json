@@ -1,0 +1,344 @@
+{
+  "q1": {
+    "n_unique_tagged_languages": 20,
+    "tagged_language_counts": {
+      "en": 11964,
+      "es": 3693,
+      "vi": 683,
+      "yo": 388,
+      "hi": 296,
+      "wo": 290,
+      "fr": 256,
+      "ko": 228,
+      "zh": 218,
+      "ru": 215,
+      "tw": 207,
+      "am": 206,
+      "ar": 205,
+      "ta": 202,
+      "ja": 189,
+      "te": 188,
+      "fil": 149,
+      "mr": 145,
+      "ceb": 142,
+      "gu": 136
+    },
+    "n_unique_detected_languages": 27,
+    "detected_language_counts": {
+      "en": 11996,
+      "es": 3682,
+      "vi": 920,
+      "so": 354,
+      "tl": 297,
+      "fr": 255,
+      "None": 250,
+      "ko": 225,
+      "zh-cn": 218,
+      "ru": 215,
+      "ar": 204,
+      "ta": 198,
+      "ja": 189,
+      "te": 177,
+      "sw": 172,
+      "id": 172,
+      "hi": 160,
+      "mr": 142,
+      "gu": 130,
+      "it": 14,
+      "pt": 11,
+      "af": 7,
+      "et": 5,
+      "cs": 2,
+      "fi": 2,
+      "hr": 1,
+      "ca": 1,
+      "ro": 1
+    },
+    "tag_detect_match_rate": 0.921
+  },
+  "q2": {
+    "amount_rounded_in_text": {
+      "n_applicable": 20000,
+      "n_match": 7182,
+      "rate": 0.359
+    },
+    "amount_exact_in_text": {
+      "n_applicable": 20000,
+      "n_match": 5692,
+      "rate": 0.285
+    },
+    "persona_first_name_in_text": {
+      "n_applicable": 20000,
+      "n_match": 285,
+      "rate": 0.014
+    },
+    "corridor_keyword_in_text": {
+      "n_applicable": 5000,
+      "n_match": 3570,
+      "rate": 0.714
+    },
+    "platform_name_in_text": {
+      "n_applicable": 5000,
+      "n_match": 2135,
+      "rate": 0.427
+    },
+    "instrument_in_text": {
+      "n_applicable": 20000,
+      "n_match": 7534,
+      "rate": 0.377
+    },
+    "day_of_week_in_text": {
+      "n_applicable": 20000,
+      "n_match": 9482,
+      "rate": 0.474
+    },
+    "hour_class_in_text": {
+      "n_applicable": 20000,
+      "n_match": 7180,
+      "rate": 0.359
+    }
+  },
+  "q3": {
+    "remittance": {
+      "A": {
+        "target_range": [
+          0.15,
+          0.2
+        ],
+        "actual": 0.167,
+        "in_range": true,
+        "gap_to_nearest_bound": 0
+      },
+      "B": {
+        "target_range": [
+          0.25,
+          0.3
+        ],
+        "actual": 0.25,
+        "in_range": true,
+        "gap_to_nearest_bound": 0
+      },
+      "C": {
+        "target_range": [
+          0.3,
+          0.35
+        ],
+        "actual": 0.417,
+        "in_range": false,
+        "gap_to_nearest_bound": 0.067
+      },
+      "D": {
+        "target_range": [
+          0.15,
+          0.25
+        ],
+        "actual": 0.166,
+        "in_range": true,
+        "gap_to_nearest_bound": 0
+      }
+    },
+    "gig_worker": {
+      "A": {
+        "target_range": [
+          0.2,
+          0.25
+        ],
+        "actual": 0.0,
+        "in_range": false,
+        "gap_to_nearest_bound": 0.2
+      },
+      "B": {
+        "target_range": [
+          0.15,
+          0.2
+        ],
+        "actual": 0.25,
+        "in_range": false,
+        "gap_to_nearest_bound": 0.05
+      },
+      "C": {
+        "target_range": [
+          0.2,
+          0.25
+        ],
+        "actual": 0.417,
+        "in_range": false,
+        "gap_to_nearest_bound": 0.167
+      },
+      "D": {
+        "target_range": [
+          0.3,
+          0.4
+        ],
+        "actual": 0.333,
+        "in_range": true,
+        "gap_to_nearest_bound": 0
+      }
+    },
+    "unbanked": {
+      "A": {
+        "target_range": [
+          0.25,
+          0.3
+        ],
+        "actual": 0.0,
+        "in_range": false,
+        "gap_to_nearest_bound": 0.25
+      },
+      "B": {
+        "target_range": [
+          0.15,
+          0.2
+        ],
+        "actual": 1.0,
+        "in_range": false,
+        "gap_to_nearest_bound": 0.8
+      },
+      "C": {
+        "target_range": [
+          0.15,
+          0.2
+        ],
+        "actual": 0.0,
+        "in_range": false,
+        "gap_to_nearest_bound": 0.15
+      },
+      "D": {
+        "target_range": [
+          0.3,
+          0.4
+        ],
+        "actual": 0.0,
+        "in_range": false,
+        "gap_to_nearest_bound": 0.3
+      }
+    },
+    "itin": {
+      "A": {
+        "target_range": [
+          0.1,
+          0.15
+        ],
+        "actual": 0.083,
+        "in_range": false,
+        "gap_to_nearest_bound": 0.017
+      },
+      "B": {
+        "target_range": [
+          0.35,
+          0.4
+        ],
+        "actual": 0.5,
+        "in_range": false,
+        "gap_to_nearest_bound": 0.1
+      },
+      "C": {
+        "target_range": [
+          0.1,
+          0.15
+        ],
+        "actual": 0.083,
+        "in_range": false,
+        "gap_to_nearest_bound": 0.017
+      },
+      "D": {
+        "target_range": [
+          0.3,
+          0.4
+        ],
+        "actual": 0.333,
+        "in_range": true,
+        "gap_to_nearest_bound": 0
+      }
+    }
+  },
+  "q4": {
+    "empty_narratives": 47,
+    "short_narratives_under_60_chars": 1,
+    "n_unique_fraud_vectors_used": 69,
+    "n_unique_typology_codes_used": 10,
+    "typology_codes_exercised": [
+      "FTA_IDENTITY_2024_T1",
+      "FTA_IDENTITY_2024_T10",
+      "FTA_IDENTITY_2024_T11",
+      "FTA_IDENTITY_2024_T13",
+      "FTA_IDENTITY_2024_T14",
+      "FTA_IDENTITY_2024_T2",
+      "FTA_IDENTITY_2024_T3",
+      "FTA_IDENTITY_2024_T6",
+      "SAR_ADVISORY_ELDER_FINANCIAL_EXPLOITATION",
+      "SAR_ADVISORY_TAX_REFUND_FRAUD"
+    ],
+    "language_tag_mismatch_count": 1556,
+    "language_tag_mismatch_rate": 0.078,
+    "missing_personas": [],
+    "per_archetype_persona_coverage": {
+      "gig_worker": {
+        "count": 12,
+        "min": 416,
+        "max": 417,
+        "mean": 416.6666666666667
+      },
+      "itin": {
+        "count": 12,
+        "min": 416,
+        "max": 417,
+        "mean": 416.6666666666667
+      },
+      "remittance": {
+        "count": 12,
+        "min": 416,
+        "max": 417,
+        "mean": 416.6666666666667
+      },
+      "unbanked": {
+        "count": 10,
+        "min": 500,
+        "max": 500,
+        "mean": 500.0
+      }
+    }
+  },
+  "q5": {
+    "v2_violations_total": 585,
+    "v2_bucket_distribution_pct": {
+      "persona_mismatch": 36.4,
+      "cadence": 28.2,
+      "amount": 20.7,
+      "channel": 13.2,
+      "device_sim": 13.0,
+      "fraud_type": 10.8,
+      "tenure_age": 8.0,
+      "language": 7.9,
+      "hour_time": 6.3,
+      "fee": 5.5,
+      "other": 3.2
+    },
+    "v3_structural_check_raw_counts": {
+      "cadence": 0,
+      "amount": 0,
+      "channel": 0,
+      "hour_time": 0,
+      "language": 0,
+      "fraud_type": 0,
+      "fee": 0,
+      "tenure_age": 0,
+      "device_sim": 0,
+      "persona_mismatch": 0
+    },
+    "v2_buckets_potentially_addressed_in_v3": [
+      "amount",
+      "cadence",
+      "channel",
+      "device_sim",
+      "fee",
+      "fraud_type",
+      "hour_time",
+      "language",
+      "persona_mismatch",
+      "tenure_age"
+    ],
+    "v2_buckets_still_structurally_present_in_v3": [],
+    "caveat": "v3 has no coherence scoring run yet; these are structural checks only. True violation parity requires running src/personas/persona_verify.py against v3 data."
+  }
+}

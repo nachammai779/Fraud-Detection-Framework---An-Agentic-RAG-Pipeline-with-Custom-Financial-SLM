@@ -1,0 +1,34 @@
+{
+  "source_id": "fincen_sar_key_terms",
+  "archetypes": ["remittance", "gig_worker", "itin"],
+  "extraction_method": "reference — full SAR key-term taxonomy decomposed into datasets_v3/sources/typology_registry.json under SAR_ADVISORY_* keys. This extract documents which advisories were selected as relevant to our archetypes (out of ~40 total listed on the FinCEN page).",
+  "persona_dimensions": {
+    "fraud_exposure": {
+      "selected_advisories_relevant_to_archetypes": {
+        "value": [
+          {"code": "SAR_ADVISORY_ELDER_FINANCIAL_EXPLOITATION", "advisory": "FIN-2022-A002 / FIN-2011-A003", "relevance": "phone/grandparent/romance scams on elderly remittance senders"},
+          {"code": "SAR_ADVISORY_BEC_FRAUD", "advisory": "FIN-2019-A005 / FIN-2016-A003", "relevance": "gig platforms (worker email compromise), remittance wire redirection"},
+          {"code": "SAR_ADVISORY_ACCOUNT_TAKEOVER_FRAUD", "advisory": "FIN-2011-A016", "relevance": "platform accounts (gig), remittance app accounts, ITIN credit-file compromise"},
+          {"code": "SAR_ADVISORY_COVID19_IMPOSTER_SCAMS", "advisory": "FIN-2020-A003", "relevance": "imposter / money-mule schemes cross-cutting"},
+          {"code": "SAR_ADVISORY_DISASTER_RELATED_FRAUD", "advisory": "FIN-2017-A007", "relevance": "earthquake/hurricane-aid scams targeting remittance senders to affected origin countries"},
+          {"code": "SAR_ADVISORY_TAX_REFUND_FRAUD", "advisory": "FIN-2013-A001 / FIN-2012-A005", "relevance": "ITIN-specific: fraudulent returns filed using ITIN holders' identities"},
+          {"code": "SAR_ADVISORY_IVTS", "advisory": "FIN-2010-A011", "relevance": "informal value transfer (hawala, informal couriers) — remittance alternative channels"},
+          {"code": "SAR_ADVISORY_FUNNEL_ACCOUNT", "advisory": "FIN-2014-A005 / FIN-2010-A001", "relevance": "US-Mexico corridor TBML; structured cash deposits used for remittance laundering"},
+          {"code": "SAR_ADVISORY_HUMAN_TRAFFICKING", "advisory": "FIN-2020-A008 / FIN-2014-A008", "relevance": "wage confiscation in gig work; coerced transfers from trafficking victims"},
+          {"code": "SAR_ADVISORY_CYBER_EVENTS", "advisory": "FIN-2016-A005", "relevance": "phishing/ransomware — cross-cutting; credential compromise feeding ATO"},
+          {"code": "SAR_ADVISORY_THIRD_PARTY_PAYMENT_PROCESSORS", "advisory": "FIN-2012-A010", "relevance": "processor-facilitated unauthorized ACH / chargebacks affecting consumer accounts"}
+        ],
+        "source_ref": "FinCEN SAR Advisory Key Terms page",
+        "confidence": "DIRECT"
+      },
+      "advisories_excluded_as_out_of_scope": {
+        "value": "Excluded from v3: North Korea, Iran, ISIS, FATF country-jurisdiction lists, Venezuela / South Sudan / Nicaragua corruption, ransomware-specific advisories for institutional filers, healthcare fraud, real estate fraud, TARP, casino structuring. These don't ground the four archetypes directly.",
+        "confidence": "DIRECT"
+      }
+    }
+  },
+  "persona_grounding_implications": {
+    "suitable_for_grounding_fields": ["fraud_vector_typology_ref", "family_crisis_history (fraud events tied to specific FinCEN advisories)"],
+    "behavioral_evidence_grade_when_used": "B — regulatory typology source. Combined with FinCEN FTA 2024, forms the core of the B-grade evidence layer."
+  }
+}

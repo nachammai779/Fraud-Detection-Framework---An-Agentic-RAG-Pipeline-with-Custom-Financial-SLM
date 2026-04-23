@@ -1,0 +1,113 @@
+{
+  "source_id": "iad_2026_remittance_year_in_review",
+  "archetypes": ["remittance"],
+  "extraction_method": "web fetch of Inter-American Dialogue blog post 'Remittance Transfers in 2025: The Year in Review' by Manuel Orozco (2026-01-02).",
+  "persona_dimensions": {
+    "demographics": {
+      "migrant_banking_penetration": {
+        "value": "80% of migrants have bank accounts",
+        "source_ref": "IAD 2026 year-in-review",
+        "confidence": "DIRECT"
+      },
+      "deportation_impacted_segment_profile": {
+        "value": "Majority of deported migrants had lived in the US 4+ years and sent remittances regularly — not recent arrivals.",
+        "source_ref": "IAD 2026",
+        "confidence": "DIRECT"
+      },
+      "irregular_entry_share_below_50pct": {
+        "value": "Irregular entry now represents less than 50% of total migration for Dominican Republic, Jamaica, Mexico, El Salvador.",
+        "source_ref": "IAD 2026",
+        "confidence": "DIRECT"
+      }
+    },
+    "financial_behavior": {
+      "lac_remittance_volume_2025": {
+        "value": {
+          "total_usd_billions": 158,
+          "growth_yoy_pct": 8,
+          "countries_coverage": "9 countries originating 90% of regional flows",
+          "context": "highest growth rates in 20 years for most LAC countries"
+        },
+        "source_ref": "IAD 2026",
+        "confidence": "DIRECT"
+      },
+      "mexico_negative_performer": {
+        "value": "Mexico was the only negative-performer among major LAC corridors in 2025. Drivers: ~4% of remitters ceased sending; <1% new senders initiated transfers; lower volume without migration increases.",
+        "source_ref": "IAD 2026",
+        "confidence": "DIRECT"
+      },
+      "average_transaction_change_2025": {
+        "value": "27% increase in average amounts sent per transaction",
+        "notes": "Attributed to risk-mitigation behavior by migrants facing deportation threat — senders concentrating transfers.",
+        "source_ref": "IAD 2026",
+        "confidence": "DIRECT"
+      },
+      "payment_methods_2025": {
+        "value": {
+          "agent_location_pct": 45,
+          "cash_remittance_pct": 45,
+          "prepaid_card_owners_pct": 10,
+          "account_deposit_destination": {
+            "mexico_pct": 50,
+            "el_salvador_pct": 30,
+            "honduras_pct": 30,
+            "guatemala_pct": 30
+          }
+        },
+        "source_ref": "IAD 2026",
+        "confidence": "DIRECT"
+      },
+      "remittance_income_share": {
+        "value": "Migrants may be sending 15%+ of income as remittances",
+        "source_ref": "IAD 2026 outlook",
+        "confidence": "INFERRED"
+      }
+    },
+    "vulnerability_signals": {
+      "remittance_tax_1pct_law": {
+        "value": {
+          "rate": "1%",
+          "legislation": "Big Beautiful Bill (summer 2025)",
+          "affected_senders_pct": "at least 50%",
+          "estimated_added_cost_per_transaction_usd": 4
+        },
+        "source_ref": "IAD 2026",
+        "confidence": "DIRECT"
+      },
+      "tax_elasticity": {
+        "value": "1% cost decrease causes approximately $32 reduction in remittance amount sent",
+        "source_ref": "IAD 2026",
+        "confidence": "DIRECT"
+      },
+      "deportation_pressure": {
+        "value": "Sustained deportation wave + declining irregular entry -> potential remittance decline. Senders adjusting behavior (consolidating transfers, using accounts more) as risk mitigation.",
+        "source_ref": "IAD 2026",
+        "confidence": "DIRECT"
+      },
+      "fincen_verification_pressure": {
+        "value": "FinCEN scrutinizing transactions over US$2,000; potential new verification requirements for work authorization",
+        "source_ref": "IAD 2026 outlook",
+        "confidence": "DIRECT"
+      }
+    },
+    "fraud_exposure": {
+      "stablecoin_adoption_emerging_risk": {
+        "value": "Stablecoin adoption growing in FX mechanisms; emerging risk vector outside traditional MSB oversight.",
+        "source_ref": "IAD 2026 emerging trends",
+        "confidence": "DIRECT"
+      }
+    },
+    "trust_patterns": {
+      "industry_consolidation_2025": {
+        "value": "Western Union acquiring Intermex for US$500M (expected completion mid-2026) -> Western Union reaches ~30% market share. Other leaders: Remitly (largest 2025 market share), Viamericas (US$113.6M financing), Felix Pago (US$75M Series B). Backend consolidation: Transnetwork, ApprizaPay, Uniteller.",
+        "source_ref": "IAD 2026",
+        "confidence": "DIRECT"
+      }
+    }
+  },
+  "persona_grounding_implications": {
+    "suitable_for_grounding_fields": ["transfer_service_loyalty (current market-share context for primary/secondary)", "remittance_cadence (via deportation-risk consolidation pattern, 27% avg-size increase)", "loss_tolerance_usd (via $4 added per-transaction tax = meaningful for small-amount senders)", "family_crisis_history (deportation threat as ambient vulnerability)"],
+    "behavioral_evidence_grade_when_used": "C — industry/think-tank behavioral research. Orozco / IAD is the most-cited analyst of LAC remittances; high credibility for aggregate trends, lighter on individual-persona detail.",
+    "note": "This source captures the current (2025-2026) market state. For persona grounding, it anchors the CURRENT plausible sender behavior; pair with Remitly 10-K and Wise report for historical/structural context."
+  }
+}

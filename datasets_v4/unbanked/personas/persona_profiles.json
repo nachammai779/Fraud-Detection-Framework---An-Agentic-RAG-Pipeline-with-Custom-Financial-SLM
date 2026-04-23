@@ -1,0 +1,985 @@
+{
+  "archetype": "unbanked",
+  "version": "v4",
+  "key_world_dimensions": [
+    "kiosk_location",
+    "prepaid_card_stack",
+    "income_source",
+    "documentation_status"
+  ],
+  "synthesis_notes": {
+    "n_personas": 10,
+    "primary_source": "fdic_2023_hh_microdata",
+    "grade_distribution_achieved": {
+      "B": 10
+    },
+    "grade_distribution_target_per_spec": {
+      "A": "25-30%",
+      "B": "15-20%",
+      "C": "15-20%",
+      "D": "30-40%"
+    },
+    "off_target_rationale": "Only one grounding source available for unbanked (FDIC 2023 HH Survey microdata). FDIC is a quantitative government survey = Grade B. All 10 personas land at Grade B. Hitting the target A/B/C/D distribution would require adding: (A) ethnographic field interviews with unbanked households (e.g. Urban Institute / Brookings fringe-banking studies); (C) industry reports on prepaid/check-casher markets (CFPB Prepaid Rule reports, Walmart MoneyCard data); (D) deliberate design-assumption personas. Deferred — not blocking for generator use.",
+    "grounding_method": "Each persona is a joint-distribution cell from FDIC marginals (race × age × income × region × banking history × AFS use × household type). Non-sourced fields (name, specific biographical events) are marked confidence=null and source_ids=[] so downstream code can distinguish grounded vs design fields."
+  },
+  "personas": [
+    {
+      "persona_id": "unb_001",
+      "name": "Dorothy Jackson",
+      "age": 68,
+      "summary": "Dorothy, 68, retired Black widow in rural Alabama. Lives alone on Social Security. Closed her bank account in 2019 after a string of overdraft fees she couldn't absorb. Cashes her SS check at the Walmart customer-service desk and buys money orders there to pay utilities. Doesn't trust online banking.",
+      "kiosk_location": "Walmart customer-service + CVS money-order counter, rural Alabama",
+      "prepaid_card_stack": [],
+      "income_source": "Social Security (fixed monthly)",
+      "documentation_status": "US citizen, state ID + SSN",
+      "income_usd_weekly": [
+        275,
+        325
+      ],
+      "language_mix": [
+        "en"
+      ],
+      "loss_tolerance_usd": 75,
+      "device": "Android budget phone, prepaid minutes, SMS-primary",
+      "persona_source_ids": [
+        "fdic_2023_hh_microdata"
+      ],
+      "behavioral_evidence_grade": "B",
+      "grounding": {
+        "race_ethnicity": {
+          "value": "Black",
+          "evidence_basis": "33.4% of unbanked HHs are Black",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "age_group": {
+          "value": "65+",
+          "evidence_basis": "19.7% of unbanked HHs are 65 or older",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "income_bracket": {
+          "value": "<$15K",
+          "evidence_basis": "42.7% of unbanked HHs earn <$15K annually",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "geographic_region": {
+          "value": "South",
+          "evidence_basis": "44.8% of unbanked HHs in the South",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "previously_banked": {
+          "value": true,
+          "evidence_basis": "47.3% of unbanked HHs previously had a bank account",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "household_type": {
+          "value": "female-householder nonfamily",
+          "evidence_basis": "23.4% of unbanked HHs (widow/single-woman scenario)",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "uses_nonbank_money_order": {
+          "value": true,
+          "evidence_basis": "26% of unbanked HHs used nonbank money orders in past 12 months",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "name_and_biography": {
+          "value": "Dorothy Jackson; rural Alabama; 2019 account-closure event",
+          "confidence": null,
+          "source_ids": [],
+          "notes": "design assumption — narrative detail not sourced"
+        }
+      }
+    },
+    {
+      "persona_id": "unb_002",
+      "name": "Miguel Rivera",
+      "age": 29,
+      "summary": "Miguel, 29, Mexican-born, undocumented, kitchen prep in a Los Angeles restaurant. Never had a US bank account. Paid in check, walks to a check-cashing kiosk on Vermont Ave every Friday. Keeps cash at home. Sends small amounts to his mother in Michoacán via a courier friend, not via wire.",
+      "kiosk_location": "local check-cashing storefront, Vermont Ave Los Angeles; occasional bodega for money orders",
+      "prepaid_card_stack": [
+        "NetSpend (reloadable, bought at 7-Eleven)"
+      ],
+      "income_source": "wages (restaurant, paid by check)",
+      "documentation_status": "undocumented; ITIN pending, no SSN",
+      "income_usd_weekly": [
+        550,
+        750
+      ],
+      "language_mix": [
+        "es",
+        "en"
+      ],
+      "loss_tolerance_usd": 50,
+      "device": "iPhone SE (used), prepaid T-Mobile SIM",
+      "persona_source_ids": [
+        "fdic_2023_hh_microdata"
+      ],
+      "behavioral_evidence_grade": "B",
+      "grounding": {
+        "race_ethnicity": {
+          "value": "Hispanic",
+          "evidence_basis": "31.4% of unbanked HHs are Hispanic",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "age_group": {
+          "value": "25-34",
+          "evidence_basis": "19.4% of unbanked HHs age 25-34",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "citizenship": {
+          "value": "Foreign-born noncitizen",
+          "evidence_basis": "22.2% of unbanked HHs are foreign-born noncitizens (~4x general pop rate)",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "geographic_region": {
+          "value": "West",
+          "evidence_basis": "18.9% of unbanked HHs in West",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "previously_banked": {
+          "value": false,
+          "evidence_basis": "52.7% of unbanked HHs never had a bank account",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "uses_nonbank_check_cashing": {
+          "value": true,
+          "evidence_basis": "17.9% of unbanked HHs used nonbank check cashing in past 12 months",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "household_type": {
+          "value": "male-householder nonfamily",
+          "evidence_basis": "26.3% of unbanked HHs",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "employed": {
+          "value": true,
+          "evidence_basis": "41.5% of unbanked HHs are employed",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "name_and_biography": {
+          "value": "Miguel Rivera; Michoacán origin; LA location",
+          "confidence": null,
+          "source_ids": [],
+          "notes": "design assumption"
+        }
+      }
+    },
+    {
+      "persona_id": "unb_003",
+      "name": "Shaniqua Brown",
+      "age": 27,
+      "summary": "Shaniqua, 27, Black single mother of two in Newark NJ. Receives SNAP + Section-8 assistance. Her kids' dad is incarcerated. Never opened a bank account — too many fees, too much paperwork. Uses a Green Dot prepaid card for Amazon and monthly rent money orders.",
+      "kiosk_location": "Rite Aid + local bodega, Newark NJ",
+      "prepaid_card_stack": [
+        "Green Dot reloadable"
+      ],
+      "income_source": "SNAP + Section-8 + occasional hair-braiding cash work",
+      "documentation_status": "US citizen, state ID + SSN",
+      "income_usd_weekly": [
+        200,
+        350
+      ],
+      "language_mix": [
+        "en"
+      ],
+      "loss_tolerance_usd": 40,
+      "device": "Android (Samsung A series), Cricket Wireless prepaid",
+      "persona_source_ids": [
+        "fdic_2023_hh_microdata",
+        "fincen_sar_key_terms"
+      ],
+      "behavioral_evidence_grade": "B",
+      "grounding": {
+        "race_ethnicity": {
+          "value": "Black",
+          "evidence_basis": "33.4% of unbanked HHs are Black",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "age_group": {
+          "value": "25-34",
+          "evidence_basis": "19.4% of unbanked HHs age 25-34",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "income_bracket": {
+          "value": "<$15K",
+          "evidence_basis": "42.7% of unbanked HHs earn <$15K",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "geographic_region": {
+          "value": "Northeast",
+          "evidence_basis": "16.0% of unbanked HHs in Northeast",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "previously_banked": {
+          "value": false,
+          "evidence_basis": "52.7% of unbanked HHs never had a bank account",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "household_type": {
+          "value": "single-mother family",
+          "evidence_basis": "11.0% of unbanked HHs are single-mother families",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "uses_nonbank_money_order": {
+          "value": true,
+          "evidence_basis": "26% of unbanked HHs used nonbank money orders",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "name_and_biography": {
+          "value": "Shaniqua Brown; Newark location; SNAP+Section-8 specifics",
+          "confidence": null,
+          "source_ids": [],
+          "notes": "design assumption"
+        },
+        "fraud_exposure_unauthorized_ach_via_processor": {
+          "value": "Unauthorized ACH debit from Green Dot prepaid card via a third-party payment processor; caught at month-end reconciliation, reversed with help from prepaid provider",
+          "evidence_basis": "SAR_ADVISORY_THIRD_PARTY_PAYMENT_PROCESSORS (FIN-2012-A010); processor-facilitated unauthorised ACH is a documented consumer-fraud pattern",
+          "confidence": "INFERRED",
+          "source_ids": [
+            "fincen_sar_key_terms"
+          ]
+        }
+      },
+      "family_crisis_history": [
+        "unauthorized_ach_greendot_prepaid_2024_reversed"
+      ]
+    },
+    {
+      "persona_id": "unb_004",
+      "name": "Earl Hanson",
+      "age": 71,
+      "summary": "Earl, 71, retired White rural electrician in western Kentucky. Distrusts banks since 2008. Keeps his pension in a safe at home and drives into town weekly for money orders. Was targeted twice by phone-scam callers claiming to be from the IRS. Didn't fall for it either time.",
+      "kiosk_location": "small-town grocery money-order counter + Kroger service desk, western Kentucky",
+      "prepaid_card_stack": [],
+      "income_source": "electrician union pension (fixed monthly) + Social Security",
+      "documentation_status": "US citizen, driver's license + SSN",
+      "income_usd_weekly": [
+        650,
+        800
+      ],
+      "language_mix": [
+        "en"
+      ],
+      "loss_tolerance_usd": 400,
+      "device": "older flip phone, carrier plan",
+      "persona_source_ids": [
+        "fdic_2023_hh_microdata"
+      ],
+      "behavioral_evidence_grade": "B",
+      "grounding": {
+        "race_ethnicity": {
+          "value": "White",
+          "evidence_basis": "29.5% of unbanked HHs are White",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "age_group": {
+          "value": "65+",
+          "evidence_basis": "19.7% of unbanked HHs 65+",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "income_bracket": {
+          "value": "$30-50K",
+          "evidence_basis": "18.2% of unbanked HHs in $30-50K bracket",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "geographic_region": {
+          "value": "South",
+          "evidence_basis": "44.8% in South (Kentucky is Census South)",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "previously_banked": {
+          "value": true,
+          "evidence_basis": "47.3% of unbanked HHs previously banked",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "household_type": {
+          "value": "male-householder nonfamily",
+          "evidence_basis": "26.3% of unbanked HHs",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "uses_nonbank_money_order": {
+          "value": true,
+          "evidence_basis": "26% of unbanked HHs used money orders",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "fraud_exposure_irs_impersonation": {
+          "value": "targeted, not victimized",
+          "confidence": null,
+          "source_ids": [],
+          "notes": "design detail; Treasury OIG is the authoritative source for this scheme but is not declared as unbanked-applicable in sources.json"
+        },
+        "name_and_biography": {
+          "value": "Earl Hanson; western Kentucky; 2008 bank-distrust event",
+          "confidence": null,
+          "source_ids": [],
+          "notes": "design assumption"
+        }
+      }
+    },
+    {
+      "persona_id": "unb_005",
+      "name": "Marcus Thompson",
+      "age": 47,
+      "summary": "Marcus, 47, Black construction day-laborer in Houston. Employed but irregularly — income varies month to month. Uses a Fiesta Mart check-cashing counter every payday. Took out a payday loan once in 2022 to cover a car-repair emergency; paid it off over four months at painful APR.",
+      "kiosk_location": "Fiesta Mart + local check-casher storefront, Houston",
+      "prepaid_card_stack": [
+        "Walmart MoneyCard"
+      ],
+      "income_source": "construction wages (cash and paper check, irregular)",
+      "documentation_status": "US citizen, TX state ID + SSN",
+      "income_usd_weekly": [
+        450,
+        900
+      ],
+      "language_mix": [
+        "en"
+      ],
+      "loss_tolerance_usd": 100,
+      "device": "Android mid-tier, AT&T postpaid family plan",
+      "persona_source_ids": [
+        "fdic_2023_hh_microdata"
+      ],
+      "behavioral_evidence_grade": "B",
+      "grounding": {
+        "race_ethnicity": {
+          "value": "Black",
+          "evidence_basis": "33.4% of unbanked HHs are Black",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "age_group": {
+          "value": "45-54",
+          "evidence_basis": "17.0% of unbanked HHs 45-54",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "income_bracket": {
+          "value": "$15-30K",
+          "evidence_basis": "23.8% of unbanked HHs in $15-30K bracket",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "geographic_region": {
+          "value": "South",
+          "evidence_basis": "44.8% of unbanked HHs in South",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "employed": {
+          "value": true,
+          "evidence_basis": "41.5% of unbanked HHs employed",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "income_volatility": {
+          "value": "varied somewhat to a lot",
+          "evidence_basis": "25.0% of unbanked HHs report monthly income volatility (17.9% + 7.1%)",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "uses_nonbank_check_cashing": {
+          "value": true,
+          "evidence_basis": "17.9% of unbanked HHs used nonbank check cashing",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "uses_payday_loan": {
+          "value": "historical",
+          "evidence_basis": "1.1% of unbanked HHs used payday loan past 12mo; historical use higher",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "fell_behind_on_bills": {
+          "value": true,
+          "evidence_basis": "29.4% of unbanked HHs fell behind on bills in past 12mo",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "name_and_biography": {
+          "value": "Marcus Thompson; Houston; 2022 payday-loan event",
+          "confidence": null,
+          "source_ids": [],
+          "notes": "design assumption"
+        }
+      }
+    },
+    {
+      "persona_id": "unb_006",
+      "name": "Maria Cortez",
+      "age": 38,
+      "summary": "Maria, 38, Hispanic green-card holder, married with three kids in Dallas. Previously banked — account was closed after repeated overdrafts during her husband's layoff in 2020. Now uses money orders for rent and Walmart MoneyCard for groceries + Amazon. Sends a small monthly amount to her parents in Jalisco via a Walmart-to-Walmart.",
+      "kiosk_location": "Walmart customer-service + Dollar General money-order counter, Dallas",
+      "prepaid_card_stack": [
+        "Walmart MoneyCard (reloaded weekly)"
+      ],
+      "income_source": "husband's factory wages + intermittent part-time retail",
+      "documentation_status": "legal permanent resident (green card) + SSN",
+      "income_usd_weekly": [
+        650,
+        950
+      ],
+      "language_mix": [
+        "es",
+        "en"
+      ],
+      "loss_tolerance_usd": 100,
+      "device": "Android Samsung mid-tier, T-Mobile family plan",
+      "persona_source_ids": [
+        "fdic_2023_hh_microdata"
+      ],
+      "behavioral_evidence_grade": "B",
+      "grounding": {
+        "race_ethnicity": {
+          "value": "Hispanic",
+          "evidence_basis": "31.4% of unbanked HHs are Hispanic",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "age_group": {
+          "value": "35-44",
+          "evidence_basis": "18.9% of unbanked HHs 35-44",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "citizenship": {
+          "value": "Foreign-born citizen",
+          "evidence_basis": "8.0% of unbanked HHs foreign-born citizens (includes green-card holders)",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "income_bracket": {
+          "value": "$30-50K",
+          "evidence_basis": "18.2% of unbanked HHs in $30-50K",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "geographic_region": {
+          "value": "South",
+          "evidence_basis": "44.8% in South",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "previously_banked": {
+          "value": true,
+          "evidence_basis": "47.3% of unbanked HHs previously banked",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "household_type": {
+          "value": "married couple",
+          "evidence_basis": "18.3% of unbanked HHs are married couples",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "uses_nonbank_money_order": {
+          "value": true,
+          "evidence_basis": "26% of unbanked HHs used money orders",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "fell_behind_on_bills": {
+          "value": true,
+          "evidence_basis": "29.4% of unbanked HHs fell behind on bills past 12mo",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "name_and_biography": {
+          "value": "Maria Cortez; Dallas; Jalisco origin; 2020 overdraft-closure event",
+          "confidence": null,
+          "source_ids": [],
+          "notes": "design assumption"
+        }
+      }
+    },
+    {
+      "persona_id": "unb_007",
+      "name": "Rosalind Yellowtail",
+      "age": 44,
+      "summary": "Rosalind, 44, Crow tribal member on the Crow reservation in southeastern Montana. Never had a bank account — nearest bank is 40 miles away. Uses the tribal-owned convenience store for money orders to pay utilities. Seasonal income from beadwork and tribal-program payments. Relies on Walmart MoneyCard for online purchases.",
+      "kiosk_location": "tribal convenience store + IHS clinic cashier + Billings Walmart 50mi round trip",
+      "prepaid_card_stack": [
+        "Walmart MoneyCard"
+      ],
+      "income_source": "beadwork sales (seasonal) + tribal program payments + occasional wage work",
+      "documentation_status": "US citizen, tribal enrollment card + SSN",
+      "income_usd_weekly": [
+        150,
+        350
+      ],
+      "language_mix": [
+        "en"
+      ],
+      "loss_tolerance_usd": 50,
+      "device": "Android prepaid (Tracfone), intermittent cell coverage",
+      "persona_source_ids": [
+        "fdic_2023_hh_microdata"
+      ],
+      "behavioral_evidence_grade": "B",
+      "grounding": {
+        "race_ethnicity": {
+          "value": "American Indian or Alaska Native",
+          "evidence_basis": "2.8% of unbanked HHs are AIAN (~6x general-pop share)",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "age_group": {
+          "value": "35-44",
+          "evidence_basis": "18.9% 35-44",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "income_bracket": {
+          "value": "<$15K",
+          "evidence_basis": "42.7% <$15K",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "geographic_region": {
+          "value": "West",
+          "evidence_basis": "18.9% in West",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "previously_banked": {
+          "value": false,
+          "evidence_basis": "52.7% never banked",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "income_volatility": {
+          "value": "varied a lot",
+          "evidence_basis": "7.1% of unbanked HHs report income varied a lot month to month",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "uses_nonbank_money_order": {
+          "value": true,
+          "evidence_basis": "26% used money orders",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "name_and_biography": {
+          "value": "Rosalind Yellowtail; Crow reservation Montana; specific income-sources",
+          "confidence": null,
+          "source_ids": [],
+          "notes": "design assumption — AIAN-on-reservation scenario common but FDIC cell-level data thin"
+        }
+      }
+    },
+    {
+      "persona_id": "unb_008",
+      "name": "Juan García",
+      "age": 72,
+      "summary": "Juan, 72, Salvadoran-born, undocumented, lives with his adult daughter's family in Houston. No SSN, no ITIN. His daughter pays most bills; he buys money orders in cash when he needs to send small amounts to his sister back in San Miguel. Spanish-only. Distrusts any paperwork.",
+      "kiosk_location": "Fiesta Mart + Vietnamese-run corner store in southwest Houston",
+      "prepaid_card_stack": [],
+      "income_source": "occasional informal yard-work wages; daughter's household support",
+      "documentation_status": "undocumented, no SSN, no ITIN",
+      "income_usd_weekly": [
+        0,
+        200
+      ],
+      "language_mix": [
+        "es"
+      ],
+      "loss_tolerance_usd": 25,
+      "device": "no smartphone; uses daughter's iPhone occasionally",
+      "persona_source_ids": [
+        "fdic_2023_hh_microdata"
+      ],
+      "behavioral_evidence_grade": "B",
+      "grounding": {
+        "race_ethnicity": {
+          "value": "Hispanic",
+          "evidence_basis": "31.4%",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "age_group": {
+          "value": "65+",
+          "evidence_basis": "19.7%",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "citizenship": {
+          "value": "Foreign-born noncitizen",
+          "evidence_basis": "22.2% of unbanked HHs foreign-born noncitizens",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "income_bracket": {
+          "value": "<$15K",
+          "evidence_basis": "42.7%",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "geographic_region": {
+          "value": "South",
+          "evidence_basis": "44.8%",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "previously_banked": {
+          "value": false,
+          "evidence_basis": "52.7% never banked",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "employed": {
+          "value": "not in labor force",
+          "evidence_basis": "52.0% of unbanked HHs not in labor force",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "name_and_biography": {
+          "value": "Juan García; Salvadoran origin; Houston daughter's household",
+          "confidence": null,
+          "source_ids": [],
+          "notes": "design assumption"
+        }
+      }
+    },
+    {
+      "persona_id": "unb_009",
+      "name": "Darius Clark",
+      "age": 24,
+      "summary": "Darius, 24, Black, lives alone in a Detroit rooming house. Works gig restaurant shifts and warehouse temp jobs. Had a Chase account in 2021, closed after an identity-theft dispute he couldn't resolve. Now uses a prepaid card for everything and a CVS money-order counter for his monthly rent. Frequent phone thief/SIM-swap-attempt target.",
+      "kiosk_location": "CVS money-order counter + 7-Eleven NetSpend reload, Detroit",
+      "prepaid_card_stack": [
+        "NetSpend",
+        "Chime (deactivated)"
+      ],
+      "income_source": "gig shifts + temp warehouse wages",
+      "documentation_status": "US citizen, state ID + SSN",
+      "income_usd_weekly": [
+        250,
+        500
+      ],
+      "language_mix": [
+        "en"
+      ],
+      "loss_tolerance_usd": 30,
+      "device": "Android (refurbished), Metro prepaid",
+      "persona_source_ids": [
+        "fdic_2023_hh_microdata",
+        "fincen_sar_key_terms",
+        "fincen_2024_identity_fta"
+      ],
+      "behavioral_evidence_grade": "B",
+      "grounding": {
+        "race_ethnicity": {
+          "value": "Black",
+          "evidence_basis": "33.4%",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "age_group": {
+          "value": "25-34",
+          "evidence_basis": "19.4%",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "income_bracket": {
+          "value": "$15-30K",
+          "evidence_basis": "23.8%",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "geographic_region": {
+          "value": "Midwest",
+          "evidence_basis": "20.3% of unbanked HHs in Midwest",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "previously_banked": {
+          "value": true,
+          "evidence_basis": "47.3% previously banked",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "household_type": {
+          "value": "male-householder nonfamily",
+          "evidence_basis": "26.3%",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "uses_nonbank_money_order": {
+          "value": true,
+          "evidence_basis": "26%",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "name_and_biography": {
+          "value": "Darius Clark; Detroit; 2021 identity-theft account-closure",
+          "confidence": null,
+          "source_ids": [],
+          "notes": "design assumption"
+        },
+        "fraud_exposure_kyc_circumvention": {
+          "value": "Observed a Detroit bodega offering money-transfer services without visible MSB licensing; declined to use",
+          "evidence_basis": "FTA_IDENTITY_2024_T5 Circumventing Standards; unlicensed MSB activity documented by FinCEN",
+          "confidence": "INFERRED",
+          "source_ids": [
+            "fincen_sar_key_terms",
+            "fincen_2024_identity_fta"
+          ]
+        }
+      },
+      "family_crisis_history": [
+        "kyc_circumvention_bodega_observed_2024"
+      ]
+    },
+    {
+      "persona_id": "unb_010",
+      "name": "Chao Nguyen",
+      "age": 58,
+      "summary": "Chao, 58, Vietnamese-born naturalized US citizen, runs a small home-based tailoring business in San Jose. Prefers cash transactions and has never had a US bank account — wires money to her brother in Da Nang via a Vietnamese-run money-transfer shop, not via an app. Mobile-averse. Learned English later in life.",
+      "kiosk_location": "Vietnamese-run money-transfer shop + Asian-market money-order counter, San Jose",
+      "prepaid_card_stack": [],
+      "income_source": "self-employment (tailoring, cash)",
+      "documentation_status": "US citizen (naturalized) + SSN",
+      "income_usd_weekly": [
+        400,
+        700
+      ],
+      "language_mix": [
+        "vi",
+        "en"
+      ],
+      "loss_tolerance_usd": 200,
+      "device": "older iPhone hand-me-down, Mint Mobile plan",
+      "persona_source_ids": [
+        "fdic_2023_hh_microdata"
+      ],
+      "behavioral_evidence_grade": "B",
+      "grounding": {
+        "race_ethnicity": {
+          "value": "Asian",
+          "evidence_basis": "2.6% of unbanked HHs are Asian",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "age_group": {
+          "value": "55-64",
+          "evidence_basis": "18.5% of unbanked HHs 55-64",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "citizenship": {
+          "value": "Foreign-born citizen",
+          "evidence_basis": "8.0% of unbanked HHs foreign-born citizens",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "income_bracket": {
+          "value": "$15-30K",
+          "evidence_basis": "23.8%",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "geographic_region": {
+          "value": "West",
+          "evidence_basis": "18.9%",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "previously_banked": {
+          "value": false,
+          "evidence_basis": "52.7% never banked",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "employed": {
+          "value": true,
+          "evidence_basis": "41.5% employed (self-employed counted here)",
+          "confidence": "DIRECT",
+          "source_ids": [
+            "fdic_2023_hh_microdata"
+          ]
+        },
+        "name_and_biography": {
+          "value": "Chao Nguyen; San Jose; Vietnamese origin; tailoring business",
+          "confidence": null,
+          "source_ids": [],
+          "notes": "design assumption"
+        }
+      }
+    }
+  ]
+}

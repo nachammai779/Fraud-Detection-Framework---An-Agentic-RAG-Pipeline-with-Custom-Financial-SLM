@@ -1,0 +1,246 @@
+{
+  "_schema": {
+    "description": "v3 citation registry. Each entry is keyed by source_id. Every persona field citation in persona_citations.json must reference a source_id that exists here.",
+    "fields": {
+      "source_id": "stable citation key, used as lookup across v3",
+      "kind": "pdf | link | data_bundle",
+      "title": "authoritative title of the source",
+      "authors": "list of author or issuing-organization names",
+      "year": "publication year (int). For unknown, use null.",
+      "publisher": "journal, press, agency, or organization that published it",
+      "url": "canonical URL (for links; optional for PDFs)",
+      "pdf_path": "relative path from repo root, for pdf / data_bundle kinds",
+      "archetypes": "list of archetypes this source can ground (remittance, gig_worker, unbanked, itin)",
+      "accessed": "YYYY-MM-DD the source was added to the registry",
+      "notes": "free-form annotations \u2014 author manuscripts, duplicate flags, etc."
+    }
+  },
+  "fincen_2024_identity_fta": {
+    "kind": "pdf",
+    "title": "Financial Trend Analysis: Identity-Related Suspicious Activity (January 2024)",
+    "authors": [
+      "Financial Crimes Enforcement Network (FinCEN)"
+    ],
+    "year": 2024,
+    "publisher": "U.S. Department of the Treasury, FinCEN",
+    "url": null,
+    "pdf_path": "datasets_v4/sources/pdfs/remittance/fincen_2024_identity_fta.pdf",
+    "archetypes": [
+      "remittance",
+      "gig_worker",
+      "itin",
+      "unbanked"
+    ],
+    "accessed": "2026-04-21",
+    "notes": "Primary file lives under remittance/ (first-listed archetype); applies to all three. Cross-cutting FinCEN typology source. v4: archetype list extended to include unbanked \u2014 SAR_ADVISORY_THIRD_PARTY_PAYMENT_PROCESSORS and FTA_IDENTITY_2024_T5 Circumventing Standards both apply to unbanked populations using prepaid cards / kiosk / unlicensed-MSB channels."
+  },
+  "remitly_2024_10k": {
+    "kind": "pdf",
+    "title": "Remitly Global, Inc. \u2014 Annual Report 2024 (Form 10-K)",
+    "authors": [
+      "Remitly Global, Inc."
+    ],
+    "year": 2024,
+    "publisher": "U.S. Securities and Exchange Commission",
+    "url": null,
+    "pdf_path": "datasets_v4/sources/pdfs/remittance/remitly_2024_10k.pdf",
+    "archetypes": [
+      "remittance"
+    ],
+    "accessed": "2026-04-21",
+    "notes": "Filed 2025-02-19 for fiscal year 2024. Market share, corridor volumes, user counts, pricing."
+  },
+  "delreal_2022_venezuelan_legalization": {
+    "kind": "pdf",
+    "title": "Seemingly inclusive liminal legality: the fragility and illegality production of Colombia's legalization programmes for Venezuelan migrants",
+    "authors": [
+      "Deisy Del Real"
+    ],
+    "year": 2022,
+    "publisher": "Journal of Ethnic and Migration Studies",
+    "doi": "10.1080/1369183X.2022.2029374",
+    "volume_issue_pages": "48(15): 3580-3601",
+    "url": "https://doi.org/10.1080/1369183X.2022.2029374",
+    "pdf_path": "datasets_v4/sources/pdfs/remittance/delreal_2022_venezuelan_legalization.pdf",
+    "archetypes": [
+      "remittance"
+    ],
+    "accessed": "2026-04-21",
+    "notes": "Author manuscript (PMC copy). Documentation-status and informal-economy context for VE->CO corridor."
+  },
+  "menjivar_2022_tps_contradictions": {
+    "kind": "pdf",
+    "title": "The Contradictions of Liminal Legality: Economic Attainment and Civic Engagement of Central American Immigrants on Temporary Protected Status",
+    "authors": [
+      "Cecilia Menj\u00edvar",
+      "Victor Agadjanian",
+      "Byeongdon Oh"
+    ],
+    "year": 2022,
+    "publisher": "Social Problems",
+    "doi": "10.1093/socpro/spaa052",
+    "volume_issue_pages": "69(3): 678-698",
+    "url": "https://doi.org/10.1093/socpro/spaa052",
+    "pdf_path": "datasets_v4/sources/pdfs/remittance/menjivar_2022_tps_contradictions.pdf",
+    "archetypes": [
+      "remittance",
+      "itin"
+    ],
+    "accessed": "2026-04-21",
+    "notes": "Author manuscript (PMC copy, available Aug 2023). Economic-attainment and civic-engagement trajectories for TPS holders; overlaps with remittance senders and ITIN filers."
+  },
+  "vallas_schor_2020_gig_platforms": {
+    "kind": "pdf",
+    "title": "What Do Platforms Do? Understanding the Gig Economy",
+    "authors": [
+      "Steven Vallas",
+      "Juliet B. Schor"
+    ],
+    "year": 2020,
+    "publisher": "Annual Review of Sociology",
+    "volume_issue_pages": "46: 273-294",
+    "url": "https://www.annualreviews.org/doi/10.1146/annurev-soc-121919-054857",
+    "pdf_path": "datasets_v4/sources/pdfs/gig_worker/vallas_schor_2020_gig_platforms.pdf",
+    "archetypes": [
+      "gig_worker"
+    ],
+    "accessed": "2026-04-21",
+    "notes": "Foundational platform-labor review; grounds platform_mix, daily_cashout_pattern, device_stability framings."
+  },
+  "wise_2023_remittances_report": {
+    "kind": "pdf",
+    "title": "2023 Remittances Report: How to sustainably lower costs and achieve the UN goal of 3% by 2030",
+    "authors": [
+      "Wise"
+    ],
+    "year": 2023,
+    "publisher": "Wise plc",
+    "url": null,
+    "pdf_path": "datasets_v4/sources/pdfs/remittance/wise_2023_remittances_report.pdf",
+    "archetypes": [
+      "remittance"
+    ],
+    "accessed": "2026-04-21",
+    "notes": "Industry report on remittance cost economics and corridor fee benchmarks."
+  },
+  "fdic_2023_hh_microdata": {
+    "kind": "data_bundle",
+    "title": "2023 FDIC National Survey of Unbanked and Underbanked Households \u2014 Full Release (instrument, technical documentation, codebook, and microdata)",
+    "authors": [
+      "Federal Deposit Insurance Corporation",
+      "U.S. Census Bureau"
+    ],
+    "year": 2023,
+    "publisher": "Federal Deposit Insurance Corporation",
+    "url": "https://www.fdic.gov/household-survey",
+    "pdf_path": "datasets_v3/sources/pdfs/hh2023/",
+    "archetypes": [
+      "unbanked"
+    ],
+    "accessed": "2026-04-21",
+    "notes": "Canonical FDIC source for unbanked / underbanked / alternative-financial-services definitions and empirical distributions. Bundle contains: survey instrument (doc/instrument_2023.pdf), June 2023 CPS technical documentation (doc/Jun23 Technical Documentation.pdf), variable-frequency codebook (metadata/HH2023_CodeBookVariableFrequency.html), analytic-ready microdata CSV (hh2023_analys.csv, 309 MB, gitignored), and raw CPS .dat files (gitignored). When citing a specific sub-artifact in persona_citations.json, reference its sub-path (e.g. 'doc/instrument_2023.pdf')."
+  },
+  "fincen_sar_key_terms": {
+    "kind": "link",
+    "title": "SAR Advisory Key Terms",
+    "authors": [
+      "Financial Crimes Enforcement Network (FinCEN)"
+    ],
+    "year": null,
+    "publisher": "U.S. Department of the Treasury, FinCEN",
+    "url": "https://www.fincen.gov/resources/suspicious-activity-report-sar-advisory-key-terms",
+    "pdf_path": null,
+    "archetypes": [
+      "remittance",
+      "gig_worker",
+      "itin",
+      "unbanked"
+    ],
+    "accessed": "2026-04-21",
+    "notes": "Canonical FinCEN SAR typology taxonomy. Primary source for fraud_vector -> typology_code mapping. v4: archetype list extended to include unbanked \u2014 SAR_ADVISORY_THIRD_PARTY_PAYMENT_PROCESSORS and FTA_IDENTITY_2024_T5 Circumventing Standards both apply to unbanked populations using prepaid cards / kiosk / unlicensed-MSB channels."
+  },
+  "oxfam_2018_central_america_myths": {
+    "kind": "link",
+    "title": "Facts, Not Fears: 4 Myths About the Mass Exodus From Central America",
+    "authors": [
+      "Oxfam America"
+    ],
+    "year": 2018,
+    "publisher": "Oxfam America",
+    "url": "https://www.oxfamamerica.org/explore/stories/facts-not-fears-4-myths-about-the-mass-exodus-from-central-america/",
+    "pdf_path": null,
+    "archetypes": [
+      "remittance",
+      "itin"
+    ],
+    "accessed": "2026-04-21",
+    "notes": "Migration-driver context for Central American remittance senders and ITIN filer populations. Publication date 2018-11-02."
+  },
+  "iad_2026_remittance_year_in_review": {
+    "kind": "link",
+    "title": "Remittance Transfers in 2025: The Year in Review",
+    "authors": [
+      "Inter-American Dialogue"
+    ],
+    "year": 2026,
+    "publisher": "Inter-American Dialogue",
+    "url": "https://thedialogue.org/blogs/2026/01/remittance-transfers-in-2025-the-year-in-review",
+    "pdf_path": null,
+    "archetypes": [
+      "remittance"
+    ],
+    "accessed": "2026-04-21",
+    "notes": "Annual corridor-level remittance review (Orozco tradition at IAD)."
+  },
+  "fed_reserve_synthetic_identity_fraud": {
+    "kind": "link",
+    "title": "Synthetic Identity Payments Fraud",
+    "authors": [
+      "Federal Reserve Financial Services"
+    ],
+    "year": null,
+    "publisher": "Federal Reserve / FedPayments Improvement",
+    "url": "https://fedpaymentsimprovement.org/strategic-initiatives/payments-security/synthetic-identity-payments-fraud/",
+    "pdf_path": null,
+    "archetypes": [
+      "remittance",
+      "gig_worker",
+      "itin"
+    ],
+    "accessed": "2026-04-21",
+    "notes": "Synthetic-ID fraud methodology and impact \u2014 relevant to account-opening fraud in wire transfers, platform worker accounts, and ITIN credit files."
+  },
+  "treasury_oig_fraud_alerts": {
+    "kind": "link",
+    "title": "Treasury OIG Fraud Alerts",
+    "authors": [
+      "U.S. Department of the Treasury, Office of Inspector General"
+    ],
+    "year": null,
+    "publisher": "U.S. Department of the Treasury, OIG",
+    "url": "https://oig.treasury.gov/fraud-alerts",
+    "pdf_path": null,
+    "archetypes": [
+      "remittance",
+      "itin"
+    ],
+    "accessed": "2026-04-21",
+    "notes": "Treasury OIG fraud alerts \u2014 IRS impersonation / tax fraud schemes (ITIN filer relevance) and wire-fraud phishing targeting Treasury programs (remittance relevance)."
+  },
+  "irs_soi_individual_tax_statistics": {
+    "kind": "link",
+    "title": "SOI Tax Stats \u2014 Individual Income Tax Statistics",
+    "authors": [
+      "Internal Revenue Service, Statistics of Income Division"
+    ],
+    "year": null,
+    "publisher": "Internal Revenue Service",
+    "url": "https://www.irs.gov/statistics/soi-tax-stats-individual-tax-statistics",
+    "pdf_path": null,
+    "archetypes": [
+      "itin"
+    ],
+    "accessed": "2026-04-21",
+    "notes": "Canonical IRS SOI statistics for individual income tax filers. Primary numerical grounding for ITIN filer income, business type, and filing patterns. First ITIN-primary source in the v3 pool."
+  }
+}

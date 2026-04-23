@@ -1,0 +1,122 @@
+{
+  "source_id": "delreal_2022_venezuelan_legalization",
+  "archetypes": ["remittance"],
+  "extraction_method": "manual structured extraction from Del Real 2022, 'Seemingly inclusive liminal legality', Journal of Ethnic and Migration Studies 48(15):3580-3601. Based on in-depth interviews with Venezuelan migrants in Bogotá, Colombia.",
+  "persona_dimensions": {
+    "demographics": {
+      "displaced_population": {
+        "value": "Over 5.9 million Venezuelans displaced globally (second-largest displaced population after Syria). Colombia is the leading destination: 1.7 million Venezuelan migrants and refugees hosted as of 2021.",
+        "source_ref": "p2",
+        "quote": "Over 5.9 million Venezuelans have been displaced... Currently, Venezuelans are the second largest population of forcefully displaced persons globally; Colombia is their leading destination",
+        "confidence": "DIRECT"
+      },
+      "migration_drivers": {
+        "value": ["human rights violations", "food shortages", "violence", "economic deterioration", "crumbling healthcare system"],
+        "source_ref": "p2",
+        "quote": "Venezuelans have been displaced, fleeing widespread human rights violations, food shortages, violence, economic deterioration, and a crumbling healthcare system",
+        "confidence": "DIRECT"
+      },
+      "study_site_and_population": {
+        "value": {
+          "location": "Bogotá, D.C., Colombia",
+          "population": "Venezuelan migrants with liminal-legal status (PEP holders) and undocumented Venezuelans",
+          "method": "in-depth interviews"
+        },
+        "source_ref": "p1, p3",
+        "confidence": "DIRECT"
+      },
+      "education_variation_example": {
+        "value": "Rocio Vargas, 31, university nursing degree, ran small business in Maracaibo Venezuela, now works as nurse in Bogotá with PEP. Other interviewees include less-educated migrants; undocumented Venezuelans tend to come from lower socioeconomic backgrounds than PEP holders.",
+        "source_ref": "p12, p16",
+        "confidence": "DIRECT"
+      }
+    },
+    "financial_behavior": {
+      "legalization_fee_barrier": {
+        "value": "Migrant Visa requires US$250-300 in fees. Undocumented Venezuelans from lower socioeconomic backgrounds cannot afford this, derailing them into permanent illegality.",
+        "source_ref": "p10, p16",
+        "quote": "marry a Colombian citizen or have a child in Colombia to qualify for family reunification and save up US$250–300",
+        "confidence": "DIRECT"
+      },
+      "pep_access_via_free_online_application": {
+        "value": "PEP applications are free and online. Applicants fill out on Migración Colombia's webpage and receive printable residency card automatically.",
+        "source_ref": "p2, p8",
+        "quote": "the PEP applications are free and can be accessed online, with applicants receiving their permits automatically",
+        "confidence": "DIRECT"
+      },
+      "benefits_of_pep": {
+        "value": ["two years of legal residency", "work authorization", "right to public healthcare", "right to public education"],
+        "source_ref": "p2",
+        "confidence": "DIRECT"
+      },
+      "etpv_expansion_2021": {
+        "value": "Estatuto de Protección Temporal para Migrantes Venezolanos (ETPV) announced February 2021: up to 10 years to acquire legal permanent residency via separate high-requirement visa.",
+        "source_ref": "p2",
+        "confidence": "DIRECT"
+      }
+    },
+    "vulnerability_signals": {
+      "fragility_masked_by_welcome": {
+        "value": "Colombia's welcoming context (free applications, pro-immigrant discourse, low enforcement) HIDES the fragility of liminal legality. Migrants feel safe but status remains temporary and discretionary — exactly the vulnerability the paper's thesis names.",
+        "source_ref": "p1, p16",
+        "quote": "liminal legality in inclusive political contexts such as Columbia—with straightforward application procedures, pro-immigrant political discourse, and weak immigration enforcement—hide this legal status' fragility and illegality production features",
+        "confidence": "DIRECT"
+      },
+      "misinformation_about_legal_path": {
+        "value": "Most PEP holders are MISINFORMED about their legal path: they believe PEP automatically translates into permanent residency, misunderstand renewal procedures, or don't know Migrant/Residency Visa requirements. Few who know cannot afford the fees.",
+        "source_ref": "p10, p16",
+        "quote": "most Venezuelans with liminal legality remain at risk of illegality because they have outdated, inaccurate information about how to maintain their PEPs or get on a path to legal permanent residency",
+        "confidence": "DIRECT"
+      },
+      "derailment_into_illegality": {
+        "value": "The most vulnerable Venezuelan migrants (lowest socioeconomic resources) are derailed into illegality because they cannot afford fees or meet entry requirements. They feel 'stuck in illegality' with a sense of hopelessness.",
+        "source_ref": "p16",
+        "confidence": "DIRECT"
+      }
+    },
+    "fraud_exposure": {
+      "implied_fraud_vectors": {
+        "value": "Not directly enumerated; the paper is on legalization procedures, not fraud. Implied: misinformation about legal procedures + fee barriers create demand for unofficial legal-assistance intermediaries, which is a known notario-fraud vector.",
+        "source_ref": "inferred",
+        "confidence": "INFERRED"
+      }
+    },
+    "trust_patterns": {
+      "state_trust_high_among_pep_holders": {
+        "value": "Most liminal-legality recipients experience their PEP with a sense of state protection. Rocio Vargas (nurse, PEP holder): 'I feel welcomed by the government, and I think immigration will give us permanent legal residency.' This sense of security inhibits efforts to secure permanent status.",
+        "source_ref": "p1, p12",
+        "quote": "most liminal legality recipients want to reside legally in Colombia and experience their legal status with a sense of state protection. Though, their sense of security inhibits their effort [to secure permanent residency]",
+        "confidence": "DIRECT"
+      },
+      "government_website_as_trusted_source": {
+        "value": "PEP holders trust and reference Migración Colombia's official website and Venezuelan Consulate website as primary information channels. Rocio reports using these for renewal procedure.",
+        "source_ref": "p12",
+        "quote": "I've read the Venezuelan Consulate and the Migration Colombia websites. … To renew it [the PEP], I must let it expire, and then I reapply.",
+        "confidence": "DIRECT"
+      },
+      "pro_immigration_political_discourse": {
+        "value": "Colombian government's pro-immigrant rhetoric (Duque's 'united by fraternity' speech at UN) and international validation (European Parliament, Selee et al. 2019) reinforce trust but coexist with exclusionary mechanisms.",
+        "source_ref": "p8",
+        "confidence": "DIRECT"
+      }
+    },
+    "communication": {
+      "primary_language": {
+        "value": "Spanish (origin and destination both Spanish-speaking)",
+        "source_ref": "inferred from context",
+        "confidence": "INFERRED"
+      },
+      "channels_used_for_legal_information": {
+        "value": ["official Migración Colombia website", "Venezuelan Consulate website", "immigration-authority border checkpoints", "word-of-mouth from other migrants"],
+        "source_ref": "p12, context",
+        "confidence": "DIRECT"
+      }
+    }
+  },
+  "persona_grounding_implications": {
+    "suitable_for_grounding_fields": ["corridor_country (Venezuela-Colombia / Bogotá corridor)", "documentation_status (PEP, ETPV, undocumented-in-Colombia)", "language_mix (es)", "family_crisis_history (migration-driver events: food shortage, healthcare collapse, economic emigration)", "income_usd_weekly (via example: nurse with university degree works as nurse; small-business-owner → nurse transition)", "trust_patterns (high state-trust for PEP holders; government-website reliance)"],
+    "not_suitable_for_grounding_fields": ["US-based persona specifics (paper is about Colombia, not US)", "US fraud-vector events", "platform_mix"],
+    "behavioral_evidence_grade_when_used": "A — direct ethnographic field-interview source. Peer-reviewed, interview-based. Venezuelan-Colombian corridor is different from the primary US-based personas but provides the richest single-source grounding for corridor_country + documentation_status + state_trust fields for any hypothetical VE-origin persona.",
+    "caveat": "Study is specifically about Venezuelans-in-Colombia, not Venezuelans-in-US. Some findings transfer (liminal-legality psychology, misinformation patterns) but fee amounts, benefit structures, and enforcement contexts differ radically between Colombia and the US. For a Venezuelan-origin US-based remittance-sender persona, use this paper for origin-country context only; pair with US-specific sources for destination-side grounding."
+  }
+}

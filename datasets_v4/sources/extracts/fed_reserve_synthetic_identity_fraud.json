@@ -1,0 +1,41 @@
+{
+  "source_id": "fed_reserve_synthetic_identity_fraud",
+  "archetypes": ["remittance", "gig_worker", "itin"],
+  "extraction_method": "web fetch of FedPayments Improvement page on Synthetic Identity Payments Fraud. Landing-page content is shallow; a Mitigation Toolkit with 3 white papers exists but is linked, not inlined.",
+  "persona_dimensions": {
+    "fraud_exposure": {
+      "synthetic_identity_definition": {
+        "value": "The use of a combination of personally identifiable information (PII) to fabricate a person or entity in order to commit a dishonest act for personal or financial gain.",
+        "source_ref": "Fed Payments Improvement page",
+        "quote": "The use of a combination of personally identifiable information (PII) to fabricate a person or entity in order to commit a dishonest act for personal or financial gain.",
+        "confidence": "DIRECT"
+      },
+      "scale_framing": {
+        "value": {
+          "growth_trend": "reported as the fastest-growing type of financial crime in the United States",
+          "annual_losses": "billions in losses annually",
+          "sources_cited_by_fed": ["FBI", "Experian", "GIACT"]
+        },
+        "source_ref": "Fed Payments Improvement page",
+        "confidence": "DIRECT"
+      },
+      "mitigation_toolkit_reference": {
+        "value": "Federal Reserve released Synthetic Identity Fraud Mitigation Toolkit in early 2022 — online repository with three white papers on defining, detecting, and mitigating synthetic identity fraud, plus webinars and focus-group recommendations.",
+        "source_ref": "Fed Payments Improvement page",
+        "confidence": "DIRECT"
+      }
+    },
+    "vulnerability_signals": {
+      "payments_industry_framing": {
+        "value": "Fed positions synthetic ID as a cross-industry problem — financial institutions, consumers, and businesses named as stakeholder groups. Not restricted to a specific sector.",
+        "source_ref": "Fed Payments Improvement page",
+        "confidence": "DIRECT"
+      }
+    }
+  },
+  "persona_grounding_implications": {
+    "suitable_for_grounding_fields": ["fraud_vector (synthetic_id)", "fraud_vector_typology_ref (maps to FTA_IDENTITY_2024_T13)", "family_crisis_history (synthetic-ID-driven credit-file compromise events for ITIN holders)"],
+    "behavioral_evidence_grade_when_used": "B — regulatory source (Federal Reserve). Definition + mitigation-framework source, not a statistical deep-dive.",
+    "caveat": "Landing-page content is thin. For specific numeric estimates (e.g., annual dollar losses, sector breakdown), the 3 linked white papers would need separate fetch/extraction. Present extraction has the framework but not the measurement detail."
+  }
+}

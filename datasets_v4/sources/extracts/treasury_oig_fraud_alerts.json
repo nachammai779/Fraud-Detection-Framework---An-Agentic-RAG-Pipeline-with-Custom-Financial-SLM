@@ -1,0 +1,88 @@
+{
+  "source_id": "treasury_oig_fraud_alerts",
+  "archetypes": ["remittance", "itin"],
+  "extraction_method": "manual curl + HTML parse of the Treasury OIG Fraud Alerts landing page (https://oig.treasury.gov/fraud-alerts). Page enumerates ongoing fraud schemes OIG is monitoring; alert pages themselves have deeper detail not extracted here.",
+  "persona_dimensions": {
+    "fraud_exposure": {
+      "impersonation_schemes": {
+        "value": [
+          {
+            "scheme": "Treasury/OIG/FinCEN/OFAC/IRS official impersonation",
+            "modality": "unsolicited phone calls, text messages, or emails",
+            "payload": "caller asserts the victim has been awarded a grant or sum of money and requests personal information or a payment",
+            "relevant_archetypes": ["remittance", "itin"]
+          },
+          {
+            "scheme": "IRS impersonation / investigator impersonation",
+            "modality": "phone call",
+            "payload": "falsely representing as IRS or OIG investigator, demanding payment or information",
+            "relevant_archetypes": ["itin", "remittance"]
+          },
+          {
+            "scheme": "Threats-and-demands calls",
+            "modality": "phone/email",
+            "payload": "impersonation with threat of arrest/penalty to extract payment",
+            "relevant_archetypes": ["remittance", "itin"]
+          }
+        ],
+        "source_ref": "Treasury OIG landing page",
+        "confidence": "DIRECT"
+      },
+      "beneficial_ownership_information_scams": {
+        "value": [
+          {
+            "scheme": "Fraudulent 'Form 4022' or 'Form 5102' correspondence",
+            "note": "FinCEN does NOT have these forms; correspondence is fraudulent",
+            "relevant_archetypes": ["itin", "gig_worker"]
+          },
+          {
+            "scheme": "'US Business Regulations Dept' correspondence",
+            "note": "No government entity by this name exists",
+            "relevant_archetypes": ["itin"]
+          },
+          {
+            "scheme": "BOI-filing-fee solicitation",
+            "note": "There is NO fee to file BOI directly with FinCEN",
+            "relevant_archetypes": ["itin"]
+          },
+          {
+            "scheme": "Fake CTA penalty-collection correspondence",
+            "note": "FinCEN does NOT send initial CTA penalty correspondence via email or phone; no phone/mail/website payment requests",
+            "relevant_archetypes": ["itin"]
+          }
+        ],
+        "source_ref": "Treasury OIG landing page — Corporate Transparency Act / BOI section",
+        "confidence": "DIRECT"
+      },
+      "redemption_acceptance_for_value_schemes": {
+        "value": "Fraudulent scheme asserting the US government has trust accounts linked to each citizen ('redemption' / 'acceptance for value'). Individuals use fraudulent Treasury-related financial obligations or fictitious promissory notes / bonds to attempt purchases (commonly vehicles). Fraudsters hold seminars (in-person and on YouTube) teaching attendees how to create fictitious documents and misuse federal routing numbers.",
+        "source_ref": "Treasury OIG page",
+        "relevant_archetypes": ["gig_worker", "unbanked"],
+        "confidence": "DIRECT"
+      },
+      "investment_scheme_category_index": {
+        "value": [
+          "Treasury Securities scams",
+          "Historical Bond Fraud",
+          "Prime Bank Instrument Fraud",
+          "Phony Securities",
+          "Bogus Sight Drafts / Bills of Exchange Drawn on the Treasury",
+          "Fraudulent Promissory Notes and Bonds"
+        ],
+        "notes": "Less directly relevant to our four underserved-community archetypes (investment-scam category is more predatory-investment-targeting broader middle-class populations), but included for completeness.",
+        "source_ref": "Treasury OIG page",
+        "confidence": "DIRECT"
+      },
+      "recent_specific_alert": {
+        "value": "Scam using names of Treasury officials and a California attorney 'Brian D. Jacobs', promising victims sums of money for prior contract or fraud losses.",
+        "source_ref": "Treasury OIG page — NEW FRAUD ALERTS section",
+        "confidence": "DIRECT"
+      }
+    }
+  },
+  "persona_grounding_implications": {
+    "suitable_for_grounding_fields": ["fraud_vector (IRS impersonation, Treasury impersonation, BOI-filing scams, redemption scams)", "family_crisis_history (phone-scam attempted events, specifically IRS/Treasury impersonation)", "fraud_vector_typology_ref (maps to SAR_ADVISORY_TAX_REFUND_FRAUD and FTA_IDENTITY_2024_T10 Scam)"],
+    "behavioral_evidence_grade_when_used": "B — regulatory fraud-alert source (US Treasury OIG). Definitional and advisory — describes schemes, does not quantify scale.",
+    "note": "Especially useful for ITIN personas — IRS/Treasury impersonation is the highest-relevance fraud vector for tax filers. Also grounds a specific recent alert (Brian D. Jacobs scam) that could seed a persona's family_crisis_history entry."
+  }
+}

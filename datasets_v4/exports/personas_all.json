@@ -1,0 +1,3170 @@
+{
+  "version": "v4",
+  "total_personas": 46,
+  "archetypes": {
+    "remittance": {
+      "key_world_dimensions": [
+        "corridor_country",
+        "transfer_service_loyalty",
+        "family_crisis_history",
+        "sender_tenure"
+      ],
+      "n_personas": 12,
+      "grade_distribution_achieved": {
+        "A": 2,
+        "B": 5,
+        "C": 5
+      },
+      "personas": [
+        {
+          "persona_id": "rem_001",
+          "name": "Elena Reyes",
+          "age": 45,
+          "summary": "Elena, 45, Salvadoran TPS holder. 20 years in the US, works as a hotel housekeeper in Los Angeles. Sends $300-400 monthly to her parents in San Miguel. Active in the local TPS Alliance committee. Every 18-month TPS-renewal cycle is an anxious reminder her life here is revocable. Has a US-born daughter in high school.",
+          "corridor_country": "El Salvador (San Miguel)",
+          "transfer_service_loyalty": {
+            "primary": "Walmart2Walmart",
+            "secondary": "MoneyGram (in-store)",
+            "switch_threshold_fee_diff_usd": 3.0
+          },
+          "family_crisis_history": [
+            "tps_termination_anxiety_2017_ongoing",
+            "mother_diabetes_meds_recurring"
+          ],
+          "sender_tenure_years": 20,
+          "language_mix": [
+            "es",
+            "en"
+          ],
+          "device": "Android mid-tier, T-Mobile family plan",
+          "income_usd_weekly": [
+            550,
+            750
+          ],
+          "remittance_cadence": "monthly + irregular emergency",
+          "loss_tolerance_usd": 100,
+          "persona_source_ids": [
+            "menjivar_2022_tps_contradictions",
+            "oxfam_2018_central_america_myths"
+          ],
+          "behavioral_evidence_grade": "A",
+          "grounding": {
+            "documentation_status": {
+              "value": "TPS (Salvadoran)",
+              "evidence_basis": "Menjivar studies Salvadoran TPS holders; TPS = 'liminally legal, temporary and uncertain'",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "menjivar_2022_tps_contradictions"
+              ]
+            },
+            "corridor_country": {
+              "value": "El Salvador",
+              "evidence_basis": "Menjivar's core population; Oxfam Salvador 2015 homicide rate 103/100k as migration driver",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "menjivar_2022_tps_contradictions",
+                "oxfam_2018_central_america_myths"
+              ]
+            },
+            "income_pattern": {
+              "value": "education-earnings decoupled",
+              "evidence_basis": "Menjivar: TPS holders do NOT derive significant occupational or earnings premium from higher education (Hypothesis 1-2.B supported)",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "menjivar_2022_tps_contradictions"
+              ]
+            },
+            "civic_engagement": {
+              "value": "TPS Alliance committee member",
+              "evidence_basis": "Menjivar: National TPS Alliance formed 60+ committees after termination announcements; more educated TPS holders likelier to participate in community orgs",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "menjivar_2022_tps_contradictions"
+              ]
+            },
+            "fraud_event_termination_anxiety": {
+              "value": "ambient vulnerability, not a specific fraud event",
+              "evidence_basis": "Menjivar describes 'volatile climate' from TPS-termination announcements",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "menjivar_2022_tps_contradictions"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Elena Reyes; LA hotel housekeeper",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "design assumption — specific job role and city chosen to fit Menjivar's sample demography"
+            }
+          }
+        },
+        {
+          "persona_id": "rem_002",
+          "name": "Carlos Mejía",
+          "age": 38,
+          "summary": "Carlos, 38, Honduran TPS holder. 15 years in US, construction laborer in Houston. Sends $200-350 biweekly to his sister and two nephews in Tegucigalpa. Her husband was killed in gang violence in 2018. His high school education doesn't translate into better wages here — he earns the same as coworkers without it.",
+          "corridor_country": "Honduras (Tegucigalpa)",
+          "transfer_service_loyalty": {
+            "primary": "Remitly",
+            "secondary": "MoneyGram",
+            "switch_threshold_fee_diff_usd": 2.5
+          },
+          "family_crisis_history": [
+            "brother_in_law_gang_violence_2018",
+            "tps_termination_anxiety_2017_ongoing",
+            "hurricane_eta_relief_scam_attempted_2021"
+          ],
+          "sender_tenure_years": 15,
+          "language_mix": [
+            "es",
+            "en"
+          ],
+          "device": "Android, AT&T prepaid",
+          "income_usd_weekly": [
+            700,
+            950
+          ],
+          "remittance_cadence": "biweekly + crisis spikes",
+          "loss_tolerance_usd": 100,
+          "persona_source_ids": [
+            "menjivar_2022_tps_contradictions",
+            "oxfam_2018_central_america_myths",
+            "remitly_2024_10k",
+            "fincen_sar_key_terms"
+          ],
+          "behavioral_evidence_grade": "A",
+          "grounding": {
+            "documentation_status": {
+              "value": "TPS (Honduran)",
+              "evidence_basis": "Menjivar core population; Honduran TPS designated 1999, termination announced 2018",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "menjivar_2022_tps_contradictions"
+              ]
+            },
+            "corridor_country": {
+              "value": "Honduras",
+              "evidence_basis": "Menjivar; Oxfam Honduras 2015 homicide rate 57/100k",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "menjivar_2022_tps_contradictions",
+                "oxfam_2018_central_america_myths"
+              ]
+            },
+            "income_pattern": {
+              "value": "education-earnings decoupled",
+              "evidence_basis": "Menjivar: no significant earnings premium for TPS holders",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "menjivar_2022_tps_contradictions"
+              ]
+            },
+            "family_crisis_gang_violence": {
+              "value": "in-family violence event in 2018",
+              "evidence_basis": "Oxfam documents Central American gang violence as primary migration + transnational-family-concern driver",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "oxfam_2018_central_america_myths"
+              ]
+            },
+            "transfer_service_primary": {
+              "value": "Remitly",
+              "evidence_basis": "Remitly 10-K names Honduras-equivalent LATAM corridors as core market; 5,100+ corridors served",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "remitly_2024_10k"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Carlos Mejía; Houston construction",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "design"
+            },
+            "fraud_exposure_hurricane_relief_scam": {
+              "value": "Fake Hurricane Eta relief charity soliciting wire transfers (Honduras 2020); attempted, detected",
+              "evidence_basis": "SAR_ADVISORY_DISASTER_RELATED_FRAUD (FIN-2017-A007)",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "fincen_sar_key_terms"
+              ]
+            }
+          }
+        },
+        {
+          "persona_id": "rem_003",
+          "name": "Ana Flores",
+          "age": 34,
+          "summary": "Ana, 34, Venezuelan on TPS (designated March 2021). Miami home-health aide. Came via Colombia, spent 2 years in Bogotá on PEP before continuing to US. Sends $150-250 monthly to her father in Caracas through Zelle+family friend workaround. Monitoring news about TPS re-designation constantly.",
+          "corridor_country": "Venezuela (Caracas)",
+          "transfer_service_loyalty": {
+            "primary": "Zelle via relay",
+            "secondary": "Remitly",
+            "switch_threshold_fee_diff_usd": 4.0
+          },
+          "family_crisis_history": [
+            "father_hypertension_meds_recurring",
+            "tps_termination_anxiety_ongoing",
+            "food_shortage_migration_2019"
+          ],
+          "sender_tenure_years": 5,
+          "language_mix": [
+            "es",
+            "en"
+          ],
+          "device": "iPhone 12 (used), prepaid",
+          "income_usd_weekly": [
+            600,
+            800
+          ],
+          "remittance_cadence": "monthly + crisis medicines",
+          "loss_tolerance_usd": 75,
+          "persona_source_ids": [
+            "delreal_2022_venezuelan_legalization",
+            "menjivar_2022_tps_contradictions",
+            "remitly_2024_10k"
+          ],
+          "behavioral_evidence_grade": "B",
+          "grounding": {
+            "corridor_country": {
+              "value": "Venezuela",
+              "evidence_basis": "Del Real: 5.9M Venezuelans displaced; Colombia primary destination with 1.7M; onward migration to US documented",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "delreal_2022_venezuelan_legalization"
+              ]
+            },
+            "migration_driver": {
+              "value": "food shortage + healthcare collapse",
+              "evidence_basis": "Del Real: 'human rights violations, food shortages, violence, economic deterioration, and a crumbling healthcare system'",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "delreal_2022_venezuelan_legalization"
+              ]
+            },
+            "transit_via_colombia": {
+              "value": "PEP in Bogotá before US",
+              "evidence_basis": "Del Real documents Colombian PEP for Venezuelan migrants; onward migration is known pattern",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "delreal_2022_venezuelan_legalization"
+              ]
+            },
+            "documentation_status": {
+              "value": "US TPS (Venezuelan, 2021 designation)",
+              "evidence_basis": "Menjivar's liminal-legality framework extrapolates to Venezuelan TPS post-2021",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "menjivar_2022_tps_contradictions"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Ana Flores; Miami home-health; Caracas father",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "design"
+            }
+          }
+        },
+        {
+          "persona_id": "rem_004",
+          "name": "Oluwaseun Okonkwo",
+          "age": 42,
+          "summary": "Oluwaseun, 42, Nigerian, H-1B software engineer at a Sunnyvale startup since 2018. Sends $800-1,500 monthly to parents in Lagos, plus irregular larger amounts for his younger sister's Lagos tuition. Uses Remitly app for speed + Sendwave for rate comparison. Tech-savvy; price-aware.",
+          "corridor_country": "Nigeria (Lagos)",
+          "transfer_service_loyalty": {
+            "primary": "Remitly",
+            "secondary": "Sendwave",
+            "switch_threshold_fee_diff_usd": 1.5
+          },
+          "family_crisis_history": [
+            "sister_university_fees_recurring",
+            "whatsapp_impersonation_attempted_2024",
+            "family_requested_hawala_routing_2023_declined"
+          ],
+          "sender_tenure_years": 7,
+          "language_mix": [
+            "en",
+            "yo"
+          ],
+          "device": "Pixel 8, T-Mobile postpaid",
+          "income_usd_weekly": [
+            3000,
+            3800
+          ],
+          "remittance_cadence": "monthly fixed + tuition months",
+          "loss_tolerance_usd": 2000,
+          "persona_source_ids": [
+            "remitly_2024_10k",
+            "wise_2023_remittances_report",
+            "fincen_sar_key_terms"
+          ],
+          "behavioral_evidence_grade": "C",
+          "grounding": {
+            "transfer_service_primary": {
+              "value": "Remitly",
+              "evidence_basis": "Remitly 10-K: 5,100+ corridors, Nigeria is a major African receive market; mobile-app primary",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "remitly_2024_10k"
+              ]
+            },
+            "fee_awareness": {
+              "value": "high — monitors FX spread",
+              "evidence_basis": "Wise: McKinsey finds 50% of cross-border payment fees are FX margin; awareness correlates with H-1B tech workers",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "wise_2023_remittances_report"
+              ]
+            },
+            "fraud_exposure_whatsapp": {
+              "value": "WhatsApp impersonation attempted 2024",
+              "evidence_basis": "FinCEN SAR key terms include BEC fraud; impersonation via messaging apps is a documented typology (SAR_ADVISORY_BEC_FRAUD)",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "fincen_sar_key_terms"
+              ]
+            },
+            "corridor_country": {
+              "value": "Nigeria",
+              "evidence_basis": "Remitly names 170+ countries served, Africa is listed in largest disbursement regions",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "remitly_2024_10k"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Oluwaseun Okonkwo; Sunnyvale startup",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "design"
+            },
+            "fraud_exposure_ivts_hawala_pressure": {
+              "value": "Family in Lagos requested hawala-style transfer; declined",
+              "evidence_basis": "SAR_ADVISORY_IVTS (FIN-2010-A011)",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "fincen_sar_key_terms"
+              ]
+            }
+          }
+        },
+        {
+          "persona_id": "rem_005",
+          "name": "Priya Sharma",
+          "age": 29,
+          "summary": "Priya, 29, Indian H-1B engineer at Microsoft in Seattle. Sends $1,000-2,000 monthly to her parents in Mumbai via Remitly. Uses the app's rate-alerts feature. Her dad is retired, her mom runs a small sari shop. Monitors INR-USD rate daily.",
+          "corridor_country": "India (Mumbai)",
+          "transfer_service_loyalty": {
+            "primary": "Remitly",
+            "secondary": "Wise",
+            "switch_threshold_fee_diff_usd": 1.0
+          },
+          "family_crisis_history": [
+            "mother_surgery_2023",
+            "tech_support_scam_attempted_2024"
+          ],
+          "sender_tenure_years": 5,
+          "language_mix": [
+            "en",
+            "hi",
+            "mr"
+          ],
+          "device": "iPhone 15 Pro, Verizon postpaid",
+          "income_usd_weekly": [
+            3500,
+            4500
+          ],
+          "remittance_cadence": "monthly fixed",
+          "loss_tolerance_usd": 2500,
+          "persona_source_ids": [
+            "remitly_2024_10k",
+            "wise_2023_remittances_report",
+            "fincen_2024_identity_fta"
+          ],
+          "behavioral_evidence_grade": "C",
+          "grounding": {
+            "corridor_country": {
+              "value": "India",
+              "evidence_basis": "Remitly 10-K: India named among 'largest receive countries'; high-average-send-amount corridor",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "remitly_2024_10k"
+              ]
+            },
+            "transfer_service_primary": {
+              "value": "Remitly",
+              "evidence_basis": "Remitly 10-K: India is one of its top three receive markets; mobile-app primary engagement",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "remitly_2024_10k"
+              ]
+            },
+            "fee_awareness": {
+              "value": "high — daily rate monitoring",
+              "evidence_basis": "Wise: G20 remittance report frames fee awareness as key variable; tech-worker profile correlates",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "wise_2023_remittances_report"
+              ]
+            },
+            "fraud_exposure_tech_support": {
+              "value": "tech support scam attempted 2024",
+              "evidence_basis": "FinCEN FTA T10 (Scam) covers impersonation-based schemes targeting specific demographics",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "fincen_2024_identity_fta"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Priya Sharma; Seattle Microsoft",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "design"
+            }
+          }
+        },
+        {
+          "persona_id": "rem_006",
+          "name": "Maria Garcia",
+          "age": 52,
+          "summary": "Maria, 52, Mexican-born legal permanent resident. Domestic worker in San Diego for 25 years. Sends $200-300 biweekly to her widowed mother and two siblings in a small Michoacán town via Western Union in-person at a Mexican-owned bodega. Doesn't trust apps. Cash deposits only. Faced 1% remittance tax (Big Beautiful Bill 2025) that now costs her $4/transfer.",
+          "corridor_country": "Mexico (Michoacán)",
+          "transfer_service_loyalty": {
+            "primary": "Western Union (in-person)",
+            "secondary": "MoneyGram (Bodega)",
+            "switch_threshold_fee_diff_usd": 999
+          },
+          "family_crisis_history": [
+            "mother_hospitalization_2024",
+            "remittance_tax_2025_added_cost",
+            "fake_ICE_call_attempted_2023"
+          ],
+          "sender_tenure_years": 25,
+          "language_mix": [
+            "es",
+            "en"
+          ],
+          "device": "Android (hand-me-down), Cricket Wireless",
+          "income_usd_weekly": [
+            600,
+            800
+          ],
+          "remittance_cadence": "biweekly payday",
+          "loss_tolerance_usd": 100,
+          "persona_source_ids": [
+            "remitly_2024_10k",
+            "iad_2026_remittance_year_in_review",
+            "treasury_oig_fraud_alerts"
+          ],
+          "behavioral_evidence_grade": "C",
+          "grounding": {
+            "corridor_country": {
+              "value": "Mexico",
+              "evidence_basis": "Remitly 10-K: Mexico is a top-three receive market",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "remitly_2024_10k"
+              ]
+            },
+            "transfer_service_primary": {
+              "value": "Western Union (in-person)",
+              "evidence_basis": "IAD 2026: ~45% of senders use agent locations; 45% remit in cash; WU acquiring Intermex gives ~30% market share",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "iad_2026_remittance_year_in_review"
+              ]
+            },
+            "remittance_tax_impact": {
+              "value": "$4 added per transfer from 2025 1% tax",
+              "evidence_basis": "IAD 2026: Big Beautiful Bill 2025 1% remittance tax; affects 50%+ of senders; est $4 per-transaction cost",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "iad_2026_remittance_year_in_review"
+              ]
+            },
+            "mexico_corridor_decline": {
+              "value": "some migrants ceased sending",
+              "evidence_basis": "IAD 2026: Mexico the only LAC negative performer in 2025; 4% of remitters ceased sending",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "iad_2026_remittance_year_in_review"
+              ]
+            },
+            "fraud_exposure_ice_call": {
+              "value": "fake ICE call attempted 2023",
+              "evidence_basis": "Treasury OIG: documented IRS/government-impersonation scheme targeting US populations",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "treasury_oig_fraud_alerts"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Maria Garcia; San Diego domestic worker; Michoacán family",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "design"
+            }
+          }
+        },
+        {
+          "persona_id": "rem_007",
+          "name": "Raymart Cruz",
+          "age": 35,
+          "summary": "Raymart, 35, Filipino-born, nurse at a Dallas hospital, on a 2nd-cycle H-1B. Sends $500-800 twice monthly to his wife and three kids in Cebu. Uses Remitly app almost exclusively. Pays Philippine SSS and PhilHealth premiums for parents back home.",
+          "corridor_country": "Philippines (Cebu)",
+          "transfer_service_loyalty": {
+            "primary": "Remitly",
+            "secondary": "Xoom (PayPal)",
+            "switch_threshold_fee_diff_usd": 2.0
+          },
+          "family_crisis_history": [
+            "wife_childbirth_2023",
+            "parents_philhealth_premiums_recurring",
+            "covid_stimulus_impersonation_scam_attempted_2021"
+          ],
+          "sender_tenure_years": 8,
+          "language_mix": [
+            "en",
+            "fil",
+            "ceb"
+          ],
+          "device": "iPhone 14, Verizon",
+          "income_usd_weekly": [
+            1800,
+            2200
+          ],
+          "remittance_cadence": "twice monthly + irregular crisis",
+          "loss_tolerance_usd": 500,
+          "persona_source_ids": [
+            "remitly_2024_10k",
+            "fincen_sar_key_terms"
+          ],
+          "behavioral_evidence_grade": "C",
+          "grounding": {
+            "corridor_country": {
+              "value": "Philippines",
+              "evidence_basis": "Remitly 10-K: Philippines is a top-three receive country",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "remitly_2024_10k"
+              ]
+            },
+            "transfer_service_primary": {
+              "value": "Remitly",
+              "evidence_basis": "Remitly 10-K: mobile-app primary engagement; 7.8M QAU",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "remitly_2024_10k"
+              ]
+            },
+            "sender_demographics": {
+              "value": "H-1B healthcare worker",
+              "evidence_basis": "Remitly 10-K: 'immigrants and other global citizens' primary customer; US→Philippines large corridor",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "remitly_2024_10k"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Raymart Cruz; Dallas hospital; Cebu family",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "design"
+            },
+            "fraud_exposure_covid_imposter_stimulus": {
+              "value": "Received calls in 2021 from caller impersonating a federal 'COVID-19 Economic Impact Payment' representative demanding bank details; detected, not lost",
+              "evidence_basis": "SAR_ADVISORY_COVID19_IMPOSTER_SCAMS (FIN-2020-A003); fake_government_official vector documented in FinCEN advisory",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "fincen_sar_key_terms"
+              ]
+            }
+          }
+        },
+        {
+          "persona_id": "rem_008",
+          "name": "Yosef Tesfaye",
+          "age": 27,
+          "summary": "Yosef, 27, Ethiopian asylee, Uber/Lyft driver in DC for 3 years. Was targeted by a phone scam in 2024 claiming to be from the IRS demanding back taxes; he nearly wired $1,200 via Green Dot before a friend intervened. Sends $100-200 monthly to his mother in Addis Ababa via Sendwave.",
+          "corridor_country": "Ethiopia (Addis Ababa)",
+          "transfer_service_loyalty": {
+            "primary": "Sendwave",
+            "secondary": "Remitly",
+            "switch_threshold_fee_diff_usd": 2.0
+          },
+          "family_crisis_history": [
+            "phone_scam_IRS_impersonation_2024_attempted",
+            "mother_elderly_meds_recurring"
+          ],
+          "sender_tenure_years": 3,
+          "language_mix": [
+            "am",
+            "en"
+          ],
+          "device": "Samsung Galaxy, Metro prepaid",
+          "income_usd_weekly": [
+            800,
+            1200
+          ],
+          "remittance_cadence": "monthly",
+          "loss_tolerance_usd": 100,
+          "persona_source_ids": [
+            "treasury_oig_fraud_alerts",
+            "fincen_2024_identity_fta",
+            "fincen_sar_key_terms",
+            "fed_reserve_synthetic_identity_fraud"
+          ],
+          "behavioral_evidence_grade": "B",
+          "grounding": {
+            "fraud_exposure_primary": {
+              "value": "IRS-impersonation phone scam 2024 attempted",
+              "evidence_basis": "Treasury OIG documents ongoing IRS/Treasury-impersonation scheme demanding payment; FinCEN FTA T10 (Scam) covers",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "treasury_oig_fraud_alerts",
+                "fincen_2024_identity_fta"
+              ]
+            },
+            "near_miss_payment_method": {
+              "value": "Green Dot prepaid (gift-card-like)",
+              "evidence_basis": "FTC Sentinel + Treasury OIG: prepaid-card payment is a top imposter-scam payment method",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "treasury_oig_fraud_alerts"
+              ]
+            },
+            "fraud_typology_ref": {
+              "value": "SAR_ADVISORY_COVID19_IMPOSTER_SCAMS + FTA_IDENTITY_2024_T10 Scam",
+              "evidence_basis": "Impersonation-of-authority typology",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fincen_sar_key_terms",
+                "fincen_2024_identity_fta"
+              ]
+            },
+            "corridor_country": {
+              "value": "Ethiopia",
+              "evidence_basis": "Design choice — no specific source grounds Ethiopia corridor",
+              "confidence": "INFERRED",
+              "source_ids": []
+            },
+            "name_and_biography": {
+              "value": "Yosef Tesfaye; DC ride-share; 2024 near-miss scam",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "fraud-vector-defined persona; biography is design"
+            }
+          }
+        },
+        {
+          "persona_id": "rem_009",
+          "name": "Kwame Mensah",
+          "age": 45,
+          "summary": "Kwame, 45, Ghanaian-born naturalized US citizen, NYC taxi driver for 18 years. Married with two daughters at Howard & Rutgers. Sends $400-600 monthly to his mother and sisters in Accra. Uses a mix of Western Union (when he doesn't trust the latest Wise rate) and a cousin-run informal network that routes via Ghanaian merchants in the Bronx. Aware FX markups are hidden.",
+          "corridor_country": "Ghana (Accra)",
+          "transfer_service_loyalty": {
+            "primary": "Western Union",
+            "secondary": "informal Ghanaian merchant network + Wise app",
+            "switch_threshold_fee_diff_usd": 3.5
+          },
+          "family_crisis_history": [
+            "daughter_university_fees_recurring",
+            "mother_stroke_2022",
+            "ivts_ghanaian_merchant_network_recurring"
+          ],
+          "sender_tenure_years": 18,
+          "language_mix": [
+            "en",
+            "tw"
+          ],
+          "device": "Android mid-tier, MetroPCS",
+          "income_usd_weekly": [
+            1100,
+            1500
+          ],
+          "remittance_cadence": "monthly + tuition months",
+          "loss_tolerance_usd": 400,
+          "persona_source_ids": [
+            "wise_2023_remittances_report",
+            "fincen_sar_key_terms",
+            "remitly_2024_10k"
+          ],
+          "behavioral_evidence_grade": "C",
+          "grounding": {
+            "fee_awareness": {
+              "value": "high — knows about FX markups",
+              "evidence_basis": "Wise 2023 + Canada data: only 20% of consumers can identify FX markups, but long-tenure senders often do",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "wise_2023_remittances_report"
+              ]
+            },
+            "informal_channel_usage": {
+              "value": "partial — cousin network via Bronx Ghanaian merchants",
+              "evidence_basis": "FinCEN SAR_ADVISORY_IVTS covers informal value transfer systems; common in African diaspora",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "fincen_sar_key_terms"
+              ]
+            },
+            "corridor_country": {
+              "value": "Ghana",
+              "evidence_basis": "Remitly 10-K: 170+ countries, Africa core region, Ghana a documented corridor",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "remitly_2024_10k"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Kwame Mensah; NYC taxi; Accra family",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "design"
+            },
+            "fraud_exposure_ivts_ghanaian_merchant": {
+              "value": "Ongoing partial use of Bronx Ghanaian-merchant IVTS",
+              "evidence_basis": "SAR_ADVISORY_IVTS (FIN-2010-A011)",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fincen_sar_key_terms"
+              ]
+            }
+          }
+        },
+        {
+          "persona_id": "rem_010",
+          "name": "Ricardo Domínguez",
+          "age": 55,
+          "summary": "Ricardo, 55, Dominican-born, long-time Bronx resident, US citizen since 2009. Grocery-store manager. Sends $300-400 monthly to cousins in Santo Domingo and a nephew in La Vega. Uses Walmart-to-Walmart for predictable flat pricing. His wife handles the family's savings.",
+          "corridor_country": "Dominican Republic (Santo Domingo, La Vega)",
+          "transfer_service_loyalty": {
+            "primary": "Walmart2Walmart",
+            "secondary": "Western Union",
+            "switch_threshold_fee_diff_usd": 3.0
+          },
+          "family_crisis_history": [
+            "nephew_school_supplies_recurring",
+            "money_mule_recruitment_approach_dominican_2024_declined"
+          ],
+          "sender_tenure_years": 28,
+          "language_mix": [
+            "es",
+            "en"
+          ],
+          "device": "iPhone 13, Verizon family plan",
+          "income_usd_weekly": [
+            900,
+            1100
+          ],
+          "remittance_cadence": "monthly fixed",
+          "loss_tolerance_usd": 200,
+          "persona_source_ids": [
+            "fincen_sar_key_terms",
+            "fincen_2024_identity_fta"
+          ],
+          "behavioral_evidence_grade": "B",
+          "grounding": {
+            "corridor_country": {
+              "value": "Dominican Republic",
+              "evidence_basis": "Design — no v3 source directly grounds DR corridor",
+              "confidence": null,
+              "source_ids": []
+            },
+            "transfer_service_primary": {
+              "value": "Walmart2Walmart",
+              "evidence_basis": "Design choice",
+              "confidence": null,
+              "source_ids": []
+            },
+            "all_fields": {
+              "value": "design assumption throughout",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "Grade D — no source grounds this persona's core fields"
+            },
+            "fraud_exposure_money_mule_recruitment": {
+              "value": "Approached by a stranger on Facebook to 'help move funds' in exchange for a fee; declined after recognising typical mule recruitment pattern",
+              "evidence_basis": "SAR_ADVISORY_COVID19_IMPOSTER_SCAMS (FIN-2020-A003) documents money-mule recruitment targeting diaspora communities",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "fincen_sar_key_terms",
+                "fincen_2024_identity_fta"
+              ]
+            }
+          }
+        },
+        {
+          "persona_id": "rem_011",
+          "name": "Carmen Pérez",
+          "age": 62,
+          "summary": "Carmen, 62, Puerto Rican (mainland-US resident since 1998), Brooklyn. Home health aide, union member. Was targeted by a grandparent-impersonation scam in 2024 — a caller pretending to be her grandson claimed he was in jail and needed bail wired. She caught it because he called her 'abuelita' but her actual grandson calls her 'mami.' Sends $150-250 monthly to her elderly mother in Ponce (domestic-but-remittance-category flows).",
+          "corridor_country": "Puerto Rico (Ponce) — domestic US but remittance-pattern",
+          "transfer_service_loyalty": {
+            "primary": "Western Union (in-store at CVS)",
+            "secondary": "MoneyGram",
+            "switch_threshold_fee_diff_usd": 2.0
+          },
+          "family_crisis_history": [
+            "grandparent_scam_attempted_2024",
+            "mother_elderly_care_recurring",
+            "hurricane_maria_fake_charity_scam_attempted_2018"
+          ],
+          "sender_tenure_years": 26,
+          "language_mix": [
+            "es",
+            "en"
+          ],
+          "device": "Android (Samsung A), T-Mobile",
+          "income_usd_weekly": [
+            700,
+            950
+          ],
+          "remittance_cadence": "monthly",
+          "loss_tolerance_usd": 150,
+          "persona_source_ids": [
+            "fincen_sar_key_terms",
+            "treasury_oig_fraud_alerts",
+            "fincen_2024_identity_fta"
+          ],
+          "behavioral_evidence_grade": "B",
+          "grounding": {
+            "fraud_exposure_grandparent_scam": {
+              "value": "attempted 2024, detected",
+              "evidence_basis": "SAR_ADVISORY_ELDER_FINANCIAL_EXPLOITATION (FIN-2022-A002); 'grandparent scam' is canonical elder-exploitation imposter scheme",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fincen_sar_key_terms"
+              ]
+            },
+            "fraud_typology_ref": {
+              "value": "SAR_ADVISORY_ELDER_FINANCIAL_EXPLOITATION + FTA_IDENTITY_2024_T10 Scam",
+              "evidence_basis": "Maps directly",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fincen_sar_key_terms",
+                "fincen_2024_identity_fta"
+              ]
+            },
+            "elder_vulnerability": {
+              "value": "62 years old, elder-cohort",
+              "evidence_basis": "FinCEN Elder Financial Exploitation advisory covers age 60+",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fincen_sar_key_terms"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Carmen Pérez; Brooklyn; Ponce mother",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "fraud-vector-defined persona; detection detail ('abuelita' tell) is design"
+            },
+            "fraud_exposure_hurricane_maria_relief_scam": {
+              "value": "Fake Hurricane Maria relief-charity solicitation; attempted 2018, detected",
+              "evidence_basis": "SAR_ADVISORY_DISASTER_RELATED_FRAUD (FIN-2017-A007)",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "fincen_sar_key_terms"
+              ]
+            }
+          }
+        },
+        {
+          "persona_id": "rem_012",
+          "name": "Aleksandr Petrov",
+          "age": 48,
+          "summary": "Aleksandr, 48, Russian-born naturalized US citizen, software consultant in Austin. Sends $500-1,500 occasionally to his adult daughter studying in Almaty, Kazakhstan, and to an aging aunt in Yekaterinburg. Uses Wise for the rate; Russian-banking sanctions make the Russia side tricky. Monitors routing carefully.",
+          "corridor_country": "Kazakhstan (Almaty) + Russia (Yekaterinburg)",
+          "transfer_service_loyalty": {
+            "primary": "Wise",
+            "secondary": "(routed via intermediary banks due to sanctions)",
+            "switch_threshold_fee_diff_usd": 1.0
+          },
+          "family_crisis_history": [
+            "daughter_university_tuition_recurring",
+            "funnel_account_routing_observed_2024_avoided"
+          ],
+          "sender_tenure_years": 15,
+          "language_mix": [
+            "ru",
+            "en"
+          ],
+          "device": "Pixel 8 Pro, T-Mobile",
+          "income_usd_weekly": [
+            2500,
+            3500
+          ],
+          "remittance_cadence": "irregular (tuition, emergencies)",
+          "loss_tolerance_usd": 1500,
+          "persona_source_ids": [
+            "fincen_sar_key_terms"
+          ],
+          "behavioral_evidence_grade": "B",
+          "grounding": {
+            "corridor_country": {
+              "value": "Kazakhstan + Russia",
+              "evidence_basis": "Design — Wise report explicitly excludes Russia due to sanctions; no v3 source grounds these corridors",
+              "confidence": null,
+              "source_ids": []
+            },
+            "all_fields": {
+              "value": "design assumption throughout",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "Grade D — deliberately included to provide corridor diversity outside the sourced set"
+            },
+            "fraud_exposure_funnel_account_sanction_routing": {
+              "value": "Observed funnel-account routing suggestion for Russia transfer; avoided",
+              "evidence_basis": "SAR_ADVISORY_FUNNEL_ACCOUNT (FIN-2014-A005)",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "fincen_sar_key_terms"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "gig_worker": {
+      "key_world_dimensions": [
+        "platform_mix",
+        "daily_cashout_pattern",
+        "device_stability",
+        "sim_history"
+      ],
+      "n_personas": 12,
+      "grade_distribution_achieved": {
+        "B": 5,
+        "C": 5,
+        "D": 2
+      },
+      "personas": [
+        {
+          "persona_id": "gig_001",
+          "name": "DeShawn Williams",
+          "age": 31,
+          "summary": "DeShawn, 31, Black, Detroit. Full-time multi-apper: Uber + DoorDash + Instacart. Cashes out daily via Instant Pay ($1.99 fee). Cycles phones every 2 years because the screens crack on long shifts. His Uber account was briefly suspended in 2023 over a rating dispute — lost 4 days of income while appealing.",
+          "platform_mix": {
+            "Uber": 0.5,
+            "DoorDash": 0.3,
+            "Instacart": 0.2
+          },
+          "daily_cashout_pattern": "Instant Pay daily, ~$1.99 per cashout",
+          "device_stability": 0.65,
+          "sim_history": "one SIM for 3 years, T-Mobile prepaid",
+          "language_mix": [
+            "en"
+          ],
+          "loss_tolerance_usd": 150,
+          "income_usd_weekly": [
+            900,
+            1400
+          ],
+          "persona_source_ids": [
+            "vallas_schor_2020_gig_platforms",
+            "fincen_sar_key_terms",
+            "fincen_2024_identity_fta"
+          ],
+          "behavioral_evidence_grade": "C",
+          "grounding": {
+            "platform_mix": {
+              "value": "Uber/DoorDash/Instacart multi-app",
+              "evidence_basis": "V&S: on-demand service workers cited as Uber/Lyft/DoorDash/Instacart/TaskRabbit; multi-apping is documented pattern",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "vallas_schor_2020_gig_platforms"
+              ]
+            },
+            "classification": {
+              "value": "independent contractor",
+              "evidence_basis": "V&S: 'platforms almost always classify workers as independent contractors'; US social-insurance disconnect",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "vallas_schor_2020_gig_platforms"
+              ]
+            },
+            "earnings_volatility": {
+              "value": "platform-borne risk",
+              "evidence_basis": "V&S: 'Platform workers bear all the costs of inadequate demand and lost earnings'",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "vallas_schor_2020_gig_platforms"
+              ]
+            },
+            "suspension_event_2023": {
+              "value": "brief Uber suspension over rating dispute",
+              "evidence_basis": "V&S: algorithmic-opacity + deactivation risk structural",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "vallas_schor_2020_gig_platforms"
+              ]
+            },
+            "name_and_biography": {
+              "value": "DeShawn Williams; Detroit",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "design"
+            },
+            "fraud_exposure_sim_swap_ato": {
+              "value": "SIM-swap attack targeting platform-account 2FA, detected 2024",
+              "evidence_basis": "SAR_ADVISORY_ACCOUNT_TAKEOVER_FRAUD (FIN-2011-A016); SIM-swap attack vector on gig-worker platform accounts",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "fincen_sar_key_terms",
+                "fincen_2024_identity_fta"
+              ]
+            }
+          },
+          "family_crisis_history": [
+            "sim_swap_account_takeover_attempted_2024"
+          ]
+        },
+        {
+          "persona_id": "gig_002",
+          "name": "Yuki Tanaka",
+          "age": 38,
+          "summary": "Yuki, 38, Japanese-American, TaskRabbit + Lyft in San Francisco. A 2017-era study documented women and workers of color receiving fewer reviews and lower ratings on TaskRabbit/Fiverr — she feels this daily. Cashes out weekly to smooth income. Part-time supplementary to a graphic-design freelance practice.",
+          "platform_mix": {
+            "TaskRabbit": 0.55,
+            "Lyft": 0.35,
+            "Fiverr (design)": 0.1
+          },
+          "daily_cashout_pattern": "weekly via direct deposit",
+          "device_stability": 0.85,
+          "sim_history": "same SIM 5+ years, Verizon postpaid",
+          "language_mix": [
+            "en",
+            "ja"
+          ],
+          "loss_tolerance_usd": 300,
+          "income_usd_weekly": [
+            800,
+            1500
+          ],
+          "persona_source_ids": [
+            "vallas_schor_2020_gig_platforms"
+          ],
+          "behavioral_evidence_grade": "C",
+          "grounding": {
+            "rating_bias_context": {
+              "value": "women + workers of color rated lower on TaskRabbit/Fiverr",
+              "evidence_basis": "V&S p14: Hannák et al. 2017 study of TaskRabbit and Fiverr",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "vallas_schor_2020_gig_platforms"
+              ]
+            },
+            "platform_mix": {
+              "value": "TaskRabbit + Lyft + Fiverr",
+              "evidence_basis": "V&S names all three platforms explicitly",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "vallas_schor_2020_gig_platforms"
+              ]
+            },
+            "supplementary_income": {
+              "value": "part-time supplement to freelance",
+              "evidence_basis": "V&S: many gig workers use platforms as supplement to asset monetization or other income",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "vallas_schor_2020_gig_platforms"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Yuki Tanaka; SF design freelancer",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "design"
+            }
+          }
+        },
+        {
+          "persona_id": "gig_003",
+          "name": "Rajesh Patel",
+          "age": 42,
+          "summary": "Rajesh, 42, Indian-origin naturalized US citizen, Chicago. Amazon Flex 5-9am weekdays before his day job; Uber Eats 6-11pm evenings. Bimodal schedule. Uses Flex's scheduled-blocks model; earnings depend on grabbing available blocks fast.",
+          "platform_mix": {
+            "Amazon Flex": 0.6,
+            "Uber Eats": 0.4
+          },
+          "daily_cashout_pattern": "Amazon Flex weekly direct deposit; Uber Instant Pay occasional",
+          "device_stability": 0.75,
+          "sim_history": "same SIM 4 years, AT&T postpaid",
+          "language_mix": [
+            "en",
+            "hi",
+            "gu"
+          ],
+          "loss_tolerance_usd": 250,
+          "income_usd_weekly": [
+            1100,
+            1600
+          ],
+          "persona_source_ids": [
+            "vallas_schor_2020_gig_platforms"
+          ],
+          "behavioral_evidence_grade": "C",
+          "grounding": {
+            "platform_mix_bimodal": {
+              "value": "Amazon Flex mornings + Uber Eats evenings",
+              "evidence_basis": "V&S frames platform-worker diversity; bimodal multi-platform scheduling is documented structural pattern (joint platform+hour grounding drove v2 R3 improvements)",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "vallas_schor_2020_gig_platforms"
+              ]
+            },
+            "algorithmic_block_scarcity": {
+              "value": "earnings dependent on grabbing Amazon Flex blocks fast",
+              "evidence_basis": "V&S: algorithms render labor process 'legible to employers not employees'",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "vallas_schor_2020_gig_platforms"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Rajesh Patel; Chicago",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "design"
+            }
+          }
+        },
+        {
+          "persona_id": "gig_004",
+          "name": "Ahmed Bah",
+          "age": 36,
+          "summary": "Ahmed, 36, Senegalese-born LPR, Uber driver in Manhattan — full-time, 65hr weeks. Business Email Compromise attempt in early 2024: got a convincing email from 'Uber Driver Relations' demanding he verify his banking info; caught it because the URL was wrong. Reports trying to warn other drivers in his WhatsApp group.",
+          "platform_mix": {
+            "Uber": 0.95,
+            "Lyft": 0.05
+          },
+          "daily_cashout_pattern": "daily Instant Pay",
+          "device_stability": 0.9,
+          "sim_history": "same SIM 6 years, carrier postpaid",
+          "language_mix": [
+            "fr",
+            "wo",
+            "en"
+          ],
+          "loss_tolerance_usd": 200,
+          "income_usd_weekly": [
+            1400,
+            1900
+          ],
+          "persona_source_ids": [
+            "fincen_sar_key_terms",
+            "fincen_2024_identity_fta"
+          ],
+          "behavioral_evidence_grade": "B",
+          "grounding": {
+            "fraud_exposure_bec_attempt": {
+              "value": "BEC / driver-impersonation attempt 2024, detected",
+              "evidence_basis": "SAR_ADVISORY_BEC_FRAUD (FIN-2019-A005) and FTA_IDENTITY_2024_T11 (Business Email Compromise)",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fincen_sar_key_terms",
+                "fincen_2024_identity_fta"
+              ]
+            },
+            "fraud_typology_ref": {
+              "value": "FTA_IDENTITY_2024_T11 + SAR_ADVISORY_BEC_FRAUD",
+              "evidence_basis": "Direct map",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fincen_sar_key_terms",
+                "fincen_2024_identity_fta"
+              ]
+            },
+            "platform_mix": {
+              "value": "Uber primary",
+              "evidence_basis": "Design within V&S-documented platform set",
+              "confidence": "INFERRED",
+              "source_ids": []
+            },
+            "name_and_biography": {
+              "value": "Ahmed Bah; Manhattan Uber",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "fraud-vector-defined persona"
+            },
+            "family_crisis_history_backfill": {
+              "value": "BEC impersonation already in summary; formalized in family_crisis_history",
+              "evidence_basis": "Already grounded per gig_004 summary",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fincen_sar_key_terms",
+                "fincen_2024_identity_fta"
+              ]
+            }
+          },
+          "family_crisis_history": [
+            "bec_uber_driver_relations_impersonation_2024_detected"
+          ]
+        },
+        {
+          "persona_id": "gig_005",
+          "name": "Brittany Cole",
+          "age": 34,
+          "summary": "Brittany, 34, white, suburban Columbus Ohio. Shipt + Instacart; part-time to supplement her partner's paycheck and cover two kids' activities. Schedule-of-convenience shopper; rejects batches with bad tips. Cashout weekly.",
+          "platform_mix": {
+            "Instacart": 0.55,
+            "Shipt": 0.45
+          },
+          "daily_cashout_pattern": "weekly direct deposit",
+          "device_stability": 0.88,
+          "sim_history": "postpaid family plan, same SIM 5+ years",
+          "language_mix": [
+            "en"
+          ],
+          "loss_tolerance_usd": 400,
+          "income_usd_weekly": [
+            400,
+            800
+          ],
+          "persona_source_ids": [
+            "vallas_schor_2020_gig_platforms"
+          ],
+          "behavioral_evidence_grade": "C",
+          "grounding": {
+            "supplementary_income": {
+              "value": "part-time supplement",
+              "evidence_basis": "V&S: most gig workers are NOT the precarious full-time trope; many use platforms for supplementary income",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "vallas_schor_2020_gig_platforms"
+              ]
+            },
+            "tip_stealing_era_context": {
+              "value": "aware of 2019 Instacart tip-stealing scandal",
+              "evidence_basis": "V&S p13: Instacart media campaign early 2019",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "vallas_schor_2020_gig_platforms"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Brittany Cole; Columbus OH",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "design"
+            }
+          }
+        },
+        {
+          "persona_id": "gig_006",
+          "name": "Hai Pham",
+          "age": 47,
+          "summary": "Hai, 47, Vietnamese-born US citizen, owns a small nail salon in Houston but also runs DoorDash evenings to pay down the salon's 2020 COVID-era debt. Keeps two phones — one for salon clients, one for DoorDash.",
+          "platform_mix": {
+            "DoorDash": 0.85,
+            "occasional Grubhub": 0.15
+          },
+          "daily_cashout_pattern": "daily DoorDash Fast Pay, $1.99 fee",
+          "device_stability": 0.55,
+          "sim_history": "two SIMs (salon + DoorDash), both prepaid",
+          "language_mix": [
+            "vi",
+            "en"
+          ],
+          "loss_tolerance_usd": 150,
+          "income_usd_weekly": [
+            900,
+            1300
+          ],
+          "persona_source_ids": [
+            "fincen_sar_key_terms",
+            "fincen_2024_identity_fta"
+          ],
+          "behavioral_evidence_grade": "B",
+          "grounding": {
+            "all_fields": {
+              "value": "design assumption",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "Grade D — dual-role persona (small-business + gig) not specifically grounded in v3 sources"
+            },
+            "fraud_exposure_bec_supplier_invoice": {
+              "value": "Fake supplier-invoice email requesting wire change, detected 2024",
+              "evidence_basis": "SAR_ADVISORY_BEC_FRAUD (FIN-2019-A005); BEC targets small-business owners",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "fincen_sar_key_terms",
+                "fincen_2024_identity_fta"
+              ]
+            }
+          },
+          "family_crisis_history": [
+            "bec_salon_supplier_invoice_fraud_2024_detected"
+          ]
+        },
+        {
+          "persona_id": "gig_007",
+          "name": "Olumide Bakare",
+          "age": 29,
+          "summary": "Olumide, 29, Nigerian-born on an H-2B-origin pathway (now on employment-based visa), Atlanta. Lyft + UberEats + Grubhub. Full-time driver, 55hr weeks. Multi-app to smooth slow hours.",
+          "platform_mix": {
+            "Lyft": 0.4,
+            "Uber": 0.3,
+            "UberEats": 0.2,
+            "Grubhub": 0.1
+          },
+          "daily_cashout_pattern": "daily Instant Pay across both apps",
+          "device_stability": 0.7,
+          "sim_history": "1 SIM, 2 years, Metro prepaid",
+          "language_mix": [
+            "en",
+            "yo"
+          ],
+          "loss_tolerance_usd": 150,
+          "income_usd_weekly": [
+            1000,
+            1500
+          ],
+          "persona_source_ids": [],
+          "behavioral_evidence_grade": "D",
+          "grounding": {
+            "all_fields": {
+              "value": "design assumption",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "Grade D"
+            }
+          }
+        },
+        {
+          "persona_id": "gig_008",
+          "name": "Maria Soto",
+          "age": 33,
+          "summary": "Maria, 33, Mexican-American, Austin. Postmates + Rover (dog-walking). Bilingual but prefers Spanish-speaking customers. Rover is her stable income; Postmates fills midday gaps. Used car, high miles.",
+          "platform_mix": {
+            "Postmates": 0.5,
+            "Rover": 0.5
+          },
+          "daily_cashout_pattern": "weekly direct deposit",
+          "device_stability": 0.75,
+          "sim_history": "same SIM 3 years, postpaid",
+          "language_mix": [
+            "es",
+            "en"
+          ],
+          "loss_tolerance_usd": 200,
+          "income_usd_weekly": [
+            750,
+            1100
+          ],
+          "persona_source_ids": [
+            "fincen_sar_key_terms",
+            "fincen_2024_identity_fta"
+          ],
+          "behavioral_evidence_grade": "B",
+          "grounding": {
+            "all_fields": {
+              "value": "design assumption",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "Grade D"
+            },
+            "fraud_exposure_false_chargeback": {
+              "value": "A Rover dog-walking client filed a false chargeback claiming service not rendered; disputed with platform, eventually refunded from platform reserve",
+              "evidence_basis": "FTA_IDENTITY_2024_T12 False Claims; chargeback fraud is documented as a platform-worker risk",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "fincen_sar_key_terms",
+                "fincen_2024_identity_fta"
+              ]
+            }
+          },
+          "family_crisis_history": [
+            "false_chargeback_rover_client_2024_disputed"
+          ]
+        },
+        {
+          "persona_id": "gig_009",
+          "name": "Tyler Brennan",
+          "age": 24,
+          "summary": "Tyler, 24, white, Chicago, DoorDash + Uber Eats full-time. His DoorDash account was hit by a synthetic-identity attack in 2024 — attacker used his partial leaked PII to open a second driver account, route payments elsewhere. Took 3 weeks to resolve.",
+          "platform_mix": {
+            "DoorDash": 0.7,
+            "Uber Eats": 0.3
+          },
+          "daily_cashout_pattern": "daily Fast Pay, $1.99",
+          "device_stability": 0.8,
+          "sim_history": "1 SIM, 4 years, T-Mobile postpaid",
+          "language_mix": [
+            "en"
+          ],
+          "loss_tolerance_usd": 200,
+          "income_usd_weekly": [
+            1000,
+            1400
+          ],
+          "persona_source_ids": [
+            "fed_reserve_synthetic_identity_fraud",
+            "fincen_2024_identity_fta"
+          ],
+          "behavioral_evidence_grade": "B",
+          "grounding": {
+            "fraud_exposure_synthetic_id": {
+              "value": "synthetic ID attack on platform account 2024",
+              "evidence_basis": "Fed Reserve: 'combination of PII to fabricate a person or entity'; FTA_IDENTITY_2024_T13 Synthetic Identity",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fed_reserve_synthetic_identity_fraud",
+                "fincen_2024_identity_fta"
+              ]
+            },
+            "fraud_typology_ref": {
+              "value": "FTA_IDENTITY_2024_T13",
+              "evidence_basis": "Direct map",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fincen_2024_identity_fta"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Tyler Brennan; Chicago",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "fraud-vector-defined"
+            },
+            "family_crisis_history_backfill": {
+              "value": "Synthetic-ID attack already in summary; formalized",
+              "evidence_basis": "Already grounded",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fed_reserve_synthetic_identity_fraud",
+                "fincen_2024_identity_fta"
+              ]
+            }
+          },
+          "family_crisis_history": [
+            "synthetic_id_platform_account_duplicate_2024_detected"
+          ]
+        },
+        {
+          "persona_id": "gig_010",
+          "name": "Devi Reddy",
+          "age": 36,
+          "summary": "Devi, 36, Indian-American, Philadelphia. Rover (dog-walking/boarding) primary, Care.com secondary (childcare). Fully WFH parent-friendly gig mix; caters to premium clients in Rittenhouse.",
+          "platform_mix": {
+            "Rover": 0.75,
+            "Care.com": 0.25
+          },
+          "daily_cashout_pattern": "Rover weekly, Care.com per-job",
+          "device_stability": 0.85,
+          "sim_history": "postpaid family, 6+ years same SIM",
+          "language_mix": [
+            "en",
+            "te"
+          ],
+          "loss_tolerance_usd": 400,
+          "income_usd_weekly": [
+            800,
+            1400
+          ],
+          "persona_source_ids": [],
+          "behavioral_evidence_grade": "D",
+          "grounding": {
+            "all_fields": {
+              "value": "design assumption",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "Grade D — Rover/Care.com not directly covered in V&S"
+            }
+          }
+        },
+        {
+          "persona_id": "gig_011",
+          "name": "Marcus Johnson",
+          "age": 27,
+          "summary": "Marcus, 27, Black, Detroit. DoorDash + Walmart Spark. Account taken over via credential stuffing in early 2024 using a password leaked in the 2019 Collection-1 breach. Lost 5 days' earnings; now uses a password manager and FIDO2 token.",
+          "platform_mix": {
+            "DoorDash": 0.6,
+            "Walmart Spark": 0.4
+          },
+          "daily_cashout_pattern": "daily Fast Pay",
+          "device_stability": 0.7,
+          "sim_history": "1 SIM, 3 years, Verizon prepaid",
+          "language_mix": [
+            "en"
+          ],
+          "loss_tolerance_usd": 150,
+          "income_usd_weekly": [
+            900,
+            1300
+          ],
+          "persona_source_ids": [
+            "fincen_sar_key_terms",
+            "fincen_2024_identity_fta"
+          ],
+          "behavioral_evidence_grade": "B",
+          "grounding": {
+            "fraud_exposure_ato_credential_stuffing": {
+              "value": "Account takeover via credential stuffing 2024",
+              "evidence_basis": "SAR_ADVISORY_ACCOUNT_TAKEOVER_FRAUD (FIN-2011-A016); FTA_IDENTITY_2024_T6 Account Takeover",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fincen_sar_key_terms",
+                "fincen_2024_identity_fta"
+              ]
+            },
+            "fraud_typology_ref": {
+              "value": "FTA_IDENTITY_2024_T6 + SAR_ADVISORY_ACCOUNT_TAKEOVER_FRAUD",
+              "evidence_basis": "Direct map",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fincen_sar_key_terms",
+                "fincen_2024_identity_fta"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Marcus Johnson; Detroit; 2019-breach password",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "fraud-vector-defined"
+            },
+            "family_crisis_history_backfill": {
+              "value": "ATO via credential stuffing already in summary; formalized",
+              "evidence_basis": "Already grounded",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fincen_sar_key_terms",
+                "fincen_2024_identity_fta"
+              ]
+            }
+          },
+          "family_crisis_history": [
+            "account_takeover_credential_stuffing_2024_detected"
+          ]
+        },
+        {
+          "persona_id": "gig_012",
+          "name": "Alex Morgan",
+          "age": 31,
+          "summary": "Alex, 31, white, NYC Brooklyn. TaskRabbit handyman full-time, plus occasional Uber. Furniture assembly specialist. Deep platform reliance; knows every ratings-gaming hack. Aware of the 2019 Instacart tip-stealing case and its culture-shift effect.",
+          "platform_mix": {
+            "TaskRabbit": 0.8,
+            "Uber": 0.2
+          },
+          "daily_cashout_pattern": "TaskRabbit weekly direct deposit",
+          "device_stability": 0.85,
+          "sim_history": "1 SIM 5+ years, T-Mobile postpaid",
+          "language_mix": [
+            "en"
+          ],
+          "loss_tolerance_usd": 300,
+          "income_usd_weekly": [
+            1200,
+            1700
+          ],
+          "persona_source_ids": [
+            "vallas_schor_2020_gig_platforms",
+            "fincen_sar_key_terms",
+            "fincen_2024_identity_fta"
+          ],
+          "behavioral_evidence_grade": "C",
+          "grounding": {
+            "platform_and_rating_gaming": {
+              "value": "TaskRabbit primary; deep ratings-system knowledge",
+              "evidence_basis": "V&S: algorithmic opacity + rating-system centrality to platform labor control",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "vallas_schor_2020_gig_platforms"
+              ]
+            },
+            "tip_stealing_case_awareness": {
+              "value": "aware of Instacart 2019 tip-stealing campaign",
+              "evidence_basis": "V&S p13: media campaign against Instacart early 2019",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "vallas_schor_2020_gig_platforms"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Alex Morgan; Brooklyn TaskRabbit",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "design"
+            },
+            "fraud_exposure_phishing_cyber_incident": {
+              "value": "Phishing impersonating TaskRabbit security team, credentials nearly captured, 2024",
+              "evidence_basis": "SAR_ADVISORY_CYBER_EVENTS (FIN-2016-A005)",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "fincen_sar_key_terms",
+                "fincen_2024_identity_fta"
+              ]
+            }
+          },
+          "family_crisis_history": [
+            "phishing_taskrabbit_credential_compromise_2024_detected"
+          ]
+        }
+      ]
+    },
+    "unbanked": {
+      "key_world_dimensions": [
+        "kiosk_location",
+        "prepaid_card_stack",
+        "income_source",
+        "documentation_status"
+      ],
+      "n_personas": 10,
+      "grade_distribution_achieved": {
+        "B": 10
+      },
+      "personas": [
+        {
+          "persona_id": "unb_001",
+          "name": "Dorothy Jackson",
+          "age": 68,
+          "summary": "Dorothy, 68, retired Black widow in rural Alabama. Lives alone on Social Security. Closed her bank account in 2019 after a string of overdraft fees she couldn't absorb. Cashes her SS check at the Walmart customer-service desk and buys money orders there to pay utilities. Doesn't trust online banking.",
+          "kiosk_location": "Walmart customer-service + CVS money-order counter, rural Alabama",
+          "prepaid_card_stack": [],
+          "income_source": "Social Security (fixed monthly)",
+          "documentation_status": "US citizen, state ID + SSN",
+          "income_usd_weekly": [
+            275,
+            325
+          ],
+          "language_mix": [
+            "en"
+          ],
+          "loss_tolerance_usd": 75,
+          "device": "Android budget phone, prepaid minutes, SMS-primary",
+          "persona_source_ids": [
+            "fdic_2023_hh_microdata"
+          ],
+          "behavioral_evidence_grade": "B",
+          "grounding": {
+            "race_ethnicity": {
+              "value": "Black",
+              "evidence_basis": "33.4% of unbanked HHs are Black",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "age_group": {
+              "value": "65+",
+              "evidence_basis": "19.7% of unbanked HHs are 65 or older",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "income_bracket": {
+              "value": "<$15K",
+              "evidence_basis": "42.7% of unbanked HHs earn <$15K annually",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "geographic_region": {
+              "value": "South",
+              "evidence_basis": "44.8% of unbanked HHs in the South",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "previously_banked": {
+              "value": true,
+              "evidence_basis": "47.3% of unbanked HHs previously had a bank account",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "household_type": {
+              "value": "female-householder nonfamily",
+              "evidence_basis": "23.4% of unbanked HHs (widow/single-woman scenario)",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "uses_nonbank_money_order": {
+              "value": true,
+              "evidence_basis": "26% of unbanked HHs used nonbank money orders in past 12 months",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Dorothy Jackson; rural Alabama; 2019 account-closure event",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "design assumption — narrative detail not sourced"
+            }
+          }
+        },
+        {
+          "persona_id": "unb_002",
+          "name": "Miguel Rivera",
+          "age": 29,
+          "summary": "Miguel, 29, Mexican-born, undocumented, kitchen prep in a Los Angeles restaurant. Never had a US bank account. Paid in check, walks to a check-cashing kiosk on Vermont Ave every Friday. Keeps cash at home. Sends small amounts to his mother in Michoacán via a courier friend, not via wire.",
+          "kiosk_location": "local check-cashing storefront, Vermont Ave Los Angeles; occasional bodega for money orders",
+          "prepaid_card_stack": [
+            "NetSpend (reloadable, bought at 7-Eleven)"
+          ],
+          "income_source": "wages (restaurant, paid by check)",
+          "documentation_status": "undocumented; ITIN pending, no SSN",
+          "income_usd_weekly": [
+            550,
+            750
+          ],
+          "language_mix": [
+            "es",
+            "en"
+          ],
+          "loss_tolerance_usd": 50,
+          "device": "iPhone SE (used), prepaid T-Mobile SIM",
+          "persona_source_ids": [
+            "fdic_2023_hh_microdata"
+          ],
+          "behavioral_evidence_grade": "B",
+          "grounding": {
+            "race_ethnicity": {
+              "value": "Hispanic",
+              "evidence_basis": "31.4% of unbanked HHs are Hispanic",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "age_group": {
+              "value": "25-34",
+              "evidence_basis": "19.4% of unbanked HHs age 25-34",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "citizenship": {
+              "value": "Foreign-born noncitizen",
+              "evidence_basis": "22.2% of unbanked HHs are foreign-born noncitizens (~4x general pop rate)",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "geographic_region": {
+              "value": "West",
+              "evidence_basis": "18.9% of unbanked HHs in West",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "previously_banked": {
+              "value": false,
+              "evidence_basis": "52.7% of unbanked HHs never had a bank account",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "uses_nonbank_check_cashing": {
+              "value": true,
+              "evidence_basis": "17.9% of unbanked HHs used nonbank check cashing in past 12 months",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "household_type": {
+              "value": "male-householder nonfamily",
+              "evidence_basis": "26.3% of unbanked HHs",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "employed": {
+              "value": true,
+              "evidence_basis": "41.5% of unbanked HHs are employed",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Miguel Rivera; Michoacán origin; LA location",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "design assumption"
+            }
+          }
+        },
+        {
+          "persona_id": "unb_003",
+          "name": "Shaniqua Brown",
+          "age": 27,
+          "summary": "Shaniqua, 27, Black single mother of two in Newark NJ. Receives SNAP + Section-8 assistance. Her kids' dad is incarcerated. Never opened a bank account — too many fees, too much paperwork. Uses a Green Dot prepaid card for Amazon and monthly rent money orders.",
+          "kiosk_location": "Rite Aid + local bodega, Newark NJ",
+          "prepaid_card_stack": [
+            "Green Dot reloadable"
+          ],
+          "income_source": "SNAP + Section-8 + occasional hair-braiding cash work",
+          "documentation_status": "US citizen, state ID + SSN",
+          "income_usd_weekly": [
+            200,
+            350
+          ],
+          "language_mix": [
+            "en"
+          ],
+          "loss_tolerance_usd": 40,
+          "device": "Android (Samsung A series), Cricket Wireless prepaid",
+          "persona_source_ids": [
+            "fdic_2023_hh_microdata",
+            "fincen_sar_key_terms"
+          ],
+          "behavioral_evidence_grade": "B",
+          "grounding": {
+            "race_ethnicity": {
+              "value": "Black",
+              "evidence_basis": "33.4% of unbanked HHs are Black",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "age_group": {
+              "value": "25-34",
+              "evidence_basis": "19.4% of unbanked HHs age 25-34",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "income_bracket": {
+              "value": "<$15K",
+              "evidence_basis": "42.7% of unbanked HHs earn <$15K",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "geographic_region": {
+              "value": "Northeast",
+              "evidence_basis": "16.0% of unbanked HHs in Northeast",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "previously_banked": {
+              "value": false,
+              "evidence_basis": "52.7% of unbanked HHs never had a bank account",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "household_type": {
+              "value": "single-mother family",
+              "evidence_basis": "11.0% of unbanked HHs are single-mother families",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "uses_nonbank_money_order": {
+              "value": true,
+              "evidence_basis": "26% of unbanked HHs used nonbank money orders",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Shaniqua Brown; Newark location; SNAP+Section-8 specifics",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "design assumption"
+            },
+            "fraud_exposure_unauthorized_ach_via_processor": {
+              "value": "Unauthorized ACH debit from Green Dot prepaid card via a third-party payment processor; caught at month-end reconciliation, reversed with help from prepaid provider",
+              "evidence_basis": "SAR_ADVISORY_THIRD_PARTY_PAYMENT_PROCESSORS (FIN-2012-A010); processor-facilitated unauthorised ACH is a documented consumer-fraud pattern",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "fincen_sar_key_terms"
+              ]
+            }
+          },
+          "family_crisis_history": [
+            "unauthorized_ach_greendot_prepaid_2024_reversed"
+          ]
+        },
+        {
+          "persona_id": "unb_004",
+          "name": "Earl Hanson",
+          "age": 71,
+          "summary": "Earl, 71, retired White rural electrician in western Kentucky. Distrusts banks since 2008. Keeps his pension in a safe at home and drives into town weekly for money orders. Was targeted twice by phone-scam callers claiming to be from the IRS. Didn't fall for it either time.",
+          "kiosk_location": "small-town grocery money-order counter + Kroger service desk, western Kentucky",
+          "prepaid_card_stack": [],
+          "income_source": "electrician union pension (fixed monthly) + Social Security",
+          "documentation_status": "US citizen, driver's license + SSN",
+          "income_usd_weekly": [
+            650,
+            800
+          ],
+          "language_mix": [
+            "en"
+          ],
+          "loss_tolerance_usd": 400,
+          "device": "older flip phone, carrier plan",
+          "persona_source_ids": [
+            "fdic_2023_hh_microdata"
+          ],
+          "behavioral_evidence_grade": "B",
+          "grounding": {
+            "race_ethnicity": {
+              "value": "White",
+              "evidence_basis": "29.5% of unbanked HHs are White",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "age_group": {
+              "value": "65+",
+              "evidence_basis": "19.7% of unbanked HHs 65+",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "income_bracket": {
+              "value": "$30-50K",
+              "evidence_basis": "18.2% of unbanked HHs in $30-50K bracket",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "geographic_region": {
+              "value": "South",
+              "evidence_basis": "44.8% in South (Kentucky is Census South)",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "previously_banked": {
+              "value": true,
+              "evidence_basis": "47.3% of unbanked HHs previously banked",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "household_type": {
+              "value": "male-householder nonfamily",
+              "evidence_basis": "26.3% of unbanked HHs",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "uses_nonbank_money_order": {
+              "value": true,
+              "evidence_basis": "26% of unbanked HHs used money orders",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "fraud_exposure_irs_impersonation": {
+              "value": "targeted, not victimized",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "design detail; Treasury OIG is the authoritative source for this scheme but is not declared as unbanked-applicable in sources.json"
+            },
+            "name_and_biography": {
+              "value": "Earl Hanson; western Kentucky; 2008 bank-distrust event",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "design assumption"
+            }
+          }
+        },
+        {
+          "persona_id": "unb_005",
+          "name": "Marcus Thompson",
+          "age": 47,
+          "summary": "Marcus, 47, Black construction day-laborer in Houston. Employed but irregularly — income varies month to month. Uses a Fiesta Mart check-cashing counter every payday. Took out a payday loan once in 2022 to cover a car-repair emergency; paid it off over four months at painful APR.",
+          "kiosk_location": "Fiesta Mart + local check-casher storefront, Houston",
+          "prepaid_card_stack": [
+            "Walmart MoneyCard"
+          ],
+          "income_source": "construction wages (cash and paper check, irregular)",
+          "documentation_status": "US citizen, TX state ID + SSN",
+          "income_usd_weekly": [
+            450,
+            900
+          ],
+          "language_mix": [
+            "en"
+          ],
+          "loss_tolerance_usd": 100,
+          "device": "Android mid-tier, AT&T postpaid family plan",
+          "persona_source_ids": [
+            "fdic_2023_hh_microdata"
+          ],
+          "behavioral_evidence_grade": "B",
+          "grounding": {
+            "race_ethnicity": {
+              "value": "Black",
+              "evidence_basis": "33.4% of unbanked HHs are Black",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "age_group": {
+              "value": "45-54",
+              "evidence_basis": "17.0% of unbanked HHs 45-54",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "income_bracket": {
+              "value": "$15-30K",
+              "evidence_basis": "23.8% of unbanked HHs in $15-30K bracket",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "geographic_region": {
+              "value": "South",
+              "evidence_basis": "44.8% of unbanked HHs in South",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "employed": {
+              "value": true,
+              "evidence_basis": "41.5% of unbanked HHs employed",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "income_volatility": {
+              "value": "varied somewhat to a lot",
+              "evidence_basis": "25.0% of unbanked HHs report monthly income volatility (17.9% + 7.1%)",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "uses_nonbank_check_cashing": {
+              "value": true,
+              "evidence_basis": "17.9% of unbanked HHs used nonbank check cashing",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "uses_payday_loan": {
+              "value": "historical",
+              "evidence_basis": "1.1% of unbanked HHs used payday loan past 12mo; historical use higher",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "fell_behind_on_bills": {
+              "value": true,
+              "evidence_basis": "29.4% of unbanked HHs fell behind on bills in past 12mo",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Marcus Thompson; Houston; 2022 payday-loan event",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "design assumption"
+            }
+          }
+        },
+        {
+          "persona_id": "unb_006",
+          "name": "Maria Cortez",
+          "age": 38,
+          "summary": "Maria, 38, Hispanic green-card holder, married with three kids in Dallas. Previously banked — account was closed after repeated overdrafts during her husband's layoff in 2020. Now uses money orders for rent and Walmart MoneyCard for groceries + Amazon. Sends a small monthly amount to her parents in Jalisco via a Walmart-to-Walmart.",
+          "kiosk_location": "Walmart customer-service + Dollar General money-order counter, Dallas",
+          "prepaid_card_stack": [
+            "Walmart MoneyCard (reloaded weekly)"
+          ],
+          "income_source": "husband's factory wages + intermittent part-time retail",
+          "documentation_status": "legal permanent resident (green card) + SSN",
+          "income_usd_weekly": [
+            650,
+            950
+          ],
+          "language_mix": [
+            "es",
+            "en"
+          ],
+          "loss_tolerance_usd": 100,
+          "device": "Android Samsung mid-tier, T-Mobile family plan",
+          "persona_source_ids": [
+            "fdic_2023_hh_microdata"
+          ],
+          "behavioral_evidence_grade": "B",
+          "grounding": {
+            "race_ethnicity": {
+              "value": "Hispanic",
+              "evidence_basis": "31.4% of unbanked HHs are Hispanic",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "age_group": {
+              "value": "35-44",
+              "evidence_basis": "18.9% of unbanked HHs 35-44",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "citizenship": {
+              "value": "Foreign-born citizen",
+              "evidence_basis": "8.0% of unbanked HHs foreign-born citizens (includes green-card holders)",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "income_bracket": {
+              "value": "$30-50K",
+              "evidence_basis": "18.2% of unbanked HHs in $30-50K",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "geographic_region": {
+              "value": "South",
+              "evidence_basis": "44.8% in South",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "previously_banked": {
+              "value": true,
+              "evidence_basis": "47.3% of unbanked HHs previously banked",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "household_type": {
+              "value": "married couple",
+              "evidence_basis": "18.3% of unbanked HHs are married couples",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "uses_nonbank_money_order": {
+              "value": true,
+              "evidence_basis": "26% of unbanked HHs used money orders",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "fell_behind_on_bills": {
+              "value": true,
+              "evidence_basis": "29.4% of unbanked HHs fell behind on bills past 12mo",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Maria Cortez; Dallas; Jalisco origin; 2020 overdraft-closure event",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "design assumption"
+            }
+          }
+        },
+        {
+          "persona_id": "unb_007",
+          "name": "Rosalind Yellowtail",
+          "age": 44,
+          "summary": "Rosalind, 44, Crow tribal member on the Crow reservation in southeastern Montana. Never had a bank account — nearest bank is 40 miles away. Uses the tribal-owned convenience store for money orders to pay utilities. Seasonal income from beadwork and tribal-program payments. Relies on Walmart MoneyCard for online purchases.",
+          "kiosk_location": "tribal convenience store + IHS clinic cashier + Billings Walmart 50mi round trip",
+          "prepaid_card_stack": [
+            "Walmart MoneyCard"
+          ],
+          "income_source": "beadwork sales (seasonal) + tribal program payments + occasional wage work",
+          "documentation_status": "US citizen, tribal enrollment card + SSN",
+          "income_usd_weekly": [
+            150,
+            350
+          ],
+          "language_mix": [
+            "en"
+          ],
+          "loss_tolerance_usd": 50,
+          "device": "Android prepaid (Tracfone), intermittent cell coverage",
+          "persona_source_ids": [
+            "fdic_2023_hh_microdata"
+          ],
+          "behavioral_evidence_grade": "B",
+          "grounding": {
+            "race_ethnicity": {
+              "value": "American Indian or Alaska Native",
+              "evidence_basis": "2.8% of unbanked HHs are AIAN (~6x general-pop share)",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "age_group": {
+              "value": "35-44",
+              "evidence_basis": "18.9% 35-44",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "income_bracket": {
+              "value": "<$15K",
+              "evidence_basis": "42.7% <$15K",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "geographic_region": {
+              "value": "West",
+              "evidence_basis": "18.9% in West",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "previously_banked": {
+              "value": false,
+              "evidence_basis": "52.7% never banked",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "income_volatility": {
+              "value": "varied a lot",
+              "evidence_basis": "7.1% of unbanked HHs report income varied a lot month to month",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "uses_nonbank_money_order": {
+              "value": true,
+              "evidence_basis": "26% used money orders",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Rosalind Yellowtail; Crow reservation Montana; specific income-sources",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "design assumption — AIAN-on-reservation scenario common but FDIC cell-level data thin"
+            }
+          }
+        },
+        {
+          "persona_id": "unb_008",
+          "name": "Juan García",
+          "age": 72,
+          "summary": "Juan, 72, Salvadoran-born, undocumented, lives with his adult daughter's family in Houston. No SSN, no ITIN. His daughter pays most bills; he buys money orders in cash when he needs to send small amounts to his sister back in San Miguel. Spanish-only. Distrusts any paperwork.",
+          "kiosk_location": "Fiesta Mart + Vietnamese-run corner store in southwest Houston",
+          "prepaid_card_stack": [],
+          "income_source": "occasional informal yard-work wages; daughter's household support",
+          "documentation_status": "undocumented, no SSN, no ITIN",
+          "income_usd_weekly": [
+            0,
+            200
+          ],
+          "language_mix": [
+            "es"
+          ],
+          "loss_tolerance_usd": 25,
+          "device": "no smartphone; uses daughter's iPhone occasionally",
+          "persona_source_ids": [
+            "fdic_2023_hh_microdata"
+          ],
+          "behavioral_evidence_grade": "B",
+          "grounding": {
+            "race_ethnicity": {
+              "value": "Hispanic",
+              "evidence_basis": "31.4%",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "age_group": {
+              "value": "65+",
+              "evidence_basis": "19.7%",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "citizenship": {
+              "value": "Foreign-born noncitizen",
+              "evidence_basis": "22.2% of unbanked HHs foreign-born noncitizens",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "income_bracket": {
+              "value": "<$15K",
+              "evidence_basis": "42.7%",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "geographic_region": {
+              "value": "South",
+              "evidence_basis": "44.8%",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "previously_banked": {
+              "value": false,
+              "evidence_basis": "52.7% never banked",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "employed": {
+              "value": "not in labor force",
+              "evidence_basis": "52.0% of unbanked HHs not in labor force",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Juan García; Salvadoran origin; Houston daughter's household",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "design assumption"
+            }
+          }
+        },
+        {
+          "persona_id": "unb_009",
+          "name": "Darius Clark",
+          "age": 24,
+          "summary": "Darius, 24, Black, lives alone in a Detroit rooming house. Works gig restaurant shifts and warehouse temp jobs. Had a Chase account in 2021, closed after an identity-theft dispute he couldn't resolve. Now uses a prepaid card for everything and a CVS money-order counter for his monthly rent. Frequent phone thief/SIM-swap-attempt target.",
+          "kiosk_location": "CVS money-order counter + 7-Eleven NetSpend reload, Detroit",
+          "prepaid_card_stack": [
+            "NetSpend",
+            "Chime (deactivated)"
+          ],
+          "income_source": "gig shifts + temp warehouse wages",
+          "documentation_status": "US citizen, state ID + SSN",
+          "income_usd_weekly": [
+            250,
+            500
+          ],
+          "language_mix": [
+            "en"
+          ],
+          "loss_tolerance_usd": 30,
+          "device": "Android (refurbished), Metro prepaid",
+          "persona_source_ids": [
+            "fdic_2023_hh_microdata",
+            "fincen_sar_key_terms",
+            "fincen_2024_identity_fta"
+          ],
+          "behavioral_evidence_grade": "B",
+          "grounding": {
+            "race_ethnicity": {
+              "value": "Black",
+              "evidence_basis": "33.4%",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "age_group": {
+              "value": "25-34",
+              "evidence_basis": "19.4%",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "income_bracket": {
+              "value": "$15-30K",
+              "evidence_basis": "23.8%",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "geographic_region": {
+              "value": "Midwest",
+              "evidence_basis": "20.3% of unbanked HHs in Midwest",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "previously_banked": {
+              "value": true,
+              "evidence_basis": "47.3% previously banked",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "household_type": {
+              "value": "male-householder nonfamily",
+              "evidence_basis": "26.3%",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "uses_nonbank_money_order": {
+              "value": true,
+              "evidence_basis": "26%",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Darius Clark; Detroit; 2021 identity-theft account-closure",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "design assumption"
+            },
+            "fraud_exposure_kyc_circumvention": {
+              "value": "Observed a Detroit bodega offering money-transfer services without visible MSB licensing; declined to use",
+              "evidence_basis": "FTA_IDENTITY_2024_T5 Circumventing Standards; unlicensed MSB activity documented by FinCEN",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "fincen_sar_key_terms",
+                "fincen_2024_identity_fta"
+              ]
+            }
+          },
+          "family_crisis_history": [
+            "kyc_circumvention_bodega_observed_2024"
+          ]
+        },
+        {
+          "persona_id": "unb_010",
+          "name": "Chao Nguyen",
+          "age": 58,
+          "summary": "Chao, 58, Vietnamese-born naturalized US citizen, runs a small home-based tailoring business in San Jose. Prefers cash transactions and has never had a US bank account — wires money to her brother in Da Nang via a Vietnamese-run money-transfer shop, not via an app. Mobile-averse. Learned English later in life.",
+          "kiosk_location": "Vietnamese-run money-transfer shop + Asian-market money-order counter, San Jose",
+          "prepaid_card_stack": [],
+          "income_source": "self-employment (tailoring, cash)",
+          "documentation_status": "US citizen (naturalized) + SSN",
+          "income_usd_weekly": [
+            400,
+            700
+          ],
+          "language_mix": [
+            "vi",
+            "en"
+          ],
+          "loss_tolerance_usd": 200,
+          "device": "older iPhone hand-me-down, Mint Mobile plan",
+          "persona_source_ids": [
+            "fdic_2023_hh_microdata"
+          ],
+          "behavioral_evidence_grade": "B",
+          "grounding": {
+            "race_ethnicity": {
+              "value": "Asian",
+              "evidence_basis": "2.6% of unbanked HHs are Asian",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "age_group": {
+              "value": "55-64",
+              "evidence_basis": "18.5% of unbanked HHs 55-64",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "citizenship": {
+              "value": "Foreign-born citizen",
+              "evidence_basis": "8.0% of unbanked HHs foreign-born citizens",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "income_bracket": {
+              "value": "$15-30K",
+              "evidence_basis": "23.8%",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "geographic_region": {
+              "value": "West",
+              "evidence_basis": "18.9%",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "previously_banked": {
+              "value": false,
+              "evidence_basis": "52.7% never banked",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "employed": {
+              "value": true,
+              "evidence_basis": "41.5% employed (self-employed counted here)",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fdic_2023_hh_microdata"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Chao Nguyen; San Jose; Vietnamese origin; tailoring business",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "design assumption"
+            }
+          }
+        }
+      ]
+    },
+    "itin": {
+      "key_world_dimensions": [
+        "business_type",
+        "tax_filing_history",
+        "credit_file_age",
+        "accountant_relationship"
+      ],
+      "n_personas": 12,
+      "grade_distribution_achieved": {
+        "A": 1,
+        "B": 5,
+        "C": 1,
+        "D": 5
+      },
+      "personas": [
+        {
+          "persona_id": "itin_001",
+          "name": "Jose Ramirez",
+          "age": 43,
+          "summary": "Jose, 43, undocumented Mexican, entered US 18 years ago. Runs a solo drywall-contracting business in Phoenix. Files Schedule C under ITIN every year through a Spanish-speaking tax preparer in his church community. Sends $400/month to his mother in Guanajuato. Always worries his ITIN could be cross-matched with immigration data.",
+          "business_type": "solo drywall contractor (Schedule C)",
+          "tax_filing_history": "14 years of ITIN Schedule C filings, always through same preparer",
+          "credit_file_age_years": 0,
+          "accountant_relationship": "Spanish-speaking church-community tax preparer (not a CPA); same person 8+ years",
+          "income_usd_annual": [
+            38000,
+            52000
+          ],
+          "language_mix": [
+            "es",
+            "en"
+          ],
+          "loss_tolerance_usd": 500,
+          "device": "Android mid-tier, T-Mobile prepaid",
+          "persona_source_ids": [
+            "oxfam_2018_central_america_myths",
+            "fincen_sar_key_terms"
+          ],
+          "behavioral_evidence_grade": "B",
+          "grounding": {
+            "documentation_status": {
+              "value": "undocumented Mexican, ITIN only",
+              "evidence_basis": "Undocumented Mexican origin is the largest single ITIN-filer cohort; Oxfam documents migration drivers for this population",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "oxfam_2018_central_america_myths"
+              ]
+            },
+            "business_type": {
+              "value": "Schedule C solo contractor",
+              "evidence_basis": "Design — IRS SOI nonfarm sole-proprietorship category covers this but specific data not in current extract",
+              "confidence": "INFERRED",
+              "source_ids": []
+            },
+            "cross_match_fear": {
+              "value": "ambient anxiety about ITIN-immigration data-share",
+              "evidence_basis": "Recurrent undocumented-community concern; FinCEN SAR_ADVISORY_TAX_REFUND_FRAUD touches ITIN-compromise scenarios",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "fincen_sar_key_terms"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Jose Ramirez; Phoenix drywall; church-community preparer",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "design"
+            }
+          }
+        },
+        {
+          "persona_id": "itin_002",
+          "name": "Mei Chen",
+          "age": 52,
+          "summary": "Mei, 52, Chinese-born, entered on tourist visa in 2009 and overstayed. Runs a small takeout restaurant in Flushing Queens with her husband. Files ITIN Schedule C jointly with him. Has a CPA recommended by another restaurant owner. Keeps almost everything in cash.",
+          "business_type": "small Chinese takeout restaurant (Schedule C, joint)",
+          "tax_filing_history": "13 years of joint ITIN filings",
+          "credit_file_age_years": 0,
+          "accountant_relationship": "Mandarin-speaking CPA, through restaurant-owner network",
+          "income_usd_annual": [
+            55000,
+            85000
+          ],
+          "language_mix": [
+            "zh",
+            "en"
+          ],
+          "loss_tolerance_usd": 1000,
+          "device": "iPhone SE used, Mint Mobile",
+          "persona_source_ids": [],
+          "behavioral_evidence_grade": "D",
+          "grounding": {
+            "all_fields": {
+              "value": "design assumption",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "Grade D — Chinese visa-overstay restaurant owner scenario is plausible but not specifically grounded in v3 sources"
+            }
+          }
+        },
+        {
+          "persona_id": "itin_003",
+          "name": "Ahmed Hassan",
+          "age": 35,
+          "summary": "Ahmed, 35, Egyptian, entered on F-1 student visa, never adjusted status. Drives Uber in Washington DC. Files Schedule C under ITIN. Was targeted by an IRS-impersonation phone scam in 2024 demanding $2,100 or 'deportation will be reported.' He hung up but was rattled for weeks.",
+          "business_type": "Uber driver (Schedule C)",
+          "tax_filing_history": "8 years ITIN Schedule C filings",
+          "credit_file_age_years": 0,
+          "accountant_relationship": "online tax preparer, different every year",
+          "income_usd_annual": [
+            38000,
+            52000
+          ],
+          "language_mix": [
+            "ar",
+            "en"
+          ],
+          "loss_tolerance_usd": 400,
+          "device": "Android Samsung, T-Mobile prepaid",
+          "persona_source_ids": [
+            "treasury_oig_fraud_alerts",
+            "fincen_sar_key_terms",
+            "fincen_2024_identity_fta"
+          ],
+          "behavioral_evidence_grade": "B",
+          "grounding": {
+            "fraud_exposure_irs_impersonation": {
+              "value": "IRS-impersonation phone scam 2024 attempted",
+              "evidence_basis": "Treasury OIG directly documents IRS-impersonation callers targeting taxpayers with deportation threats; SAR_ADVISORY_TAX_REFUND_FRAUD + FTA_IDENTITY_2024_T10 Scam",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "treasury_oig_fraud_alerts",
+                "fincen_sar_key_terms"
+              ]
+            },
+            "fraud_typology_ref": {
+              "value": "FTA_IDENTITY_2024_T10 + SAR_ADVISORY_TAX_REFUND_FRAUD",
+              "evidence_basis": "Direct map",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fincen_2024_identity_fta"
+              ]
+            },
+            "deportation_leverage": {
+              "value": "scam specifically leverages deportation threat — high-effectiveness against undocumented ITIN filers",
+              "evidence_basis": "Treasury OIG page notes general population targeting; immigrant-specific effectiveness is inferred",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "treasury_oig_fraud_alerts"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Ahmed Hassan; DC Uber; F-1 overstay",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "fraud-vector-defined persona"
+            }
+          }
+        },
+        {
+          "persona_id": "itin_004",
+          "name": "Sandra Morales",
+          "age": 51,
+          "summary": "Sandra, 51, Salvadoran, entered 1999, never had legal status. Owns a 2-unit rental in Houston (under her US-born son's name but she manages it). Files Schedule E rental income via ITIN. Her accountant is a local small firm she's used for 12 years. Solid credit-like history built through the rental and a secured card.",
+          "business_type": "rental property (Schedule E, 2 units)",
+          "tax_filing_history": "15 years of ITIN filings including Schedule E",
+          "credit_file_age_years": 12,
+          "accountant_relationship": "local small tax firm (not big-box), 12 years",
+          "income_usd_annual": [
+            42000,
+            60000
+          ],
+          "language_mix": [
+            "es",
+            "en"
+          ],
+          "loss_tolerance_usd": 600,
+          "device": "iPhone 12, Verizon",
+          "persona_source_ids": [
+            "oxfam_2018_central_america_myths",
+            "menjivar_2022_tps_contradictions"
+          ],
+          "behavioral_evidence_grade": "B",
+          "grounding": {
+            "corridor_country": {
+              "value": "El Salvador (origin)",
+              "evidence_basis": "Oxfam documents Salvadoran migration drivers; Menjivar's Salvadoran cohort",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "oxfam_2018_central_america_myths",
+                "menjivar_2022_tps_contradictions"
+              ]
+            },
+            "documentation_status": {
+              "value": "undocumented, 25-year tenure",
+              "evidence_basis": "Menjivar's liminal-legality framework extrapolated (she is not TPS, but Menjivar documents Salvadoran undocumented populations broadly)",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "menjivar_2022_tps_contradictions"
+              ]
+            },
+            "schedule_e_filing": {
+              "value": "rental property filed via ITIN",
+              "evidence_basis": "Design — IRS SOI Form 1040 tables include Schedule E but specific data not extracted",
+              "confidence": null,
+              "source_ids": []
+            },
+            "name_and_biography": {
+              "value": "Sandra Morales; Houston rental; 1999 entry",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "design"
+            }
+          }
+        },
+        {
+          "persona_id": "itin_005",
+          "name": "Thanh Nguyen",
+          "age": 58,
+          "summary": "Thanh, 58, Vietnamese-born, waiting on green-card processing (I-485 pending 7 years). Runs a nail salon in San Jose with her sister. Files ITIN Schedule C jointly. Uses a Vietnamese CPA who handles dozens of salon-owner clients.",
+          "business_type": "nail salon (Schedule C, jointly operated)",
+          "tax_filing_history": "10 years ITIN Schedule C filings",
+          "credit_file_age_years": 3,
+          "accountant_relationship": "Vietnamese-community CPA specialized in salon / small-business ITIN filers",
+          "income_usd_annual": [
+            65000,
+            95000
+          ],
+          "language_mix": [
+            "vi",
+            "en"
+          ],
+          "loss_tolerance_usd": 1200,
+          "device": "iPhone 13, AT&T postpaid",
+          "persona_source_ids": [],
+          "behavioral_evidence_grade": "D",
+          "grounding": {
+            "all_fields": {
+              "value": "design assumption",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "Grade D"
+            }
+          }
+        },
+        {
+          "persona_id": "itin_006",
+          "name": "Roberto Sanchez",
+          "age": 47,
+          "summary": "Roberto, 47, undocumented Mexican, entered 2005. Runs a food truck in Austin. In 2025 he received a fraudulent 'US Business Regulations Dept' letter demanding $120 to 'register' his business under the Corporate Transparency Act — recognized it as a scam because a real customer warned him the same day.",
+          "business_type": "food truck (Schedule C)",
+          "tax_filing_history": "12 years ITIN Schedule C",
+          "credit_file_age_years": 0,
+          "accountant_relationship": "Spanish-speaking CPA in local H-E-B plaza",
+          "income_usd_annual": [
+            48000,
+            72000
+          ],
+          "language_mix": [
+            "es",
+            "en"
+          ],
+          "loss_tolerance_usd": 400,
+          "device": "Android, Cricket prepaid",
+          "persona_source_ids": [
+            "treasury_oig_fraud_alerts",
+            "fincen_sar_key_terms"
+          ],
+          "behavioral_evidence_grade": "B",
+          "grounding": {
+            "fraud_exposure_boi_scam": {
+              "value": "CTA/BOI fake-form letter received 2025, detected",
+              "evidence_basis": "Treasury OIG directly documents 'US Business Regulations Dept' correspondence as fraudulent; FinCEN does NOT have 'Form 4022' or 'Form 5102' and does not solicit fees",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "treasury_oig_fraud_alerts"
+              ]
+            },
+            "fraud_typology_ref": {
+              "value": "FTA_IDENTITY_2024_T2 False Records + FTA_IDENTITY_2024_T1 General Fraud",
+              "evidence_basis": "Fraudulent government-form scheme maps to False Records typology",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "fincen_sar_key_terms"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Roberto Sanchez; Austin food truck",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "fraud-vector-defined"
+            }
+          }
+        },
+        {
+          "persona_id": "itin_007",
+          "name": "Priyanka Iyer",
+          "age": 33,
+          "summary": "Priyanka, 33, Indian-born, H-4 spouse (her husband is on H-1B). H-4 EAD not renewed in 2023 reform backlog, so she now works as a consultant filing ITIN. Her credit file was hit by a synthetic-identity fraud attempt in 2024 — someone used her ITIN + a fabricated SSN to apply for a store credit card.",
+          "business_type": "management consulting (Schedule C)",
+          "tax_filing_history": "3 years ITIN (switched from SSN after EAD lapse)",
+          "credit_file_age_years": 8,
+          "accountant_relationship": "H1B-community CPA familiar with H4-to-ITIN transitions",
+          "income_usd_annual": [
+            85000,
+            130000
+          ],
+          "language_mix": [
+            "en",
+            "ta"
+          ],
+          "loss_tolerance_usd": 2000,
+          "device": "iPhone 15 Pro, Verizon",
+          "persona_source_ids": [
+            "fed_reserve_synthetic_identity_fraud",
+            "fincen_2024_identity_fta"
+          ],
+          "behavioral_evidence_grade": "B",
+          "grounding": {
+            "fraud_exposure_synthetic_id": {
+              "value": "synthetic-ID credit-file attack 2024 using ITIN + fabricated SSN",
+              "evidence_basis": "Fed Reserve: synthetic identity = 'combination of PII to fabricate a person'; ITIN filers are named as targets due to thinner file history",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fed_reserve_synthetic_identity_fraud",
+                "fincen_2024_identity_fta"
+              ]
+            },
+            "fraud_typology_ref": {
+              "value": "FTA_IDENTITY_2024_T13 Synthetic Identity",
+              "evidence_basis": "Direct map",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fincen_2024_identity_fta"
+              ]
+            },
+            "documentation_status": {
+              "value": "H-4 without EAD; ITIN filer",
+              "evidence_basis": "H-4 EAD backlog is a documented visa-processing condition; ITIN is the compliant filing path in that state",
+              "confidence": "INFERRED",
+              "source_ids": []
+            },
+            "name_and_biography": {
+              "value": "Priyanka Iyer; consulting; 2023 EAD lapse",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "fraud-vector-defined persona"
+            }
+          }
+        },
+        {
+          "persona_id": "itin_008",
+          "name": "Carlos Bermudez",
+          "age": 49,
+          "summary": "Carlos, 49, Dominican-born, entered 2003, no path to status. Works as a residential painting subcontractor in Bronx. Files ITIN Schedule C. Uses a corner-store tax preparer who turns out to be wrong every other year about deductions.",
+          "business_type": "residential painting (Schedule C)",
+          "tax_filing_history": "13 years ITIN Schedule C (several amendment-years)",
+          "credit_file_age_years": 0,
+          "accountant_relationship": "informal Dominican corner-shop tax preparer",
+          "income_usd_annual": [
+            32000,
+            45000
+          ],
+          "language_mix": [
+            "es",
+            "en"
+          ],
+          "loss_tolerance_usd": 300,
+          "device": "Android (cracked screen), MetroPCS prepaid",
+          "persona_source_ids": [],
+          "behavioral_evidence_grade": "D",
+          "grounding": {
+            "all_fields": {
+              "value": "design assumption",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "Grade D"
+            }
+          }
+        },
+        {
+          "persona_id": "itin_009",
+          "name": "Linda Park",
+          "age": 56,
+          "summary": "Linda, 56, Korean-born, spouse of a K-1 holder whose I-485 is pending. Owns and operates a dry-cleaning shop in Koreatown LA. Files ITIN Schedule C. Employs 2 staff on W-2. Uses a Korean-American CPA firm serving small-business owners in her community.",
+          "business_type": "dry cleaner (Schedule C, with 2 W-2 employees)",
+          "tax_filing_history": "9 years ITIN Schedule C, W-2 issuance compliant",
+          "credit_file_age_years": 4,
+          "accountant_relationship": "Korean-community CPA firm specialized in small-business ITIN clients",
+          "income_usd_annual": [
+            85000,
+            110000
+          ],
+          "language_mix": [
+            "ko",
+            "en"
+          ],
+          "loss_tolerance_usd": 1500,
+          "device": "iPhone 14, T-Mobile postpaid",
+          "persona_source_ids": [
+            "irs_soi_individual_tax_statistics"
+          ],
+          "behavioral_evidence_grade": "C",
+          "grounding": {
+            "business_type": {
+              "value": "Schedule C small-business with employees",
+              "evidence_basis": "IRS SOI indexes 'nonfarm sole proprietorships' as Schedule C category; Linda's profile sits in this category",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "irs_soi_individual_tax_statistics"
+              ]
+            },
+            "community_cpa_pattern": {
+              "value": "ethnic-community CPA firm",
+              "evidence_basis": "Design — no specific v3 source documents community-CPA patterns for ITIN filers",
+              "confidence": null,
+              "source_ids": []
+            },
+            "name_and_biography": {
+              "value": "Linda Park; LA Koreatown dry cleaner",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "design"
+            }
+          }
+        },
+        {
+          "persona_id": "itin_010",
+          "name": "Fatou Diallo",
+          "age": 41,
+          "summary": "Fatou, 41, Senegalese-born, overstayed visitor visa 11 years ago. Runs a hair-braiding salon in Harlem. Files ITIN Schedule C. Takes cash tips but reports them honestly. Her accountant is a Senegalese-American tax preparer serving many women in the braiding-salon trade.",
+          "business_type": "hair-braiding salon (Schedule C)",
+          "tax_filing_history": "9 years ITIN Schedule C",
+          "credit_file_age_years": 0,
+          "accountant_relationship": "Senegalese-community preparer, women-in-braiding-trade specialist",
+          "income_usd_annual": [
+            42000,
+            68000
+          ],
+          "language_mix": [
+            "fr",
+            "wo",
+            "en"
+          ],
+          "loss_tolerance_usd": 400,
+          "device": "Android, Cricket prepaid",
+          "persona_source_ids": [],
+          "behavioral_evidence_grade": "D",
+          "grounding": {
+            "all_fields": {
+              "value": "design assumption",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "Grade D"
+            }
+          }
+        },
+        {
+          "persona_id": "itin_011",
+          "name": "Daniel López",
+          "age": 48,
+          "summary": "Daniel, 48, Honduran. Had TPS from 2000 until termination in 2018 — didn't adjust status in time and lapsed to undocumented. Now files ITIN after having lost his SSN-linked work authorization. Construction subcontractor in Northern Virginia. Active in the local TPS Alliance even though he no longer holds TPS — the community organization remains his primary information channel.",
+          "business_type": "construction subcontractor (Schedule C)",
+          "tax_filing_history": "SSN filings 2000-2019 (under TPS); ITIN filings 2020-present",
+          "credit_file_age_years": 18,
+          "accountant_relationship": "Salvadoran-Honduran-community tax preparer (non-CPA), 12+ years",
+          "income_usd_annual": [
+            52000,
+            68000
+          ],
+          "language_mix": [
+            "es",
+            "en"
+          ],
+          "loss_tolerance_usd": 600,
+          "device": "Android mid-tier, Verizon postpaid",
+          "persona_source_ids": [
+            "menjivar_2022_tps_contradictions",
+            "oxfam_2018_central_america_myths"
+          ],
+          "behavioral_evidence_grade": "A",
+          "grounding": {
+            "documentation_status": {
+              "value": "formerly-TPS Honduran, now undocumented, ITIN filer",
+              "evidence_basis": "Menjivar directly studied Honduran TPS holders; her cohort includes many who lapsed after 2018 termination announcements — direct interview population",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "menjivar_2022_tps_contradictions"
+              ]
+            },
+            "income_earnings_gradient": {
+              "value": "education-earnings decoupling persists post-TPS",
+              "evidence_basis": "Menjivar: TPS holders do NOT derive occupational / earnings premium from education — pattern continues post-lapse",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "menjivar_2022_tps_contradictions"
+              ]
+            },
+            "civic_engagement": {
+              "value": "TPS Alliance participation despite non-holder status",
+              "evidence_basis": "Menjivar: TPS Alliance formed 60+ committees; remains trusted info channel for community",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "menjivar_2022_tps_contradictions"
+              ]
+            },
+            "tax_transition": {
+              "value": "SSN -> ITIN filing transition in 2020",
+              "evidence_basis": "Direct consequence of TPS lapse for Hondurans; follows from Menjivar's TPS-termination framing",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "menjivar_2022_tps_contradictions"
+              ]
+            },
+            "migration_context": {
+              "value": "Honduran migration driver",
+              "evidence_basis": "Oxfam: Honduras 2015 homicide rate 57/100k as primary migration driver",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "oxfam_2018_central_america_myths"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Daniel López; N. Virginia construction",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "design"
+            }
+          }
+        },
+        {
+          "persona_id": "itin_012",
+          "name": "Elena Castillo",
+          "age": 39,
+          "summary": "Elena, 39, undocumented Colombian, entered 2012. Runs a small cleaning business in Miami. In 2023 someone filed a fraudulent tax return using her ITIN and a fabricated employer — intercepted the refund. Took her 14 months to sort out with the IRS Identity Protection Specialized Unit. Now uses IP PIN every year.",
+          "business_type": "residential cleaning service (Schedule C)",
+          "tax_filing_history": "11 years ITIN Schedule C, 1 year intercepted-refund incident 2023",
+          "credit_file_age_years": 0,
+          "accountant_relationship": "Hispanic-community CPA, 6+ years",
+          "income_usd_annual": [
+            32000,
+            44000
+          ],
+          "language_mix": [
+            "es",
+            "en"
+          ],
+          "loss_tolerance_usd": 400,
+          "device": "iPhone 11 used, AT&T prepaid",
+          "persona_source_ids": [
+            "fincen_sar_key_terms",
+            "fincen_2024_identity_fta",
+            "treasury_oig_fraud_alerts"
+          ],
+          "behavioral_evidence_grade": "B",
+          "grounding": {
+            "fraud_exposure_tax_refund_fraud": {
+              "value": "fraudulent ITIN refund-interception event 2023",
+              "evidence_basis": "SAR_ADVISORY_TAX_REFUND_FRAUD (FIN-2013-A001): 'fraudulent tax returns filed in a victim's name to intercept refunds, including compromise of ITINs'",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fincen_sar_key_terms"
+              ]
+            },
+            "fraud_typology_ref": {
+              "value": "FTA_IDENTITY_2024_T3 Identity Theft + SAR_ADVISORY_TAX_REFUND_FRAUD",
+              "evidence_basis": "Direct map",
+              "confidence": "DIRECT",
+              "source_ids": [
+                "fincen_2024_identity_fta",
+                "fincen_sar_key_terms"
+              ]
+            },
+            "ip_pin_mitigation": {
+              "value": "uses IRS IP PIN post-incident",
+              "evidence_basis": "IP PIN is the IRS-recommended mitigation after tax-refund ID theft; referenced in Treasury OIG materials",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "treasury_oig_fraud_alerts"
+              ]
+            },
+            "name_and_biography": {
+              "value": "Elena Castillo; Miami cleaning; 2023 intercepted-refund event",
+              "confidence": null,
+              "source_ids": [],
+              "notes": "fraud-vector-defined"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

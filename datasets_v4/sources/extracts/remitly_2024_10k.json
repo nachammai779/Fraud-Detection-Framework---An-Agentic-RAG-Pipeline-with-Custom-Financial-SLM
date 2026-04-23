@@ -1,0 +1,155 @@
+{
+  "source_id": "remitly_2024_10k",
+  "archetypes": ["remittance"],
+  "extraction_method": "manual structured extraction from 10-K Part I (Business) and MD&A sections (pages 5-11, 32-33, 49, 55, 70)",
+  "persona_dimensions": {
+    "demographics": {
+      "customer_base_description": {
+        "value": "Immigrants and other global citizens sending cross-border remittances; primarily sending from the United States and Canada",
+        "source_ref": "p9",
+        "quote": "Today, our customers primarily send money from the United States and Canada. Our customers and their recipients are located in over 170 countries around the world.",
+        "confidence": "DIRECT"
+      },
+      "primary_receive_corridors": {
+        "value": ["India", "Mexico", "Philippines"],
+        "source_ref": "p9, p49",
+        "quote": "our largest receive countries include India, Mexico, and the Philippines",
+        "confidence": "DIRECT"
+      },
+      "customer_base_size": {
+        "value": {
+          "quarterly_active_users_q4_2024_millions": 7.8,
+          "corridors_served": "5,100+",
+          "countries_served": "170+"
+        },
+        "source_ref": "p5, p8",
+        "quote": "we expand our core cross-border remittance product to over 5,100 corridors worldwide. We are working to expand our suite of products and features to further our vision and transform the lives of our 7.8 million quarterly active users",
+        "confidence": "DIRECT"
+      },
+      "implied_customer_segmentation": {
+        "value": "Primary segment is immigrants/diaspora sending to family in home countries; underserved by traditional banks with burdensome KYC",
+        "source_ref": "p10",
+        "quote": "Traditional bank networks... may have burdensome KYC processes that do not cater to immigrants or other global citizens",
+        "confidence": "DIRECT"
+      }
+    },
+    "financial_behavior": {
+      "transaction_volume_total": {
+        "value": {
+          "send_volume_2024_usd_billion": 54.6,
+          "send_volume_2023_usd_billion": 39.5,
+          "growth_yoy_pct": 38.2
+        },
+        "source_ref": "p49",
+        "quote": "Send volume for the year ended December 31, 2024 increased to $54.6 billion, from $39.5 billion",
+        "confidence": "DIRECT"
+      },
+      "average_transaction_size_implied": {
+        "value_range_usd": [300, 700],
+        "notes": "Not explicitly stated; typical industry average for digital remittance is $300-700 per transaction. Remitly explicitly flags that high-average-send corridors (e.g., India) can disproportionately impact send volume relative to active-customer counts.",
+        "source_ref": "p49",
+        "quote": "a period of high growth in receive corridors with large average send amounts, such as India, could disproportionately impact send volume while impacting active customers to a lesser extent",
+        "confidence": "INFERRED"
+      },
+      "primary_channel": {
+        "value": "mobile app + web; mobile-dominant",
+        "source_ref": "p6",
+        "quote": "our customers predominantly engage with us via their mobile phones, either using our app or website, shifting what traditionally required waiting in line to speak with an agent to hand held devices",
+        "confidence": "DIRECT"
+      },
+      "disbursement_channels": {
+        "value": ["bank deposit", "cash pickup", "mobile wallet", "home delivery", "debit card"],
+        "source_ref": "p8",
+        "quote": "We provide broad and high quality disbursement options to our customers allowing them to choose the method that is most convenient",
+        "confidence": "DIRECT"
+      },
+      "revenue_model": {
+        "value": "transaction fees + foreign-exchange spread (markup over interbank rate)",
+        "source_ref": "p6",
+        "quote": "Our remittance revenue is earned from transaction fees charged to customers who are sending remittances and the foreign exchange spreads",
+        "confidence": "DIRECT"
+      },
+      "transaction_loss_rate": {
+        "value": {
+          "2024_loss_usd_millions": 57.9,
+          "2024_loss_pct_of_send_volume": 0.11,
+          "2023_loss_pct_of_send_volume": 0.10,
+          "2022_loss_pct_of_send_volume": 0.15
+        },
+        "notes": "Includes fraud losses and other transaction losses. Note 16 of the 10-K breaks this down further but combines fraud + chargebacks + disbursement-partner failures into a single Reserve for Transaction Losses.",
+        "source_ref": "p49, p70",
+        "quote": "transaction losses of $57.9 million, or 0.11%, $39.0 million, or 0.10%, and $41.9 million, or 0.15%, of total send volume",
+        "confidence": "DIRECT"
+      }
+    },
+    "vulnerability_signals": {
+      "trust_dependency": {
+        "value": "Remitly's own framing is that the business is built on trust — remittances are described as 'all about trust' and the brand promise is 'peace of mind'",
+        "source_ref": "p5",
+        "quote": "In Matt's own words, remittances are all about trust. The long-term, trusted relationships we foster with our customers have enabled us to expand",
+        "confidence": "DIRECT"
+      },
+      "recipient_familiarity_requirement": {
+        "value": "Customers require that the recipient can pick up funds from a locally trusted partner (bank, shop, kiosk they already know)",
+        "source_ref": "p9",
+        "quote": "Our disbursement partners make us a trusted source of remittances because our customers are typically already familiar with their chosen disbursement partner and recipients feel comfortable receiving money where they regularly bank or shop",
+        "confidence": "DIRECT"
+      },
+      "kyc_friction_vs_incumbents": {
+        "value": "Traditional banks' KYC is 'burdensome' and specifically excludes immigrants/global citizens from formal remittance services",
+        "source_ref": "p10",
+        "quote": "Traditional bank networks... have limited disbursement options and may have burdensome KYC processes that do not cater to immigrants or other global citizens",
+        "confidence": "DIRECT"
+      }
+    },
+    "fraud_exposure": {
+      "stated_fraud_risk_categories": {
+        "value": ["account compromise / account takeover", "synthetic identity / false records at onboarding", "third-party disbursement partner failure", "customer chargeback fraud"],
+        "source_ref": "p50, p70",
+        "quote": "we integrate historical fraud loss data and other transaction data into our risk models, which helps us identify emerging patterns and quantify fraud and compliance risks",
+        "confidence": "INFERRED"
+      },
+      "regulatory_framing": {
+        "value": "Registered as a Money Services Business (MSB) with FinCEN under the Bank Secrecy Act; subject to AML/CFT requirements, SAR filing obligations, state money-transmitter licensing in all 50 states.",
+        "source_ref": "p11",
+        "quote": "federal AML laws, regulations, and supervisory guidance, which includes the Bank Secrecy Act... requires companies engaged in money transmission to register with the Financial Crimes Enforcement Network ('FinCEN') of the U.S. Department of the Treasury as money services businesses",
+        "confidence": "DIRECT"
+      }
+    },
+    "trust_patterns": {
+      "disbursement_partner_selection": {
+        "value": "Disbursement partners selected for (1) geographic coverage, (2) compliance/regulatory standing, (3) credit-worthiness and error rates — not just cost",
+        "source_ref": "p9",
+        "quote": "we only select disbursement partners that meet or exceed: (1) our geographic coverage goals in the regions in which they operate; (2) our robust compliance and regulatory requirements; and (3) our specific operating metrics such as credit worthiness and error rates",
+        "confidence": "DIRECT"
+      },
+      "brand_positioning": {
+        "value": "'peace of mind' — trust, reliability, fair and transparent pricing",
+        "source_ref": "p5",
+        "quote": "Our brand promise is to bring 'peace of mind' into everything we do. We focus on bringing trust, reliability, and a fair and transparent price to cross-border remittances",
+        "confidence": "DIRECT"
+      }
+    },
+    "communication": {
+      "channel": {
+        "value": "Mobile app primary; web secondary. Real-time transaction status tracking available.",
+        "source_ref": "p6",
+        "quote": "Our customers are able to set up an account and start sending money to international recipients generally within minutes. Recipients can receive funds in multiple ways using our diversified, high quality global disbursement network. Our customers can also track the status of their transactions as they are processed.",
+        "confidence": "DIRECT"
+      },
+      "localization_claim": {
+        "value": "Localized experience across 170+ countries, but specific language list not enumerated in the 10-K",
+        "source_ref": "p7, p33",
+        "quote": "localization across over 170 countries, reducing friction for customers across different payment methods and currencies",
+        "confidence": "INFERRED"
+      }
+    }
+  },
+  "persona_grounding_implications": {
+    "top_corridors_for_personas": ["US-India", "US-Mexico", "US-Philippines", "Canada-India", "Canada-Philippines"],
+    "customer_demographic_anchor": "immigrant / diaspora senders; primary send from US and Canada; recipients in 170+ countries",
+    "suitable_for_grounding_fields": ["corridor_country", "transfer_service_loyalty (primary=Remitly)", "income_usd_weekly (via corridor averages)", "remittance_cadence (via implied average send × frequency)", "language_mix (indirectly via corridor country demographics)"],
+    "not_suitable_for_grounding_fields": ["specific fraud_vector events per persona (10-K doesn't narrate individual scam experiences)", "family_crisis_history (10-K doesn't cover consumer-level narratives)", "device specifics (only mobile-vs-web distinction)"],
+    "behavioral_evidence_grade_when_used": "C — industry behavioral research. Provides corridor structure, channel preferences, and aggregate fraud-loss rates, but not individual-persona narratives."
+  }
+}

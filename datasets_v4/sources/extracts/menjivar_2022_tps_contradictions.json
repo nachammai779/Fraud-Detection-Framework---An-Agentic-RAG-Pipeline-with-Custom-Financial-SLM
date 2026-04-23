@@ -1,0 +1,128 @@
+{
+  "source_id": "menjivar_2022_tps_contradictions",
+  "archetypes": ["remittance", "itin"],
+  "extraction_method": "manual structured extraction from Menjívar, Agadjanian & Oh 2022, 'The Contradictions of Liminal Legality', Social Problems 69(3):678-698. Based on a 2016 survey of Salvadoran and Honduran TPS holders in 5 US metropolitan areas.",
+  "persona_dimensions": {
+    "demographics": {
+      "study_population": {
+        "value": {
+          "population": "Salvadoran and Honduran Temporary Protected Status (TPS) holders (the majority of immigrants on this status nationally)",
+          "study_year": 2016,
+          "metro_areas": 5,
+          "legal_status": "TPS — liminally legal, temporary, uncertain; renewals announced just months before expiration"
+        },
+        "source_ref": "p1, p4",
+        "quote": "a unique survey of Salvadoran and Honduran TPS holders, the majority of immigrants on this status",
+        "confidence": "DIRECT"
+      },
+      "educational_distribution": {
+        "value": {
+          "less_than_high_school": "majority of sample",
+          "high_school_or_ged": "substantial share",
+          "at_least_some_university": "9% of men, 10% of women"
+        },
+        "source_ref": "p11",
+        "quote": "Due to the already small fraction of those with at least some university education (9 percent of men and 10 percent of women)",
+        "confidence": "DIRECT"
+      },
+      "origin_countries_emphasized": {
+        "value": ["El Salvador", "Honduras"],
+        "secondary_mentions": ["Haiti", "Nicaragua", "Nepal"],
+        "notes": "Trump administration 'ended TPS designation' for El Salvador, Haiti, Honduras — creating termination anxiety that forms the civic-engagement response",
+        "source_ref": "p3",
+        "confidence": "DIRECT"
+      },
+      "tps_statutory_context": {
+        "value": "TPS created via Immigration Act of 1990; Secretary of Homeland Security designates countries facing armed conflict, environmental disaster, or other extraordinary conditions. Protection period 6-18 months; holders receive work permit. Renewals announced close to expiration.",
+        "source_ref": "p4",
+        "confidence": "DIRECT"
+      }
+    },
+    "financial_behavior": {
+      "education_earnings_decoupling": {
+        "value": "TPS holders do NOT derive significant occupational or earnings premium from higher educational attainment — Hypothesis 1-1.B and 1-2.B both supported. The standard education-earnings relationship that holds in the general population is absent among TPS holders.",
+        "source_ref": "p13, abstract",
+        "quote": "TPS holders with higher levels of educational attainment do not derive commensurate significant occupational or earnings premiums from their education",
+        "confidence": "DIRECT"
+      },
+      "partnered_earnings_gradient": {
+        "value": "Having a partner in the United States increases men's likelihood of holding a higher-skilled job and increases their earnings. Same not true for women.",
+        "source_ref": "p13",
+        "confidence": "DIRECT"
+      },
+      "country_of_education_not_significant": {
+        "value": "Where the TPS holder received their highest level of education (US vs origin country) is NOT significantly associated with earnings — unusual for immigrant populations generally.",
+        "source_ref": "p13",
+        "confidence": "DIRECT"
+      },
+      "salvadoran_vs_honduran_no_difference": {
+        "value": "No significant differences between Salvadoran and Honduran TPS holders in occupational level or earnings.",
+        "source_ref": "p13",
+        "confidence": "DIRECT"
+      }
+    },
+    "vulnerability_signals": {
+      "liminal_legality_as_vulnerability": {
+        "value": "TPS status is explicitly 'temporary and uncertain'; renewals announced just months before expiration. Workers operate under continual threat of loss-of-status.",
+        "source_ref": "p2, p4",
+        "quote": "Statuses that are liminally legal, and, therefore, temporary and uncertain, have expanded significantly, and today they can be conceptualized as a spectrum",
+        "confidence": "DIRECT"
+      },
+      "termination_anxiety": {
+        "value": "Trump administration's decision to end TPS designation for El Salvador, Haiti, Honduras, Nepal created 'volatile climate' — existential uncertainty about work authorization.",
+        "source_ref": "p3",
+        "quote": "the volatile climate that the Trump administration has created with its decision to end TPS designation for several countries, even those that have been designated for this dispensation for years",
+        "confidence": "DIRECT"
+      },
+      "incorporation_incompleteness": {
+        "value": "TPS holders show 'in-corporation incompleteness' (Brown & Bean 2006) — socioeconomic integration lags compared to more-secure-status immigrants and general population, while civic engagement follows typical patterns.",
+        "source_ref": "p15",
+        "confidence": "DIRECT"
+      }
+    },
+    "fraud_exposure": {
+      "implied_exposures": {
+        "value": "Not directly enumerated in this paper. TPS populations are plausibly exposed to: (a) notario / immigration-service fraud targeting uncertain-status populations; (b) wage theft and misclassification (common in low-wage sectors where TPS holders concentrate); (c) remittance-corridor fraud on the Central American sending route.",
+        "source_ref": "inferred from context",
+        "confidence": "INFERRED"
+      }
+    },
+    "trust_patterns": {
+      "civic_organization_engagement_more_educated": {
+        "value": "More educated TPS holders ARE more likely to participate in community organizations and voluntary community service — Hypothesis 2-1.A and 2-2.A supported. Civic engagement follows typical education gradient, unlike economic outcomes.",
+        "source_ref": "p15, abstract",
+        "quote": "more educated TPS holders are more likely to be members of community organizations and to participate in voluntary community service",
+        "confidence": "DIRECT"
+      },
+      "tps_alliance_mobilization": {
+        "value": "National TPS Alliance formed in response to termination announcements. Within two years: 60+ committees nationwide, demonstrations, legislative lobbying, lawsuits, status-information campaigns. High trust in community-based organizations serving the TPS population.",
+        "source_ref": "p15",
+        "quote": "the National TPS Alliance, the nation-wide organization that formed in the wake of the Trump administration's announcement to terminate TPS. In just two years, TPS holders have organized at least sixty committees",
+        "confidence": "DIRECT"
+      },
+      "community_org_as_incorporation_channel": {
+        "value": "TPS holders engage in community organizations and rights movements to advocate for improving conditions that block their integration in other spaces (economic, institutional).",
+        "source_ref": "p15",
+        "confidence": "DIRECT"
+      }
+    },
+    "communication": {
+      "advocacy_communication_channels": {
+        "value": ["community organizations (formal or informal)", "voluntary community service", "demonstrations / lobbying", "lawsuits (legal advocacy)", "media presence (TPS Alliance campaigns)"],
+        "source_ref": "p15",
+        "confidence": "DIRECT"
+      },
+      "language_implied": {
+        "value": "Spanish-primary (Salvadoran and Honduran); English proficiency variable with US-education variable NOT significantly predicting earnings",
+        "source_ref": "p13",
+        "confidence": "INFERRED"
+      }
+    }
+  },
+  "persona_grounding_implications": {
+    "suitable_for_grounding_fields": ["documentation_status (TPS — liminally legal, temporary)", "corridor_country (El Salvador, Honduras as sender origins)", "language_mix (es, en)", "family_crisis_history (TPS termination anxiety, renewal uncertainty, political climate)", "income_usd_weekly (via education-earnings decoupling — TPS holders earn below education-predicted levels)", "civic / trust patterns (community org membership, TPS Alliance affiliation)"],
+    "not_suitable_for_grounding_fields": ["fraud_vector events (paper is about integration, not fraud typologies)", "platform_mix / gig specifics (not a gig-worker-focused paper)", "device or SIM details"],
+    "behavioral_evidence_grade_when_used": "B — regulatory/academic typology source. Peer-reviewed empirical sociology; direct survey data from a defined population. Strongest for documentation_status + earnings context; limited for fraud-specific fields.",
+    "caveat": "Study year is 2016, paper published 2022. TPS policy and designation landscape has shifted since (various designations extended, terminated, relitigated). For current-state persona grounding, pair with more recent regulatory tracking."
+  }
+}
