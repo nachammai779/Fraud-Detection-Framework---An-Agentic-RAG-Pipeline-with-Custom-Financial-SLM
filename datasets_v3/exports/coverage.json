@@ -16,7 +16,7 @@
   },
   "itin": {
     "n_rows": 5000,
-    "source": "raw_synthetic_no_narrative",
-    "narrative_fill_rate": 0.0
+    "source": "narrative_filled",
+    "narrative_fill_rate": 0.9968
   }
 }

@@ -40,7 +40,7 @@ input changes.
 | remittance | 5,000 | 99.8% | narrative_filled |
 | gig_worker | 5,000 | 99.8% | narrative_filled |
 | unbanked | 5,000 | 99.7% | narrative_filled |
-| itin | 5,000 | 0.0% | raw_synthetic_no_narrative |
+| itin | 5,000 | 99.7% | narrative_filled |
 
 ## Schema (per transaction row)
 
