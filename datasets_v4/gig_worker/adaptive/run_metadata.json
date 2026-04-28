@@ -1,0 +1,9 @@
+{
+  "archetype": "gig_worker",
+  "dataset_id": "40c8c81c-e174-459e-830c-29b94e4c5cb8",
+  "run_id": "dataset-40c8c81c-e174-459e-830c-29b94e4c5cb8-1776972128218",
+  "estimated_credits": 1.0,
+  "estimated_minutes": 11.0,
+  "n_rows": 50,
+  "estimate_only": false
+}

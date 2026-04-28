@@ -1,0 +1,12 @@
+{
+  "dataset_id": "7536e0cd-556a-4aaf-aad9-df5ca83f5799",
+  "run_id": "dataset-7536e0cd-556a-4aaf-aad9-df5ca83f5799-1777063840493",
+  "credits": 4.0,
+  "estimated_minutes": 15.0,
+  "n_empties": 52,
+  "n_missing_typology": 300,
+  "status": "downloaded",
+  "empties_filled": 51,
+  "missing_typology_appended": 0,
+  "final_typology_codes": 25
+}

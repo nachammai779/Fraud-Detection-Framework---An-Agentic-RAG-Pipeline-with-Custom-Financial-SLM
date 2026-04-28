@@ -26,21 +26,21 @@ input changes.
 
 | Metric | Value |
 |--------|-------|
-| Total transactions | 20,000 (5,000 per archetype) |
+| Total transactions | 20,300 (5,075 per archetype) |
 | Total personas | 46 (12/12/10/12 for remittance/gig/unbanked/itin) |
 | Sources in registry | 13 |
 | FinCEN typology codes | 25 (14 FTA Identity 2024 + 11 SAR Advisory Key Terms) |
-| Overall grade distribution | A: 6.2%, B: 58.3%, C: 22.9%, D: 12.5% |
-| fraud_vector_typology_ref populated | 9.8% (= fraud rate; null on legit rows) |
+| Overall grade distribution | A: 6.2%, B: 58.0%, C: 23.1%, D: 12.8% |
+| fraud_vector_typology_ref populated | 11.1% (= fraud rate; null on legit rows) |
 
 ## Per-archetype coverage
 
 | Archetype | Rows | Narrative fill rate | Source of transactions |
 |---|---:|---:|---|
 | remittance | 5,000 | 100.0% | narrative_filled |
-| gig_worker | 5,000 | 100.0% | narrative_filled |
-| unbanked | 5,000 | 100.0% | narrative_filled |
-| itin | 5,000 | 100.0% | narrative_filled |
+| gig_worker | 5,100 | 99.7% | narrative_filled |
+| unbanked | 5,100 | 99.8% | narrative_filled |
+| itin | 5,100 | 99.7% | narrative_filled |
 
 ## Schema (per transaction row)
 

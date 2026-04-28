@@ -23,79 +23,81 @@
       "ceb": 142,
       "gu": 136
     },
-    "n_unique_detected_languages": 27,
+    "n_unique_detected_languages": 29,
     "detected_language_counts": {
-      "en": 12070,
-      "es": 3653,
-      "vi": 947,
-      "so": 364,
-      "tl": 280,
-      "fr": 237,
-      "ko": 222,
-      "ru": 221,
-      "zh-cn": 216,
-      "ta": 206,
-      "None": 204,
-      "ar": 192,
-      "ja": 187,
-      "id": 173,
-      "hi": 169,
-      "sw": 169,
-      "te": 165,
-      "mr": 143,
-      "gu": 126,
-      "it": 19,
-      "pt": 10,
-      "et": 8,
-      "af": 5,
-      "cs": 5,
-      "hr": 4,
-      "fi": 2,
-      "ro": 2,
-      "ca": 1
+      "en": 11984,
+      "es": 3691,
+      "vi": 961,
+      "so": 357,
+      "tl": 296,
+      "hi": 271,
+      "fr": 258,
+      "ko": 228,
+      "None": 218,
+      "zh-cn": 218,
+      "ru": 215,
+      "ar": 205,
+      "ta": 202,
+      "ja": 189,
+      "te": 187,
+      "mr": 145,
+      "gu": 136,
+      "sw": 114,
+      "id": 69,
+      "pt": 16,
+      "af": 15,
+      "it": 10,
+      "sk": 4,
+      "ca": 3,
+      "tr": 3,
+      "ro": 1,
+      "fi": 1,
+      "cs": 1,
+      "hr": 1,
+      "da": 1
     },
-    "tag_detect_match_rate": 0.593
+    "tag_detect_match_rate": 0.928
   },
   "q2": {
     "amount_rounded_in_text": {
       "n_applicable": 20000,
-      "n_match": 1559,
-      "rate": 0.078
+      "n_match": 5486,
+      "rate": 0.274
     },
     "amount_exact_in_text": {
       "n_applicable": 20000,
-      "n_match": 315,
-      "rate": 0.016
+      "n_match": 3829,
+      "rate": 0.191
     },
     "persona_first_name_in_text": {
       "n_applicable": 20000,
-      "n_match": 287,
-      "rate": 0.014
+      "n_match": 362,
+      "rate": 0.018
     },
     "corridor_keyword_in_text": {
       "n_applicable": 5000,
-      "n_match": 3556,
-      "rate": 0.711
+      "n_match": 3422,
+      "rate": 0.684
     },
     "platform_name_in_text": {
       "n_applicable": 5000,
-      "n_match": 2162,
-      "rate": 0.432
+      "n_match": 2082,
+      "rate": 0.416
     },
     "instrument_in_text": {
       "n_applicable": 20000,
-      "n_match": 4546,
-      "rate": 0.227
+      "n_match": 7510,
+      "rate": 0.376
     },
     "day_of_week_in_text": {
       "n_applicable": 20000,
-      "n_match": 4904,
-      "rate": 0.245
+      "n_match": 8728,
+      "rate": 0.436
     },
     "hour_class_in_text": {
       "n_applicable": 20000,
-      "n_match": 4495,
-      "rate": 0.225
+      "n_match": 7689,
+      "rate": 0.384
     }
   },
   "q3": {
@@ -253,8 +255,8 @@
     }
   },
   "q4": {
-    "empty_narratives": 0,
-    "short_narratives_under_60_chars": 2,
+    "empty_narratives": 12,
+    "short_narratives_under_60_chars": 1,
     "n_unique_fraud_vectors_used": 78,
     "n_unique_typology_codes_used": 18,
     "typology_codes_exercised": [
@@ -277,8 +279,8 @@
       "SAR_ADVISORY_TAX_REFUND_FRAUD",
       "SAR_ADVISORY_THIRD_PARTY_PAYMENT_PROCESSORS"
     ],
-    "language_tag_mismatch_count": 8054,
-    "language_tag_mismatch_rate": 0.403,
+    "language_tag_mismatch_count": 1421,
+    "language_tag_mismatch_rate": 0.071,
     "missing_personas": [],
     "per_archetype_persona_coverage": {
       "gig_worker": {

@@ -1,0 +1,10 @@
+{
+  "dataset_id": "16e023a0-6807-453a-b604-6ce3acaab019",
+  "run_id": "dataset-16e023a0-6807-453a-b604-6ce3acaab019-1777063820456",
+  "credits": 40.0,
+  "estimated_minutes": 60.0,
+  "n_rows": 3926,
+  "status": "downloaded",
+  "completions_filled": 3926,
+  "reasoning_traces_filled": 3926
+}

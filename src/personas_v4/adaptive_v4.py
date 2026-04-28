@@ -192,13 +192,25 @@ def check_status(archetype: str, api_key: str) -> dict:
 
 
 def download_and_merge(archetype: str, api_key: str) -> dict:
+    """Download an Adaption job's narratives and write to a phase-specific file.
+
+    - Full-sized jobs (n_rows >= 1000) overwrite transactions_adapted.parquet.
+    - MVP / sample jobs (n_rows < 1000) write to a distinct file
+      transactions_adapted_phase2_mvp{N}.parquet so they don't clobber
+      the overlay. Output carries full v4 metadata for the submitted rows
+      only (no merge with the full 5000-row table).
+    """
     arch_dir = V4 / archetype / "adaptive"
     meta = _load_meta(archetype)
     if not meta:
         raise RuntimeError(f"no run_metadata.json for {archetype}; submit + wait first")
+    n_submitted = int(meta.get("n_rows", 0) or 0)
+    is_mvp = 0 < n_submitted < 1000
+
     client = _get_client(api_key)
     content = client.datasets.download(meta["dataset_id"], file_format="jsonl")
-    out_jsonl = arch_dir / "adapted_output.jsonl"
+    jsonl_name = f"adapted_output_phase2_mvp{n_submitted}.jsonl" if is_mvp else "adapted_output.jsonl"
+    out_jsonl = arch_dir / jsonl_name
     out_jsonl.write_text(content, encoding="utf-8")
     print(f"[{archetype}] downloaded {len(content)} bytes -> {out_jsonl}")
 
@@ -220,17 +232,32 @@ def download_and_merge(archetype: str, api_key: str) -> dict:
         })
     adapted = pd.DataFrame(rows)
 
-    # Merge into transactions
+    # Merge into transactions — MVP path keeps only the submitted rows with full v4 metadata
     txns = pd.read_parquet(V4 / archetype / "synthetic" / "transactions.parquet")
-    merged = txns.merge(adapted[["data_uuid", "narrative_text"]], on="data_uuid", how="left", suffixes=("", "_new"))
-    if "narrative_text_new" in merged.columns:
-        merged["narrative_text"] = merged["narrative_text_new"].fillna(merged["narrative_text"])
-        merged = merged.drop(columns=["narrative_text_new"])
-    out_parquet = arch_dir / "transactions_adapted.parquet"
+    if is_mvp:
+        # Inner join: keep only the ~50 submitted rows, attach fresh narrative
+        merged = txns.merge(adapted[["data_uuid", "narrative_text"]], on="data_uuid", how="inner", suffixes=("", "_new"))
+        if "narrative_text_new" in merged.columns:
+            merged["narrative_text"] = merged["narrative_text_new"]
+            merged = merged.drop(columns=["narrative_text_new"])
+        out_parquet = arch_dir / f"transactions_adapted_phase2_mvp{n_submitted}.parquet"
+    else:
+        # Full-fill path: left-join, overwrite the main adapted file
+        merged = txns.merge(adapted[["data_uuid", "narrative_text"]], on="data_uuid", how="left", suffixes=("", "_new"))
+        if "narrative_text_new" in merged.columns:
+            merged["narrative_text"] = merged["narrative_text_new"].fillna(merged["narrative_text"])
+            merged = merged.drop(columns=["narrative_text_new"])
+        out_parquet = arch_dir / "transactions_adapted.parquet"
     merged.to_parquet(out_parquet, index=False)
     fill_rate = merged["narrative_text"].astype(str).str.len().gt(0).mean()
-    print(f"[{archetype}] wrote {out_parquet} (narrative fill rate: {fill_rate:.3f})")
-    return {"archetype": archetype, "n_rows": len(merged), "narrative_fill_rate": float(fill_rate)}
+    print(f"[{archetype}] wrote {out_parquet} ({len(merged)} rows, narrative fill rate: {fill_rate:.3f})")
+    return {
+        "archetype": archetype,
+        "n_rows": len(merged),
+        "narrative_fill_rate": float(fill_rate),
+        "mvp": is_mvp,
+        "output_path": str(out_parquet),
+    }
 
 
 def _strip_json_wrapper(blob: str) -> str:
@@ -263,21 +290,195 @@ def _load_meta(archetype: str) -> dict | None:
 
 # ── CLI ──────────────────────────────────────────────────────────────────────
 
+# ── Combined-archetype path (one job for all 4 archetypes) ──────────────────
+
+def build_combined_upload_jsonl(max_rows_total: int | None) -> tuple[Path, int, dict]:
+    """Concatenate all 4 archetypes into a single JSONL.
+
+    If max_rows_total is set, stratify equally across archetypes
+    (max_rows_total // 4 rows per archetype).
+    """
+    per_arch = None
+    if max_rows_total:
+        per_arch = max_rows_total // len(ARCHETYPES)
+
+    all_rows = []
+    per_arch_counts = {}
+    for arch in ARCHETYPES:
+        arch_dir = V4 / arch
+        personas = json.loads((arch_dir / "personas" / "persona_profiles.json").read_text(encoding="utf-8"))["personas"]
+        persona_index = {p["persona_id"]: p for p in personas}
+        txns = pd.read_parquet(arch_dir / "synthetic" / "transactions.parquet")
+        if per_arch:
+            txns = txns.sample(min(per_arch, len(txns)), random_state=42).reset_index(drop=True)
+
+        for _, r in txns.iterrows():
+            persona = persona_index.get(r["persona_id"])
+            if persona is None:
+                continue
+            prompt = build_prompt(persona, r, arch)
+            all_rows.append({
+                "prompt": prompt,
+                "completion": "",
+                "data_uuid": str(r.get("data_uuid", "")),
+                "persona_id": r["persona_id"],
+                "archetype": arch,
+                "is_fraud": int(r.get("is_fraud", 0)),
+                "language": r.get("language", ""),
+                "fraud_vector_typology_ref": r.get("fraud_vector_typology_ref") or "",
+            })
+        per_arch_counts[arch] = len(txns)
+
+    out_dir = V4 / "adaptive_combined"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_path = out_dir / "for_adaption.jsonl"
+    pd.DataFrame(all_rows).to_json(out_path, orient="records", lines=True, force_ascii=False)
+    return out_path, len(all_rows), per_arch_counts
+
+
+def run_adaption_combined(api_key: str, max_rows_total: int | None, estimate_only: bool) -> dict:
+    upload_path, n_rows, per_arch_counts = build_combined_upload_jsonl(max_rows_total)
+    print(f"[combined] upload: {upload_path} ({n_rows} txns, per-archetype={per_arch_counts}, estimate_only={estimate_only})")
+
+    client = _get_client(api_key)
+    resp_up = client.datasets.upload_file(
+        path=str(upload_path),
+        name="fraud-combined-narrative-fill-v4",
+    )
+    dataset_id = resp_up.dataset_id
+
+    column_mapping = {
+        "prompt": "prompt",
+        "completion": "completion",
+        "context": ["archetype", "persona_id", "data_uuid", "is_fraud", "language", "fraud_vector_typology_ref"],
+    }
+    recipe_spec = {
+        "version": "v1",
+        "recipes": {
+            "deduplication": False,
+            "prompt_rephrase": False,
+            "reasoning_traces": False,
+            "preference_pairs": False,
+            "prompt_metadata_injection": True,
+        },
+    }
+    brand_controls = {"length": "concise", "hallucination_mitigation": True}
+
+    from adaption import ConflictError
+    deadline = time.time() + 900
+    resp = None
+    while time.time() < deadline:
+        try:
+            resp = client.datasets.run(
+                dataset_id=dataset_id,
+                column_mapping=column_mapping,
+                recipe_specification=recipe_spec,
+                brand_controls=brand_controls,
+                job_specification={},
+                estimate=estimate_only,
+            )
+            break
+        except ConflictError:
+            print(f"[combined] import not ready, retrying in 10s")
+            time.sleep(10)
+    if resp is None:
+        raise RuntimeError(f"combined: dataset {dataset_id} still importing after 15 min")
+
+    meta = {
+        "archetype": "combined",
+        "dataset_id": dataset_id,
+        "run_id": getattr(resp, "run_id", None),
+        "estimated_credits": getattr(resp, "estimated_credits_consumed", None),
+        "estimated_minutes": getattr(resp, "estimated_minutes", None),
+        "n_rows": n_rows,
+        "per_archetype_counts": per_arch_counts,
+        "estimate_only": estimate_only,
+    }
+    # Persist to a dedicated combined metadata file + the main job tracker
+    out_dir = V4 / "adaptive_combined"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    (out_dir / "run_metadata.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")
+    tracker = {}
+    if JOB_TRACKER.exists():
+        tracker = json.loads(JOB_TRACKER.read_text(encoding="utf-8"))
+    tracker.setdefault("combined", []).append(meta)
+    JOB_TRACKER.write_text(json.dumps(tracker, indent=2), encoding="utf-8")
+    return meta
+
+
+def check_status_combined(api_key: str) -> dict:
+    p = V4 / "adaptive_combined" / "run_metadata.json"
+    if not p.exists():
+        raise RuntimeError("no combined run_metadata.json; submit first")
+    meta = json.loads(p.read_text(encoding="utf-8"))
+    client = _get_client(api_key)
+    status = client.datasets.get_status(meta["dataset_id"])
+    return {"status": getattr(status, "status", None), "progress": str(getattr(status, "progress", "")), "meta": meta}
+
+
+def download_combined_and_split(api_key: str) -> dict:
+    p = V4 / "adaptive_combined" / "run_metadata.json"
+    if not p.exists():
+        raise RuntimeError("no combined run_metadata.json")
+    meta = json.loads(p.read_text(encoding="utf-8"))
+    client = _get_client(api_key)
+    content = client.datasets.download(meta["dataset_id"], file_format="jsonl")
+    (V4 / "adaptive_combined" / "adapted_output.jsonl").write_text(content, encoding="utf-8")
+    print(f"[combined] downloaded {len(content)} bytes")
+
+    # Parse
+    rows = []
+    for line in content.splitlines():
+        try:
+            rec = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        narrative = rec.get("enhanced_completion") or rec.get("completion") or ""
+        if isinstance(narrative, dict):
+            narrative = json.dumps(narrative, ensure_ascii=False)
+        narrative = _strip_json_wrapper(narrative)
+        rows.append({
+            "data_uuid": rec.get("data_uuid", ""),
+            "archetype": rec.get("archetype", ""),
+            "persona_id": rec.get("persona_id", ""),
+            "narrative_text": narrative,
+        })
+    adapted = pd.DataFrame(rows)
+
+    # Split back by archetype, merge into each archetype's transactions
+    summary = {"archetypes": {}}
+    for arch in ARCHETYPES:
+        sub = adapted[adapted["archetype"] == arch]
+        txns = pd.read_parquet(V4 / arch / "synthetic" / "transactions.parquet")
+        merged = txns.merge(sub[["data_uuid", "narrative_text"]], on="data_uuid", how="left", suffixes=("", "_new"))
+        if "narrative_text_new" in merged.columns:
+            merged["narrative_text"] = merged["narrative_text_new"].fillna(merged["narrative_text"])
+            merged = merged.drop(columns=["narrative_text_new"])
+        out = V4 / arch / "adaptive" / "transactions_adapted.parquet"
+        merged.to_parquet(out, index=False)
+        fill = merged["narrative_text"].astype(str).str.len().gt(0).mean()
+        summary["archetypes"][arch] = {"n_rows": len(merged), "narrative_fill_rate": round(float(fill), 3), "out": str(out)}
+        print(f"[{arch}] {len(merged)} rows, narrative_fill={fill:.3f} -> {out}")
+    return summary
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--archetype", choices=ARCHETYPES)
     parser.add_argument("--all", action="store_true")
+    parser.add_argument("--combined", action="store_true",
+                        help="submit all 4 archetypes as ONE Adaption job (single queue position)")
     parser.add_argument("--max_rows", type=int, default=None,
-                        help="cap rows submitted for cost control (e.g. --max_rows 200)")
+                        help="per-archetype cap; in --combined mode this is the total-cap and is divided by 4")
     grp = parser.add_mutually_exclusive_group(required=True)
-    grp.add_argument("--estimate", action="store_true", help="build JSONL + dry-run credit estimate, no charge")
-    grp.add_argument("--submit",   action="store_true", help="actually run the job, credits charged")
-    grp.add_argument("--check",    action="store_true", help="poll job status")
-    grp.add_argument("--download", action="store_true", help="download completed results + merge narrative_text")
+    grp.add_argument("--estimate", action="store_true")
+    grp.add_argument("--submit",   action="store_true")
+    grp.add_argument("--check",    action="store_true")
+    grp.add_argument("--download", action="store_true")
     args = parser.parse_args()
 
-    if not args.all and not args.archetype:
-        parser.error("specify --archetype or --all")
+    if not args.combined and not args.all and not args.archetype:
+        parser.error("specify --archetype, --all, or --combined")
 
     if not args.estimate:
         api_key = os.environ.get("ADAPTION_API_KEY")
@@ -287,6 +488,28 @@ def main() -> int:
     else:
         api_key = os.environ.get("ADAPTION_API_KEY", "")
 
+    # --- Combined mode (single job for all 4 archetypes) ---
+    if args.combined:
+        if args.estimate:
+            upload_path, n_rows, per_arch = build_combined_upload_jsonl(args.max_rows)
+            print(f"[combined] upload-JSONL built: {upload_path} ({n_rows} rows, per-archetype={per_arch})")
+            if api_key:
+                m = run_adaption_combined(api_key, args.max_rows, estimate_only=True)
+                print(json.dumps(m, indent=2))
+            else:
+                print(f"[combined] (no ADAPTION_API_KEY; JSONL built but credit-estimate skipped)")
+        elif args.submit:
+            m = run_adaption_combined(api_key, args.max_rows, estimate_only=False)
+            print(json.dumps(m, indent=2))
+        elif args.check:
+            s = check_status_combined(api_key)
+            print(json.dumps(s, indent=2, default=str))
+        elif args.download:
+            s = download_combined_and_split(api_key)
+            print(json.dumps(s, indent=2))
+        return 0
+
+    # --- Per-archetype mode (original behaviour) ---
     targets = ARCHETYPES if args.all else [args.archetype]
     for arch in targets:
         if args.estimate:

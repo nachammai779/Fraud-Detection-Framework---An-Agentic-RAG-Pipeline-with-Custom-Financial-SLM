@@ -1014,10 +1014,19 @@
                 "fincen_sar_key_terms",
                 "fincen_2024_identity_fta"
               ]
+            },
+            "fraud_exposure_refusal_to_cooperate": {
+              "value": "after the 2024 SIM-swap ATO, platform customer-support declined to produce transaction-log records DeShawn requested to support his identity-theft affidavit",
+              "evidence_basis": "FinCEN FTA_IDENTITY_2024 Refusal to Cooperate (T8): entity refusing to provide information required for fraud investigation",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "fincen_2024_identity_fta"
+              ]
             }
           },
           "family_crisis_history": [
-            "sim_swap_account_takeover_attempted_2024"
+            "sim_swap_account_takeover_attempted_2024",
+            "platform_refusal_records_id_theft_dispute_2024"
           ]
         },
         {
@@ -1634,7 +1643,8 @@
           "loss_tolerance_usd": 75,
           "device": "Android budget phone, prepaid minutes, SMS-primary",
           "persona_source_ids": [
-            "fdic_2023_hh_microdata"
+            "fdic_2023_hh_microdata",
+            "fincen_2024_identity_fta"
           ],
           "behavioral_evidence_grade": "B",
           "grounding": {
@@ -1699,8 +1709,20 @@
               "confidence": null,
               "source_ids": [],
               "notes": "design assumption — narrative detail not sourced"
+            },
+            "fraud_exposure_power_of_attorney_abuse": {
+              "value": "niece obtained durable POA in late 2023 and made unauthorized money-order purchases on Dorothy's Social Security income through early 2024",
+              "evidence_basis": "FinCEN FTA_IDENTITY_2024 Abuse of Access (T7): misuse of legal authority granted via POA; overlaps with ELDER_FINANCIAL_EXPLOITATION advisory",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "fincen_2024_identity_fta",
+                "fincen_sar_key_terms"
+              ]
             }
-          }
+          },
+          "family_crisis_history": [
+            "power_of_attorney_abuse_caregiver_2024"
+          ]
         },
         {
           "persona_id": "unb_002",
@@ -3021,7 +3043,9 @@
           ],
           "loss_tolerance_usd": 400,
           "device": "Android, Cricket prepaid",
-          "persona_source_ids": [],
+          "persona_source_ids": [
+            "fincen_sar_key_terms"
+          ],
           "behavioral_evidence_grade": "D",
           "grounding": {
             "all_fields": {
@@ -3029,8 +3053,20 @@
               "confidence": null,
               "source_ids": [],
               "notes": "Grade D"
+            },
+            "fraud_exposure_wage_confiscation": {
+              "value": "controlling intermediary (senior salon operator) withholds a portion of Fatou's braiding earnings each week under threat of immigration-status disclosure; she records the full gross on her ITIN Schedule C but sees a reduced net in hand",
+              "evidence_basis": "FinCEN SAR Advisory on Human Trafficking and Smuggling (2014 FIN-2014-A008): wage confiscation and coerced labor indicators among informal-economy migrants",
+              "confidence": "INFERRED",
+              "source_ids": [
+                "fincen_sar_key_terms",
+                "fincen_2024_identity_fta"
+              ]
             }
-          }
+          },
+          "family_crisis_history": [
+            "wage_confiscation_braider_intermediary_recurring"
+          ]
         },
         {
           "persona_id": "itin_011",

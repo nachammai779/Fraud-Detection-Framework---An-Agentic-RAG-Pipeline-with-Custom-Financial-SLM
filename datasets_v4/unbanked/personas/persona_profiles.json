@@ -42,7 +42,8 @@
       "loss_tolerance_usd": 75,
       "device": "Android budget phone, prepaid minutes, SMS-primary",
       "persona_source_ids": [
-        "fdic_2023_hh_microdata"
+        "fdic_2023_hh_microdata",
+        "fincen_2024_identity_fta"
       ],
       "behavioral_evidence_grade": "B",
       "grounding": {
@@ -107,8 +108,20 @@
           "confidence": null,
           "source_ids": [],
           "notes": "design assumption — narrative detail not sourced"
+        },
+        "fraud_exposure_power_of_attorney_abuse": {
+          "value": "niece obtained durable POA in late 2023 and made unauthorized money-order purchases on Dorothy's Social Security income through early 2024",
+          "evidence_basis": "FinCEN FTA_IDENTITY_2024 Abuse of Access (T7): misuse of legal authority granted via POA; overlaps with ELDER_FINANCIAL_EXPLOITATION advisory",
+          "confidence": "INFERRED",
+          "source_ids": [
+            "fincen_2024_identity_fta",
+            "fincen_sar_key_terms"
+          ]
         }
-      }
+      },
+      "family_crisis_history": [
+        "power_of_attorney_abuse_caregiver_2024"
+      ]
     },
     {
       "persona_id": "unb_002",

@@ -43,3 +43,11 @@ datasets_v3/sources/pdfs/hh2023/*.sas7bdat
 # Allow small HH2023 metadata/format CSVs to be tracked (override global *.csv rule)
 !datasets_v3/sources/pdfs/hh2023/metadata/metadata.csv
 !datasets_v3/sources/pdfs/hh2023/sas_fmt/formatData.csv
+
+# v4 Adaption Labs large outputs (regeneratable from dataset_id via wrappers)
+datasets_v4/adaptive_combined/adapted_output.jsonl
+datasets_v4/adaptive_combined/for_adaption.jsonl
+datasets_v4/reasoning/adapted_output.jsonl
+datasets_v4/reasoning/for_reasoning.jsonl
+datasets_v4/v4_1/adapted_output.jsonl
+datasets_v4/v4_1/combined_upload.jsonl

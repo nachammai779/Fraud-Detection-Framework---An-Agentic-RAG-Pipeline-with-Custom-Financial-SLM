@@ -102,10 +102,19 @@
             "fincen_sar_key_terms",
             "fincen_2024_identity_fta"
           ]
+        },
+        "fraud_exposure_refusal_to_cooperate": {
+          "value": "after the 2024 SIM-swap ATO, platform customer-support declined to produce transaction-log records DeShawn requested to support his identity-theft affidavit",
+          "evidence_basis": "FinCEN FTA_IDENTITY_2024 Refusal to Cooperate (T8): entity refusing to provide information required for fraud investigation",
+          "confidence": "INFERRED",
+          "source_ids": [
+            "fincen_2024_identity_fta"
+          ]
         }
       },
       "family_crisis_history": [
-        "sim_swap_account_takeover_attempted_2024"
+        "sim_swap_account_takeover_attempted_2024",
+        "platform_refusal_records_id_theft_dispute_2024"
       ]
     },
     {

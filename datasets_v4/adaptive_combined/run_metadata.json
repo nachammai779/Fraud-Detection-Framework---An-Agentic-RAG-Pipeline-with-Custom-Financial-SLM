@@ -1,0 +1,15 @@
+{
+  "archetype": "combined",
+  "dataset_id": "88148465-e021-4b86-82c5-c6f81730a2f6",
+  "run_id": "dataset-88148465-e021-4b86-82c5-c6f81730a2f6-1777039349081",
+  "estimated_credits": 199.0,
+  "estimated_minutes": 259.0,
+  "n_rows": 20000,
+  "per_archetype_counts": {
+    "remittance": 5000,
+    "gig_worker": 5000,
+    "unbanked": 5000,
+    "itin": 5000
+  },
+  "estimate_only": false
+}
