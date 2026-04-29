@@ -4,7 +4,7 @@ Patch layer that brings the v4 dataset from 18/25 to **25/25** FinCEN
 typology coverage and cleans residual narrative issues. v4.1 does not
 regenerate the v4 baseline — it edits in place and adds 300 new rows.
 
-## Headline numbers
+## Key metrics
 
 | Metric | Before v4.1 | After v4.1 |
 |---|---:|---:|
@@ -37,7 +37,7 @@ v4_1/
    is_fraud + language) into the completion body. Anchor on `data_uuid` and
    trim from there backward.
 2. **Re-stamped 4 shadowed FTA codes** (T4, T6, T9, T11) on a half-cap subset
-   so both the FTA and SAR equivalents carry rows. No Adaption credits.
+   so both the FTA and SAR equivalents carry rows. No Adaption credits used.
 3. **Added 3 missing typology codes** (T7 Abuse of Access, T8 Refusal to
    Cooperate, SAR_HUMAN_TRAFFICKING) by patching one persona each
    (`unb_001`, `gig_001`, `itin_010`) with a documented fraud-exposure
