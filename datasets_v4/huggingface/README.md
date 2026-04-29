@@ -2,24 +2,28 @@
 license: cc-by-4.0
 task_categories:
   - tabular-classification
+  - text-generation
 language:
   - en
   - es
   - vi
-  - ht
-  - hi
-  - mr
-  - ta
-  - te
+  - wo
   - yo
+  - hi
   - fr
-  - am
-  - tw
-  - ru
-  - zh
-  - tl
   - ko
+  - zh
+  - ru
+  - tw
+  - am
   - ar
+  - ta
+  - ja
+  - te
+  - fil
+  - mr
+  - ceb
+  - gu
 tags:
   - fraud-detection
   - synthetic-data
@@ -31,7 +35,8 @@ tags:
   - gig-economy
   - unbanked
   - itin
-pretty_name: Persona-Conditioned Fraud Detection (v4, Expanded Typology Coverage)
+  - chain-of-thought
+pretty_name: Persona-Conditioned Fraud Detection (v4 + v4.1, Full Typology Coverage)
 size_categories:
   - 10K<n<100K
 configs:
@@ -69,37 +74,35 @@ configs:
         path: data/typology_registry/train.parquet
 ---
 
-# Persona-Conditioned Fraud Detection Dataset (v4, Expanded Typology Coverage)
+# Persona-Conditioned Fraud Detection Dataset (v4 + v4.1, Full Typology Coverage)
 
-## What's new in v4 vs v3
+A 20,300-row citation-grounded synthetic fraud-narrative dataset for four
+underserved US financial-system archetypes — **remittance**, **gig_worker**,
+**unbanked**, **ITIN** — with **all 25 FinCEN typology codes exercised**.
 
-v3 shipped a citation-grounded dataset with 10 of 25 FinCEN typology codes
-exercised. **v4 closes the gap to 18 of 25 (+80%)** through three targeted
-changes — none of which required new Adaption credits:
+## What's new vs v3
 
-1. **16 persona edits**: added documented fraud events (SIM-swap, BEC,
-   hawala/IVTS, hurricane relief scams, money-mule recruitment, synthetic-ID,
-   unauthorized ACH, lax-KYC observation, false chargeback, COVID-imposter)
-   across gig / remittance / unbanked personas. 4 personas graded D→B.
-2. **SAR-preference typology resolver**: when a fraud vector maps to both an
-   FTA Identity code and a more-specific SAR Advisory code, the resolver now
-   picks the SAR advisory (citeable to a FIN-YYYY-A### advisory). Surfaces 4
-   previously-shadowed SAR codes.
-3. **Narrative overlay from v3** by persona_id: zero-credit reuse of v3's
-   Adaption-filled narratives. Persona voice preserved; row-level amount /
-   day / language drift accepted.
+V3 covered 10 of 25 FinCEN typology codes. **v4 closed the gap to 18/25**
+through three targeted changes:
 
-The generation pipeline is otherwise identical to v3 (persona-conditioned
-Tab-DDPM-style sampling, joint platform+hour for gig workers, five v2
-tightening rules).
+1. **16 persona edits** documenting fraud events (SIM-swap, BEC, hawala/IVTS,
+   hurricane scams, money-mule, synthetic-ID, unauthorized-ACH, lax-KYC,
+   false-chargeback, COVID-imposter). 8 grade upgrades D→B.
+2. **SAR-preference resolver** picks the more-specific SAR Advisory code
+   when both an FTA Identity code and a SAR Advisory match a fraud_vector.
+3. **Combined 20k Adaption narrative fill** — single job, 20 native scripts,
+   per-row persona/transaction context.
 
-### Same three universal v3 columns, updated v4 values
+**v4.1 closed the remaining gap to 25/25** through:
 
-| Field | Type | V4 note |
-|---|---|---|
-| `persona_source_ids` | list[string] | Persona-level; includes new FinCEN advisory IDs for the 16 edited personas |
-| `fraud_vector_typology_ref` | string (nullable) | Re-resolved per SAR-preference rule; 18 distinct codes exercised |
-| `behavioral_evidence_grade` | string A/B/C/D | 4 promotions D→B |
+1. **Strip prompt-tag leakage** from 1,235 narratives (Adaption was echoing
+   the upload metadata block into completions for ~6% of rows).
+2. **Re-stamp 4 shadowed FTA codes** (T4, T6, T9, T11) on a half-cap subset
+   so both the FTA and SAR equivalents carry rows. No Adaption credits.
+3. **Add 3 truly-missing codes** (T7 Abuse of Access, T8 Refusal to Cooperate,
+   SAR_HUMAN_TRAFFICKING) via persona-event additions on `unb_001`,
+   `gig_001`, `itin_010` + 300 synthetic transactions narrated by Adaption.
+4. **Refill 51/52 empty narratives** by resubmitting the original prompts.
 
 ## Quick start
 
@@ -108,49 +111,46 @@ from datasets import load_dataset
 
 repo = "Nachammai41/underserved-persona_conditioned-fraud-v4"  # TBD
 
-ds = load_dataset(repo, name="all")["train"]                    # 20,000 rows
-remit = load_dataset(repo, name="remittance")["train"]          # 5,000 rows
-personas = load_dataset(repo, name="personas")["train"]         # 46 rows
-sources = load_dataset(repo, name="sources")["train"]           # 13 rows
-typology = load_dataset(repo, name="typology_registry")["train"] # 25 rows
+ds       = load_dataset(repo, name="all")["train"]                  # 20,300 rows
+remit    = load_dataset(repo, name="remittance")["train"]           #  5,000 rows
+gig      = load_dataset(repo, name="gig_worker")["train"]           #  5,100 rows
+unbanked = load_dataset(repo, name="unbanked")["train"]             #  5,100 rows
+itin     = load_dataset(repo, name="itin")["train"]                 #  5,100 rows
+personas = load_dataset(repo, name="personas")["train"]             #     46 rows
+sources  = load_dataset(repo, name="sources")["train"]              #     13 rows
+typology = load_dataset(repo, name="typology_registry")["train"]    #     25 rows
 ```
 
 ## Dataset Statistics
 
 | Metric | Value |
-|--------|-------|
-| Total transactions | 20,000 (5,000 per archetype) |
-| Total personas | 46 (12 remittance, 12 gig_worker, 10 unbanked, 12 ITIN) |
-| Fraud rate | ~10% per archetype |
+|---|---|
+| Total transactions | **20,300** |
+| Per-archetype rows | remittance 5,000 / gig_worker 5,100 / unbanked 5,100 / itin 5,100 |
+| Total personas | 46 (12/12/10/12) |
 | Sources in registry | 13 (7 PDFs + 1 data bundle + 5 links) |
-| FinCEN typology codes | 25 registered, **18 exercised** in generated output |
-| Languages | 17+ native scripts (Latin, Devanagari, CJK, Arabic, Cyrillic, Ge'ez, etc.) |
-| Overall grade distribution | A 6.3% / **B 58.3%** / C 22.9% / **D 12.5%** |
-| Narrative fill rate | 100% (v3-overlaid) |
+| FinCEN typology codes | 25 registered, **all 25 exercised** |
+| Languages | 20 tagged, 29 detected, 92.8% tag↔detect match |
+| Fraud rate | ~11.1% (2,263 of 20,300 rows) |
+| Overall persona grade | A 6.3% / **B 58.3%** / C 22.9% / **D 12.5%** |
+| Narrative fill rate | 99.81% (39 empty rows of 20,300) |
+| Prompt-tag leakage | 0 (post-strip) |
 
-## Narrative-overlay tradeoff
+## Narrative quality
 
-v4 reuses v3's narratives by `persona_id` without new credit spend. This
-preserves **persona-level grounding** (corridor, platform, biographical
-details) but introduces **row-level drift** in:
+Combined 20k Adaption fresh fill recovers row-level signals that an overlay
+approach would have lost:
 
 | Signal | v3 | v4 | Note |
 |---|---:|---:|---|
-| Corridor keyword in narrative | 71.4% | 71.1% | stable |
-| Platform name in narrative | 42.7% | 43.2% | stable |
-| Amount in narrative (rounded) | 35.9% | 7.8% | drift |
-| Amount in narrative (exact) | 28.5% | 1.6% | drift |
-| Day of week mentioned | 47.4% | 24.5% | drift |
-| Language tag↔detected match | 92.1% | 59.3% | drift |
-
-Downstream consumers using the **structured columns** (amount, instrument,
-day_of_week, language, etc.) are unaffected — those are accurate. Models
-trying to recover transaction features from `narrative_text` will see
-degraded signal compared to v3; prefer the structured columns for that.
-
-If your use case requires row-accurate narratives, use
-[`Nachammai41/underserved-persona_conditioned-fraud-v3`](https://huggingface.co/datasets/Nachammai41/underserved-persona_conditioned-fraud-v3)
-— same schema, higher row-level narrative fidelity, 10-of-25 typology coverage.
+| Corridor keyword | 71.4% | 68.4% | persona-level, stable |
+| Platform name | 42.7% | 41.6% | persona-level, stable |
+| Day of week | 47.4% | 43.6% | row-level, recovered |
+| Instrument | 37.7% | 37.6% | row-level, recovered |
+| Amount (rounded) | 35.9% | 27.4% | row-level |
+| Amount (exact) | 28.5% | 19.1% | row-level |
+| Hour class | 35.9% | 38.4% | row-level, recovered |
+| Language tag↔detect | 92.1% | 92.8% | row-level, recovered |
 
 ## Archetypes
 
@@ -164,62 +164,76 @@ If your use case requires row-accurate narratives, use
 ## Available Configs
 
 **Transaction data:**
-- `all` — 20,000 rows across all 4 archetypes
-- `remittance` / `gig_worker` / `unbanked` / `itin` — 5,000 rows each
+- `all` — 20,300 rows across all 4 archetypes
+- `remittance` (5,000) / `gig_worker` (5,100) / `unbanked` (5,100) / `itin` (5,100)
 
 **Reference / attribution:**
-- `personas` — 46 persona profiles with evidence grade, source IDs, family_crisis_history (v4 edits included)
-- `sources` — 13-entry citation registry (with v4 unbanked archetype extension noted)
-- `typology_registry` — 25 FinCEN typology codes with applies_to_fraud_vectors mapping
+- `personas` — 46 persona profiles with grade, source IDs, family_crisis_history
+- `sources` — 13-entry citation registry
+- `typology_registry` — 25 FinCEN typology codes with applies_to_fraud_vectors
 
 ## Schema
 
-Same 25 columns as v3. See v3 dataset card for field-by-field descriptions.
-V4-specific columns (`persona_source_ids`, `fraud_vector_typology_ref`,
-`behavioral_evidence_grade`) carry v4 values, recomputed from the edited
-persona profiles.
+Same 25 columns as v3, plus three universal grounding columns
+(`persona_source_ids`, `fraud_vector_typology_ref`,
+`behavioral_evidence_grade`). See `dataset_card.md` for field-by-field
+descriptions.
 
-## V4 Typology Coverage Table
+## V4 + v4.1 Typology Coverage Table (all 25 codes)
 
-| Code | Count | Notes |
+| Code | Count | Source |
 |---|---:|---|
-| SAR_ADVISORY_ELDER_FINANCIAL_EXPLOITATION | 326 | carries from v3 |
-| SAR_ADVISORY_ACCOUNT_TAKEOVER_FRAUD | 271 | **v4-new** via SAR-pref + ATO events |
-| FTA_IDENTITY_2024_T1 (General Fraud) | 259 | |
-| FTA_IDENTITY_2024_T10 (Scam) | 207 | shifted, portion redirected to SAR-specifics |
-| SAR_ADVISORY_TAX_REFUND_FRAUD | 205 | |
-| FTA_IDENTITY_2024_T13 (Synthetic Identity) | 197 | |
-| FTA_IDENTITY_2024_T2 (False Records) | 101 | |
-| FTA_IDENTITY_2024_T3 (Identity Theft) | 95 | |
-| SAR_ADVISORY_BEC_FRAUD | 88 | **v4-new** via BEC events on gig_004/gig_006 |
-| FTA_IDENTITY_2024_T14 (Kiting) | 86 | |
-| SAR_ADVISORY_IVTS | 29 | **v4-new** via rem_004 hawala + rem_009 Bronx-merchant events |
-| SAR_ADVISORY_COVID19_IMPOSTER_SCAMS | 25 | **v4-new** via rem_007 COVID + rem_010 money-mule events |
-| SAR_ADVISORY_CYBER_EVENTS | 15 | **v4-new** via gig_012 phishing event |
-| SAR_ADVISORY_THIRD_PARTY_PAYMENT_PROCESSORS | 15 | **v4-new** via unb_003 unauthorized-ACH event |
-| FTA_IDENTITY_2024_T12 (False Claims) | 13 | **v4-new** via gig_008 false-chargeback event |
-| SAR_ADVISORY_DISASTER_RELATED_FRAUD | 13 | **v4-new** via rem_002 + rem_011 hurricane events |
-| SAR_ADVISORY_FUNNEL_ACCOUNT | 11 | **v4-new** via rem_012 funnel-account event |
-| FTA_IDENTITY_2024_T5 (Circumventing Standards) | 7 | **v4-new** via unb_009 lax-KYC event |
+| SAR_ADVISORY_ELDER_FINANCIAL_EXPLOITATION | 326 | inherited from v3 |
+| FTA_IDENTITY_2024_T1 (General Fraud) | 259 | broad coverage |
+| FTA_IDENTITY_2024_T10 (Scam) | 207 | redirected to SAR-specifics |
+| SAR_ADVISORY_TAX_REFUND_FRAUD | 205 | inherited |
+| FTA_IDENTITY_2024_T13 (Synthetic Identity) | 197 | inherited |
+| SAR_ADVISORY_ACCOUNT_TAKEOVER_FRAUD | 171 | SAR-pref + gig_001/gig_011 |
+| FTA_IDENTITY_2024_T2 (False Records) | 101 | inherited |
+| FTA_IDENTITY_2024_T6 (Account Takeover) | 100 | **v4.1** half-cap re-stamp |
+| SAR_ADVISORY_HUMAN_TRAFFICKING | 100 | **v4.1** itin_010 wage_confiscation event |
+| FTA_IDENTITY_2024_T8 (Refusal to Cooperate) | 100 | **v4.1** gig_001 platform_refusal event |
+| FTA_IDENTITY_2024_T7 (Abuse of Access) | 100 | **v4.1** unb_001 POA_abuse event |
+| FTA_IDENTITY_2024_T3 (Identity Theft) | 95 | inherited |
+| FTA_IDENTITY_2024_T14 (Kiting) | 86 | inherited |
+| FTA_IDENTITY_2024_T11 (BEC) | 44 | **v4.1** half-cap re-stamp |
+| SAR_ADVISORY_BEC_FRAUD | 44 | gig_004/gig_006 BEC events |
+| SAR_ADVISORY_IVTS | 29 | rem_004 + rem_009 IVTS/hawala |
+| SAR_ADVISORY_COVID19_IMPOSTER_SCAMS | 17 | rem_007 + rem_010 |
+| SAR_ADVISORY_THIRD_PARTY_PAYMENT_PROCESSORS | 15 | unb_003 unauthorized-ACH |
+| FTA_IDENTITY_2024_T12 (False Claims) | 13 | gig_008 false-chargeback |
+| SAR_ADVISORY_DISASTER_RELATED_FRAUD | 13 | rem_002 + rem_011 hurricane |
+| SAR_ADVISORY_FUNNEL_ACCOUNT | 11 | rem_012 |
+| FTA_IDENTITY_2024_T4 (Third-Party ML) | 8 | **v4.1** half-cap re-stamp |
+| SAR_ADVISORY_CYBER_EVENTS | 8 | gig_012 phishing |
+| FTA_IDENTITY_2024_T9 (Cyber Incident) | 7 | **v4.1** half-cap re-stamp |
+| FTA_IDENTITY_2024_T5 (Circumventing Standards) | 7 | unb_009 lax-KYC |
 
-Unexercised (7/25): FTA T4 (recoverable), FTA T6/T9/T11 (SAR shadow-dedupes),
-FTA T7 Abuse of Access (insider concept), FTA T8 Refusal to Cooperate
-(regulatory), SAR_HUMAN_TRAFFICKING (deliberately skipped as sensitive).
+Total fraud rows: 2,263. **All 25 codes carry rows.**
+
+## Companion: CoT reasoning dataset
+
+A separate **3,926-row chain-of-thought dataset** (1,963 fraud + 1,963
+matched non-fraud) was generated for SFT/judge training, with reasoning
+traces appended via Adaption's `reasoning_traces` recipe. Adaption quality
+grade: **E → A (+92%)**, 100% trace fill. Lives at
+`datasets_v4/reasoning/cot_dataset.parquet` and is **not** part of the
+20,300-row bundle published here.
 
 ## License
 
-Released under CC-BY-4.0 for research and educational purposes. Persona names
-are fictional; biographical details are composed from published aggregate
-source evidence. Any resemblance to real individuals is coincidental.
+Released under CC-BY-4.0 for research and educational purposes. Persona
+names are fictional; biographical details are composed from published
+aggregate source evidence. Any resemblance to real individuals is
+coincidental.
 
 ## Credits
 
-- Adaption Labs — narrative fill (v3 narratives overlaid into v4)
-- FinCEN — Financial Trend Analysis 2024 (Identity), SAR Advisory Key Terms
-- FDIC — 2023 National Survey of Unbanked and Underbanked Households
-- Menjívar, Agadjanian & Oh — "The Contradictions of Liminal Legality" (Soc Probl 2022)
-- Del Real — "Seemingly inclusive liminal legality" (J Ethn Migr Stud 2022)
-- Vallas & Schor — "What Do Platforms Do?" (Annu Rev Sociol 2020)
-- Remitly, Wise, Inter-American Dialogue, Oxfam America, IRS SOI, Treasury
-  OIG, Federal Reserve FedPayments Improvement — industry & regulatory sources
-- Tab-DDPM — Gaussian multinomial diffusion for tabular data
+- **Adaption Labs** — narrative fill (combined 20k v4 job + v4.1 patch + CoT job)
+- **FinCEN** — Financial Trend Analysis 2024 (Identity), SAR Advisory Key Terms
+- **FDIC** — 2023 National Survey of Unbanked and Underbanked Households
+- **Menjívar, Agadjanian & Oh** — "The Contradictions of Liminal Legality" (Soc Probl 2022)
+- **Del Real** — "Seemingly inclusive liminal legality" (J Ethn Migr Stud 2022)
+- **Vallas & Schor** — "What Do Platforms Do?" (Annu Rev Sociol 2020)
+- **Remitly, Wise, Inter-American Dialogue, Oxfam America, IRS SOI, Treasury OIG, Federal Reserve FedPayments Improvement** — industry & regulatory sources
+- **Tab-DDPM** — Gaussian multinomial diffusion for tabular data
