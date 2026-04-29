@@ -19,6 +19,9 @@ closes typology coverage to 25/25.
 
 A separate **CoT reasoning dataset** (3,926 rows: all fraud + matched legit)
 lives at `reasoning/cot_dataset.parquet` for SFT use; A-graded by Adaption.
+Also published as the `cot_reasoning` config in the HF tree at
+`huggingface/data/cot_reasoning/train.parquet` (rebuilt by
+`build_hf_data.py`).
 
 ## Languages (20 tagged)
 

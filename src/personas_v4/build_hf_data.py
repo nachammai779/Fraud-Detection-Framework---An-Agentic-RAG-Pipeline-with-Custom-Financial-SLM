@@ -86,6 +86,15 @@ def build_sources():
     _write(pd.DataFrame(rows), "sources")
 
 
+def build_cot_reasoning():
+    src = V4 / "reasoning" / "cot_dataset.parquet"
+    if not src.exists():
+        print(f"  cot_reasoning       SKIPPED — {src} missing (run cot_adaption_job.py --download first)")
+        return
+    df = pd.read_parquet(src)
+    _write(df, "cot_reasoning")
+
+
 def build_typology():
     data = json.loads((V4 / "sources" / "typology_registry.json").read_text(encoding="utf-8"))
     rows = []
@@ -112,6 +121,8 @@ def main():
     build_personas()
     build_sources()
     build_typology()
+    print("--- cot_reasoning ---")
+    build_cot_reasoning()
     print("\ndone.")
 
 

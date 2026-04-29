@@ -72,6 +72,10 @@ configs:
     data_files:
       - split: train
         path: data/typology_registry/train.parquet
+  - config_name: cot_reasoning
+    data_files:
+      - split: train
+        path: data/cot_reasoning/train.parquet
 ---
 
 # Persona-Conditioned Fraud Detection Dataset (v4 + v4.1, Full Typology Coverage)
@@ -119,6 +123,7 @@ itin     = load_dataset(repo, name="itin")["train"]                 #  5,100 row
 personas = load_dataset(repo, name="personas")["train"]             #     46 rows
 sources  = load_dataset(repo, name="sources")["train"]              #     13 rows
 typology = load_dataset(repo, name="typology_registry")["train"]    #     25 rows
+cot      = load_dataset(repo, name="cot_reasoning")["train"]        #  3,926 rows (SFT companion)
 ```
 
 ## Dataset Statistics
@@ -172,6 +177,9 @@ approach would have lost:
 - `sources` — 13-entry citation registry
 - `typology_registry` — 25 FinCEN typology codes with applies_to_fraud_vectors
 
+**SFT companion:**
+- `cot_reasoning` — 3,926 rows (1,963 fraud + 1,963 matched non-fraud) with chain-of-thought reasoning traces; A-graded by Adaption (E → A, +92%), 100% trace fill
+
 ## Schema
 
 Same 25 columns as v3, plus three universal grounding columns
@@ -211,14 +219,46 @@ descriptions.
 
 Total fraud rows: 2,263. **All 25 codes carry rows.**
 
-## Companion: CoT reasoning dataset
+## Companion: CoT reasoning dataset (`cot_reasoning` config)
 
-A separate **3,926-row chain-of-thought dataset** (1,963 fraud + 1,963
-matched non-fraud) was generated for SFT/judge training, with reasoning
-traces appended via Adaption's `reasoning_traces` recipe. Adaption quality
-grade: **E → A (+92%)**, 100% trace fill. Lives at
-`datasets_v4/reasoning/cot_dataset.parquet` and is **not** part of the
-20,300-row bundle published here.
+A **3,926-row chain-of-thought dataset** (1,963 fraud + 1,963 matched
+non-fraud) generated for SFT / judge training. Each row pairs a v4
+transaction with a reasoning trace produced by Adaption's
+`reasoning_traces` recipe. Adaption quality grade: **E → A (+92%)**,
+100% trace fill.
+
+```python
+cot = load_dataset(repo, name="cot_reasoning")["train"]
+cot[0]["cot_reasoning_trace"]    # step-by-step reasoning
+cot[0]["cot_completion"]         # final verdict + supporting analysis
+cot[0]["narrative_text"]         # the v4 narrative under review
+cot[0]["is_fraud"]               # the ground-truth label the trace reasons toward
+```
+
+### Schema (additional columns vs the transaction configs)
+
+| Field | Type | Description |
+|---|---|---|
+| `cot_completion` | string | Final verdict + analysis emitted by the reasoning recipe |
+| `cot_reasoning_trace` | string | Step-by-step reasoning produced by Adaption |
+| `enhanced_prompt` | string | Adaption's rephrased prompt (audit trail) |
+| `amount_band` | category | Band used for fraud/non-fraud matching (xs/s/m/l/xl) |
+
+All other columns are inherited from the parent v4 transaction row, so
+you can join `cot_reasoning` to `all` on `data_uuid` if you need
+additional context.
+
+### Suggested uses
+
+- **SFT for fraud-analyst LLMs**: train a model to emit reasoning traces
+  given (transaction metadata + narrative) → verdict.
+- **LLM-as-judge fine-tuning**: distill the reasoning style into a
+  smaller model used for evaluation pipelines.
+- **CoT data augmentation**: combine with the 20,300-row bundle for
+  mixed reasoning + narrative-only training.
+
+The CoT subset is independent of the 20,300-row bundle — selecting
+`cot_reasoning` does not duplicate rows from `all`.
 
 ## License
 
