@@ -11,7 +11,7 @@ closes typology coverage to 25/25.
 |---|---|
 | Rows | 20,300 |
 | Personas | 46 (3 patched in v4.1 with new fraud-event grounding) |
-| Languages | 20 tagged, 29 detected, 92.8% tag↔detect match |
+| Languages | 20 tagged, 29 detected, 92.8% tag↔detect match (see list below) |
 | Typology coverage | **25 / 25** FinCEN codes (was 18 / 25 at v4 close) |
 | Fraud / legit | 2,263 fraud / 18,037 legit |
 | Empty narratives | 39 (~0.19%) |
@@ -19,6 +19,35 @@ closes typology coverage to 25/25.
 
 A separate **CoT reasoning dataset** (3,926 rows: all fraud + matched legit)
 lives at `reasoning/cot_dataset.parquet` for SFT use; A-graded by Adaption.
+
+## Languages (20 tagged)
+
+| Code | Language | Rows |
+|---|---|---:|
+| en | English | 12,164 |
+| es | Spanish | 3,693 |
+| vi | Vietnamese | 683 |
+| wo | Wolof | 390 |
+| yo | Yoruba | 388 |
+| hi | Hindi | 296 |
+| fr | French | 256 |
+| ko | Korean | 228 |
+| zh | Chinese | 218 |
+| ru | Russian | 215 |
+| tw | Twi | 207 |
+| am | Amharic | 206 |
+| ar | Arabic | 205 |
+| ta | Tamil | 202 |
+| ja | Japanese | 189 |
+| te | Telugu | 188 |
+| fil | Filipino | 149 |
+| mr | Marathi | 145 |
+| ceb | Cebuano | 142 |
+| gu | Gujarati | 136 |
+
+`detected_language_hints` column captures runtime-detected languages (29
+distinct, including Somali, Swahili, Indonesian, and others picked up by
+langdetect on phrase fragments).
 
 ## Where things live
 
