@@ -74,7 +74,7 @@ datasets_v4/
 ├── adaptive_combined/               20k Adaption combined-job inputs/outputs
 ├── reasoning/                       CoT dataset (3,926 rows) for SFT
 ├── v4_1/                            v4.1 patch layer (see v4_1/README.md)
-└── huggingface/                     8 HF dataset configs + card
+└── huggingface/                     9 HF dataset configs + card (incl. cot_reasoning)
 ```
 
 ## Quick start
