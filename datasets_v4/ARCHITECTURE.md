@@ -1,19 +1,25 @@
 # V4 Citation-Grounded Dataset Pipeline — Architecture Walkthrough
 
+> v4.1 closed the remaining coverage gap to 25/25 typology codes via a small
+> patch layer. See `v4_1/ARCHITECTURE.md` for that delta. This document
+> describes v4 itself: the 20,000-row baseline through the combined Adaption
+> narrative fill.
+
 ## What changed from v3
 
 V3 shipped a citation-grounded dataset with 10 of 25 FinCEN typology codes
-exercised. V4 closes that coverage gap through three targeted changes, none
-of which required new Adaption credits.
+exercised. V4 closes most of that coverage gap through three targeted
+generator-level changes, then replaces v3's narrative content with a fresh
+20,000-row Adaption pass.
 
 | Change | Effect |
 |---|---|
 | 16 persona edits (11 carried from a v3 draft + 5 new typology-focused) | Documented fraud events expanded across gig_worker, remittance, and unbanked personas; 8 persona grade upgrades (D→B) |
 | Typology resolver rule: SAR advisories preferred over FTA codes when both match a fraud_vector | Surfaces 4 previously-shadowed SAR advisory codes (ATO, BEC, Cyber Events, Disaster-Related Fraud) in every fraud row |
 | 9 new fraud-event regex patterns in the generator | New events like `hurricane_maria_fake_charity_scam_attempted_2018`, `ivts_ghanaian_merchant_network_recurring`, and `unauthorized_ach_greendot_prepaid_2024_reversed` map to the correct typology code at sampling time |
-| Narrative overlay from v3 per `persona_id` | v4 transactions inherit v3's Adaption-filled narrative_text without new credit spend; accepts row-level drift in amounts / days / languages (see tradeoff section) |
+| Combined 20k Adaption narrative fill | Per-row narratives in 20 languages with persona/transaction context injected; replaces the planned v3 overlay |
 
-**Typology coverage: 10 → 18 of 25 codes exercised (+80% relative).**
+**Typology coverage at v4 close: 18 of 25 codes exercised (+80% relative to v3).** v4.1 patches close to 25/25.
 
 ---
 
@@ -28,7 +34,8 @@ V4:  datasets_v3/ (frozen on HF) + 16 persona edits
      -> synthesised persona_profiles (v4)
      -> TabDDPM v4 generator (SAR-preference + expanded fraud patterns)
      -> transactions.parquet (new metadata columns, same shape)
-     -> Overlay v3 narratives by persona_id -> transactions_adapted.parquet
+     -> Combined 20k Adaption narrative fill -> transactions_adapted.parquet
+     -> Post-process: strip prompt-tag leakage
 ```
 
 The three universal v3 columns remain:
@@ -162,42 +169,75 @@ per-persona allocation — is bit-identical to v3.
 
 ---
 
-## Stage 4 — Narrative overlay (v3 → v4)
+## Stage 4 — Narrative fill (combined 20k Adaption job)
 
-`src/personas_v4/overlay_v3_narratives.py` copies narrative_text from v3's
-`transactions_adapted.parquet` files to v4's rows, matched by `persona_id`.
-For each v4 row, a v3 row with the same persona is chosen at random
-(seeded) and its narrative is copied.
+The original plan was to overlay v3 narratives by `persona_id` for zero credit
+spend. A 50-row MVP fill on `remittance` (`adapted_output_phase2_mvp50.jsonl`)
+showed that fresh per-row narratives recovered the row-level signals overlay
+sacrificed (amount, hour, day, instrument). Based on that signal, the full
+20,000-row submission ran as a single combined Adaption job.
 
-### Why overlay instead of new narrative fill
+`src/personas_v4/adaptive_v4.py --combined --submit/--check/--download` drives
+the flow:
 
-- **Cost**: 0 credits vs ~400 credits for a full 20,000-row fresh narrative fill.
-- **Persona voice preserved**: narratives remain biographically consistent with
-  the persona (same corridor, platform, family context).
-- **Explicit tradeoff accepted**: row-level grounding drifts — a v4 row might
-  have `language=es` but the overlaid narrative is in English (from a
-  different v3 row of the same persona). Amount / day / hour details in the
-  narrative reflect the source v3 row, not the new v4 row.
+1. Build a single upload JSONL combining all four archetype prompt sets at
+   `datasets_v4/adaptive_combined/for_adaption.jsonl`.
+2. Submit one job to Adaption (one queue position vs four).
+3. Download → split per `archetype` field → merge `narrative_text` into each
+   archetype's `transactions_adapted.parquet` by `data_uuid`.
 
-### Measured drift (from `analyze_narratives.py` on v4)
+### Prompt structure
 
-| Signal | v3 propagation | v4 propagation | Notes |
-|---|---:|---:|---|
-| Corridor keyword | 71.4% | 71.1% | persona-level, carries cleanly |
-| Platform name | 42.7% | 43.2% | persona-level, carries cleanly |
-| Persona first name | 1.4% | 1.4% | stable (first-person narrative rarely self-names) |
-| Day of week | 47.4% | 24.5% | row-level drift |
-| Instrument | 37.7% | 22.7% | row-level drift |
-| Amount rounded | 35.9% | 7.8% | heavy row-level drift |
-| Amount exact | 28.5% | 1.6% | heavy row-level drift |
-| Hour class | 35.9% | 22.5% | row-level drift |
-| Language tag↔detected match | 92.1% | 59.3% | drift from per-row language resampling vs per-persona narrative pool |
+Each prompt embeds the persona summary, the transaction JSON, the assigned
+language code, and an emotional-beat instruction:
 
-If row-level narrative fidelity matters downstream (e.g. for training a model
-to predict amount from narrative), a v4.1 fresh narrative pass is the fix.
-Phase 2 (planned) submits 50 rows per archetype for an MVP-sized
-sample of fresh v4 narratives to measure whether the quality-uplift
-justifies a full resubmission.
+```
+Write a realistic first-person narrative (3-5 sentences) from this persona
+describing a {legitimate|fraudulent} transaction that just occurred. Use the
+persona's voice, cultural context, and primary language. If fraudulent, hint
+at the scam mechanic without naming it explicitly.
+
+Persona ({archetype}): {summary}
+
+Transaction: {amount, fee, instrument, fraud_vector, hour, day, days_since_last, is_fraud}
+
+Language to write in: {ISO-639-1 code}. Include one emotional beat consistent
+with the transaction (relief, worry, gratitude, shame, obligation). Return
+just the narrative text, no preamble.
+```
+
+### Outcome
+
+- **Adaption quality**: graded by Adaption's own evaluation
+- **Empties**: 47 rows initially returned empty (later refilled in v4.1; 39 remain)
+- **Languages**: 20 distinct tagged languages, 92.8% tag↔detect match rate
+
+### Stage 4b — Post-processing: prompt-tag leakage strip
+
+About 5.8% of returned narratives (1,235 rows) contained the
+"Additional Context Tags" block (archetype + persona_id + data_uuid +
+is_fraud + language) echoed into the completion body — Adaption's
+prompt-rephrase pipeline leaking the upload metadata into the output.
+
+`src/personas_v4/strip_prompt_leakage.py` removes these by anchoring on
+`data_uuid` (a 36-char UUID never appears in real prose) and trimming
+backward through any preceding separator tokens. Run once, in place. After
+the strip, no row contains `data_uuid` anywhere in `narrative_text`.
+
+### Comparison against the abandoned overlay path
+
+| Signal | overlay (planned) | combined fresh fill (shipped) |
+|---|---:|---:|
+| Corridor keyword | 71.1% | 68.4% |
+| Platform name | 43.2% | 41.6% |
+| Day of week | 24.5% | **43.6%** |
+| Instrument | 22.7% | **37.6%** |
+| Amount rounded | 7.8% | **27.4%** |
+| Amount exact | 1.6% | **19.1%** |
+| Hour class | 22.5% | **38.4%** |
+| Language tag↔detected | 59.3% | **92.8%** |
+
+Row-level signals roughly doubled vs the overlay would have delivered.
 
 ---
 
@@ -222,20 +262,26 @@ datasets_v4/exports/
 
 ---
 
-## Stage 6 — Phase-2 narrative uplift (planned, next)
+## Stage 6 — v4.1 patch layer
 
-The overlay tradeoff is accepted but not ideal. Phase 2 submits a
-stratified **50 rows per archetype × 4 archetypes = 200 rows** to Adaption
-for fresh narrative fill, then compares row-level propagation rates between
-v4-overlay and v4-fresh narratives to decide whether a full 20k fresh pass is
-worthwhile.
+After v4 closed at 18/25 typology coverage with the combined fresh fill,
+a small patch layer brought it to 25/25 + cleaned residual issues:
 
-**Estimated cost**: ~4 credits (1 credit per 50-row archetype at v3-era
-pricing).
+- Re-stamp shadowed FTA codes (T4/T6/T9/T11) on a half-cap subset so the
+  SAR counterparts persist alongside (18 → 22 codes, no Adaption credits).
+- Add 3 truly-missing typology codes (T7 Abuse of Access, T8 Refusal to
+  Cooperate, SAR_HUMAN_TRAFFICKING) via persona-event additions on
+  unb_001, gig_001, itin_010 + 300 synthetic transactions narrated by
+  Adaption (22 → 25, ~4 credits).
+- Refill 51/52 empty narratives via prompt-preserving re-submit.
 
-**Success criterion**: if v4-fresh shows amount-in-narrative propagation
-recover to ≥30% (close to v3's 35.9%), a full resubmission is justified.
-Otherwise the overlay is sufficient for v4's use cases.
+See `v4_1/ARCHITECTURE.md` for details. Bundle grew from 20,000 to 20,300
+rows. After v4.1 the dataset ships at 25/25 typology coverage.
+
+A separate **CoT reasoning dataset** (3,926 rows: all fraud + matched
+non-fraud) was generated for SFT use; it lives at
+`datasets_v4/reasoning/cot_dataset.parquet` and is independent of the
+20k bundle.
 
 ---
 
@@ -244,26 +290,40 @@ Otherwise the overlay is sufficient for v4's use cases.
 ```
 src/personas_v4/
     _apply_persona_edits.py          one-shot edit script (16 edits)
-    adaptive_v4.py                   narrative fill (--estimate/--submit/--check/--download)
+    adaptive_v4.py                   narrative fill (per-archetype + --combined)
     analyze_narratives.py            5-question analysis report generator
     export_dataset.py                bundle exporter
     extract_fdic_unbanked.py         cross-references v3 FDIC bundle
     lint_personas.py                 source + typology integrity check
-    overlay_v3_narratives.py         v3→v4 narrative inheritance
+    overlay_v3_narratives.py         v3→v4 narrative inheritance (legacy; superseded)
+    strip_prompt_leakage.py          post-process: strip echoed tag block from narratives
     tabddpm_v4_generator.py          generator with SAR-preference + expanded patterns
+    # v4.1 patch layer:
+    v4_1_restamp_shadowed.py         flips SAR-stamped rows to FTA equivalents
+    v4_1_add_missing_typologies.py   patches 3 personas + synthesises 300 rows
+    v4_1_adaption_job.py             submits combined v4.1 Adaption run
+    v4_1_merge_missing.py            merges v4.1 narratives back into bundle
+    build_v4_1_reprompt.py           builds the empties-refill JSONL
+    # CoT subset:
+    build_cot_job.py                 selects fraud + matched negatives, builds prompts
+    cot_adaption_job.py              submit/check/download wrapper for the CoT job
 
 datasets_v4/
     sources/                         (copied from v3, with unbanked archetype extension)
     {archetype}/
         personas/persona_profiles.json     synthesised personas w/ v4 edits
         synthetic/transactions.parquet     v4 generator output
-        adaptive/transactions_adapted.parquet   v3 narrative-overlaid final artifact
-    exports/                         bundled deliverable
+        adaptive/transactions_adapted.parquet   final fresh-narrative artifact
+    adaptive_combined/               combined 20k Adaption run inputs/outputs
+    reasoning/                       CoT dataset (3,926 rows)
+    v4_1/                            v4.1 patch layer artifacts
+    exports/                         bundled deliverable (20,300 rows post-v4.1)
     huggingface/
         data/                        8 HF-compatible configs
         README.md                    HF dataset card
     ARCHITECTURE.md                  this document
     DISTRIBUTION_METRICS.md          v4 sampling + grade/typology metrics
+    README.md                        directory overview + quick start
 ```
 
 ---
@@ -274,20 +334,18 @@ datasets_v4/
 |---|---:|
 | V4 persona edits | 0 |
 | V4 generator regeneration | 0 |
-| V3 narrative overlay | 0 |
-| V4 export + HF build | 0 |
-| Phase 2 MVP narrative fill (planned, next commit) | ~4 |
-| **Total v4 spend so far** | **0** |
-
-All v4 quality uplift to this point was free. Phase 2 is the first and
-smallest credit spend for v4 — bounded at ~4 credits to validate fresh
-narrative uplift before committing to a larger pass.
+| Combined 20k Adaption narrative fill | ~199 |
+| Phase 2 MVP narrative fill (50-row remittance only, validated approach) | ~1 |
+| Post-process: prompt-tag leakage strip | 0 |
+| **v4 close** | **~200** |
+| v4.1 missing-typology + empties refill | ~4 |
+| CoT reasoning job (3,926 rows) | (separate budget; A-graded) |
 
 ---
 
 ## Known limitations
 
-1. **Narrative row-level drift** — quantified in Stage 4, deliberate tradeoff.
-2. **7 unexercised typology codes** — 5 are FTA/SAR shadow-dedupes (same fraud routed to the more-specific code), 1 insider concept (T7), 1 deliberately skipped (SAR_HUMAN_TRAFFICKING).
-3. **No Forge integration yet** — Adaption's Forge unstructured-document pipeline is the next major extension; v4 is the pre-Forge baseline.
-4. **No ethnographic A-grade sources added** — A-share unchanged from v3 (6.3% overall). Closing requires UC Berkeley Labor Center / CFPB focus-group / Treasury IG interview sources.
+1. **39 empty narratives remain** (~0.19% of 20,300 rows) after the v4.1 refill pass.
+2. **No Forge integration yet** — Adaption's Forge unstructured-document pipeline is a possible future extension; v4 is the pre-Forge baseline.
+3. **No ethnographic A-grade sources added** — A-share unchanged from v3 (6.3% overall). Closing requires UC Berkeley Labor Center / CFPB focus-group / Treasury IG interview sources.
+4. **Two FTA codes (T6, T11) live alongside their SAR counterparts** as a result of the v4.1 half-cap re-stamp — both codes retain rows so coverage stays at 25/25 without erasing the SAR-preference outcome.
