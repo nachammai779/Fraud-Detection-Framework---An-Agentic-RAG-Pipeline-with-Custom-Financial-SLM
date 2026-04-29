@@ -92,7 +92,7 @@ cot = pd.read_parquet("datasets_v4/reasoning/cot_dataset.parquet")
 # Columns include: cot_completion, cot_reasoning_trace + the v4 row metadata
 ```
 
-## How v4 was built (one-paragraph summary)
+## How v4 was built
 
 Start from v3 personas + sources. Apply 16 persona edits to expand fraud-event
 coverage (8 grade upgrades D→B). Run TabDDPM v4 generator with the
