@@ -1,0 +1,42 @@
+{
+  "remittance": {
+    "dataset_id": "789ad6cf-bca7-48ca-8608-c26581e54edb",
+    "upload_path": "datasets\\sft_v3_pass2\\remittance\\for_pass2_nonfraud.jsonl",
+    "rows": 1257,
+    "estimated_credits": 13.0,
+    "estimated_minutes": 26.0,
+    "submitted_at": "2026-05-27T04:04:10.760779+00:00",
+    "status": "running",
+    "run_id": "dataset-789ad6cf-bca7-48ca-8608-c26581e54edb-1779854649889"
+  },
+  "gig_worker": {
+    "dataset_id": "7af96ab0-3d8f-49e3-ac2f-a41f19fd730b",
+    "upload_path": "datasets\\sft_v3_pass2\\gig_worker\\for_pass2_nonfraud.jsonl",
+    "rows": 1231,
+    "estimated_credits": 13.0,
+    "estimated_minutes": 26.0,
+    "submitted_at": "2026-05-27T04:04:14.960581+00:00",
+    "status": "running",
+    "run_id": "dataset-7af96ab0-3d8f-49e3-ac2f-a41f19fd730b-1779854654199"
+  },
+  "unbanked": {
+    "dataset_id": "78545a82-f71c-4459-aeb1-5e596e3ab8ff",
+    "upload_path": "datasets\\sft_v3_pass2\\unbanked\\for_pass2_nonfraud.jsonl",
+    "rows": 1456,
+    "estimated_credits": 15.0,
+    "estimated_minutes": 29.0,
+    "submitted_at": "2026-05-27T04:04:19.891032+00:00",
+    "status": "running",
+    "run_id": "dataset-78545a82-f71c-4459-aeb1-5e596e3ab8ff-1779854659121"
+  },
+  "itin": {
+    "dataset_id": "ac446d6d-cf49-48a1-b21a-eddabdcfd1ae",
+    "upload_path": "datasets\\sft_v3_pass2\\itin\\for_pass2_nonfraud.jsonl",
+    "rows": 1045,
+    "estimated_credits": 11.0,
+    "estimated_minutes": 24.0,
+    "submitted_at": "2026-05-27T04:04:24.504968+00:00",
+    "status": "running",
+    "run_id": "dataset-ac446d6d-cf49-48a1-b21a-eddabdcfd1ae-1779854663747"
+  }
+}

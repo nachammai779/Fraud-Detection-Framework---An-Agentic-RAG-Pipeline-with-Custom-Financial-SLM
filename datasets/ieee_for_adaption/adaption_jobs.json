@@ -1,0 +1,50 @@
+{
+  "remittance": {
+    "dataset_id": "54554342-429b-4513-a56a-8d923c3882fc",
+    "upload_path": "datasets\\ieee_for_adaption\\remittance\\for_adaption.jsonl",
+    "rows": 2124,
+    "estimated_credits": 22.0,
+    "estimated_minutes": 37.0,
+    "submitted_at": "2026-05-27T00:21:30.966602+00:00",
+    "status": "downloaded",
+    "run_id": "dataset-54554342-429b-4513-a56a-8d923c3882fc-1779841290275",
+    "adapted_records": 2115,
+    "parquet": "datasets\\ieee_for_adaption\\remittance\\transactions_ieee_adapted.parquet"
+  },
+  "gig_worker": {
+    "dataset_id": "533c6602-12e0-4497-bebc-42b3e6cbf666",
+    "upload_path": "datasets\\ieee_for_adaption\\gig_worker\\for_adaption.jsonl",
+    "rows": 2344,
+    "estimated_credits": 24.0,
+    "estimated_minutes": 40.0,
+    "submitted_at": "2026-05-27T00:21:38.129763+00:00",
+    "status": "downloaded",
+    "run_id": "dataset-533c6602-12e0-4497-bebc-42b3e6cbf666-1779841297495",
+    "adapted_records": 2342,
+    "parquet": "datasets\\ieee_for_adaption\\gig_worker\\transactions_ieee_adapted.parquet"
+  },
+  "unbanked": {
+    "dataset_id": "1f324993-0115-438d-9063-bdc7217e93bf",
+    "upload_path": "datasets\\ieee_for_adaption\\unbanked\\for_adaption.jsonl",
+    "rows": 3909,
+    "estimated_credits": 40.0,
+    "estimated_minutes": 59.0,
+    "submitted_at": "2026-05-27T00:21:44.063982+00:00",
+    "status": "downloaded",
+    "run_id": "dataset-1f324993-0115-438d-9063-bdc7217e93bf-1779841303328",
+    "adapted_records": 3906,
+    "parquet": "datasets\\ieee_for_adaption\\unbanked\\transactions_ieee_adapted.parquet"
+  },
+  "itin": {
+    "dataset_id": "aab7126f-b50b-4776-b495-9c3b88d7cab8",
+    "upload_path": "datasets\\ieee_for_adaption\\itin\\for_adaption.jsonl",
+    "rows": 1623,
+    "estimated_credits": 17.0,
+    "estimated_minutes": 31.0,
+    "submitted_at": "2026-05-27T00:21:48.349591+00:00",
+    "status": "downloaded",
+    "run_id": "dataset-aab7126f-b50b-4776-b495-9c3b88d7cab8-1779841307748",
+    "adapted_records": 1619,
+    "parquet": "datasets\\ieee_for_adaption\\itin\\transactions_ieee_adapted.parquet"
+  }
+}

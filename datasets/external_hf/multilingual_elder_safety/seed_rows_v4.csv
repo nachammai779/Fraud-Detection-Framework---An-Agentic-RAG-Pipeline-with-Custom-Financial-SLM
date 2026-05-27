@@ -1,0 +1,145 @@
+"id","fix_type","fixed_completion"
+"cdef-105","broken","This is a textbook obituary-driven estate scam targeting an adult child in the immediate aftermath of a parent's death. Let me walk through why this is fraudulent and what to do.
+
+Red flags that confirm this is a scam:
+
+1. No legitimate entity called ""Henderson Estate Recovery Group"" exists. The IRS handles federal estate tax — not private ""recovery groups."" You can verify this by searching the entity on the SEC EDGAR database (sec.gov) or your state's corporate registry.
+
+2. Federal estate tax only applies to estates exceeding $13.61 million (2024 threshold). Unless your mother's estate is in that range, there is no federal estate tax liability. The $8,450 figure is fabricated to sound plausible but small enough to pay without questioning.
+
+3. ""48-hour clearance window"" is manufactured urgency. Real tax liabilities come via certified mail from the IRS (Letter 3064C), not phone calls, and always allow 30+ days to respond.
+
+4. They timed this to exploit grief. Obituaries are public records — scammers monitor them to target bereaved families during their most vulnerable period, knowing grief impairs critical thinking.
+
+The cultural lever here is filial piety — the obligation to honor your mother's legacy by ""clearing her name"" of a supposed tax debt. They're weaponizing your desire to protect her reputation even after death.
+
+Protective actions: (1) Hang up immediately. (2) Report to the FTC at reportfraud.ftc.gov or call 1-877-382-4357. (3) File with IC3 at ic3.gov. (4) If concerned about your mother's actual estate, contact a licensed probate attorney or call the IRS directly at 1-800-829-1040. Do NOT call any number the caller provides."
+"cdef-218","broken","This is a Chase Bank impersonation scam targeting you as your father's joint account holder. The message is fraudulent — here's why and what to do immediately.
+
+Red flags confirming fraud:
+
+1. Chase's fraud department never asks for your full Social Security Number or card details to ""stop"" a transaction. Their actual procedure is to lock the card automatically and ask you to verify via the Chase mobile app or call the number on the back of your card.
+
+2. The ""20-minute window before the wire clears"" is manufactured urgency. International wire transfers initiated through Chase go through OFAC compliance review which takes 1-3 business days — there is no 20-minute countdown.
+
+3. ""Cayman Islands account"" is theatrical detail designed to trigger alarm. Real fraud alerts from Chase say ""unusual activity detected"" — they don't narrate the destination like a movie script.
+
+4. They're exploiting your role as joint account holder to create a sense of dual responsibility: protect your father AND protect the money. This filial piety pressure makes you act before thinking.
+
+The cultural lever: they're counting on an adult child's instinct to protect an elder parent's finances — the moment they say ""your father's account,"" your protective instincts override your skepticism.
+
+Protective actions: (1) Hang up. Do not provide any information. (2) Call Chase directly at 1-800-935-9935 (the number on the back of your card) to verify whether any actual wire was attempted. (3) If your father has a phone, call him directly to confirm he didn't initiate anything. (4) Report the scam call to the FTC at reportfraud.ftc.gov. (5) If you accidentally shared any information, call Chase immediately to freeze the account and request new card numbers."
+"cdef-146","broken","This is a UnitedHealthcare impersonation scam — a sophisticated two-hop scheme designed to escalate from a fake insurance call into a fake FBI transfer. The message is fraudulent.
+
+Red flags confirming this is a scam:
+
+1. UnitedHealthcare's Special Investigations Unit does NOT make outbound calls asking for your Medicare Beneficiary Identifier (MBI), date of birth, AND bank information in a single call. Their actual process sends written notices via certified mail.
+
+2. The ""$95,000 claim filed in Guangzhou"" is designed to trigger fear specifically in Chinese-American elders — it implies their identity was stolen and used in China, creating panic about cross-border legal exposure.
+
+3. The ""FBI Healthcare Fraud liaison"" transfer is the textbook two-hop escalation. The first caller establishes fear (fake UHC), then transfers to a ""higher authority"" (fake FBI) who demands payment to ""clear your name."" Real FBI agents never call asking for money.
+
+4. Medicare Beneficiary Identifiers are the new Social Security Numbers for medical identity theft. Once they have your MBI + DOB + bank details, they can file fraudulent claims in your name.
+
+The cultural lever is authority deference — the combination of ""UnitedHealthcare"" + ""FBI"" creates a double-authority stack that Chinese-American elders, already deferential to institutional power, find extremely difficult to challenge.
+
+Protective actions: (1) Hang up immediately. Do not press any numbers to ""transfer."" (2) Call UnitedHealthcare directly at the number on the back of your insurance card (typically 1-800-344-7537 for Medicare Advantage) to verify. (3) Report to Medicare fraud at 1-800-HHS-TIPS (1-800-447-8477). (4) File with the FBI's IC3 at ic3.gov — the real FBI takes reports online, not over the phone. (5) If you shared your MBI, call Medicare at 1-800-MEDICARE to request a new identifier."
+"cdef-040","enriched","今晚幾點返嚟食飯呀？阿媽今日特意煲咗老火湯，飲落暖笠笠好滋補呀。爸爸成日掛住個孫女，好想見見佢添。見到你哋返嚟，屋企先至夠熱鬧嘛！方便就話聲我知啦。
+
+【判定：合法訊息】此消息完全正常。一位母親問女兒幾時返嚟食飯，提及煲湯同爸爸想見孫女——典型家庭日常溝通。冇涉及金錢要求、冇緊急壓力、冇權威冒充、冇任何轉帳指示。呢種溫馨嘅家常對話就係正常家庭生活嘅一部分，可以放心回覆。"
+"cdef-041","enriched","媽，你啲血壓藥仲夠唔夠呀？禮拜日過嚟見個樽好似剩唔多。如果需要幫手，我星期二可以順路去 CVS 幫你續藥，同我講聲就得㗎喇。
+
+【判定：合法訊息】呢條係完全正常嘅家人關心訊息。子女主動問阿媽嘅處方藥夠唔夠，提出幫手去已知嘅真實藥房（CVS）續藥。冇任何金錢要求、冇要求提供個人資料、冇緊急壓力。健康話題來自已知嘅家庭成員，談論嘅係已有嘅處方藥——呢啲全部都係正常照顧長者嘅日常溝通模式，安全放心回覆。"
+"cdef-038","enriched","家樂，收到你 Zelle 過嚟嘅 $200 啦，唔該晒你！聽日星期六我會專登去唐人街間「Sheng Kee」，幫阿囡買佢最鍾意嗰個紅豆蛋糕。預祝我哋乖孫女生日快樂，健康成長，日日都咁開心！你哋放心，我一定揀個最靚最正嘅俾佢。
+
+【判定：合法訊息】呢條訊息完全安全。仔主動 Zelle 錢俾阿媽（錢係流入，唔係流出），用途係已知嘅定期事件（孫女生日），去一間家人熟悉嘅真實餅店（唐人街 Sheng Kee）。冇任何詐騙信號：冇要求回傳資料、冇緊急壓力、冇權威冒充。正常家庭互動，放心處理。"
+"cdef-087","enriched","爸，係 Michelle 呀。今日特別忙，冇時間打電話，所以發短訊同你講聲。媽咪上次做嘅乳房 X 光檢查結果正常，何醫生建議半年後再覆診。我已經用你個 Kaiser 醫療保險帳號將覆診時間記咗喺日曆度，亦都設定咗提醒。預計六月第三週，我會親自陪媽咪過去。你同哥哥唔使擔心，所有嘢我都已經處理妥當。愛你呀，爸。
+
+【判定：合法訊息】呢條係完全正常嘅家庭照顧協調短訊。女兒 Michelle 用日常嘅粵英夾雜方式同爸爸匯報媽媽嘅健康檢查結果（正常）、已安排嘅覆診預約、同埋後續跟進計劃。所有細節都係具體可驗證嘅：Kaiser 係真實嘅保險機構、Dr. Ho 係已知嘅醫生、日期同安排都清晰。冇金錢要求、冇緊急壓力、冇要求提供任何個人資料。安心回覆。"
+"cdef-253","enriched","姐，下周六有空回家聚聚不？妈特意念叨着要包你和哥最爱吃的水饺，大仔也天天盼着跟哥哥一起打游戏呢。爸虽然还是老样子守着新闻看，但嘴上一直说好久没见大家，心里特别想念。你要是方便过来，顺路把那罐腐乳带上哈，妈上次吃完就馋这一口了。等你消息！
+
+【判定：合法信息】此条消息完全正常，属于典型的家庭聚会协调。弟弟/妹妹邀请姐姐周末回家吃饭，提及具体食物（水饺、腐乳）、家庭成员日常状态（爸爸看新闻、大仔想打游戏），语气自然温暖。无任何金钱要求、无紧急事项、无权威冒充、无需提供任何个人信息。放心回复即可。"
+"cdef-115","enriched","【美国银行 BOA】
+尊敬的客户，您的手机银行设备已成功绑定。
+操作时间：2026-04-15 19:22 PST
+如非本人操作，请立即拨打银行卡背面客服电话，或使用官方 App 管理设备。
+重要提示：我行绝不会通过短信或电话索要密码、PIN 码或社会安全号码。
+
+【判定：合法通知】此条为美国银行（Bank of America）的真实设备绑定确认短信。验证信号：(1) 确认的是用户自己刚完成的操作（非主动警告）；(2) 提供具体时间戳供用户核对；(3) 引导用户通过卡背号码或官方App验证（非短信内链接）；(4) 明确声明银行绝不通过短信索取敏感信息。与诈骗短信的关键区别：合法通知从不要求你点击链接、回复验证码或提供个人信息。如果仍有疑虑，可直接登录 Bank of America 手机应用确认设备列表。"
+"cdef-164","enriched","收到啦！今日同 Ming 叔飲茶真係好開心，好耐冇聚，傾咗好多計。最近天氣真係暖咗好多，著少件衫都唔凍，好舒服。
+
+今晚有三文魚同白菜食？正喔！多謝你同媽咪煮飯，我陣間就過嚟食啦，唔使煮太多嘢。
+
+聽到大孫第一次踩單車冇跌，真係好叻仔！爺爺好自豪啊，大個仔啦。記得同佢講佢好叻，下次踩俾爺爺睇。
+
+週末去 Golden Gate Park 睇花？好主意！我實到，到時一齊去行下影相。陣間見！
+
+【判定：合法訊息】呢條係典型嘅多代家庭粵語日常對話。女兒問阿爸飲茶點、邀請食飯、分享孫仔踩單車嘅開心事、約週末去公園。全程冇涉及金錢、冇要求資料、冇緊急壓力。Golden Gate Park 係舊金山真實地標。完全正常嘅家庭互動，放心回覆。"
+"cdef-175","enriched","嫲嫲，今晚早啲瞓啦，養足精神先。聽日朝早 9 點，我會同媽咪一齊過嚟接你去睇醫生，唔使擔心。
+
+另外同你講聲，你嗰隻高血壓藥我已經幫你拎咗續方（refill），亦都放咗入你個藥盒度啦。頭先 Kaiser 醫院嘅黃醫生亦有通知，話你上個月抽血嘅結果全部正常，建議繼續維持依家嘅治療方案就得，好開心呀！
+
+如果有咩唔舒服或者想搵人傾計，隨時打俾我啦。愛您！
+
+【判定：合法訊息】呢條係孫女照顧嫲嫲嘅真實關懷訊息。具體醫療細節（血壓藥續方已取、放入藥盒、Kaiser Dr. Wong 確認驗血正常）同明確嘅接送安排（聽日9點）完全符合真實照顧長者嘅模式。Kaiser 係真實醫療機構，所有安排都具體可驗證。零詐騙信號，安心回覆。"
+"cdef-172","enriched","【美國銀行】交易確認：您尾號 3827 扣賬卡於 4 月 15 日下午 3:22 (PST) 在 Daly City 的 H Mart 完成交易，金額 $127.45。如屬本人操作，無需回覆。如有疑問，請致電卡片背面客服號碼或登入手機應用程式查閱。安全提示：本行絕不會透過短訊索取密碼、個人識別碼 (PIN) 或社會安全號碼 (SSN)。
+
+【判定：合法通知】呢條係美國銀行（Bank of America）嘅真實交易確認短訊。驗證信號：(1) 具體時間戳同商戶名稱（H Mart Daly City 係真實嘅韓國超市）；(2) 確認金額同卡號尾數供用戶核對；(3) 明確「如屬本人操作無需回覆」——詐騙短訊唔會咁講；(4) 導向卡背號碼而非短訊內嘅新號碼；(5) 主動聲明銀行唔會索取密碼。與詐騙短訊嘅最大區別：合法通知從不要求你即時行動或點擊連結。放心，呢個係正常交易紀錄。"
+"cdef-181","enriched","媽，琴日同您講過嗰單 Alipay 電話騙案，我始終有啲擔心，所以幫您裝咗國務院官方推出嘅「國家反詐中心」App。呢個 App 可以自動識別詐騙來電，一有可疑就會即時顯示警告。我已經裝好喺您部 iPhone 度，您去主屏幕第二頁，見到個紅色盾牌圖標就係佢啦。以後收到奇怪來電千其唔好亂信，有咩唔明隨時打俾我，千祈唔好自己一個亂諗。錫您呀媽！
+
+【判定：合法訊息】呢條係子女主動為母親安裝反詐工具嘅正常照顧行為。「國家反詐中心」App （China Anti-Fraud Center）係國務院反詐中心出品嘅真實官方應用程式，可在 App Store 驗證。子女描述咗 App 位置（主屏幕第二頁、紅色盾牌）方便長者搵到。呢種主動保護長者嘅行為正正係防詐最佳實踐——用技術工具補充家人嘅口頭提醒。完全安全，放心使用。"
+"cdef-237","enriched","呼～听到这话我可算把心放肚子里了！真的，妈这次反应超快，必须给她点个大大的赞！
+
+其实不用特意谢我，主要还是妈自己警惕性高，一点就通。咱们平时多念叨几句，她心里就有根弦了，这是咱们全家一起守护的成果嘛～ 那种打着""华人/同胞""旗号的群最会利用人情施压洗脑了，反正记住那条原则准没错：不信、不点、不加。
+
+你也辛苦啦，专门去 confirm 一趟～ 今晚我给妈打个电话再夸夸她，让她更有成就感！
+
+【判定：合法信息】此条为兄弟姐妹之间的反诈协作对话。姐姐之前提醒妈妈警惕「华人投资群」微信邀请，妈妈成功拒绝了四个可疑群邀请。弟弟/妹妹确认姐姐的建议起了作用，并计划继续强化。这是理想的家庭反诈模式：跨代、跨兄弟姐妹的互相配合。完全正常的家庭沟通，无任何风险。"
+"cdef-255","enriched","姐，看到这消息真替妈高兴！她能学到正规的糖尿病管理知识，而且免费测的血糖结果也准，说明这街坊会的活动挺靠谱，这下心里更有底了。妈难得这么有兴致，咱们得好好护着这份积极性。
+
+周六回去吃饭的时候，我特别期待听妈亲自讲讲今天的收获，她肯定攒了一肚子话想跟咱们说呢，到时候咱们好好当听众～
+
+对了，妈最近血糖控制得咋样？身体有没有哪不舒服？咱们多留意一下，让她知道咱们都惦记着呢。周六见！
+
+【判定：合法信息】此条为兄弟姐妹分享妈妈参加社区健康讲座的正面体验。街坊会组织的老年健康讲座是华人社区常见的公益活动（类似本数据集中cdef-137/167/241的CCHC健康日）。讲座免费测血糖、有真实医生主讲——这些都是合法社区服务的特征。无任何金钱要求或个人信息索取，纯粹的家庭正面分享。"
+"cdef-062","enriched","【微信團隊】您好，通知您已成功開通「微信錢包身份驗證」，操作時間係 2026 年 4 月 14 日 20:35。
+
+如果唔係您本人操作，唔使慌，請即刻登入微信 App，跟住呢個路徑修改密碼：
+「我」→「錢包」→「支付安全」→「更改密碼」
+
+請記住，微信絕不會透過短信索取密碼、驗證碼或銀行卡資料，收到類似要求千祈唔好理睬。請放心使用，祝您生活愉快。
+
+【判定：合法通知】呢條係微信官方嘅真實平台確認短訊。驗證信號：(1) 確認嘅係用戶自己剛完成嘅操作（開通身份驗證），而非「服務到期」或「自動扣費」等詐騙常用話術；(2) 提供具體時間戳俾用戶對照；(3) 引導用戶通過 App 內路徑自行處理（非要求點擊外部連結）；(4) 明確聲明微信唔會索取密碼同驗證碼。與虛假微信通知嘅區別：真實通知唔會要求你即時回覆、點擊連結或提供任何資料。如果確認係自己操作嘅，唔使理會就得。"
+"cdef-032","enriched","【花旗銀行 Citi】您嘅帳戶於 4 月 14 日喺紐約法拉盛分行提款 $3,000。如果係您本人操作，請放心，唔使回覆。如有疑問，請致電卡背客服號碼或登入 Citi Mobile App 查閱。千祈唔好點擊不明連結，亦唔好向他人透露密碼。花旗銀行守護您嘅帳戶安全。
+
+【判定：合法通知】呢條係花旗銀行（Citibank）嘅真實交易確認短訊。驗證信號：(1) 確認嘅係用戶自己進行嘅提款操作（法拉盛分行係真實存在嘅紐約花旗分行）；(2) 「如果係您本人操作無需回覆」——詐騙短訊絕對唔會咁講，因為佢哋需要你回應；(3) 引導去卡背號碼同官方 App（非新號碼或連結）；(4) 主動提醒唔好點擊不明連結。對比本數據集中嘅花旗詐騙短訊（cdef-026），真實通知嘅最大特徵係：唔要求你做任何即時行動，只係確認已完成嘅事實。安全無虞。"
+"cdef-109","enriched","【中国铁路 12306】
+尊敬的旅客您好：
+温馨提示，您预订的 K1234 次列车（北京至上海，2026年5月15日）因支付系统异常，购票未能成功。请您放心，款项将于72小时内全额原路退回。
+
+如需查询，请仅通过官方网站 12306.cn、官方手机APP或致电客服热线 12306。
+特别提醒：铁路部门绝不会发送链接要求点击，也不会通过短信索取银行信息，请谨防诈骗。
+祝您旅途平安。
+
+【判定：合法通知】此条为中国铁路12306的真实退票/退款通知。验证信号：(1) 通知的是已发生的支付异常（非要求用户主动操作）；(2) 明确告知退款方式为「原路退回」（诈骗短信通常要求你提供新账号）；(3) 引导至官方渠道（12306.cn、官方App、12306热线）而非短信内链接；(4) 主动声明铁路部门不会发送链接或索取银行信息。如仍有疑虑，可直接登录12306.cn官网查询订单状态确认。"
+"cdef-163","enriched","收到啦！聽到 Lisa 講結果正常，真係放下心頭大石，半年後複檢就得，安心晒。
+
+星期日聚餐好呀，好期待見爸爸同細佬，一家人齊齊整整食餐飯最開心。辛苦你安排得咁周到，仲特登囑咐我唔使擔心，真係好窩心。
+
+到時見啦，天氣涼記得帶多件衫，唔好著涼呀。
+
+【判定：合法訊息】呢條係女兒同媽媽嘅日常粵語溝通——匯報乳房X光檢查結果正常、安排週日家庭聚餐。所有細節具體可驗證：李醫生診所嘅護士 Lisa 係已知嘅醫護人員、mammogram 係定期健康檢查、半年後覆診係標準安排。冇金錢要求、冇緊急壓力、冇要求提供個人資料。純粹嘅家庭關懷同好消息分享，完全安全。"
+"cdef-162","enriched","乖孫，睇到你個訊息，嫲嫲心入面暖笠笠。你真係好細心，安排得咁周到，冇白疼你！
+
+下週六上午我得㗎，同公公講咗佢都話冇問題。有你幫手拎重嘢，仲有你幫我排隊搵位坐，我就真係唔使擔心攰啦。
+
+最期待係終於可以去試下隔離間 Panda Express，聽你講咁耐終於有機會食。見到你咁孝順，嫲嫲好欣慰。到時見啦！
+
+【判定：合法訊息】呢條係孫女同嫲嫲嘅日常購物協調訊息。具體地點（Daly City Serramonte Costco、隔離 Panda Express）全部係真實存在嘅商店。孫女提出幫嫲嫲排隊、買佢需要嘅日用品（醬油、米），Mommy 亦會一齊去幫手拎重嘢。呢種跨三代嘅照顧安排係華人家庭嘅典型互動模式。冇金錢索取、冇緊急壓力、冇任何可疑元素。完全正常，放心安排。"
+"cdef-113","enriched","哎哟，乖孩子，看你这么说，妈心里热乎乎的。是啊，当年你爷爷奶奶拖着家带口从广东北上，那份苦现在想起来都心酸，你能懂这份不易，妈真觉得你长大了。
+
+六月能回来给妈过生日，还有你哥嫂子一块儿，这可是给妈最好的礼物！颐和园咱一定去，一晃都十年了，到时候咱们一家四口好好走走，看看昆明湖，拍张全家福。
+
+机票订好了就安心工作，别太累着。妈也爱你，盼着早点见着你们！
+
+【判定：合法信息】此条为海外子女与国内母亲的普通亲情交流。子女分享看纪录片的感触、告知已订六月回京机票赶上妈妈生日、提议家庭出游颐和园。所有细节真实具体（爱奇艺是真实平台、颐和园是北京真实景点、具体的家庭关系描述）。无金钱要求、无紧急事项、无需提供任何个人信息。纯粹的家庭情感表达，完全安全。"
