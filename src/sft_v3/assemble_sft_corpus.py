@@ -112,9 +112,14 @@ def stratified_split(df: pd.DataFrame, eval_frac: float, seed: int
     return train_df, eval_df
 
 
-def main(eval_frac: float, seed: int, out_train: Path, out_eval: Path) -> None:
+def main(eval_frac: float, seed: int, out_train: Path, out_eval: Path,
+         exclude_sources: list[str] | None = None) -> None:
+    exclude = set(exclude_sources or [])
     frames = []
     for tag, path in SOURCES.items():
+        if tag in exclude:
+            print(f"[exclude] {tag} (skipped via --exclude-source)")
+            continue
         if not path.exists():
             print(f"[skip] {tag}: missing {path}")
             continue
@@ -160,5 +165,11 @@ if __name__ == "__main__":
     p.add_argument("--seed", type=int, default=42)
     p.add_argument("--train-out", type=Path, default=DEFAULT_TRAIN)
     p.add_argument("--eval-out", type=Path, default=DEFAULT_EVAL)
+    p.add_argument("--exclude-source", action="append", default=[],
+                   choices=list(SOURCES.keys()),
+                   help="Skip a source tag (can be repeated). "
+                        "Use 'adaption_pass2_nf' to drop the IEEE non-fraud "
+                        "slice with corrupted labels.")
     args = p.parse_args()
-    main(args.eval_frac, args.seed, args.train_out, args.eval_out)
+    main(args.eval_frac, args.seed, args.train_out, args.eval_out,
+         exclude_sources=args.exclude_source)
