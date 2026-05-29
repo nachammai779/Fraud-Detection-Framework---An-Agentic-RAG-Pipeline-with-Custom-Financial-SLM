@@ -55,7 +55,12 @@ VERDICT_RE = re.compile(
 def parse_verdict(text: str | None) -> str | None:
     """Find the LAST verdict mention in the text — the model often paraphrases
     the verdict earlier (e.g., "Final Verdict: The transaction is fraudulent..."
-    in prose) before stating the structured `verdict: fraud` near the end."""
+    in prose) before stating the structured `verdict: fraud` near the end.
+
+    Strict-regex-only by design: a prose fallback was tried and produced too
+    many false negatives in v4_cot completions where "legitimate" appears
+    inside analysis paragraphs (negated context). Unparseable rows are
+    counted as abstentions, not misclassified."""
     if not text:
         return None
     matches = list(VERDICT_RE.finditer(text))
